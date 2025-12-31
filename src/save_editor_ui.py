@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'saveEditorRVwcGL.ui'
+## Form generated from reading UI file 'saveEditorThVwxV.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.10.1
 ##
@@ -16,10 +16,10 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFrame,
-    QGridLayout, QGroupBox, QHBoxLayout, QMainWindow,
-    QMenu, QMenuBar, QSizePolicy, QSpinBox,
-    QStatusBar, QTabWidget, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
+    QGroupBox, QHBoxLayout, QMainWindow, QMenu,
+    QMenuBar, QSizePolicy, QSpinBox, QStatusBar,
+    QTabWidget, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -112,11 +112,6 @@ class Ui_MainWindow(object):
         self.divisionGroupBox_4.setObjectName(u"divisionGroupBox_4")
         self.verticalLayout_57 = QVBoxLayout(self.divisionGroupBox_4)
         self.verticalLayout_57.setObjectName(u"verticalLayout_57")
-        self.regimentCheckBox_4 = QCheckBox(self.divisionGroupBox_4)
-        self.regimentCheckBox_4.setObjectName(u"regimentCheckBox_4")
-
-        self.verticalLayout_57.addWidget(self.regimentCheckBox_4)
-
         self.regimentGroupBox_4_1 = QGroupBox(self.divisionGroupBox_4)
         self.regimentGroupBox_4_1.setObjectName(u"regimentGroupBox_4_1")
         self.verticalLayout_58 = QVBoxLayout(self.regimentGroupBox_4_1)
@@ -220,11 +215,6 @@ class Ui_MainWindow(object):
         self.divisionGroupBox_2.setObjectName(u"divisionGroupBox_2")
         self.verticalLayout_37 = QVBoxLayout(self.divisionGroupBox_2)
         self.verticalLayout_37.setObjectName(u"verticalLayout_37")
-        self.regimentCheckBox_2 = QCheckBox(self.divisionGroupBox_2)
-        self.regimentCheckBox_2.setObjectName(u"regimentCheckBox_2")
-
-        self.verticalLayout_37.addWidget(self.regimentCheckBox_2)
-
         self.regimentGroupBox_2_1 = QGroupBox(self.divisionGroupBox_2)
         self.regimentGroupBox_2_1.setObjectName(u"regimentGroupBox_2_1")
         self.verticalLayout_44 = QVBoxLayout(self.regimentGroupBox_2_1)
@@ -328,13 +318,6 @@ class Ui_MainWindow(object):
         self.divisionGroupBox_1.setObjectName(u"divisionGroupBox_1")
         self.verticalLayout_36 = QVBoxLayout(self.divisionGroupBox_1)
         self.verticalLayout_36.setObjectName(u"verticalLayout_36")
-        self.regimentCheckBox_1 = QCheckBox(self.divisionGroupBox_1)
-        self.regimentCheckBox_1.setObjectName(u"regimentCheckBox_1")
-        self.regimentCheckBox_1.setEnabled(False)
-        self.regimentCheckBox_1.setCheckable(False)
-
-        self.verticalLayout_36.addWidget(self.regimentCheckBox_1)
-
         self.regimentGroupBox_1_1 = QGroupBox(self.divisionGroupBox_1)
         self.regimentGroupBox_1_1.setObjectName(u"regimentGroupBox_1_1")
         self.verticalLayout_38 = QVBoxLayout(self.regimentGroupBox_1_1)
@@ -438,11 +421,6 @@ class Ui_MainWindow(object):
         self.divisionGroupBox_3.setObjectName(u"divisionGroupBox_3")
         self.verticalLayout_50 = QVBoxLayout(self.divisionGroupBox_3)
         self.verticalLayout_50.setObjectName(u"verticalLayout_50")
-        self.regimentCheckBox_3 = QCheckBox(self.divisionGroupBox_3)
-        self.regimentCheckBox_3.setObjectName(u"regimentCheckBox_3")
-
-        self.verticalLayout_50.addWidget(self.regimentCheckBox_3)
-
         self.regimentGroupBox_3_1 = QGroupBox(self.divisionGroupBox_3)
         self.regimentGroupBox_3_1.setObjectName(u"regimentGroupBox_3_1")
         self.verticalLayout_51 = QVBoxLayout(self.regimentGroupBox_3_1)
@@ -546,11 +524,6 @@ class Ui_MainWindow(object):
         self.divisionGroupBox_5.setObjectName(u"divisionGroupBox_5")
         self.verticalLayout_69 = QVBoxLayout(self.divisionGroupBox_5)
         self.verticalLayout_69.setObjectName(u"verticalLayout_69")
-        self.regimentCheckBox_5 = QCheckBox(self.divisionGroupBox_5)
-        self.regimentCheckBox_5.setObjectName(u"regimentCheckBox_5")
-
-        self.verticalLayout_69.addWidget(self.regimentCheckBox_5)
-
         self.regimentGroupBox_5_1 = QGroupBox(self.divisionGroupBox_5)
         self.regimentGroupBox_5_1.setObjectName(u"regimentGroupBox_5_1")
         self.verticalLayout_70 = QVBoxLayout(self.regimentGroupBox_5_1)
@@ -1315,19 +1288,18 @@ class Ui_MainWindow(object):
         self.veterancySpinBox_5_2.setMaximum(9)
         self.veterancySpinBox_5_3.setMaximum(9)
         self.veterancySpinBox_5_4.setMaximum(9)
-        
     # setupUi
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.actionLoad_Save_File.setText(QCoreApplication.translate("MainWindow", u"Load File", None))
         self.actionSave_File.setText(QCoreApplication.translate("MainWindow", u"Save File", None))
         self.actionLoad_File.setText(QCoreApplication.translate("MainWindow", u"Load File", None))
-        self.goldGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Gold", None))
+        self.goldGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Thalers", None))
         self.supplyGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Supply", None))
         self.manpowerGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Manpower", None))
         self.ammoGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Ammunition", None))
         self.divisionGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Division #4", None))
-        self.regimentCheckBox_4.setText(QCoreApplication.translate("MainWindow", u"Enabled", None))
         self.regimentGroupBox_4_1.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #1", None))
         self.veterancyGroupBox_4_1.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.regimentGroupBox_4_2.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #2", None))
@@ -1337,7 +1309,6 @@ class Ui_MainWindow(object):
         self.regimentGroupBox_4_4.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #4", None))
         self.veterancyGroupBox_4_4.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.divisionGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Division #2", None))
-        self.regimentCheckBox_2.setText(QCoreApplication.translate("MainWindow", u"Enabled", None))
         self.regimentGroupBox_2_1.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #1", None))
         self.veterancyGroupBox_2_1.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.regimentGroupBox_2_2.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #2", None))
@@ -1347,7 +1318,6 @@ class Ui_MainWindow(object):
         self.regimentGroupBox_2_4.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #4", None))
         self.veterancyGroupBox_2_4.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.divisionGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Division #1", None))
-        self.regimentCheckBox_1.setText(QCoreApplication.translate("MainWindow", u"Enabled", None))
         self.regimentGroupBox_1_1.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #1", None))
         self.veterancyGroupBox_1_1.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.regimentGroupBox_1_2.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #2", None))
@@ -1357,7 +1327,6 @@ class Ui_MainWindow(object):
         self.regimentGroupBox_1_4.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #4", None))
         self.veterancyGroupBox_1_4.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.divisionGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Division #3", None))
-        self.regimentCheckBox_3.setText(QCoreApplication.translate("MainWindow", u"Enabled", None))
         self.regimentGroupBox_3_1.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #1", None))
         self.veterancyGroupBox_3_1.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.regimentGroupBox_3_2.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #2", None))
@@ -1367,7 +1336,6 @@ class Ui_MainWindow(object):
         self.regimentGroupBox_3_4.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #4", None))
         self.veterancyGroupBox_3_4.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.divisionGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Division #5", None))
-        self.regimentCheckBox_5.setText(QCoreApplication.translate("MainWindow", u"Enabled", None))
         self.regimentGroupBox_5_1.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #1", None))
         self.veterancyGroupBox_5_1.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.regimentGroupBox_5_2.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #2", None))
