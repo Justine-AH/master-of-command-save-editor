@@ -45,6 +45,8 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         self.actionSave_File.setEnabled(True)
         
     def on_save_button_trigger(self):
+        self.save_data()
+        
         path, _ = QFileDialog.getSaveFileName(
             self,
             "Save File",
@@ -54,7 +56,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
 
         if not path:
             return
-
+        
         dir_name = os.path.dirname(path)
         fd, temp_path = tempfile.mkstemp(dir=dir_name)
 
@@ -79,7 +81,20 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         self.supplySpinBox.setValue(player_data["Food"])
         self.ammoSpinBox.setValue(player_data["Ammo"])
         self.manpowerSpinBox.setValue(player_data["Manpower"])
+    
+    def save_data(self):
+        if self.data is None:
+            return
         
+        player_data = self.data["PlayerSaveData"]
+        
+        player_data["Cash"] = self.goldSpinBox.value()
+        player_data["Food"] = self.supplySpinBox.value()
+        player_data["Ammo"] = self.ammoSpinBox.value()
+        player_data["Manpower"] = self.manpowerSpinBox.value()
+        
+        self.data["PlayerSaveData"] = player_data
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 
