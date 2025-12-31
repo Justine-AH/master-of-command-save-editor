@@ -11,6 +11,8 @@ from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QCheckBox)
 from save_editor_ui import Ui_MainWindow
 from constants import UNITS
 
+DEV_FEATURES = os.getenv("DEV_FEATURES", "").lower() == "true"
+
 # TODO: Yeesh, the unit stats are separate from unit type... might need to read game files
 class SaveEditor(QMainWindow, Ui_MainWindow):
     def __init__(self, q_app, parent=None):
@@ -29,6 +31,13 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         self.actionSave_File.setEnabled(False)
         self.actionLoad_File.triggered.connect(self.on_load_button_trigger)
         self.actionSave_File.triggered.connect(self.on_save_button_trigger)
+        
+        if DEV_FEATURES:
+            with open("./save_folder/test.fcs", "r", encoding="utf-8") as f:
+                self.data = json.load(f)
+                
+            self.load_data()
+            self.actionSave_File.setEnabled(True)
     
     def on_load_button_trigger(self):
         path, _ = QFileDialog.getOpenFileName(
