@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'saveEditorThVwxV.ui'
+## Form generated from reading UI file 'saveEditorbXZUvq.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.10.1
 ##
@@ -16,22 +16,26 @@ from PySide6.QtGui import (QAction, QBrush, QColor, QConicalGradient,
     QIcon, QImage, QKeySequence, QLinearGradient,
     QPainter, QPalette, QPixmap, QRadialGradient,
     QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QGridLayout,
-    QGroupBox, QHBoxLayout, QMainWindow, QMenu,
+from PySide6.QtWidgets import (QAbstractItemView, QAbstractScrollArea, QApplication, QComboBox,
+    QFrame, QGridLayout, QGroupBox, QHBoxLayout,
+    QHeaderView, QLabel, QMainWindow, QMenu,
     QMenuBar, QSizePolicy, QSpinBox, QStatusBar,
-    QTabWidget, QVBoxLayout, QWidget)
+    QTabWidget, QTableWidget, QTableWidgetItem, QTreeWidget,
+    QTreeWidgetItem, QVBoxLayout, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(809, 1020)
+        MainWindow.resize(1242, 1109)
         self.actionLoad_Save_File = QAction(MainWindow)
         self.actionLoad_Save_File.setObjectName(u"actionLoad_Save_File")
         self.actionSave_File = QAction(MainWindow)
         self.actionSave_File.setObjectName(u"actionSave_File")
         self.actionLoad_File = QAction(MainWindow)
         self.actionLoad_File.setObjectName(u"actionLoad_File")
+        self.actionView_Templates = QAction(MainWindow)
+        self.actionView_Templates.setObjectName(u"actionView_Templates")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout_3 = QVBoxLayout(self.centralwidget)
@@ -764,32 +768,46 @@ class Ui_MainWindow(object):
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.leaderGroupBox_1 = QGroupBox(self.leaderGroupBox)
         self.leaderGroupBox_1.setObjectName(u"leaderGroupBox_1")
-        self.verticalLayout_81 = QVBoxLayout(self.leaderGroupBox_1)
-        self.verticalLayout_81.setObjectName(u"verticalLayout_81")
+        self.verticalLayout_12 = QVBoxLayout(self.leaderGroupBox_1)
+        self.verticalLayout_12.setObjectName(u"verticalLayout_12")
+        self.leaderNameGroupBox_1 = QGroupBox(self.leaderGroupBox_1)
+        self.leaderNameGroupBox_1.setObjectName(u"leaderNameGroupBox_1")
+        self.verticalLayout_14 = QVBoxLayout(self.leaderNameGroupBox_1)
+        self.verticalLayout_14.setObjectName(u"verticalLayout_14")
+        self.leaderNameLabel_1 = QLabel(self.leaderNameGroupBox_1)
+        self.leaderNameLabel_1.setObjectName(u"leaderNameLabel_1")
+        self.leaderNameLabel_1.setAutoFillBackground(False)
+        self.leaderNameLabel_1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout_14.addWidget(self.leaderNameLabel_1)
+
+
+        self.verticalLayout_12.addWidget(self.leaderNameGroupBox_1)
+
         self.leaderComboBox_1_1 = QComboBox(self.leaderGroupBox_1)
         self.leaderComboBox_1_1.setObjectName(u"leaderComboBox_1_1")
 
-        self.verticalLayout_81.addWidget(self.leaderComboBox_1_1)
+        self.verticalLayout_12.addWidget(self.leaderComboBox_1_1)
 
         self.leaderComboBox_1_2 = QComboBox(self.leaderGroupBox_1)
         self.leaderComboBox_1_2.setObjectName(u"leaderComboBox_1_2")
 
-        self.verticalLayout_81.addWidget(self.leaderComboBox_1_2)
+        self.verticalLayout_12.addWidget(self.leaderComboBox_1_2)
 
         self.leaderComboBox_1_3 = QComboBox(self.leaderGroupBox_1)
         self.leaderComboBox_1_3.setObjectName(u"leaderComboBox_1_3")
 
-        self.verticalLayout_81.addWidget(self.leaderComboBox_1_3)
+        self.verticalLayout_12.addWidget(self.leaderComboBox_1_3)
 
         self.leaderComboBox_1_4 = QComboBox(self.leaderGroupBox_1)
         self.leaderComboBox_1_4.setObjectName(u"leaderComboBox_1_4")
 
-        self.verticalLayout_81.addWidget(self.leaderComboBox_1_4)
+        self.verticalLayout_12.addWidget(self.leaderComboBox_1_4)
 
         self.leaderComboBox_1_5 = QComboBox(self.leaderGroupBox_1)
         self.leaderComboBox_1_5.setObjectName(u"leaderComboBox_1_5")
 
-        self.verticalLayout_81.addWidget(self.leaderComboBox_1_5)
+        self.verticalLayout_12.addWidget(self.leaderComboBox_1_5)
 
         self.leaderLevelGroupBox_1 = QGroupBox(self.leaderGroupBox_1)
         self.leaderLevelGroupBox_1.setObjectName(u"leaderLevelGroupBox_1")
@@ -801,7 +819,19 @@ class Ui_MainWindow(object):
         self.verticalLayout_79.addWidget(self.leaderLevelSpinBox_1)
 
 
-        self.verticalLayout_81.addWidget(self.leaderLevelGroupBox_1)
+        self.verticalLayout_12.addWidget(self.leaderLevelGroupBox_1)
+
+        self.leaderSkillPointGroupBox_1 = QGroupBox(self.leaderGroupBox_1)
+        self.leaderSkillPointGroupBox_1.setObjectName(u"leaderSkillPointGroupBox_1")
+        self.verticalLayout_81 = QVBoxLayout(self.leaderSkillPointGroupBox_1)
+        self.verticalLayout_81.setObjectName(u"verticalLayout_81")
+        self.leaderSkillPointSpinBox_1 = QSpinBox(self.leaderSkillPointGroupBox_1)
+        self.leaderSkillPointSpinBox_1.setObjectName(u"leaderSkillPointSpinBox_1")
+
+        self.verticalLayout_81.addWidget(self.leaderSkillPointSpinBox_1)
+
+
+        self.verticalLayout_12.addWidget(self.leaderSkillPointGroupBox_1)
 
 
         self.horizontalLayout_4.addWidget(self.leaderGroupBox_1)
@@ -810,6 +840,20 @@ class Ui_MainWindow(object):
         self.leaderGroupBox_2.setObjectName(u"leaderGroupBox_2")
         self.verticalLayout_82 = QVBoxLayout(self.leaderGroupBox_2)
         self.verticalLayout_82.setObjectName(u"verticalLayout_82")
+        self.leaderNameGroupBox_2 = QGroupBox(self.leaderGroupBox_2)
+        self.leaderNameGroupBox_2.setObjectName(u"leaderNameGroupBox_2")
+        self.verticalLayout_15 = QVBoxLayout(self.leaderNameGroupBox_2)
+        self.verticalLayout_15.setObjectName(u"verticalLayout_15")
+        self.leaderNameLabel_2 = QLabel(self.leaderNameGroupBox_2)
+        self.leaderNameLabel_2.setObjectName(u"leaderNameLabel_2")
+        self.leaderNameLabel_2.setAutoFillBackground(False)
+        self.leaderNameLabel_2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout_15.addWidget(self.leaderNameLabel_2)
+
+
+        self.verticalLayout_82.addWidget(self.leaderNameGroupBox_2)
+
         self.leaderComboBox_2_1 = QComboBox(self.leaderGroupBox_2)
         self.leaderComboBox_2_1.setObjectName(u"leaderComboBox_2_1")
 
@@ -847,6 +891,18 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_82.addWidget(self.leaderLevelGroupBox_2)
 
+        self.leaderSkillPointGroupBox_2 = QGroupBox(self.leaderGroupBox_2)
+        self.leaderSkillPointGroupBox_2.setObjectName(u"leaderSkillPointGroupBox_2")
+        self.verticalLayout_104 = QVBoxLayout(self.leaderSkillPointGroupBox_2)
+        self.verticalLayout_104.setObjectName(u"verticalLayout_104")
+        self.leaderSkillPointSpinBox_2 = QSpinBox(self.leaderSkillPointGroupBox_2)
+        self.leaderSkillPointSpinBox_2.setObjectName(u"leaderSkillPointSpinBox_2")
+
+        self.verticalLayout_104.addWidget(self.leaderSkillPointSpinBox_2)
+
+
+        self.verticalLayout_82.addWidget(self.leaderSkillPointGroupBox_2)
+
 
         self.horizontalLayout_4.addWidget(self.leaderGroupBox_2)
 
@@ -854,6 +910,20 @@ class Ui_MainWindow(object):
         self.leaderGroupBox_3.setObjectName(u"leaderGroupBox_3")
         self.verticalLayout_84 = QVBoxLayout(self.leaderGroupBox_3)
         self.verticalLayout_84.setObjectName(u"verticalLayout_84")
+        self.leaderNameGroupBox_3 = QGroupBox(self.leaderGroupBox_3)
+        self.leaderNameGroupBox_3.setObjectName(u"leaderNameGroupBox_3")
+        self.verticalLayout_16 = QVBoxLayout(self.leaderNameGroupBox_3)
+        self.verticalLayout_16.setObjectName(u"verticalLayout_16")
+        self.leaderNameLabel_3 = QLabel(self.leaderNameGroupBox_3)
+        self.leaderNameLabel_3.setObjectName(u"leaderNameLabel_3")
+        self.leaderNameLabel_3.setAutoFillBackground(False)
+        self.leaderNameLabel_3.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout_16.addWidget(self.leaderNameLabel_3)
+
+
+        self.verticalLayout_84.addWidget(self.leaderNameGroupBox_3)
+
         self.leaderComboBox_3_1 = QComboBox(self.leaderGroupBox_3)
         self.leaderComboBox_3_1.setObjectName(u"leaderComboBox_3_1")
 
@@ -891,6 +961,18 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_84.addWidget(self.leaderLevelGroupBox_3)
 
+        self.leaderSkillPointGroupBox_3 = QGroupBox(self.leaderGroupBox_3)
+        self.leaderSkillPointGroupBox_3.setObjectName(u"leaderSkillPointGroupBox_3")
+        self.verticalLayout_108 = QVBoxLayout(self.leaderSkillPointGroupBox_3)
+        self.verticalLayout_108.setObjectName(u"verticalLayout_108")
+        self.leaderSkillPointSpinBox_3 = QSpinBox(self.leaderSkillPointGroupBox_3)
+        self.leaderSkillPointSpinBox_3.setObjectName(u"leaderSkillPointSpinBox_3")
+
+        self.verticalLayout_108.addWidget(self.leaderSkillPointSpinBox_3)
+
+
+        self.verticalLayout_84.addWidget(self.leaderSkillPointGroupBox_3)
+
 
         self.horizontalLayout_4.addWidget(self.leaderGroupBox_3)
 
@@ -898,6 +980,20 @@ class Ui_MainWindow(object):
         self.leaderGroupBox_4.setObjectName(u"leaderGroupBox_4")
         self.verticalLayout_86 = QVBoxLayout(self.leaderGroupBox_4)
         self.verticalLayout_86.setObjectName(u"verticalLayout_86")
+        self.leaderNameGroupBox_4 = QGroupBox(self.leaderGroupBox_4)
+        self.leaderNameGroupBox_4.setObjectName(u"leaderNameGroupBox_4")
+        self.verticalLayout_17 = QVBoxLayout(self.leaderNameGroupBox_4)
+        self.verticalLayout_17.setObjectName(u"verticalLayout_17")
+        self.leaderNameLabel_4 = QLabel(self.leaderNameGroupBox_4)
+        self.leaderNameLabel_4.setObjectName(u"leaderNameLabel_4")
+        self.leaderNameLabel_4.setAutoFillBackground(False)
+        self.leaderNameLabel_4.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout_17.addWidget(self.leaderNameLabel_4)
+
+
+        self.verticalLayout_86.addWidget(self.leaderNameGroupBox_4)
+
         self.leaderComboBox_4_1 = QComboBox(self.leaderGroupBox_4)
         self.leaderComboBox_4_1.setObjectName(u"leaderComboBox_4_1")
 
@@ -935,6 +1031,18 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_86.addWidget(self.leaderLevelGroupBox_4)
 
+        self.leaderSkillPointGroupBox_4 = QGroupBox(self.leaderGroupBox_4)
+        self.leaderSkillPointGroupBox_4.setObjectName(u"leaderSkillPointGroupBox_4")
+        self.verticalLayout_110 = QVBoxLayout(self.leaderSkillPointGroupBox_4)
+        self.verticalLayout_110.setObjectName(u"verticalLayout_110")
+        self.leaderSkillPointSpinBox_4 = QSpinBox(self.leaderSkillPointGroupBox_4)
+        self.leaderSkillPointSpinBox_4.setObjectName(u"leaderSkillPointSpinBox_4")
+
+        self.verticalLayout_110.addWidget(self.leaderSkillPointSpinBox_4)
+
+
+        self.verticalLayout_86.addWidget(self.leaderSkillPointGroupBox_4)
+
 
         self.horizontalLayout_4.addWidget(self.leaderGroupBox_4)
 
@@ -942,6 +1050,20 @@ class Ui_MainWindow(object):
         self.leaderGroupBox_5.setObjectName(u"leaderGroupBox_5")
         self.verticalLayout_88 = QVBoxLayout(self.leaderGroupBox_5)
         self.verticalLayout_88.setObjectName(u"verticalLayout_88")
+        self.leaderNameGroupBox_5 = QGroupBox(self.leaderGroupBox_5)
+        self.leaderNameGroupBox_5.setObjectName(u"leaderNameGroupBox_5")
+        self.verticalLayout_18 = QVBoxLayout(self.leaderNameGroupBox_5)
+        self.verticalLayout_18.setObjectName(u"verticalLayout_18")
+        self.leaderNameLabel_5 = QLabel(self.leaderNameGroupBox_5)
+        self.leaderNameLabel_5.setObjectName(u"leaderNameLabel_5")
+        self.leaderNameLabel_5.setAutoFillBackground(False)
+        self.leaderNameLabel_5.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout_18.addWidget(self.leaderNameLabel_5)
+
+
+        self.verticalLayout_88.addWidget(self.leaderNameGroupBox_5)
+
         self.leaderComboBox_5_1 = QComboBox(self.leaderGroupBox_5)
         self.leaderComboBox_5_1.setObjectName(u"leaderComboBox_5_1")
 
@@ -979,6 +1101,18 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_88.addWidget(self.leaderLevelGroupBox_5)
 
+        self.leaderSkillPointGroupBox_5 = QGroupBox(self.leaderGroupBox_5)
+        self.leaderSkillPointGroupBox_5.setObjectName(u"leaderSkillPointGroupBox_5")
+        self.verticalLayout_111 = QVBoxLayout(self.leaderSkillPointGroupBox_5)
+        self.verticalLayout_111.setObjectName(u"verticalLayout_111")
+        self.leaderSkillPointSpinBox_6 = QSpinBox(self.leaderSkillPointGroupBox_5)
+        self.leaderSkillPointSpinBox_6.setObjectName(u"leaderSkillPointSpinBox_6")
+
+        self.verticalLayout_111.addWidget(self.leaderSkillPointSpinBox_6)
+
+
+        self.verticalLayout_88.addWidget(self.leaderSkillPointGroupBox_5)
+
 
         self.horizontalLayout_4.addWidget(self.leaderGroupBox_5)
 
@@ -991,32 +1125,46 @@ class Ui_MainWindow(object):
         self.gridLayout.setObjectName(u"gridLayout")
         self.reserveLeaderGroupBox_1 = QGroupBox(self.groupBox_15)
         self.reserveLeaderGroupBox_1.setObjectName(u"reserveLeaderGroupBox_1")
-        self.verticalLayout_80 = QVBoxLayout(self.reserveLeaderGroupBox_1)
-        self.verticalLayout_80.setObjectName(u"verticalLayout_80")
+        self.verticalLayout_13 = QVBoxLayout(self.reserveLeaderGroupBox_1)
+        self.verticalLayout_13.setObjectName(u"verticalLayout_13")
+        self.reserveLeaderNameGroupBox_1 = QGroupBox(self.reserveLeaderGroupBox_1)
+        self.reserveLeaderNameGroupBox_1.setObjectName(u"reserveLeaderNameGroupBox_1")
+        self.verticalLayout_19 = QVBoxLayout(self.reserveLeaderNameGroupBox_1)
+        self.verticalLayout_19.setObjectName(u"verticalLayout_19")
+        self.reserveLeaderNameLabel_1 = QLabel(self.reserveLeaderNameGroupBox_1)
+        self.reserveLeaderNameLabel_1.setObjectName(u"reserveLeaderNameLabel_1")
+        self.reserveLeaderNameLabel_1.setAutoFillBackground(False)
+        self.reserveLeaderNameLabel_1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout_19.addWidget(self.reserveLeaderNameLabel_1)
+
+
+        self.verticalLayout_13.addWidget(self.reserveLeaderNameGroupBox_1)
+
         self.reserveLeaderComboBox_1_1 = QComboBox(self.reserveLeaderGroupBox_1)
         self.reserveLeaderComboBox_1_1.setObjectName(u"reserveLeaderComboBox_1_1")
 
-        self.verticalLayout_80.addWidget(self.reserveLeaderComboBox_1_1)
+        self.verticalLayout_13.addWidget(self.reserveLeaderComboBox_1_1)
 
         self.reserveLeaderComboBox_1_2 = QComboBox(self.reserveLeaderGroupBox_1)
         self.reserveLeaderComboBox_1_2.setObjectName(u"reserveLeaderComboBox_1_2")
 
-        self.verticalLayout_80.addWidget(self.reserveLeaderComboBox_1_2)
+        self.verticalLayout_13.addWidget(self.reserveLeaderComboBox_1_2)
 
         self.reserveLeaderComboBox_1_3 = QComboBox(self.reserveLeaderGroupBox_1)
         self.reserveLeaderComboBox_1_3.setObjectName(u"reserveLeaderComboBox_1_3")
 
-        self.verticalLayout_80.addWidget(self.reserveLeaderComboBox_1_3)
+        self.verticalLayout_13.addWidget(self.reserveLeaderComboBox_1_3)
 
         self.reserveLeaderComboBox_1_4 = QComboBox(self.reserveLeaderGroupBox_1)
         self.reserveLeaderComboBox_1_4.setObjectName(u"reserveLeaderComboBox_1_4")
 
-        self.verticalLayout_80.addWidget(self.reserveLeaderComboBox_1_4)
+        self.verticalLayout_13.addWidget(self.reserveLeaderComboBox_1_4)
 
         self.reserveLeaderComboBox_1_5 = QComboBox(self.reserveLeaderGroupBox_1)
         self.reserveLeaderComboBox_1_5.setObjectName(u"reserveLeaderComboBox_1_5")
 
-        self.verticalLayout_80.addWidget(self.reserveLeaderComboBox_1_5)
+        self.verticalLayout_13.addWidget(self.reserveLeaderComboBox_1_5)
 
         self.reserveLeaderLevelGroupBox_1 = QGroupBox(self.reserveLeaderGroupBox_1)
         self.reserveLeaderLevelGroupBox_1.setObjectName(u"reserveLeaderLevelGroupBox_1")
@@ -1028,7 +1176,19 @@ class Ui_MainWindow(object):
         self.verticalLayout_74.addWidget(self.reserveLeaderLevelSpinBox_1)
 
 
-        self.verticalLayout_80.addWidget(self.reserveLeaderLevelGroupBox_1)
+        self.verticalLayout_13.addWidget(self.reserveLeaderLevelGroupBox_1)
+
+        self.reserveLeaderSkillPointGroupBox_1 = QGroupBox(self.reserveLeaderGroupBox_1)
+        self.reserveLeaderSkillPointGroupBox_1.setObjectName(u"reserveLeaderSkillPointGroupBox_1")
+        self.verticalLayout_112 = QVBoxLayout(self.reserveLeaderSkillPointGroupBox_1)
+        self.verticalLayout_112.setObjectName(u"verticalLayout_112")
+        self.reserveLeaderSkillPointSpinBox_1 = QSpinBox(self.reserveLeaderSkillPointGroupBox_1)
+        self.reserveLeaderSkillPointSpinBox_1.setObjectName(u"reserveLeaderSkillPointSpinBox_1")
+
+        self.verticalLayout_112.addWidget(self.reserveLeaderSkillPointSpinBox_1)
+
+
+        self.verticalLayout_13.addWidget(self.reserveLeaderSkillPointGroupBox_1)
 
 
         self.gridLayout.addWidget(self.reserveLeaderGroupBox_1, 0, 0, 1, 1)
@@ -1037,6 +1197,20 @@ class Ui_MainWindow(object):
         self.reserveLeaderGroupBox_2.setObjectName(u"reserveLeaderGroupBox_2")
         self.verticalLayout_94 = QVBoxLayout(self.reserveLeaderGroupBox_2)
         self.verticalLayout_94.setObjectName(u"verticalLayout_94")
+        self.reserveLeaderNameGroupBox_2 = QGroupBox(self.reserveLeaderGroupBox_2)
+        self.reserveLeaderNameGroupBox_2.setObjectName(u"reserveLeaderNameGroupBox_2")
+        self.verticalLayout_20 = QVBoxLayout(self.reserveLeaderNameGroupBox_2)
+        self.verticalLayout_20.setObjectName(u"verticalLayout_20")
+        self.reserveLeaderNameLabel_2 = QLabel(self.reserveLeaderNameGroupBox_2)
+        self.reserveLeaderNameLabel_2.setObjectName(u"reserveLeaderNameLabel_2")
+        self.reserveLeaderNameLabel_2.setAutoFillBackground(False)
+        self.reserveLeaderNameLabel_2.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout_20.addWidget(self.reserveLeaderNameLabel_2)
+
+
+        self.verticalLayout_94.addWidget(self.reserveLeaderNameGroupBox_2)
+
         self.reserveLeaderComboBox_2_1 = QComboBox(self.reserveLeaderGroupBox_2)
         self.reserveLeaderComboBox_2_1.setObjectName(u"reserveLeaderComboBox_2_1")
 
@@ -1074,6 +1248,18 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_94.addWidget(self.reserveLeaderLevelGroupBox_2)
 
+        self.reserveLeaderSkillPointGroupBox_2 = QGroupBox(self.reserveLeaderGroupBox_2)
+        self.reserveLeaderSkillPointGroupBox_2.setObjectName(u"reserveLeaderSkillPointGroupBox_2")
+        self.verticalLayout_113 = QVBoxLayout(self.reserveLeaderSkillPointGroupBox_2)
+        self.verticalLayout_113.setObjectName(u"verticalLayout_113")
+        self.reserveLeaderSkillPointSpinBox_2 = QSpinBox(self.reserveLeaderSkillPointGroupBox_2)
+        self.reserveLeaderSkillPointSpinBox_2.setObjectName(u"reserveLeaderSkillPointSpinBox_2")
+
+        self.verticalLayout_113.addWidget(self.reserveLeaderSkillPointSpinBox_2)
+
+
+        self.verticalLayout_94.addWidget(self.reserveLeaderSkillPointGroupBox_2)
+
 
         self.gridLayout.addWidget(self.reserveLeaderGroupBox_2, 0, 1, 1, 1)
 
@@ -1081,6 +1267,20 @@ class Ui_MainWindow(object):
         self.reserveLeaderGroupBox_3.setObjectName(u"reserveLeaderGroupBox_3")
         self.verticalLayout_95 = QVBoxLayout(self.reserveLeaderGroupBox_3)
         self.verticalLayout_95.setObjectName(u"verticalLayout_95")
+        self.reserveLeaderNameGroupBox_3 = QGroupBox(self.reserveLeaderGroupBox_3)
+        self.reserveLeaderNameGroupBox_3.setObjectName(u"reserveLeaderNameGroupBox_3")
+        self.verticalLayout_21 = QVBoxLayout(self.reserveLeaderNameGroupBox_3)
+        self.verticalLayout_21.setObjectName(u"verticalLayout_21")
+        self.reserveLeaderNameLabel_3 = QLabel(self.reserveLeaderNameGroupBox_3)
+        self.reserveLeaderNameLabel_3.setObjectName(u"reserveLeaderNameLabel_3")
+        self.reserveLeaderNameLabel_3.setAutoFillBackground(False)
+        self.reserveLeaderNameLabel_3.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout_21.addWidget(self.reserveLeaderNameLabel_3)
+
+
+        self.verticalLayout_95.addWidget(self.reserveLeaderNameGroupBox_3)
+
         self.reserveLeaderComboBox_3_1 = QComboBox(self.reserveLeaderGroupBox_3)
         self.reserveLeaderComboBox_3_1.setObjectName(u"reserveLeaderComboBox_3_1")
 
@@ -1118,6 +1318,18 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_95.addWidget(self.reserveLeaderLevelGroupBox_3)
 
+        self.reserveLeaderSkillPointGroupBox_3 = QGroupBox(self.reserveLeaderGroupBox_3)
+        self.reserveLeaderSkillPointGroupBox_3.setObjectName(u"reserveLeaderSkillPointGroupBox_3")
+        self.verticalLayout_114 = QVBoxLayout(self.reserveLeaderSkillPointGroupBox_3)
+        self.verticalLayout_114.setObjectName(u"verticalLayout_114")
+        self.reserveLeaderSkillPointSpinBox_3 = QSpinBox(self.reserveLeaderSkillPointGroupBox_3)
+        self.reserveLeaderSkillPointSpinBox_3.setObjectName(u"reserveLeaderSkillPointSpinBox_3")
+
+        self.verticalLayout_114.addWidget(self.reserveLeaderSkillPointSpinBox_3)
+
+
+        self.verticalLayout_95.addWidget(self.reserveLeaderSkillPointGroupBox_3)
+
 
         self.gridLayout.addWidget(self.reserveLeaderGroupBox_3, 0, 2, 1, 1)
 
@@ -1125,6 +1337,20 @@ class Ui_MainWindow(object):
         self.reserveLeaderGroupBox_4.setObjectName(u"reserveLeaderGroupBox_4")
         self.verticalLayout_96 = QVBoxLayout(self.reserveLeaderGroupBox_4)
         self.verticalLayout_96.setObjectName(u"verticalLayout_96")
+        self.reserveLeaderNameGroupBox_4 = QGroupBox(self.reserveLeaderGroupBox_4)
+        self.reserveLeaderNameGroupBox_4.setObjectName(u"reserveLeaderNameGroupBox_4")
+        self.verticalLayout_22 = QVBoxLayout(self.reserveLeaderNameGroupBox_4)
+        self.verticalLayout_22.setObjectName(u"verticalLayout_22")
+        self.reserveLeaderNameLabel_4 = QLabel(self.reserveLeaderNameGroupBox_4)
+        self.reserveLeaderNameLabel_4.setObjectName(u"reserveLeaderNameLabel_4")
+        self.reserveLeaderNameLabel_4.setAutoFillBackground(False)
+        self.reserveLeaderNameLabel_4.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout_22.addWidget(self.reserveLeaderNameLabel_4)
+
+
+        self.verticalLayout_96.addWidget(self.reserveLeaderNameGroupBox_4)
+
         self.reserveLeaderComboBox_4_1 = QComboBox(self.reserveLeaderGroupBox_4)
         self.reserveLeaderComboBox_4_1.setObjectName(u"reserveLeaderComboBox_4_1")
 
@@ -1162,6 +1388,18 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_96.addWidget(self.reserveLeaderLevelGroupBox_4)
 
+        self.reserveLeaderSkillPointGroupBox_4 = QGroupBox(self.reserveLeaderGroupBox_4)
+        self.reserveLeaderSkillPointGroupBox_4.setObjectName(u"reserveLeaderSkillPointGroupBox_4")
+        self.verticalLayout_115 = QVBoxLayout(self.reserveLeaderSkillPointGroupBox_4)
+        self.verticalLayout_115.setObjectName(u"verticalLayout_115")
+        self.reserveLeaderSkillPointSpinBox_4 = QSpinBox(self.reserveLeaderSkillPointGroupBox_4)
+        self.reserveLeaderSkillPointSpinBox_4.setObjectName(u"reserveLeaderSkillPointSpinBox_4")
+
+        self.verticalLayout_115.addWidget(self.reserveLeaderSkillPointSpinBox_4)
+
+
+        self.verticalLayout_96.addWidget(self.reserveLeaderSkillPointGroupBox_4)
+
 
         self.gridLayout.addWidget(self.reserveLeaderGroupBox_4, 0, 3, 1, 1)
 
@@ -1169,6 +1407,20 @@ class Ui_MainWindow(object):
         self.reserveLeaderGroupBox_5.setObjectName(u"reserveLeaderGroupBox_5")
         self.verticalLayout_97 = QVBoxLayout(self.reserveLeaderGroupBox_5)
         self.verticalLayout_97.setObjectName(u"verticalLayout_97")
+        self.reserveLeaderNameGroupBox_5 = QGroupBox(self.reserveLeaderGroupBox_5)
+        self.reserveLeaderNameGroupBox_5.setObjectName(u"reserveLeaderNameGroupBox_5")
+        self.verticalLayout_23 = QVBoxLayout(self.reserveLeaderNameGroupBox_5)
+        self.verticalLayout_23.setObjectName(u"verticalLayout_23")
+        self.reserveLeaderNameLabel_5 = QLabel(self.reserveLeaderNameGroupBox_5)
+        self.reserveLeaderNameLabel_5.setObjectName(u"reserveLeaderNameLabel_5")
+        self.reserveLeaderNameLabel_5.setAutoFillBackground(False)
+        self.reserveLeaderNameLabel_5.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.verticalLayout_23.addWidget(self.reserveLeaderNameLabel_5)
+
+
+        self.verticalLayout_97.addWidget(self.reserveLeaderNameGroupBox_5)
+
         self.reserveLeaderComboBox_5_1 = QComboBox(self.reserveLeaderGroupBox_5)
         self.reserveLeaderComboBox_5_1.setObjectName(u"reserveLeaderComboBox_5_1")
 
@@ -1206,6 +1458,18 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_97.addWidget(self.reserveLeaderLevelGroupBox_5)
 
+        self.reserveLeaderSkillPointGroupBox_5 = QGroupBox(self.reserveLeaderGroupBox_5)
+        self.reserveLeaderSkillPointGroupBox_5.setObjectName(u"reserveLeaderSkillPointGroupBox_5")
+        self.verticalLayout_116 = QVBoxLayout(self.reserveLeaderSkillPointGroupBox_5)
+        self.verticalLayout_116.setObjectName(u"verticalLayout_116")
+        self.reserveLeaderSkillPointSpinBox_5 = QSpinBox(self.reserveLeaderSkillPointGroupBox_5)
+        self.reserveLeaderSkillPointSpinBox_5.setObjectName(u"reserveLeaderSkillPointSpinBox_5")
+
+        self.verticalLayout_116.addWidget(self.reserveLeaderSkillPointSpinBox_5)
+
+
+        self.verticalLayout_97.addWidget(self.reserveLeaderSkillPointGroupBox_5)
+
 
         self.gridLayout.addWidget(self.reserveLeaderGroupBox_5, 0, 4, 1, 1)
 
@@ -1213,13 +1477,82 @@ class Ui_MainWindow(object):
         self.verticalLayout_90.addWidget(self.groupBox_15)
 
         self.tabWidget.addTab(self.leaderTab, "")
+        self.inventoryTab = QWidget()
+        self.inventoryTab.setObjectName(u"inventoryTab")
+        self.tabWidget.addTab(self.inventoryTab, "")
+        self.devTab = QWidget()
+        self.devTab.setObjectName(u"devTab")
+        self.verticalLayout_24 = QVBoxLayout(self.devTab)
+        self.verticalLayout_24.setObjectName(u"verticalLayout_24")
+        self.devTabWidget = QTabWidget(self.devTab)
+        self.devTabWidget.setObjectName(u"devTabWidget")
+        self.locTab = QWidget()
+        self.locTab.setObjectName(u"locTab")
+        self.verticalLayout_25 = QVBoxLayout(self.locTab)
+        self.verticalLayout_25.setObjectName(u"verticalLayout_25")
+        self.locTableWidget = QTableWidget(self.locTab)
+        if (self.locTableWidget.columnCount() < 2):
+            self.locTableWidget.setColumnCount(2)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.locTableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.locTableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        if (self.locTableWidget.rowCount() < 5):
+            self.locTableWidget.setRowCount(5)
+        self.locTableWidget.setObjectName(u"locTableWidget")
+        self.locTableWidget.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
+        self.locTableWidget.setAutoFillBackground(False)
+        self.locTableWidget.setSizeAdjustPolicy(QAbstractScrollArea.SizeAdjustPolicy.AdjustIgnored)
+        self.locTableWidget.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
+        self.locTableWidget.setTextElideMode(Qt.TextElideMode.ElideRight)
+        self.locTableWidget.setRowCount(5)
+        self.locTableWidget.setSupportedDragActions(Qt.DropAction.IgnoreAction)
+        self.locTableWidget.verticalHeader().setVisible(True)
+
+        self.verticalLayout_25.addWidget(self.locTableWidget)
+
+        self.devTabWidget.addTab(self.locTab, "")
+        self.unitTemplateTab = QWidget()
+        self.unitTemplateTab.setObjectName(u"unitTemplateTab")
+        self.verticalLayout_26 = QVBoxLayout(self.unitTemplateTab)
+        self.verticalLayout_26.setObjectName(u"verticalLayout_26")
+        self.unitTemplateTreeWidget = QTreeWidget(self.unitTemplateTab)
+        self.unitTemplateTreeWidget.setObjectName(u"unitTemplateTreeWidget")
+
+        self.verticalLayout_26.addWidget(self.unitTemplateTreeWidget)
+
+        self.devTabWidget.addTab(self.unitTemplateTab, "")
+        self.flagTemplateTab = QWidget()
+        self.flagTemplateTab.setObjectName(u"flagTemplateTab")
+        self.verticalLayout_27 = QVBoxLayout(self.flagTemplateTab)
+        self.verticalLayout_27.setObjectName(u"verticalLayout_27")
+        self.flagTemplateTreeWidget = QTreeWidget(self.flagTemplateTab)
+        self.flagTemplateTreeWidget.setObjectName(u"flagTemplateTreeWidget")
+
+        self.verticalLayout_27.addWidget(self.flagTemplateTreeWidget)
+
+        self.devTabWidget.addTab(self.flagTemplateTab, "")
+        self.bustTemplateTab = QWidget()
+        self.bustTemplateTab.setObjectName(u"bustTemplateTab")
+        self.verticalLayout_28 = QVBoxLayout(self.bustTemplateTab)
+        self.verticalLayout_28.setObjectName(u"verticalLayout_28")
+        self.bustTemplateTreeWidget = QTreeWidget(self.bustTemplateTab)
+        self.bustTemplateTreeWidget.setObjectName(u"bustTemplateTreeWidget")
+
+        self.verticalLayout_28.addWidget(self.bustTemplateTreeWidget)
+
+        self.devTabWidget.addTab(self.bustTemplateTab, "")
+
+        self.verticalLayout_24.addWidget(self.devTabWidget)
+
+        self.tabWidget.addTab(self.devTab, "")
 
         self.verticalLayout_3.addWidget(self.tabWidget)
 
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 809, 33))
+        self.menubar.setGeometry(QRect(0, 0, 1242, 33))
         self.menuFile = QMenu(self.menubar)
         self.menuFile.setObjectName(u"menuFile")
         MainWindow.setMenuBar(self.menubar)
@@ -1233,7 +1566,8 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(3)
+        self.devTabWidget.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1295,6 +1629,7 @@ class Ui_MainWindow(object):
         self.actionLoad_Save_File.setText(QCoreApplication.translate("MainWindow", u"Load File", None))
         self.actionSave_File.setText(QCoreApplication.translate("MainWindow", u"Save File", None))
         self.actionLoad_File.setText(QCoreApplication.translate("MainWindow", u"Load File", None))
+        self.actionView_Templates.setText(QCoreApplication.translate("MainWindow", u"View Templates", None))
         self.goldGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Thalers", None))
         self.supplyGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Supply", None))
         self.manpowerGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Manpower", None))
@@ -1358,27 +1693,73 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.armyTab), QCoreApplication.translate("MainWindow", u"Army", None))
         self.leaderGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Leaders", None))
         self.leaderGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Leader #1", None))
+        self.leaderNameGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
+        self.leaderNameLabel_1.setText("")
         self.leaderLevelGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Level", None))
+        self.leaderSkillPointGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.leaderGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Leader #2", None))
+        self.leaderNameGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
+        self.leaderNameLabel_2.setText("")
         self.leaderLevelGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Level", None))
+        self.leaderSkillPointGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.leaderGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Leader #3", None))
+        self.leaderNameGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
+        self.leaderNameLabel_3.setText("")
         self.leaderLevelGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Level", None))
+        self.leaderSkillPointGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.leaderGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Leader #4", None))
+        self.leaderNameGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
+        self.leaderNameLabel_4.setText("")
         self.leaderLevelGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Level", None))
+        self.leaderSkillPointGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.leaderGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Leader #5", None))
+        self.leaderNameGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
+        self.leaderNameLabel_5.setText("")
         self.leaderLevelGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Level", None))
+        self.leaderSkillPointGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.groupBox_15.setTitle(QCoreApplication.translate("MainWindow", u"Reserve", None))
         self.reserveLeaderGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Reserve Leader #1", None))
+        self.reserveLeaderNameGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
+        self.reserveLeaderNameLabel_1.setText("")
         self.reserveLeaderLevelGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Level", None))
+        self.reserveLeaderSkillPointGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.reserveLeaderGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Reserve Leader #2", None))
+        self.reserveLeaderNameGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
+        self.reserveLeaderNameLabel_2.setText("")
         self.reserveLeaderLevelGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Level", None))
+        self.reserveLeaderSkillPointGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.reserveLeaderGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Reserve Leader #3", None))
+        self.reserveLeaderNameGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
+        self.reserveLeaderNameLabel_3.setText("")
         self.reserveLeaderLevelGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Level", None))
+        self.reserveLeaderSkillPointGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.reserveLeaderGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Reserve Leader #4", None))
+        self.reserveLeaderNameGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
+        self.reserveLeaderNameLabel_4.setText("")
         self.reserveLeaderLevelGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Level", None))
+        self.reserveLeaderSkillPointGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.reserveLeaderGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Reserve Leader #5", None))
+        self.reserveLeaderNameGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
+        self.reserveLeaderNameLabel_5.setText("")
         self.reserveLeaderLevelGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Level", None))
+        self.reserveLeaderSkillPointGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.leaderTab), QCoreApplication.translate("MainWindow", u"Leaders", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.inventoryTab), QCoreApplication.translate("MainWindow", u"Inventory", None))
+        ___qtablewidgetitem = self.locTableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Key", None));
+        ___qtablewidgetitem1 = self.locTableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Value", None));
+        self.devTabWidget.setTabText(self.devTabWidget.indexOf(self.locTab), QCoreApplication.translate("MainWindow", u"Loc", None))
+        ___qtreewidgetitem = self.unitTemplateTreeWidget.headerItem()
+        ___qtreewidgetitem.setText(0, QCoreApplication.translate("MainWindow", u"Unit Template", None));
+        self.devTabWidget.setTabText(self.devTabWidget.indexOf(self.unitTemplateTab), QCoreApplication.translate("MainWindow", u"UnitTemplate", None))
+        ___qtreewidgetitem1 = self.flagTemplateTreeWidget.headerItem()
+        ___qtreewidgetitem1.setText(0, QCoreApplication.translate("MainWindow", u"Flag Template", None));
+        self.devTabWidget.setTabText(self.devTabWidget.indexOf(self.flagTemplateTab), QCoreApplication.translate("MainWindow", u"FlagTemplate", None))
+        ___qtreewidgetitem2 = self.bustTemplateTreeWidget.headerItem()
+        ___qtreewidgetitem2.setText(0, QCoreApplication.translate("MainWindow", u"Bust Template", None));
+        self.devTabWidget.setTabText(self.devTabWidget.indexOf(self.bustTemplateTab), QCoreApplication.translate("MainWindow", u"BustTemplate", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.devTab), QCoreApplication.translate("MainWindow", u"Dev", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
     # retranslateUi
 

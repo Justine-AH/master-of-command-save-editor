@@ -9,13 +9,12 @@ from PySide6.QtWidgets import (
     QMainWindow
 )
 from PySide6.QtCore import Qt
-from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QCheckBox)
+from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QTreeWidgetItem)
 from save_editor_ui import Ui_MainWindow
 from constants import UNITS
 
 DEV_FEATURES = os.getenv("DEV_FEATURES", "").lower() == "true"
 
-# TODO: Yeesh, the unit stats are separate from unit type... might need to read game files
 class SaveEditor(QMainWindow, Ui_MainWindow):
     def __init__(self, q_app, parent=None):
         super().__init__(parent)
@@ -43,7 +42,11 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         
         self.load_templates()
         
+        index = self.tabWidget.indexOf(self.devTab)
+        self.tabWidget.setTabVisible(index, False)
+        
         if DEV_FEATURES:
+            self.tabWidget.setTabVisible(index, True)
             with open("./save_folder/test.fcs", "r", encoding="utf-8") as f:
                 self.data = json.load(f)
                 
@@ -214,6 +217,27 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
                 bust_templates[file.stem] = json.load(f)
         
         self.bust_template = bust_templates
+        
+        self.unitTemplateTreeWidget.setHeaderLabels(["Key", "Value"])
+        self.add_dict_to_tree(self.unitTemplateTreeWidget.invisibleRootItem(), self.unit_template)
+        self.flagTemplateTreeWidget.setHeaderLabels(["Key", "Value"])
+        self.add_dict_to_tree(self.flagTemplateTreeWidget.invisibleRootItem(), self.flag_template)
+        self.bustTemplateTreeWidget.setHeaderLabels(["Key", "Value"])
+        self.add_dict_to_tree(self.bustTemplateTreeWidget.invisibleRootItem(), self.bust_template)
+        
+    def add_dict_to_tree(self, parent, data):
+        for k, v in data.items():
+            item = QTreeWidgetItem([str(k)])
+
+            if isinstance(v, dict):
+                self.add_dict_to_tree(item, v)
+            elif isinstance(v, list):
+                for i, val in enumerate(v):
+                    self.add_dict_to_tree(item, {f"[{i}]": val})
+            else:
+                item.setText(1, str(v))
+
+            parent.addChild(item)
             
 if __name__ == "__main__":
     app = QApplication(sys.argv)
