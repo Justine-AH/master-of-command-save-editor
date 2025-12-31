@@ -1,0 +1,1747 @@
+{
+  "FlagTemplates": {
+    "ID": {
+      "PrimaryColors": [
+        "Primary Colors"
+      ],
+      "SecondaryColors": [
+        "Secondary Colors"
+      ],
+      "Patterns": [
+        "Patterns"
+      ],
+      "Emblems": [
+        "Emblems"
+      ]
+    },
+    "Prussia_Main": {
+      "PrimaryColors": [
+        "97C77C",
+        "769B39",
+        "EEE03F",
+        "E4B34E",
+        "2D2D2D",
+        "D81D21",
+        "9E3947",
+        "950835",
+        "E6E6E6",
+        "002D61",
+        "2350A3",
+        "0D73E6",
+        "4B81B5"
+      ],
+      "SecondaryColors": [
+        "4B81B5",
+        "D81D21",
+        "EEE03F",
+        "E6E6E6",
+        "2D2D2D"
+      ],
+      "Patterns": [
+        "PRUSSIA_PATTERN_1",
+        "PRUSSIA_PATTERN_2",
+        "PRUSSIA_PATTERN_3",
+        "PRUSSIA_PATTERN_4",
+        "PRUSSIA_PATTERN_6"
+      ],
+      "Emblems": [
+        "Emblem_PRU_Infantry_01",
+        "Emblem_PRU_Infantry_02",
+        "Emblem_PRU_Infantry_03",
+        "Emblem_PRU_Infantry_04",
+        "Emblem_PRU_Infantry_05",
+        "Emblem_PRU_Infantry_06"
+      ]
+    },
+    "Prussia_Colorful": {
+      "PrimaryColors": [
+        "97C77C",
+        "769B39",
+        "EEE03F",
+        "E4B34E",
+        "2D2D2D",
+        "D81D21",
+        "9E3947",
+        "950835",
+        "E6E6E6",
+        "002D61",
+        "2350A3",
+        "0D73E6",
+        "4B81B5"
+      ],
+      "SecondaryColors": [
+        "F47D9D",
+        "97C77C",
+        "769B39",
+        "EEE03F",
+        "E4B34E",
+        "2D2D2D",
+        "D65A1E",
+        "D81D21",
+        "9E3947",
+        "950835",
+        "E6E6E6",
+        "002D61",
+        "2350A3",
+        "0D73E6",
+        "4B81B5"
+      ],
+      "Patterns": [
+        "PRUSSIA_PATTERN_1",
+        "PRUSSIA_PATTERN_2",
+        "PRUSSIA_PATTERN_3",
+        "PRUSSIA_PATTERN_4",
+        "PRUSSIA_PATTERN_6"
+      ],
+      "Emblems": [
+        "Emblem_PRU_Infantry_01",
+        "Emblem_PRU_Infantry_02",
+        "Emblem_PRU_Infantry_03",
+        "Emblem_PRU_Infantry_04",
+        "Emblem_PRU_Infantry_05",
+        "Emblem_PRU_Infantry_06"
+      ]
+    },
+    "Prussian_Cuirassiers": {
+      "PrimaryColors": [
+        "97C77C",
+        "769B39",
+        "EEE03F",
+        "E4B34E",
+        "2D2D2D",
+        "D81D21",
+        "9E3947",
+        "950835",
+        "E6E6E6",
+        "002D61",
+        "2350A3",
+        "0D73E6",
+        "4B81B5"
+      ],
+      "SecondaryColors": [
+        "4B81B5",
+        "D81D21",
+        "EEE03F",
+        "E6E6E6",
+        "2D2D2D"
+      ],
+      "Patterns": [
+        "PRUSSIA_PATTERN_1",
+        "PRUSSIA_PATTERN_2",
+        "PRUSSIA_PATTERN_3",
+        "PRUSSIA_PATTERN_4",
+        "PRUSSIA_PATTERN_6"
+      ],
+      "Emblems": [
+        "Emblem_PRU_Cavalry_01",
+        "Emblem_PRU_Cavalry_03",
+        "Emblem_PRU_Cavalry_02"
+      ]
+    },
+    "Prussia_Cavalry": {
+      "PrimaryColors": [
+        "97C77C",
+        "769B39",
+        "EEE03F",
+        "E4B34E",
+        "2D2D2D",
+        "D81D21",
+        "9E3947",
+        "950835",
+        "E6E6E6",
+        "002D61",
+        "2350A3",
+        "0D73E6",
+        "4B81B5"
+      ],
+      "SecondaryColors": [
+        "F47D9D",
+        "97C77C",
+        "769B39",
+        "EEE03F",
+        "E4B34E",
+        "2D2D2D",
+        "D65A1E",
+        "D81D21",
+        "9E3947",
+        "950835",
+        "E6E6E6",
+        "002D61",
+        "2350A3",
+        "0D73E6",
+        "4B81B5"
+      ],
+      "Patterns": [
+        "PRUSSIA_PATTERN_1",
+        "PRUSSIA_PATTERN_2",
+        "PRUSSIA_PATTERN_3",
+        "PRUSSIA_PATTERN_4",
+        "PRUSSIA_PATTERN_6"
+      ],
+      "Emblems": [
+        "Emblem_PRU_Cavalry_01",
+        "Emblem_PRU_Cavalry_03",
+        "Emblem_PRU_Cavalry_02"
+      ]
+    },
+    "Prussian_Artillery": {
+      "PrimaryColors": [
+        "97C77C",
+        "769B39",
+        "EEE03F",
+        "E4B34E",
+        "2D2D2D",
+        "D81D21",
+        "9E3947",
+        "950835",
+        "E6E6E6",
+        "002D61",
+        "2350A3",
+        "0D73E6",
+        "4B81B5"
+      ],
+      "SecondaryColors": [
+        "4B81B5",
+        "D81D21",
+        "EEE03F",
+        "E6E6E6",
+        "2D2D2D"
+      ],
+      "Patterns": [
+        "PRUSSIA_PATTERN_1",
+        "PRUSSIA_PATTERN_2",
+        "PRUSSIA_PATTERN_3",
+        "PRUSSIA_PATTERN_4",
+        "PRUSSIA_PATTERN_6"
+      ],
+      "Emblems": [
+        "Emblem_PRU_Artillery_01"
+      ]
+    },
+    "Prussian_Guards": {
+      "PrimaryColors": [
+        "E6E4D5"
+      ],
+      "SecondaryColors": [
+        "C7C7C7"
+      ],
+      "Patterns": [
+        "GENERIC_PATTERN27"
+      ],
+      "Emblems": [
+        "Emblem_PRU_Infantry_07"
+      ]
+    },
+    "Prussia_HeinrichVonPreussenFusiliers": {
+      "PrimaryColors": [
+        "abd2d5"
+      ],
+      "SecondaryColors": [
+        "abd2d5"
+      ],
+      "Patterns": [
+        "PRUSSIA_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_PRU_Infantry_02"
+      ]
+    },
+    "Prussia_WinterfeldtGrenadiers": {
+      "PrimaryColors": [
+        "e6aa53"
+      ],
+      "SecondaryColors": [
+        "e6aa53"
+      ],
+      "Patterns": [
+        "PRUSSIA_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_PRU_Infantry_02"
+      ]
+    },
+    "Prussia_PrinzvonPreussenMusketeers": {
+      "PrimaryColors": [
+        "4078a7"
+      ],
+      "SecondaryColors": [
+        "c75658"
+      ],
+      "Patterns": [
+        "PRUSSIA_PATTERN_2"
+      ],
+      "Emblems": [
+        "Emblem_PRU_Infantry_02"
+      ]
+    },
+    "Prussia_GuardGrenadiers": {
+      "PrimaryColors": [
+        "f4f5e5"
+      ],
+      "SecondaryColors": [
+        "f4f5e5"
+      ],
+      "Patterns": [
+        "PRUSSIA_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_PRU_Infantry_08"
+      ]
+    },
+    "Prussia_DeathsHeadHussars": {
+      "PrimaryColors": [
+        "333333"
+      ],
+      "SecondaryColors": [
+        "f5f6e6"
+      ],
+      "Patterns": [
+        "GENERIC_PATTERN10"
+      ],
+      "Emblems": [
+        "Emblem_GEN_05"
+      ]
+    },
+    "Prussia_BayreuthDragoons": {
+      "PrimaryColors": [
+        "333333"
+      ],
+      "SecondaryColors": [
+        "333333"
+      ],
+      "Patterns": [
+        "PRUSSIA_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_PRU_Cavalry_01"
+      ]
+    },
+    "Prussia_PennevaireLifeCarabiniers": {
+      "PrimaryColors": [
+        "87a4c8"
+      ],
+      "SecondaryColors": [
+        "87a4c8"
+      ],
+      "Patterns": [
+        "PRUSSIA_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_PRU_Cavalry_01"
+      ]
+    },
+    "Prussia_LeNobleJaegers": {
+      "PrimaryColors": [
+        "339c68"
+      ],
+      "SecondaryColors": [
+        "f2f3e3"
+      ],
+      "Patterns": [
+        "PRUSSIA_PATTERN_1"
+      ],
+      "Emblems": [
+        "Emblem_PRU_Infantry_06"
+      ]
+    },
+    "Prussia_AweydeFeldjaegers": {
+      "PrimaryColors": [
+        "ebc654"
+      ],
+      "SecondaryColors": [
+        "f2f3e3"
+      ],
+      "Patterns": [
+        "PRUSSIA_PATTERN_1"
+      ],
+      "Emblems": [
+        "Emblem_PRU_Infantry_05"
+      ]
+    },
+    "Prussia_ItzenplitzMusketeers": {
+      "PrimaryColors": [
+        "B73841"
+      ],
+      "SecondaryColors": [
+        "2B2B2B"
+      ],
+      "Patterns": [
+        "PRUSSIA_PATTERN_4"
+      ],
+      "Emblems": [
+        "Emblem_PRU_Infantry_04"
+      ]
+    },
+    "Austria_Main": {
+      "PrimaryColors": [
+        "E4B34E",
+        "E6E6E6"
+      ],
+      "SecondaryColors": [
+        "E22D39"
+      ],
+      "Patterns": [
+        "AUSTRIA_PATTERN_1",
+        "AUSTRIA_PATTERN_2",
+        "AUSTRIA_PATTERN_3",
+        "AUSTRIA_PATTERN_5"
+      ],
+      "Emblems": [
+        "Emblem_AUS_01",
+        "Emblem_AUS_03",
+        "Emblem_AUS_04",
+        "Emblem_AUS_05",
+        "Emblem_AUS_06"
+      ]
+    },
+    "Austria_ColoredFlags": {
+      "PrimaryColors": [
+        "E4B34E",
+        "E6E6E6"
+      ],
+      "SecondaryColors": [
+        "2D2D2D",
+        "E22D39",
+        "FFA5A6",
+        "314B62",
+        "87BBD3",
+        "002F59",
+        "0D73E6",
+        "752823",
+        "6B3A7C",
+        "426830"
+      ],
+      "Patterns": [
+        "AUSTRIA_PATTERN_1",
+        "AUSTRIA_PATTERN_2",
+        "AUSTRIA_PATTERN_3",
+        "AUSTRIA_PATTERN_5"
+      ],
+      "Emblems": [
+        "Emblem_AUS_01",
+        "Emblem_AUS_03",
+        "Emblem_AUS_04",
+        "Emblem_AUS_05",
+        "Emblem_AUS_06"
+      ]
+    },
+    "Austria_Hungarian": {
+      "PrimaryColors": [
+        "E4B34E",
+        "E6E6E6"
+      ],
+      "SecondaryColors": [
+        "2D2D2D",
+        "E22D39",
+        "FFA5A6",
+        "314B62",
+        "87BBD3",
+        "002F59",
+        "0D73E6",
+        "752823",
+        "6B3A7C",
+        "426830"
+      ],
+      "Patterns": [
+        "AUSTRIA_PATTERN_1",
+        "AUSTRIA_PATTERN_2",
+        "AUSTRIA_PATTERN_3",
+        "AUSTRIA_PATTERN_4",
+        "AUSTRIA_PATTERN_5"
+      ],
+      "Emblems": [
+        "Emblem_AUS_01",
+        "Emblem_AUS_02",
+        "Emblem_AUS_03",
+        "Emblem_AUS_04",
+        "Emblem_AUS_06",
+        "Emblem_AUS_07",
+        "Emblem_AUS_08"
+      ]
+    },
+    "Austria_HungarianCavalry": {
+      "PrimaryColors": [
+        "E4B34E",
+        "E6E6E6"
+      ],
+      "SecondaryColors": [
+        "2D2D2D",
+        "E22D39",
+        "FFA5A6",
+        "314B62",
+        "87BBD3",
+        "002F59",
+        "0D73E6",
+        "752823",
+        "6B3A7C",
+        "426830"
+      ],
+      "Patterns": [
+        "AUSTRIA_PATTERN_1",
+        "AUSTRIA_PATTERN_2",
+        "AUSTRIA_PATTERN_3",
+        "AUSTRIA_PATTERN_4",
+        "AUSTRIA_PATTERN_5"
+      ],
+      "Emblems": [
+        "Emblem_AUS_01",
+        "Emblem_AUS_02",
+        "Emblem_AUS_03",
+        "Emblem_AUS_04",
+        "Emblem_AUS_06",
+        "Emblem_AUS_07",
+        "Emblem_AUS_08",
+        "Emblem_AUS_09"
+      ]
+    },
+    "Austria_DeutschmeisterFusiliers": {
+      "PrimaryColors": [
+        "F5DA4B"
+      ],
+      "SecondaryColors": [
+        "ac1d1e"
+      ],
+      "Patterns": [
+        "AUSTRIA_PATTERN_2"
+      ],
+      "Emblems": [
+        "Emblem_AUS_01"
+      ]
+    },
+    "Austria_EsterhazyFusiliers": {
+      "PrimaryColors": [
+        "e5e5e5"
+      ],
+      "SecondaryColors": [
+        "ac1d1e"
+      ],
+      "Patterns": [
+        "AUSTRIA_PATTERN_2"
+      ],
+      "Emblems": [
+        "Emblem_AUS_08"
+      ]
+    },
+    "Austria_DeLigneFusiliers": {
+      "PrimaryColors": [
+        "F5DA4B"
+      ],
+      "SecondaryColors": [
+        "ac1d1e"
+      ],
+      "Patterns": [
+        "AUSTRIA_PATTERN_2"
+      ],
+      "Emblems": [
+        "Emblem_AUS_02"
+      ]
+    },
+    "Austria_OtocanerGrenzers": {
+      "PrimaryColors": [
+        "e5e5e5"
+      ],
+      "SecondaryColors": [
+        "ac1d1e"
+      ],
+      "Patterns": [
+        "AUSTRIA_PATTERN_2"
+      ],
+      "Emblems": [
+        "Emblem_AUS_03"
+      ]
+    },
+    "Austria_SerimanGrenadiers": {
+      "PrimaryColors": [
+        "e5e5e5"
+      ],
+      "SecondaryColors": [
+        "ac1d1e"
+      ],
+      "Patterns": [
+        "AUSTRIA_PATTERN_2"
+      ],
+      "Emblems": [
+        "Emblem_AUS_04"
+      ]
+    },
+    "Austria_GreenLoudonGrenadiers": {
+      "PrimaryColors": [
+        "F5DA4B"
+      ],
+      "SecondaryColors": [
+        "ac1d1e"
+      ],
+      "Patterns": [
+        "AUSTRIA_PATTERN_2"
+      ],
+      "Emblems": [
+        "Emblem_AUS_05"
+      ]
+    },
+    "Austria_KaiserFranzHussars": {
+      "PrimaryColors": [
+        "F5DA4B"
+      ],
+      "SecondaryColors": [
+        "ac1d1e"
+      ],
+      "Patterns": [
+        "AUSTRIA_PATTERN_3"
+      ],
+      "Emblems": [
+        "Emblem_AUS_06"
+      ]
+    },
+    "Austria_ErzherzogJosephDragoons": {
+      "PrimaryColors": [
+        "F5DA4B"
+      ],
+      "SecondaryColors": [
+        "ac1d1e"
+      ],
+      "Patterns": [
+        "AUSTRIA_PATTERN_3"
+      ],
+      "Emblems": [
+        "Emblem_AUS_04"
+      ]
+    },
+    "Austria_AltModenaCuirassiers": {
+      "PrimaryColors": [
+        "F5DA4B"
+      ],
+      "SecondaryColors": [
+        "ac1d1e"
+      ],
+      "Patterns": [
+        "AUSTRIA_PATTERN_3"
+      ],
+      "Emblems": [
+        "Emblem_AUS_05"
+      ]
+    },
+    "Austria_PerkoppArtillery": {
+      "PrimaryColors": [
+        "e5e5e5"
+      ],
+      "SecondaryColors": [
+        "ac1d1e"
+      ],
+      "Patterns": [
+        "AUSTRIA_PATTERN_2"
+      ],
+      "Emblems": [
+        "Emblem_AUS_01"
+      ]
+    },
+    "Russia_Main": {
+      "PrimaryColors": [
+        "F0824D",
+        "E6E6E6",
+        "16654F",
+        "AE2414",
+        "EDB61D",
+        "2D467F",
+        "51924A"
+      ],
+      "SecondaryColors": [
+        "F0824D",
+        "E6E6E6",
+        "16654F",
+        "AE2414",
+        "EDB61D",
+        "2D467F",
+        "51924A"
+      ],
+      "Patterns": [
+        "RUSSIA_PATTERN_3",
+        "RUSSIA_PATTERN_4"
+      ],
+      "Emblems": [
+        "Emblem_RUS_Infantry_01",
+        "Emblem_RUS_Infantry_02",
+        "Emblem_RUS_Infantry_03",
+        "Emblem_RUS_Infantry_04",
+        "Emblem_RUS_Infantry_05",
+        "Emblem_RUS_Infantry_06"
+      ]
+    },
+    "Russia_Cavalry": {
+      "PrimaryColors": [
+        "F0824D",
+        "E6E6E6",
+        "16654F",
+        "AE2414",
+        "EDB61D",
+        "2D467F",
+        "51924A"
+      ],
+      "SecondaryColors": [
+        "F0824D",
+        "E6E6E6",
+        "16654F",
+        "AE2414",
+        "EDB61D",
+        "2D467F",
+        "51924A"
+      ],
+      "Patterns": [
+        "RUSSIA_PATTERN_1_Gold",
+        "RUSSIA_PATTERN_1_Silver",
+        "RUSSIA_PATTERN_2_Gold",
+        "RUSSIA_PATTERN_2_Silver",
+        "RUSSIA_PATTERN_3",
+        "RUSSIA_PATTERN_4"
+      ],
+      "Emblems": [
+        "Emblem_RUS_Cuirassiers_01",
+        "Emblem_RUS_Cuirassiers_02"
+      ]
+    },
+    "Russia_Grenadiers": {
+      "PrimaryColors": [
+        "F0824D",
+        "E6E6E6",
+        "16654F",
+        "AE2414",
+        "EDB61D",
+        "2D467F",
+        "51924A"
+      ],
+      "SecondaryColors": [
+        "F0824D",
+        "E6E6E6",
+        "16654F",
+        "AE2414",
+        "EDB61D",
+        "2D467F",
+        "51924A"
+      ],
+      "Patterns": [
+        "RUSSIA_PATTERN_3",
+        "RUSSIA_PATTERN_4"
+      ],
+      "Emblems": [
+        "Emblem_RUS_Grenadiers_01"
+      ]
+    },
+    "Russia_Observation": {
+      "PrimaryColors": [
+        "E6E6E6",
+        "2D05B4",
+        "F30B0B",
+        "0AB101",
+        "96CFEA",
+        "FEFA03"
+      ],
+      "SecondaryColors": [
+        "E6E6E6",
+        "2D05B4",
+        "F30B0B",
+        "0AB101",
+        "96CFEA",
+        "FEFA03"
+      ],
+      "Patterns": [
+        "RUSSIA_PATTERN_3",
+        "RUSSIA_PATTERN_4"
+      ],
+      "Emblems": [
+        "Emblem_RUS_Observation_01"
+      ]
+    },
+    "Russia_Artillery": {
+      "PrimaryColors": [
+        "F0824D",
+        "E6E6E6",
+        "16654F",
+        "AE2414",
+        "EDB61D",
+        "2D467F",
+        "51924A"
+      ],
+      "SecondaryColors": [
+        "F0824D",
+        "E6E6E6",
+        "16654F",
+        "AE2414",
+        "EDB61D",
+        "2D467F",
+        "51924A"
+      ],
+      "Patterns": [
+        "RUSSIA_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_RUS_Artillery_01"
+      ]
+    },
+    "Russia_Cossacks": {
+      "PrimaryColors": [
+        "FEFA03",
+        "F30B0B",
+        "E6E6E6",
+        "2F74BB",
+        "2D2D2D"
+      ],
+      "SecondaryColors": [
+        "FEFA03",
+        "F30B0B",
+        "E6E6E6",
+        "2F74BB",
+        "2D2D2D"
+      ],
+      "Patterns": [
+        "RUSSIA_PATTERN_0",
+        "GENERIC_PATTERN19",
+        "GENERIC_PATTERN21",
+        "GENERIC_PATTERN20"
+      ],
+      "Emblems": [
+        "Emblem_GEN_07",
+        "Emblem_GEN_25"
+      ]
+    },
+    "Russia_PskovskiyMusketeers": {
+      "PrimaryColors": [
+        "036149"
+      ],
+      "SecondaryColors": [
+        "f7a623"
+      ],
+      "Patterns": [
+        "RUSSIA_PATTERN_3"
+      ],
+      "Emblems": [
+        "Emblem_RUS_Infantry_02"
+      ]
+    },
+    "Russia_KievskiyMusketeers": {
+      "PrimaryColors": [
+        "c63e30"
+      ],
+      "SecondaryColors": [
+        "efb61f"
+      ],
+      "Patterns": [
+        "RUSSIA_PATTERN_3"
+      ],
+      "Emblems": [
+        "Emblem_RUS_Infantry_04"
+      ]
+    },
+    "Russia_MoellerSakmoelskyJaegers": {
+      "PrimaryColors": [
+        "005f49"
+      ],
+      "SecondaryColors": [
+        "005f49"
+      ],
+      "Patterns": [
+        "RUSSIA_PATTERN_4"
+      ],
+      "Emblems": [
+        "Emblem_RUS_Infantry_01"
+      ]
+    },
+    "Russia_1stGrenadiers": {
+      "PrimaryColors": [
+        "993C2D"
+      ],
+      "SecondaryColors": [
+        "E5E5E5"
+      ],
+      "Patterns": [
+        "RUSSIA_PATTERN_3"
+      ],
+      "Emblems": [
+        "Emblem_RUS_Grenadiers_01"
+      ]
+    },
+    "Russia_PreobrazLifeGuards": {
+      "PrimaryColors": [
+        "F1A571"
+      ],
+      "SecondaryColors": [
+        "BC473A"
+      ],
+      "Patterns": [
+        "RUSSIA_PATTERN_2_Gold"
+      ],
+      "Emblems": [
+        "Emblem_RUS_LifeGuards_01"
+      ]
+    },
+    "Russia_SerbskiHussars": {
+      "PrimaryColors": [
+        "488ffc"
+      ],
+      "SecondaryColors": [
+        "488ffc"
+      ],
+      "Patterns": [
+        "RUSSIA_PATTERN_2_Gold"
+      ],
+      "Emblems": [
+        "Emblem_RUS_Cuirassiers_01"
+      ]
+    },
+    "Russia_ChuvuevCossacks": {
+      "PrimaryColors": [
+        "ff0000"
+      ],
+      "SecondaryColors": [
+        "ff0000"
+      ],
+      "Patterns": [
+        "RUSSIA_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_GEN_07"
+      ]
+    },
+    "Russia_TverskoyDragoons": {
+      "PrimaryColors": [
+        "0f2b7f"
+      ],
+      "SecondaryColors": [
+        "0f2b7f"
+      ],
+      "Patterns": [
+        "RUSSIA_PATTERN_2_Gold"
+      ],
+      "Emblems": [
+        "Emblem_RUS_Infantry_02"
+      ]
+    },
+    "Russia_MuennichCuirassiers": {
+      "PrimaryColors": [
+        "468cfc"
+      ],
+      "SecondaryColors": [
+        "468cfc"
+      ],
+      "Patterns": [
+        "RUSSIA_PATTERN_2_Gold"
+      ],
+      "Emblems": [
+        "Emblem_RUS_Cuirassiers_01"
+      ]
+    },
+    "Russia_ShuvalovHowitzers": {
+      "PrimaryColors": [
+        "fefaef"
+      ],
+      "SecondaryColors": [
+        "fefaef"
+      ],
+      "Patterns": [
+        "RUSSIA_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_RUS_Artillery_01"
+      ]
+    },
+    "Britain_Main": {
+      "PrimaryColors": [
+        "003068",
+        "0054B5",
+        "FFDC96",
+        "FFC500",
+        "426830",
+        "E6E6E6",
+        "97CA51",
+        "B22424",
+        "2D2D2D",
+        "643E87",
+        "CE181D",
+        "F26A20"
+      ],
+      "SecondaryColors": [
+        "003068",
+        "0054B5",
+        "FFDC96",
+        "FFC500",
+        "426830",
+        "E6E6E6",
+        "97CA51",
+        "B22424",
+        "2D2D2D",
+        "643E87",
+        "CE181D",
+        "F26A20"
+      ],
+      "Patterns": [
+        "GBR_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_BRI_English",
+        "Emblem_BRI_English_01",
+        "Emblem_BRI_English_03",
+        "Emblem_BRI_Highlanders_01",
+        "Emblem_BRI_Highlanders_02"
+      ]
+    },
+    "Britain_Elite": {
+      "PrimaryColors": [
+        "003068",
+        "0054B5",
+        "FFDC96",
+        "FFC500",
+        "426830",
+        "E6E6E6",
+        "97CA51",
+        "B22424",
+        "2D2D2D",
+        "643E87",
+        "CE181D",
+        "F26A20"
+      ],
+      "SecondaryColors": [
+        "CE181D"
+      ],
+      "Patterns": [
+        "GBR_PATTERN_0",
+        "GENERIC_PATTERN1"
+      ],
+      "Emblems": [
+        "Emblem_BRI_English_02",
+        "Emblem_BRI_English",
+        "Emblem_BRI_English_01",
+        "Emblem_BRI_English_03",
+        "Emblem_BRI_English_05",
+        "Emblem_BRI_English_06",
+        "Emblem_BRI_Highlanders_01",
+        "Emblem_BRI_Highlanders_02"
+      ]
+    },
+    "Britain_Cavalry": {
+      "PrimaryColors": [
+        "003068",
+        "0054B5",
+        "FFDC96",
+        "FFC500",
+        "426830",
+        "E6E6E6",
+        "97CA51",
+        "B22424",
+        "2D2D2D",
+        "643E87",
+        "CE181D",
+        "F26A20"
+      ],
+      "SecondaryColors": [
+        "2d2d2d",
+        "e5e5e5",
+        "0054B5",
+        "4E36AF",
+        "83AC3F",
+        "426830",
+        "FFDC96",
+        "FFC500",
+        "FF8D42",
+        "CE181D"
+      ],
+      "Patterns": [
+        "GBR_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_BRI_English_02",
+        "Emblem_BRI_Hanover_04",
+        "Emblem_BRI_English_04"
+      ]
+    },
+    "Britain_Hanover": {
+      "PrimaryColors": [
+        "426830",
+        "E6E6E6",
+        "FFDC96",
+        "2D2D2D",
+        "003068",
+        "FFC500",
+        "F26A20",
+        "5095CE"
+      ],
+      "SecondaryColors": [
+        "426830",
+        "E6E6E6",
+        "FFDC96",
+        "2D2D2D",
+        "003068",
+        "FFC500",
+        "F26A20",
+        "5095CE"
+      ],
+      "Patterns": [
+        "GBR_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_BRI_Hanover_01",
+        "Emblem_BRI_Hanover_02",
+        "Emblem_BRI_Hanover_03",
+        "Emblem_BRI_Hanover_04"
+      ]
+    },
+    "Britain_Brunswick": {
+      "PrimaryColors": [
+        "F26A20",
+        "B22424",
+        "CE181D",
+        "2D2D2D",
+        "F47D9D",
+        "FFDC96",
+        "E6E6E6"
+      ],
+      "SecondaryColors": [
+        "F26A20",
+        "B22424",
+        "CE181D",
+        "2D2D2D",
+        "F47D9D",
+        "FFDC96",
+        "E6E6E6"
+      ],
+      "Patterns": [
+        "GBR_PATTERN_1"
+      ],
+      "Emblems": [
+        "Emblem_BRI_Brunswick"
+      ]
+    },
+    "Britain_Hesse": {
+      "PrimaryColors": [
+        "F26A20",
+        "B22424",
+        "CE181D",
+        "2D2D2D",
+        "F47D9D",
+        "FFDC96",
+        "E6E6E6"
+      ],
+      "SecondaryColors": [
+        "F26A20",
+        "B22424",
+        "CE181D",
+        "2D2D2D",
+        "F47D9D",
+        "FFDC96",
+        "E6E6E6"
+      ],
+      "Patterns": [
+        "GBR_PATTERN_2",
+        "GBR_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_BRI_Hesse"
+      ]
+    },
+    "Britain_CampbellHighlanders": {
+      "PrimaryColors": [
+        "515b39"
+      ],
+      "SecondaryColors": [
+        "515b39"
+      ],
+      "Patterns": [
+        "GBR_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_BRI_Highlanders_01"
+      ]
+    },
+    "Britain_SchaumburgLippe": {
+      "PrimaryColors": [
+        "DC0000"
+      ],
+      "SecondaryColors": [
+        "0000CE"
+      ],
+      "Patterns": [
+        "GENERIC_PATTERN10"
+      ],
+      "Emblems": [
+        "GBR_EMBLEM_EMPTY"
+      ]
+    },
+    "Britain_LegionBritannique": {
+      "PrimaryColors": [
+        "ED1C22"
+      ],
+      "SecondaryColors": [
+        "ED1C22"
+      ],
+      "Patterns": [
+        "GBR_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_BRI_Hanover_03"
+      ]
+    },
+    "Britain_1stDragoonGuards": {
+      "PrimaryColors": [
+        "4e507a"
+      ],
+      "SecondaryColors": [
+        "4e507a"
+      ],
+      "Patterns": [
+        "GBR_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_BRI_English_02"
+      ]
+    },
+    "Britain_RoyalWelchFusiliers": {
+      "PrimaryColors": [
+        "3a4070"
+      ],
+      "SecondaryColors": [
+        "3a4070"
+      ],
+      "Patterns": [
+        "GBR_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_BRI_English_03"
+      ]
+    },
+    "Britain_ColdstreamGuards": {
+      "PrimaryColors": [
+        "a11d28"
+      ],
+      "SecondaryColors": [
+        "a11d28"
+      ],
+      "Patterns": [
+        "GBR_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_BRI_English_03"
+      ]
+    },
+    "Britain_HanoverianFootGuards": {
+      "PrimaryColors": [
+        "fdfbee"
+      ],
+      "SecondaryColors": [
+        "fdfbee"
+      ],
+      "Patterns": [
+        "GBR_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_BRI_Hanover_04"
+      ]
+    },
+    "Britain_BueckeburgCarabiniers": {
+      "PrimaryColors": [
+        "2B2B2B"
+      ],
+      "SecondaryColors": [
+        "2B2B2B"
+      ],
+      "Patterns": [
+        "GENERIC_PATTERN10"
+      ],
+      "Emblems": [
+        "Emblem_BRI_Hanover_03"
+      ]
+    },
+    "Britain_VonRothHussars": {
+      "PrimaryColors": [
+        "0808CE"
+      ],
+      "SecondaryColors": [
+        "FFCE08"
+      ],
+      "Patterns": [
+        "GENERIC_PATTERN10"
+      ],
+      "Emblems": [
+        "GBR_EMBLEM_EMPTY"
+      ]
+    },
+    "Britain_RoyalHorseGuards": {
+      "PrimaryColors": [
+        "b5313c"
+      ],
+      "SecondaryColors": [
+        "b5313c"
+      ],
+      "Patterns": [
+        "GBR_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_BRI_English_04"
+      ]
+    },
+    "France_Main": {
+      "PrimaryColors": [
+        "2D2D2D",
+        "E6E6E6",
+        "96CFEA",
+        "20A2D4",
+        "0051AE",
+        "002E90",
+        "FBAC5F",
+        "426830",
+        "085D24",
+        "E4B34E",
+        "FFC500",
+        "493420",
+        "96776C",
+        "8F50A1",
+        "C2452E",
+        "CE181D"
+      ],
+      "SecondaryColors": [
+        "2D2D2D",
+        "E6E6E6",
+        "96CFEA",
+        "20A2D4",
+        "0051AE",
+        "002E90",
+        "FBAC5F",
+        "426830",
+        "085D24",
+        "E4B34E",
+        "FFC500",
+        "493420",
+        "96776C",
+        "8F50A1",
+        "C2452E",
+        "CE181D"
+      ],
+      "Patterns": [
+        "FRA_PATTERN_5"
+      ],
+      "Emblems": [
+        "Emblem_FRA_01",
+        "Emblem_FRA_02",
+        "Emblem_FRA_03",
+        "Emblem_FRA_04",
+        "Emblem_FRA_05",
+        "FRA_EMBLEM_EMPTY"
+      ]
+    },
+    "France_Veterans": {
+      "PrimaryColors": [
+        "2D2D2D",
+        "E6E6E6",
+        "96CFEA",
+        "20A2D4",
+        "0051AE",
+        "002E90",
+        "FBAC5F",
+        "426830",
+        "085D24",
+        "E4B34E",
+        "FFC500",
+        "493420",
+        "96776C",
+        "8F50A1",
+        "C2452E",
+        "CE181D"
+      ],
+      "SecondaryColors": [
+        "2D2D2D",
+        "E6E6E6",
+        "96CFEA",
+        "20A2D4",
+        "0051AE",
+        "002E90",
+        "FBAC5F",
+        "426830",
+        "085D24",
+        "E4B34E",
+        "FFC500",
+        "493420",
+        "96776C",
+        "8F50A1",
+        "C2452E",
+        "CE181D"
+      ],
+      "Patterns": [
+        "FRA_PATTERN_5",
+        "FRA_PATTERN_8",
+        "FRA_PATTERN_9",
+        "FRA_PATTERN_10"
+      ],
+      "Emblems": [
+        "Emblem_FRA_01",
+        "Emblem_FRA_02",
+        "Emblem_FRA_03",
+        "Emblem_FRA_04",
+        "Emblem_FRA_05",
+        "FRA_EMBLEM_EMPTY"
+      ]
+    },
+    "France_Grenadiers": {
+      "PrimaryColors": [
+        "2D2D2D",
+        "E6E6E6",
+        "96CFEA",
+        "20A2D4",
+        "0051AE",
+        "002E90",
+        "FBAC5F",
+        "426830",
+        "085D24",
+        "E4B34E",
+        "FFC500",
+        "493420",
+        "96776C",
+        "8F50A1",
+        "C2452E",
+        "CE181D"
+      ],
+      "SecondaryColors": [
+        "2D2D2D",
+        "E6E6E6",
+        "96CFEA",
+        "20A2D4",
+        "0051AE",
+        "002E90",
+        "FBAC5F",
+        "426830",
+        "085D24",
+        "E4B34E",
+        "FFC500",
+        "493420",
+        "96776C",
+        "8F50A1",
+        "C2452E",
+        "CE181D"
+      ],
+      "Patterns": [
+        "FRA_PATTERN_5",
+        "FRA_PATTERN_8",
+        "FRA_PATTERN_9",
+        "FRA_PATTERN_10"
+      ],
+      "Emblems": [
+        "Emblem_FRA_Grenadiers_12"
+      ]
+    },
+    "France_Volontaires": {
+      "PrimaryColors": [
+        "2D2D2D",
+        "E6E6E6",
+        "96CFEA",
+        "20A2D4",
+        "0051AE",
+        "002E90",
+        "FBAC5F",
+        "426830",
+        "085D24",
+        "E4B34E",
+        "FFC500",
+        "493420",
+        "96776C",
+        "8F50A1",
+        "C2452E",
+        "CE181D"
+      ],
+      "SecondaryColors": [
+        "2D2D2D",
+        "E6E6E6",
+        "96CFEA",
+        "20A2D4",
+        "0051AE",
+        "002E90",
+        "FBAC5F",
+        "426830",
+        "085D24",
+        "E4B34E",
+        "FFC500",
+        "493420",
+        "96776C",
+        "8F50A1",
+        "C2452E",
+        "CE181D"
+      ],
+      "Patterns": [
+        "FRA_PATTERN_5",
+        "FRA_PATTERN_8",
+        "FRA_PATTERN_9",
+        "FRA_PATTERN_10"
+      ],
+      "Emblems": [
+        "Emblem_FRA_Volunteer_06",
+        "FRA_EMBLEM_EMPTY"
+      ]
+    },
+    "France_Cavalry": {
+      "PrimaryColors": [
+        "2D2D2D",
+        "E6E6E6",
+        "96CFEA",
+        "20A2D4",
+        "0051AE",
+        "002E90",
+        "FBAC5F",
+        "426830",
+        "085D24",
+        "E4B34E",
+        "FFC500",
+        "493420",
+        "96776C",
+        "8F50A1",
+        "C2452E",
+        "CE181D"
+      ],
+      "SecondaryColors": [
+        "2D2D2D",
+        "E6E6E6",
+        "96CFEA",
+        "20A2D4",
+        "0051AE",
+        "002E90",
+        "FBAC5F",
+        "426830",
+        "085D24",
+        "E4B34E",
+        "FFC500",
+        "493420",
+        "96776C",
+        "8F50A1",
+        "C2452E",
+        "CE181D"
+      ],
+      "Patterns": [
+        "FRA_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_FRA_Cavalry_10",
+        "Emblem_FRA_Cavalry_11"
+      ]
+    },
+    "France_Irish": {
+      "PrimaryColors": [
+        "9F4833",
+        "CE181D",
+        "426830",
+        "2D2D2D",
+        "7A9A47",
+        "085D24",
+        "FFC500",
+        "E6E6E6"
+      ],
+      "SecondaryColors": [
+        "9F4833",
+        "CE181D",
+        "426830",
+        "2D2D2D",
+        "7A9A47",
+        "085D24",
+        "FFC500",
+        "E6E6E6"
+      ],
+      "Patterns": [
+        "FRA_PATTERN_1",
+        "FRA_PATTERN_2"
+      ],
+      "Emblems": [
+        "Emblem_FRA_Irish_07"
+      ]
+    },
+    "France_German": {
+      "PrimaryColors": [
+        "20A2D4",
+        "0054B5",
+        "002E90",
+        "CE181D",
+        "7A9A47",
+        "2D2D2D",
+        "E6E6E6"
+      ],
+      "SecondaryColors": [
+        "20A2D4",
+        "0054B5",
+        "002E90",
+        "CE181D",
+        "7A9A47",
+        "2D2D2D",
+        "E6E6E6"
+      ],
+      "Patterns": [
+        "FRA_PATTERN_5",
+        "FRA_PATTERN_6"
+      ],
+      "Emblems": [
+        "Emblem_FRA_01",
+        "Emblem_FRA_02",
+        "Emblem_FRA_03",
+        "Emblem_FRA_04",
+        "Emblem_FRA_05",
+        "FRA_EMBLEM_EMPTY"
+      ]
+    },
+    "France_Swiss": {
+      "PrimaryColors": [
+        "E4B34E",
+        "9F4833",
+        "2D2D2D",
+        "0054B5",
+        "E6E6E6",
+        "7A9A47"
+      ],
+      "SecondaryColors": [
+        "E4B34E",
+        "9F4833",
+        "2D2D2D",
+        "0054B5",
+        "E6E6E6",
+        "7A9A47"
+      ],
+      "Patterns": [
+        "FRA_PATTERN_3",
+        "FRA_PATTERN_4",
+        "FRA_PATTERN_7"
+      ],
+      "Emblems": [
+        "FRA_EMBLEM_EMPTY"
+      ]
+    },
+    "France_5thRoyalArtillery": {
+      "PrimaryColors": [
+        "efc974"
+      ],
+      "SecondaryColors": [
+        "558f52"
+      ],
+      "Patterns": [
+        "FRA_PATTERN_5"
+      ],
+      "Emblems": [
+        "Emblem_FRA_02"
+      ]
+    },
+    "France_FrenchGuards": {
+      "PrimaryColors": [
+        "1e6094"
+      ],
+      "SecondaryColors": [
+        "1e6094"
+      ],
+      "Patterns": [
+        "FRA_PATTERN_5"
+      ],
+      "Emblems": [
+        "Emblem_FRA_FrenchGuards_08"
+      ]
+    },
+    "France_RoyalScotsFusiliers": {
+      "PrimaryColors": [
+        "22589B"
+      ],
+      "SecondaryColors": [
+        "fdfaeb"
+      ],
+      "Patterns": [
+        "GENERIC_PATTERN6"
+      ],
+      "Emblems": [
+        "Emblem_FRA_06"
+      ]
+    },
+    "France_DiesbachFusiliers": {
+      "PrimaryColors": [
+        "973125"
+      ],
+      "SecondaryColors": [
+        "c7af59"
+      ],
+      "Patterns": [
+        "FRA_PATTERN_3"
+      ],
+      "Emblems": [
+        "Emblem_FRA_Diesbach_09"
+      ]
+    },
+    "France_RoyalAllemandCavalry": {
+      "PrimaryColors": [
+        "2d3349"
+      ],
+      "SecondaryColors": [
+        "2d3349"
+      ],
+      "Patterns": [
+        "FRA_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_FRA_Cavalry_10"
+      ]
+    },
+    "France_SwissGuards": {
+      "PrimaryColors": [
+        "ad2823"
+      ],
+      "SecondaryColors": [
+        "015383"
+      ],
+      "Patterns": [
+        "FRA_PATTERN_3"
+      ],
+      "Emblems": [
+        "FRA_EMBLEM_EMPTY"
+      ]
+    },
+    "France_GrenadiersofFrance": {
+      "PrimaryColors": [
+        "d9d8d3"
+      ],
+      "SecondaryColors": [
+        "2c3c77"
+      ],
+      "Patterns": [
+        "FRA_PATTERN_5"
+      ],
+      "Emblems": [
+        "Emblem_FRA_Grenadiers_12"
+      ]
+    },
+    "France_RoyalDeuxPontsGrenadiers": {
+      "PrimaryColors": [
+        "22589B"
+      ],
+      "SecondaryColors": [
+        "22589B"
+      ],
+      "Patterns": [
+        "FRA_PATTERN_5"
+      ],
+      "Emblems": [
+        "Emblem_FRA_05"
+      ]
+    },
+    "France_GrenadiersaCheval": {
+      "PrimaryColors": [
+        "f1f1f1"
+      ],
+      "SecondaryColors": [
+        "f1f1f1"
+      ],
+      "Patterns": [
+        "FRA_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_FRA_Cavalry_11"
+      ]
+    },
+    "France_MusketeersoftheGuard": {
+      "PrimaryColors": [
+        "f9f7ea"
+      ],
+      "SecondaryColors": [
+        "f9f7ea"
+      ],
+      "Patterns": [
+        "FRA_PATTERN_0"
+      ],
+      "Emblems": [
+        "Emblem_FRA_Cavalry_10"
+      ]
+    }
+  }
+}

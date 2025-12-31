@@ -1,0 +1,256 @@
+{
+  "ID": "RUS_Dmitrivich Dragoons",
+  "Boots": {
+    "BootsColorData": {
+      "PrimaryColors": [
+        {
+          "r": 45,
+          "g": 45,
+          "b": 45,
+          "a": 255
+        }
+      ],
+      "IsPrimaryFlagEditable": false
+    },
+    "Items": [
+      "BOOTS_BLACK_CAVALRY_BOOT"
+    ]
+  },
+  "Hat": {
+    "HatColorData": {
+      "PrimaryColors": [
+        {
+          "r": 32,
+          "g": 50,
+          "b": 61,
+          "a": 255
+        }
+      ],
+      "SecondaryColors": [
+        {
+          "r": 255,
+          "g": 200,
+          "b": 87,
+          "a": 255
+        }
+      ],
+      "TertiaryColors": [
+        {
+          "r": 255,
+          "g": 200,
+          "b": 87,
+          "a": 255
+        }
+      ],
+      "QuaternaryColors": [
+        {
+          "r": 239,
+          "g": 239,
+          "b": 239,
+          "a": 255
+        }
+      ],
+      "IsPrimaryFlagEditable": false,
+      "IsSecondaryFlagEditable": false,
+      "IsTertiaryFlagEditable": false,
+      "IsQuaternaryFlagEditable": false
+    },
+    "Items": [
+      "HAT_TRICORNE_02"
+    ]
+  },
+  "Pants": {
+    "PantsColorData": {
+      "PrimaryColors": [
+        {
+          "r": 229,
+          "g": 229,
+          "b": 229,
+          "a": 255
+        }
+      ],
+      "IsPrimaryFlagEditable": false
+    }
+  },
+  "Shirt": {
+    "ShirtColorData": {
+      "PrimaryColors": [
+        {
+          "r": 11,
+          "g": 151,
+          "b": 243,
+          "a": 255
+        }
+      ],
+      "SecondaryColors": [
+        {
+          "r": 221,
+          "g": 80,
+          "b": 47,
+          "a": 255
+        }
+      ],
+      "TertiaryColors": [
+        {
+          "r": 229,
+          "g": 229,
+          "b": 229,
+          "a": 255
+        }
+      ],
+      "QuaternaryColors": [
+        {
+          "r": 32,
+          "g": 50,
+          "b": 61,
+          "a": 255
+        }
+      ],
+      "IsPrimaryFlagEditable": false,
+      "IsSecondaryFlagEditable": false,
+      "IsTertiaryFlagEditable": false,
+      "IsQuaternaryFlagEditable": false
+    },
+    "Items": [
+      "SHIRT_OLE_GOLD"
+    ]
+  },
+  "Skin": {
+    "SkinColorData": {
+      "PrimaryColors": [
+        {
+          "r": 203,
+          "g": 164,
+          "b": 144,
+          "a": 255
+        },
+        {
+          "r": 226,
+          "g": 183,
+          "b": 161,
+          "a": 255
+        },
+        {
+          "r": 255,
+          "g": 205,
+          "b": 181,
+          "a": 255
+        }
+      ],
+      "IsPrimaryFlagEditable": false
+    },
+    "Items": [
+      "HEAD_1",
+      "HEAD_2",
+      "HEAD_4",
+      "HEAD_3"
+    ]
+  },
+  "Hair": {
+    "HairColorData": {
+      "PrimaryColors": [
+        {
+          "r": 212,
+          "g": 212,
+          "b": 212,
+          "a": 255
+        },
+        {
+          "r": 53,
+          "g": 45,
+          "b": 38,
+          "a": 255
+        },
+        {
+          "r": 91,
+          "g": 77,
+          "b": 64,
+          "a": 255
+        },
+        {
+          "r": 168,
+          "g": 142,
+          "b": 119,
+          "a": 255
+        },
+        {
+          "r": 193,
+          "g": 169,
+          "b": 73,
+          "a": 255
+        },
+        {
+          "r": 193,
+          "g": 119,
+          "b": 73,
+          "a": 255
+        },
+        {
+          "r": 198,
+          "g": 158,
+          "b": 123,
+          "a": 255
+        },
+        {
+          "r": 89,
+          "g": 59,
+          "b": 33,
+          "a": 255
+        }
+      ],
+      "SecondaryColors": [],
+      "IsPrimaryFlagEditable": false,
+      "IsSecondaryFlagEditable": false
+    },
+    "Items": [
+      "HAIR_2",
+      "HAIR_3",
+      "HAIR_1"
+    ]
+  },
+  "Collar": {
+    "CollarColorData": {
+      "PrimaryColors": [
+        {
+          "r": 11,
+          "g": 151,
+          "b": 243,
+          "a": 255
+        }
+      ],
+      "SecondaryColors": [
+        {
+          "r": 221,
+          "g": 80,
+          "b": 47,
+          "a": 255
+        }
+      ],
+      "IsPrimaryFlagEditable": false,
+      "IsSecondaryFlagEditable": false
+    },
+    "Items": [
+      "COLLAR_02_BRAIDLOOPS_SILVER"
+    ]
+  },
+  "Straps": {
+    "StrapsColorData": {
+      "PrimaryColors": [
+        {
+          "r": 239,
+          "g": 239,
+          "b": 239,
+          "a": 255
+        }
+      ],
+      "IsPrimaryFlagEditable": false
+    },
+    "Items": []
+  },
+  "Moustache": {
+    "Items": [
+      "FACIAL_HAIR_1",
+      "FACIAL_HAIR_3"
+    ]
+  }
+}

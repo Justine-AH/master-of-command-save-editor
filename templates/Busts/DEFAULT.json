@@ -1,0 +1,236 @@
+{
+  "ID": "DEFAULT",
+  "Boots": {
+    "BootsColorData": {
+      "PrimaryColors": [
+        {
+          "r": 45,
+          "g": 45,
+          "b": 45,
+          "a": 255
+        }
+      ],
+      "IsPrimaryFlagEditable": false
+    },
+    "Items": [
+      "SHORT_BOOTS",
+      "SHORT_BOOTS",
+      "SHORT_BOOTS"
+    ]
+  },
+  "Hat": {
+    "HatColorData": {
+      "PrimaryColors": [
+        {
+          "r": 251,
+          "g": 240,
+          "b": 31,
+          "a": 255
+        }
+      ],
+      "SecondaryColors": [
+        {
+          "r": 240,
+          "g": 32,
+          "b": 37,
+          "a": 255
+        }
+      ],
+      "TertiaryColors": [
+        {
+          "r": 39,
+          "g": 89,
+          "b": 181,
+          "a": 255
+        }
+      ],
+      "QuaternaryColors": [
+        {
+          "r": 252,
+          "g": 165,
+          "b": 182,
+          "a": 255
+        }
+      ],
+      "IsPrimaryFlagEditable": false,
+      "IsSecondaryFlagEditable": false,
+      "IsTertiaryFlagEditable": false,
+      "IsQuaternaryFlagEditable": false
+    },
+    "Items": [
+      "HAT_GRENADIER_01"
+    ]
+  },
+  "Pants": {
+    "PantsColorData": {
+      "PrimaryColors": [
+        {
+          "r": 255,
+          "g": 156,
+          "b": 8,
+          "a": 255
+        }
+      ],
+      "IsPrimaryFlagEditable": false
+    }
+  },
+  "Shirt": {
+    "ShirtColorData": {
+      "PrimaryColors": [
+        {
+          "r": 229,
+          "g": 229,
+          "b": 229,
+          "a": 255
+        },
+        {
+          "r": 165,
+          "g": 9,
+          "b": 59,
+          "a": 255
+        },
+        {
+          "r": 45,
+          "g": 45,
+          "b": 45,
+          "a": 255
+        },
+        {
+          "r": 131,
+          "g": 172,
+          "b": 63,
+          "a": 255
+        },
+        {
+          "r": 252,
+          "g": 165,
+          "b": 182,
+          "a": 255
+        },
+        {
+          "r": 40,
+          "g": 69,
+          "b": 133,
+          "a": 255
+        }
+      ],
+      "SecondaryColors": [
+        {
+          "r": 111,
+          "g": 245,
+          "b": 66,
+          "a": 255
+        }
+      ],
+      "TertiaryColors": [
+        {
+          "r": 229,
+          "g": 229,
+          "b": 229,
+          "a": 255
+        }
+      ],
+      "QuaternaryColors": [
+        {
+          "r": 165,
+          "g": 9,
+          "b": 59,
+          "a": 255
+        }
+      ],
+      "IsPrimaryFlagEditable": false,
+      "IsSecondaryFlagEditable": false,
+      "IsTertiaryFlagEditable": false,
+      "IsQuaternaryFlagEditable": false
+    },
+    "Items": [
+      "SHIRT_OL_SILVER"
+    ]
+  },
+  "Skin": {
+    "SkinColorData": {
+      "PrimaryColors": [
+        {
+          "r": 131,
+          "g": 172,
+          "b": 63,
+          "a": 255
+        }
+      ],
+      "IsPrimaryFlagEditable": false
+    },
+    "Items": []
+  },
+  "Hair": {
+    "HairColorData": {
+      "PrimaryColors": [
+        {
+          "r": 229,
+          "g": 229,
+          "b": 229,
+          "a": 255
+        }
+      ],
+      "SecondaryColors": [],
+      "IsPrimaryFlagEditable": false,
+      "IsSecondaryFlagEditable": false
+    },
+    "Items": [
+      "HAIR_3"
+    ]
+  },
+  "Collar": {
+    "CollarColorData": {
+      "PrimaryColors": [
+        {
+          "r": 39,
+          "g": 89,
+          "b": 181,
+          "a": 255
+        }
+      ],
+      "SecondaryColors": [
+        {
+          "r": 240,
+          "g": 32,
+          "b": 37,
+          "a": 255
+        }
+      ],
+      "IsPrimaryFlagEditable": false,
+      "IsSecondaryFlagEditable": false
+    },
+    "Items": [
+      "COLLAR_02_BRAIDLOOPS_SILVER"
+    ]
+  },
+  "Straps": {
+    "StrapsColorData": {
+      "PrimaryColors": [
+        {
+          "r": 251,
+          "g": 240,
+          "b": 31,
+          "a": 255
+        }
+      ],
+      "SecondaryColors": [],
+      "IsPrimaryFlagEditable": false
+    },
+    "Items": [
+      "STRAP_1",
+      "STRAP_3",
+      "STRAP_2"
+    ]
+  },
+  "Moustache": {
+    "Items": [
+      "FACIAL_HAIR_4",
+      "FACIAL_HAIR_3",
+      "FACIAL_HAIR_2",
+      "FACIAL_HAIR_1"
+    ]
+  },
+  "PlayerDirty": false,
+  "UsePrimaryAsFallback": false
+}

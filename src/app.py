@@ -1,5 +1,7 @@
 import json
 import os
+from pathlib import Path
+import pprint
 import sys
 import tempfile
 from PySide6.QtWidgets import (
@@ -22,6 +24,13 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         
         self.data = None
         
+        # Templates are needed for changing unit types or adding new units
+        # unit stats, bust and flag are not attached to unit_types and must be manually changed
+        # we need the templates for reference to generate or change units
+        self.unit_template = None
+        self.flag_template = None
+        self.bust_template = None
+        
         self.q_app = q_app
 
         self.setWindowTitle("Master of Command - Save Editor")
@@ -31,6 +40,8 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         self.actionSave_File.setEnabled(False)
         self.actionLoad_File.triggered.connect(self.on_load_button_trigger)
         self.actionSave_File.triggered.connect(self.on_save_button_trigger)
+        
+        self.load_templates()
         
         if DEV_FEATURES:
             with open("./save_folder/test.fcs", "r", encoding="utf-8") as f:
@@ -182,6 +193,28 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
 
                 combo.blockSignals(False)
 
+    def load_templates(self):
+        # Loading Unit Templates
+        with open("./templates/Template_Units.json", "r", encoding="utf-8") as f:
+            unit_template_list = json.load(f)
+        
+        self.unit_template = {unit["ID"]: unit for unit in unit_template_list}
+        
+        # Loading Flag Templates
+        with open("./templates/FlagTemplates.json", "r", encoding="utf-8") as f:
+            flag_template_list = json.load(f)
+        
+        self.flag_template = flag_template_list["FlagTemplates"]
+            
+        # Loading Bust Templates
+        bust_templates = {}
+        folder_path = Path("./templates/Busts")
+        for file in folder_path.glob("*.json"):
+            with file.open("r", encoding="utf-8") as f:
+                bust_templates[file.stem] = json.load(f)
+        
+        self.bust_template = bust_templates
+            
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 

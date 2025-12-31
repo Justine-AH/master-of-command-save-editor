@@ -1,0 +1,7383 @@
+[
+  {
+    "ID": "TEST_INFANTRY",
+    "Faction": "PRU",
+    "Name": "Test Infantry",
+    "Description": null,
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 3.0,
+      "SprintSpeed": 10.0,
+      "Morale": 46,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 50,
+      "ChargeBonus": 1.0
+    },
+    "PrimaryWeapon": "POTZDAM_MUSKET",
+    "FallbackPrimary": "POTZDAM_MUSKET",
+    "SecondaryWeapon": "TEST_BAYO",
+    "FallbackSecondary": "TEST_BAYO",
+    "OffHandItems": [
+      "WOODEN_STAKES",
+      "ELEVATION_SCREWS",
+      "REG_STAFF_QUARTERMASTER",
+      "IMPROVED_LIMBER_CHEST",
+      "QUATERED_MUSKET_BALLS"
+    ],
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1000,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "TEST_INFANTRY_02",
+    "Faction": "PRU",
+    "Name": "Test Infantry",
+    "Description": null,
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 3.0,
+      "SprintSpeed": 10.0,
+      "Morale": 95,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 50,
+      "ChargeBonus": 1.0
+    },
+    "PrimaryWeapon": "POTZDAM_MUSKET",
+    "FallbackPrimary": "POTZDAM_MUSKET",
+    "SecondaryWeapon": "TEST_BAYO",
+    "FallbackSecondary": "TEST_BAYO",
+    "OffHandItems": [
+      "WOODEN_STAKES",
+      "ELEVATION_SCREWS",
+      "REG_STAFF_QUARTERMASTER",
+      "IMPROVED_LIMBER_CHEST"
+    ],
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1000,
+    "ExperienceGain": 30,
+    "UpgradeCost": 1,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "TEST_ARTILLERY",
+    "Faction": "PRU",
+    "Name": "Test Artillery",
+    "Description": null,
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 2.5,
+      "SprintSpeed": 5.0,
+      "Morale": 25,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 50,
+      "ChargeBonus": 1.0
+    },
+    "PrimaryWeapon": "IRON_3LB_GUN",
+    "FallbackPrimary": "IRON_3LB_GUN",
+    "SecondaryWeapon": "HEAVY_SABRES",
+    "FallbackSecondary": "HEAVY_SABRES",
+    "OffHandItems": [
+      "CANISTER"
+    ],
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1000,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "TEST_ARTILLERY_02",
+    "Faction": "PRU",
+    "Name": "Test Artillery",
+    "Description": null,
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 2.5,
+      "SprintSpeed": 5.0,
+      "Morale": 22,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 50,
+      "ChargeBonus": 1.0
+    },
+    "PrimaryWeapon": "IRON_3LB_GUN",
+    "FallbackPrimary": "IRON_3LB_GUN",
+    "SecondaryWeapon": "HEAVY_SABRES",
+    "FallbackSecondary": "HEAVY_SABRES",
+    "OffHandItems": [
+      "CANISTER"
+    ],
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1000,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "TEST_BOWMEN",
+    "Faction": "PRU",
+    "Name": "Test Bowmen",
+    "Description": null,
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 3.0,
+      "SprintSpeed": 10.0,
+      "Morale": 25,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 50,
+      "ChargeBonus": 1.0
+    },
+    "PrimaryWeapon": "TEST_BOW",
+    "FallbackPrimary": "TEST_BOW",
+    "SecondaryWeapon": "HEAVY_SABRES",
+    "FallbackSecondary": "HEAVY_SABRES",
+    "OffHandItems": null,
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1000,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "TEST_MELEE",
+    "Faction": "PRU",
+    "Name": "Test Melee",
+    "Description": null,
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 3.0,
+      "SprintSpeed": 10.0,
+      "Morale": 25,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 50,
+      "ChargeBonus": 1.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HEAVY_SABRES",
+    "FallbackSecondary": "HEAVY_SABRES",
+    "OffHandItems": null,
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1000,
+    "ExperienceGain": 50,
+    "UpgradeCost": 1,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "TEST_DRAGOONS",
+    "Faction": "PRU",
+    "Name": "Test Dragoons",
+    "Description": null,
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 6.0,
+      "SprintSpeed": 12.0,
+      "Morale": 33,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 50,
+      "ChargeBonus": 1.0
+    },
+    "PrimaryWeapon": "POTZDAM_MUSKET",
+    "FallbackPrimary": "POTZDAM_MUSKET",
+    "SecondaryWeapon": "HEAVY_SABRES",
+    "FallbackSecondary": "HEAVY_SABRES",
+    "OffHandItems": null,
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1000,
+    "ExperienceGain": 45,
+    "UpgradeCost": 1,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "TEST_HORSE_ARTY",
+    "Faction": "PRU",
+    "Name": "Test Horse Arty",
+    "Description": null,
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 4.0,
+      "SprintSpeed": 5.0,
+      "Morale": 25,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 50,
+      "ChargeBonus": 1.0
+    },
+    "PrimaryWeapon": "IRON_6LB_HOWITZER",
+    "FallbackPrimary": "BRONZE_10LB_HOWITZER",
+    "SecondaryWeapon": "HEAVY_SABRES",
+    "FallbackSecondary": "HEAVY_SABRES",
+    "OffHandItems": [
+      "CANISTER"
+    ],
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1000,
+    "ExperienceGain": 10,
+    "UpgradeCost": 1,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "TEST_HORSE_ARTY_02",
+    "Faction": "PRU",
+    "Name": "Test Horse Arty",
+    "Description": null,
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 4.0,
+      "SprintSpeed": 5.0,
+      "Morale": 25,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 50,
+      "ChargeBonus": 1.0
+    },
+    "PrimaryWeapon": "SHUVALOV_16LB_HOWITZER",
+    "FallbackPrimary": "IRON_3LB_GUN",
+    "SecondaryWeapon": "HEAVY_SABRES",
+    "FallbackSecondary": "HEAVY_SABRES",
+    "OffHandItems": [
+      "CANISTER"
+    ],
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1000,
+    "ExperienceGain": 10,
+    "UpgradeCost": 1,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "TEST_HORSE_ARCHER",
+    "Faction": "PRU",
+    "Name": "Test Horse Archer",
+    "Description": null,
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 6.0,
+      "SprintSpeed": 12.0,
+      "Morale": 25,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 50,
+      "ChargeBonus": 1.0
+    },
+    "PrimaryWeapon": "TEST_BOW",
+    "FallbackPrimary": "TEST_BOW",
+    "SecondaryWeapon": "HEAVY_SABRES",
+    "FallbackSecondary": "HEAVY_SABRES",
+    "OffHandItems": null,
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1000,
+    "ExperienceGain": 10,
+    "UpgradeCost": 1,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "TEST_CAVALRY",
+    "Faction": "PRU",
+    "Name": "Test Cavalry",
+    "Description": null,
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 6.0,
+      "SprintSpeed": 12.0,
+      "Morale": 25,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 50,
+      "ChargeBonus": 1.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HEAVY_SABRES",
+    "FallbackSecondary": "HEAVY_SABRES",
+    "OffHandItems": null,
+    "RawUnitType": "RECRUIT_LIGHT_CAVALRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1000,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "TEST_CAVALRY_02",
+    "Faction": "PRU",
+    "Name": "Test Cavalry",
+    "Description": null,
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 200.0,
+      "SprintSpeed": 250.0,
+      "Morale": 25,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 50,
+      "ChargeBonus": 1.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HEAVY_SABRES",
+    "FallbackSecondary": "HEAVY_SABRES",
+    "OffHandItems": null,
+    "RawUnitType": "RECRUIT_LIGHT_CAVALRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1000,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_SUPPLY_CARAVAN",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_SUPPLY_CARAVAN",
+    "Description": "Units/Desc/PRU_SUPPLY_CARAVAN",
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 20.0,
+      "Morale": 35,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 50,
+      "ChargeBonus": 1.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": null,
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "SUPPLY_CARAVAN",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 50,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": null,
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_SUPPLY_CARAVAN",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_SUPPLY_CARAVAN",
+    "Description": "Units/Desc/RUS_SUPPLY_CARAVAN",
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 20.0,
+      "Morale": 35,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 50,
+      "ChargeBonus": 1.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": null,
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "SUPPLY_CARAVAN",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 50,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": null,
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_SUPPLY_CARAVAN",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_SUPPLY_CARAVAN",
+    "Description": "Units/Desc/AUS_SUPPLY_CARAVAN",
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 20.0,
+      "Morale": 35,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 50,
+      "ChargeBonus": 1.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": null,
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "SUPPLY_CARAVAN",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 50,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": null,
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_SUPPLY_CARAVAN",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_SUPPLY_CARAVAN",
+    "Description": "Units/Desc/FRA_SUPPLY_CARAVAN",
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 20.0,
+      "Morale": 35,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 50,
+      "ChargeBonus": 1.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": null,
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "SUPPLY_CARAVAN",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 50,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": null,
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_SUPPLY_CARAVAN",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_SUPPLY_CARAVAN",
+    "Description": "Units/Desc/GBR_SUPPLY_CARAVAN",
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 20.0,
+      "Morale": 35,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 50,
+      "ChargeBonus": 1.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": null,
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "SUPPLY_CARAVAN",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 50,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": null,
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_GENERAL",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_GENERAL",
+    "Description": "Units/Desc/General",
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 90.0,
+      "Morale": 60,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 35,
+      "ChargeBonus": 10.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HEAVY_SABRES",
+    "FallbackSecondary": "HEAVY_SABRES",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 150,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_GENERAL",
+    "Faction": "FRA",
+    "Name": "Units/Name/RUS_GENERAL",
+    "Description": "Units/Desc/General",
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 90.0,
+      "Morale": 60,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 35,
+      "ChargeBonus": 10.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HEAVY_SABRES",
+    "FallbackSecondary": "HEAVY_SABRES",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 150,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "France_Main",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_GENERAL",
+    "Faction": "GBR",
+    "Name": "Units/Name/AUS_GENERAL",
+    "Description": "Units/Desc/General",
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 90.0,
+      "Morale": 60,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 35,
+      "ChargeBonus": 10.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HEAVY_SABRES",
+    "FallbackSecondary": "HEAVY_SABRES",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 150,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "Britain_Main",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_GENERAL",
+    "Faction": "AUS",
+    "Name": "Units/Name/FRA_GENERAL",
+    "Description": "Units/Desc/General",
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 90.0,
+      "Morale": 60,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 35,
+      "ChargeBonus": 10.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HEAVY_SABRES",
+    "FallbackSecondary": "HEAVY_SABRES",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 150,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "Austria_Main",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_GENERAL",
+    "Faction": "RUS",
+    "Name": "Units/Name/GBR_GENERAL",
+    "Description": "Units/Desc/General",
+    "Cost": 0,
+    "Value": 0,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 90.0,
+      "Morale": 60,
+      "FatigueSkill": 60,
+      "ReloadSkill": 90,
+      "RangedSkill": 50,
+      "MeleeSkill": 35,
+      "ChargeBonus": 10.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HEAVY_SABRES",
+    "FallbackSecondary": "HEAVY_SABRES",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 150,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "Russia_Main",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Cantonist_Recruits",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Cantonist_Recruits",
+    "Description": "Units/Desc/PRU_Cantonist_Recruits",
+    "Cost": 350,
+    "Value": 325,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 30.0,
+      "Morale": 35,
+      "FatigueSkill": 40,
+      "ReloadSkill": 25,
+      "RangedSkill": 15,
+      "MeleeSkill": 10,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": "RUSTIC_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "WORN_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        200.0,
+        50.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Prussian_Landmiliz",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Prussian_Landmiliz",
+    "Description": "Units/Desc/PRU_Prussian_Landmiliz",
+    "Cost": 500,
+    "Value": 475,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 30.0,
+      "Morale": 40,
+      "FatigueSkill": 40,
+      "ReloadSkill": 30,
+      "RangedSkill": 15,
+      "MeleeSkill": 15,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": "RUSTIC_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "WORN_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 2,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        50.0,
+        30.0,
+        10.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Musketeers",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Musketeers",
+    "Description": "Units/Desc/PRU_Musketeers",
+    "Cost": 800,
+    "Value": 650,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 50,
+      "FatigueSkill": 45,
+      "ReloadSkill": 30,
+      "RangedSkill": 20,
+      "MeleeSkill": 20,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": "POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        30.0,
+        150.0,
+        100.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Drilled_Musketeers",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Drilled_Musketeers",
+    "Description": "Units/Desc/PRU_Drilled_Musketeers",
+    "Cost": 1100,
+    "Value": 850,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 40.0,
+      "Morale": 55,
+      "FatigueSkill": 45,
+      "ReloadSkill": 35,
+      "RangedSkill": 30,
+      "MeleeSkill": 20,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": "POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Prussia_Colorful",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        50.0,
+        150.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Frei_Infantry",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Frei_Infantry",
+    "Description": "Units/Desc/PRU_Frei_Infantry",
+    "Cost": 850,
+    "Value": 550,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 40.0,
+      "Morale": 45,
+      "FatigueSkill": 45,
+      "ReloadSkill": 25,
+      "RangedSkill": 30,
+      "MeleeSkill": 10,
+      "ChargeBonus": 10.0
+    },
+    "PrimaryWeapon": "POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 800,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        10.0,
+        50.0,
+        30.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Jaegers",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Jaegers",
+    "Description": "Units/Desc/PRU_Jaegers",
+    "Cost": 1000,
+    "Value": 700,
+    "BaseStats": {
+      "WalkSpeed": 35.0,
+      "SprintSpeed": 45.0,
+      "Morale": 45,
+      "FatigueSkill": 50,
+      "ReloadSkill": 40,
+      "RangedSkill": 40,
+      "MeleeSkill": 15,
+      "ChargeBonus": 5.0
+    },
+    "PrimaryWeapon": "POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "WORN_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        30.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Fusiliers",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Fusiliers",
+    "Description": "Units/Desc/PRU_Fusiliers",
+    "Cost": 750,
+    "Value": 600,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 45,
+      "FatigueSkill": 40,
+      "ReloadSkill": 30,
+      "RangedSkill": 20,
+      "MeleeSkill": 20,
+      "ChargeBonus": 35.0
+    },
+    "PrimaryWeapon": "POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 2,
+    "FlagTemplate": "Prussia_Colorful",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        20.0,
+        40.0,
+        20.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Grenadiers",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Grenadiers",
+    "Description": "Units/Desc/PRU_Grenadiers",
+    "Cost": 1200,
+    "Value": 1050,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 40.0,
+      "Morale": 65,
+      "FatigueSkill": 45,
+      "ReloadSkill": 35,
+      "RangedSkill": 25,
+      "MeleeSkill": 25,
+      "ChargeBonus": 35.0
+    },
+    "PrimaryWeapon": "POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 6,
+    "FlagTemplate": "Prussia_Colorful",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        20.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Grenadier_Guards",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Grenadier_Guards",
+    "Description": "Units/Desc/PRU_Grenadier_Guards",
+    "Cost": 1750,
+    "Value": 1600,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 40.0,
+      "Morale": 65,
+      "FatigueSkill": 50,
+      "ReloadSkill": 40,
+      "RangedSkill": 25,
+      "MeleeSkill": 30,
+      "ChargeBonus": 45.0
+    },
+    "PrimaryWeapon": "POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        10.0,
+        30.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Guards",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Guards",
+    "Description": "Units/Desc/PRU_Guards",
+    "Cost": 1850,
+    "Value": 1700,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 40.0,
+      "Morale": 60,
+      "FatigueSkill": 45,
+      "ReloadSkill": 45,
+      "RangedSkill": 30,
+      "MeleeSkill": 25,
+      "ChargeBonus": 30.0
+    },
+    "PrimaryWeapon": "POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 6,
+    "FlagTemplate": "Prussian_Guards",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        10.0,
+        30.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Provincial_Cavalry",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Provincial_Cavalry",
+    "Description": "Units/Desc/PRU_Provincial_Cavalry",
+    "Cost": 575,
+    "Value": 525,
+    "BaseStats": {
+      "WalkSpeed": 40.0,
+      "SprintSpeed": 70.0,
+      "Morale": 45,
+      "FatigueSkill": 50,
+      "ReloadSkill": 5,
+      "RangedSkill": 5,
+      "MeleeSkill": 20,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "WORN_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Prussia_Cavalry",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        40.0,
+        40.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Hussar",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Hussar",
+    "Description": "Units/Desc/PRU_Hussar",
+    "Cost": 950,
+    "Value": 800,
+    "BaseStats": {
+      "WalkSpeed": 55.0,
+      "SprintSpeed": 85.0,
+      "Morale": 55,
+      "FatigueSkill": 65,
+      "ReloadSkill": 15,
+      "RangedSkill": 10,
+      "MeleeSkill": 25,
+      "ChargeBonus": 35.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HUSSAR_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Prussia_Cavalry",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        20.0,
+        30.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Dragoon",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Dragoon",
+    "Description": "Units/Desc/PRU_Dragoon",
+    "Cost": 1000,
+    "Value": 850,
+    "BaseStats": {
+      "WalkSpeed": 50.0,
+      "SprintSpeed": 70.0,
+      "Morale": 50,
+      "FatigueSkill": 50,
+      "ReloadSkill": 35,
+      "RangedSkill": 30,
+      "MeleeSkill": 20,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": "POTZDAM_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "DRAGOON_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Prussia_Cavalry",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        5.0,
+        20.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Cuirassier",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Cuirassier",
+    "Description": "Units/Desc/PRU_Cuirassier",
+    "Cost": 1250,
+    "Value": 1100,
+    "BaseStats": {
+      "WalkSpeed": 45.0,
+      "SprintSpeed": 65.0,
+      "Morale": 60,
+      "FatigueSkill": 45,
+      "ReloadSkill": 10,
+      "RangedSkill": 10,
+      "MeleeSkill": 45,
+      "ChargeBonus": 30.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "CUIRASSIER_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Prussian_Cuirassiers",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        10.0,
+        30.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Reserve_Artillery",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Reserve_Artillery",
+    "Description": "Units/Desc/PRU_Reserve_Artillery",
+    "Cost": 675,
+    "Value": 625,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 30.0,
+      "Morale": 20,
+      "FatigueSkill": 35,
+      "ReloadSkill": 40,
+      "RangedSkill": 20,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "IRON_3LB_GUN",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": [
+      "CANISTER"
+    ],
+    "RawUnitType": "ARTILLERY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 100,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "Prussian_Artillery",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        30.0,
+        20.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Field_Artillery",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Field_Artillery",
+    "Description": "Units/Desc/PRU_Field_Artillery",
+    "Cost": 1100,
+    "Value": 900,
+    "BaseStats": {
+      "WalkSpeed": 15.0,
+      "SprintSpeed": 25.0,
+      "Morale": 25,
+      "FatigueSkill": 40,
+      "ReloadSkill": 30,
+      "RangedSkill": 25,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "IRON_5LB_GUN",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "ARTILLERY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 150,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Prussian_Artillery",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        10.0,
+        30.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Horse_Artillery",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Horse_Artillery",
+    "Description": "Units/Desc/PRU_Horse_Artillery",
+    "Cost": 1300,
+    "Value": 1100,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 50.0,
+      "Morale": 25,
+      "FatigueSkill": 40,
+      "ReloadSkill": 35,
+      "RangedSkill": 25,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "IRON_5LB_GUN",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_ARTILLERY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 150,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Prussian_Artillery",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        10.0,
+        60.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Freikorps_Recruits",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Freikorps_Recruits",
+    "Description": "Units/Desc/PRU_Freikorps_Recruits",
+    "Cost": 300,
+    "Value": 275,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 35.0,
+      "Morale": 30,
+      "FatigueSkill": 50,
+      "ReloadSkill": 35,
+      "RangedSkill": 15,
+      "MeleeSkill": 20,
+      "ChargeBonus": 25.0
+    },
+    "PrimaryWeapon": "RUSTIC_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "WORN_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        50.0,
+        20.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Freikorps_Infantry",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Freikorps_Infantry",
+    "Description": "Units/Desc/PRU_Freikorps_Infantry",
+    "Cost": 700,
+    "Value": 550,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 40.0,
+      "Morale": 45,
+      "FatigueSkill": 55,
+      "ReloadSkill": 40,
+      "RangedSkill": 20,
+      "MeleeSkill": 30,
+      "ChargeBonus": 25.0
+    },
+    "PrimaryWeapon": "POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        10.0,
+        50.0,
+        30.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Freikorps_Jaegers",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Freikorps_Jaegers",
+    "Description": "Units/Desc/PRU_Freikorps_Jaegers",
+    "Cost": 1050,
+    "Value": 750,
+    "BaseStats": {
+      "WalkSpeed": 40.0,
+      "SprintSpeed": 50.0,
+      "Morale": 40,
+      "FatigueSkill": 60,
+      "ReloadSkill": 50,
+      "RangedSkill": 25,
+      "MeleeSkill": 20,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": "POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "WORN_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        30.0,
+        20.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Freikorps_Grenadiers",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Freikorps_Grenadiers",
+    "Description": "Units/Desc/PRU_Freikorps_Grenadiers",
+    "Cost": 950,
+    "Value": 800,
+    "BaseStats": {
+      "WalkSpeed": 35.0,
+      "SprintSpeed": 45.0,
+      "Morale": 60,
+      "FatigueSkill": 50,
+      "ReloadSkill": 45,
+      "RangedSkill": 15,
+      "MeleeSkill": 35,
+      "ChargeBonus": 45.0
+    },
+    "PrimaryWeapon": "POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 1000,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Prussia_Main",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        0.0,
+        10.0,
+        30.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Freikorps_Provincial_Cavalry",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Freikorps_Provincial_Cavalry",
+    "Description": "Units/Desc/PRU_Freikorps_Provincial_Cavalry",
+    "Cost": 650,
+    "Value": 600,
+    "BaseStats": {
+      "WalkSpeed": 45.0,
+      "SprintSpeed": 75.0,
+      "Morale": 40,
+      "FatigueSkill": 60,
+      "ReloadSkill": 30,
+      "RangedSkill": 5,
+      "MeleeSkill": 20,
+      "ChargeBonus": 25.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "WORN_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "Prussia_Cavalry",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        20.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Freikorps_Hussars",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Freikorps_Hussars",
+    "Description": "Units/Desc/PRU_Freikorps_Hussars",
+    "Cost": 1050,
+    "Value": 900,
+    "BaseStats": {
+      "WalkSpeed": 60.0,
+      "SprintSpeed": 90.0,
+      "Morale": 50,
+      "FatigueSkill": 75,
+      "ReloadSkill": 35,
+      "RangedSkill": 5,
+      "MeleeSkill": 25,
+      "ChargeBonus": 40.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HUSSAR_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 6,
+    "FlagTemplate": "Prussia_Cavalry",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        10.0,
+        20.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Freikorps_Reserve_Artillery",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Freikorps_Reserve_Artillery",
+    "Description": "Units/Desc/PRU_Freikorps_Reserve_Artillery",
+    "Cost": 725,
+    "Value": 675,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 20,
+      "FatigueSkill": 50,
+      "ReloadSkill": 50,
+      "RangedSkill": 15,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "IRON_3LB_GUN",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": [
+      "CANISTER"
+    ],
+    "RawUnitType": "ARTILLERY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 100,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Prussian_Artillery",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        10.0,
+        20.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Itzenplitz_Musketeers",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Itzenplitz_Musketeers",
+    "Description": "Units/Desc/PRU_Itzenplitz_Musketeers",
+    "Cost": 1400,
+    "Value": 900,
+    "BaseStats": {
+      "WalkSpeed": 40.0,
+      "SprintSpeed": 50.0,
+      "Morale": 60,
+      "FatigueSkill": 45,
+      "ReloadSkill": 35,
+      "RangedSkill": 30,
+      "MeleeSkill": 30,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": "REINFORCED_POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Prussia_ItzenplitzMusketeers",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Prinz_von_Preussen_Musketeers",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Prinz_von_Preussen_Musketeers",
+    "Description": "Units/Desc/PRU_Prinz_von_Preussen_Musketeers",
+    "Cost": 1400,
+    "Value": 900,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 40.0,
+      "Morale": 70,
+      "FatigueSkill": 45,
+      "ReloadSkill": 35,
+      "RangedSkill": 40,
+      "MeleeSkill": 20,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": "REINFORCED_POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Prussia_PrinzvonPreussenMusketeers",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Le_Noble_Jaegers",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Le_Noble_Jaegers",
+    "Description": "Units/Desc/PRU_Le_Noble_Jaegers",
+    "Cost": 1350,
+    "Value": 800,
+    "BaseStats": {
+      "WalkSpeed": 50.0,
+      "SprintSpeed": 60.0,
+      "Morale": 45,
+      "FatigueSkill": 70,
+      "ReloadSkill": 50,
+      "RangedSkill": 25,
+      "MeleeSkill": 20,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": "REINFORCED_POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Prussia_LeNobleJaegers",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Aweyde_Feldjägers",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Aweyde_Feldjägers",
+    "Description": "Units/Desc/PRU_Aweyde_Feldjägers",
+    "Cost": 1300,
+    "Value": 750,
+    "BaseStats": {
+      "WalkSpeed": 35.0,
+      "SprintSpeed": 45.0,
+      "Morale": 50,
+      "FatigueSkill": 50,
+      "ReloadSkill": 50,
+      "RangedSkill": 50,
+      "MeleeSkill": 15,
+      "ChargeBonus": 5.0
+    },
+    "PrimaryWeapon": "REINFORCED_POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Prussia_AweydeFeldjaegers",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Heinrich_von_Preussen_Fusiliers",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Heinrich_von_Preussen_Fusiliers",
+    "Description": "Units/Desc/PRU_Heinrich_von_Preussen_Fusiliers",
+    "Cost": 1050,
+    "Value": 650,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 50,
+      "FatigueSkill": 40,
+      "ReloadSkill": 30,
+      "RangedSkill": 30,
+      "MeleeSkill": 20,
+      "ChargeBonus": 45.0
+    },
+    "PrimaryWeapon": "REINFORCED_POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Prussia_HeinrichVonPreussenFusiliers",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Winterfeldt_Grenadiers",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Winterfeldt_Grenadiers",
+    "Description": "Units/Desc/PRU_Winterfeldt_Grenadiers",
+    "Cost": 2050,
+    "Value": 1100,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 40.0,
+      "Morale": 70,
+      "FatigueSkill": 50,
+      "ReloadSkill": 40,
+      "RangedSkill": 25,
+      "MeleeSkill": 40,
+      "ChargeBonus": 50.0
+    },
+    "PrimaryWeapon": "REINFORCED_POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Prussia_WinterfeldtGrenadiers",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Potsdam_Grenadiers",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Potsdam_Grenadiers",
+    "Description": "Units/Desc/PRU_Potsdam_Grenadiers",
+    "Cost": 2050,
+    "Value": 1650,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 40.0,
+      "Morale": 75,
+      "FatigueSkill": 50,
+      "ReloadSkill": 40,
+      "RangedSkill": 25,
+      "MeleeSkill": 30,
+      "ChargeBonus": 55.0
+    },
+    "PrimaryWeapon": "REINFORCED_POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Prussia_GuardGrenadiers",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Deaths_Heads_Hussars",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Deaths_Heads_Hussars",
+    "Description": "Units/Desc/PRU_Deaths_Heads_Hussars",
+    "Cost": 1250,
+    "Value": 850,
+    "BaseStats": {
+      "WalkSpeed": 55.0,
+      "SprintSpeed": 85.0,
+      "Morale": 60,
+      "FatigueSkill": 75,
+      "ReloadSkill": 15,
+      "RangedSkill": 10,
+      "MeleeSkill": 25,
+      "ChargeBonus": 45.0
+    },
+    "PrimaryWeapon": "REINFORCED_POTZDAM_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "REINFORCED_HUSSAR_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Prussia_DeathsHeadHussars",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Bayreuth_Dragoons",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Bayreuth_Dragoons",
+    "Description": "Units/Desc/PRU_Bayreuth_Dragoons",
+    "Cost": 1300,
+    "Value": 900,
+    "BaseStats": {
+      "WalkSpeed": 50.0,
+      "SprintSpeed": 70.0,
+      "Morale": 55,
+      "FatigueSkill": 50,
+      "ReloadSkill": 45,
+      "RangedSkill": 40,
+      "MeleeSkill": 20,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": "REINFORCED_POTZDAM_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "REINFORCED_DRAGOON_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Prussia_BayreuthDragoons",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "PRU_Pennevaire_Life_Carabiniers",
+    "Faction": "PRU",
+    "Name": "Units/Name/PRU_Pennevaire_Life_Carabiniers",
+    "Description": "Units/Desc/PRU_Pennevaire_Life_Carabiniers",
+    "Cost": 1550,
+    "Value": 1150,
+    "BaseStats": {
+      "WalkSpeed": 45.0,
+      "SprintSpeed": 65.0,
+      "Morale": 70,
+      "FatigueSkill": 45,
+      "ReloadSkill": 10,
+      "RangedSkill": 10,
+      "MeleeSkill": 55,
+      "ChargeBonus": 30.0
+    },
+    "PrimaryWeapon": "REINFORCED_POTZDAM_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "REINFORCED_CUIRASSIER_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Prussia_PennevaireLifeCarabiniers",
+    "GenerationData": {
+      "Nationality": "PRU",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_German_Recruit",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_German_Recruit",
+    "Description": "Units/Desc/AUS_German_Recruit",
+    "Cost": 350,
+    "Value": 325,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 25.0,
+      "Morale": 30,
+      "FatigueSkill": 45,
+      "ReloadSkill": 10,
+      "RangedSkill": 20,
+      "MeleeSkill": 15,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": "RUSTIC_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "WORN_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Austria_ColoredFlags",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        150.0,
+        50.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_German_Fusiliers",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_German_Fusiliers",
+    "Description": "Units/Desc/AUS_German_Fusiliers",
+    "Cost": 750,
+    "Value": 600,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 30.0,
+      "Morale": 40,
+      "FatigueSkill": 50,
+      "ReloadSkill": 15,
+      "RangedSkill": 25,
+      "MeleeSkill": 25,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": "NEUSTADT_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "Austria_Main",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        30.0,
+        150.0,
+        100.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_German_Drilled_Fusiliers",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_German_Drilled_Fusiliers",
+    "Description": "Units/Desc/AUS_German_Drilled_Fusiliers",
+    "Cost": 1050,
+    "Value": 800,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 45,
+      "FatigueSkill": 50,
+      "ReloadSkill": 20,
+      "RangedSkill": 35,
+      "MeleeSkill": 25,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": "NEUSTADT_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Austria_Main",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        0.0,
+        50.0,
+        150.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Jaegers",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Jaegers",
+    "Description": "Units/Desc/AUS_Jaegers",
+    "Cost": 1100,
+    "Value": 800,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 40.0,
+      "Morale": 40,
+      "FatigueSkill": 55,
+      "ReloadSkill": 20,
+      "RangedSkill": 50,
+      "MeleeSkill": 20,
+      "ChargeBonus": 10.0
+    },
+    "PrimaryWeapon": "NEUSTADT_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "WORN_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Austria_Main",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        0.0,
+        30.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_German_Grenadiers",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_German_Grenadiers",
+    "Description": "Units/Desc/AUS_German_Grenadiers",
+    "Cost": 1100,
+    "Value": 950,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 55,
+      "FatigueSkill": 55,
+      "ReloadSkill": 20,
+      "RangedSkill": 30,
+      "MeleeSkill": 30,
+      "ChargeBonus": 35.0
+    },
+    "PrimaryWeapon": "NEUSTADT_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Austria_ColoredFlags",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        0.0,
+        20.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Provincial_Cavalry",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Provincial_Cavalry",
+    "Description": "Units/Desc/AUS_Provincial_Cavalry",
+    "Cost": 650,
+    "Value": 600,
+    "BaseStats": {
+      "WalkSpeed": 45.0,
+      "SprintSpeed": 75.0,
+      "Morale": 45,
+      "FatigueSkill": 60,
+      "ReloadSkill": 15,
+      "RangedSkill": 15,
+      "MeleeSkill": 25,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": "NEUSTADT_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "WORN_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Austria_ColoredFlags",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        40.0,
+        40.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Grenzer_Provincial_Cavalry",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Grenzer_Provincial_Cavalry",
+    "Description": "Units/Desc/AUS_Grenzer_Provincial_Cavalry",
+    "Cost": 525,
+    "Value": 475,
+    "BaseStats": {
+      "WalkSpeed": 45.0,
+      "SprintSpeed": 75.0,
+      "Morale": 40,
+      "FatigueSkill": 65,
+      "ReloadSkill": 20,
+      "RangedSkill": 30,
+      "MeleeSkill": 20,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HUSSAR_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "Austria_Main",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        30.0,
+        40.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Dragoons",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Dragoons",
+    "Description": "Units/Desc/AUS_Dragoons",
+    "Cost": 1050,
+    "Value": 900,
+    "BaseStats": {
+      "WalkSpeed": 50.0,
+      "SprintSpeed": 70.0,
+      "Morale": 50,
+      "FatigueSkill": 60,
+      "ReloadSkill": 25,
+      "RangedSkill": 35,
+      "MeleeSkill": 25,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": "NEUSTADT_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "DRAGOON_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Austria_Main",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        20.0,
+        30.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Horse_Grenadiers",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Horse_Grenadiers",
+    "Description": "Units/Desc/AUS_Horse_Grenadiers",
+    "Cost": 1650,
+    "Value": 1500,
+    "BaseStats": {
+      "WalkSpeed": 50.0,
+      "SprintSpeed": 65.0,
+      "Morale": 65,
+      "FatigueSkill": 65,
+      "ReloadSkill": 10,
+      "RangedSkill": 15,
+      "MeleeSkill": 40,
+      "ChargeBonus": 40.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "CUIRASSIER_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 6,
+    "FlagTemplate": "Austria_ColoredFlags",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        0.0,
+        10.0,
+        30.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Cuirassiers",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Cuirassiers",
+    "Description": "Units/Desc/AUS_Cuirassiers",
+    "Cost": 1400,
+    "Value": 1250,
+    "BaseStats": {
+      "WalkSpeed": 45.0,
+      "SprintSpeed": 70.0,
+      "Morale": 60,
+      "FatigueSkill": 55,
+      "ReloadSkill": 5,
+      "RangedSkill": 15,
+      "MeleeSkill": 50,
+      "ChargeBonus": 30.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "CUIRASSIER_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Austria_ColoredFlags",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        0.0,
+        20.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Reserve_Artillery",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Reserve_Artillery",
+    "Description": "Units/Desc/AUS_Reserve_Artillery",
+    "Cost": 750,
+    "Value": 700,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 25.0,
+      "Morale": 20,
+      "FatigueSkill": 40,
+      "ReloadSkill": 30,
+      "RangedSkill": 30,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "IRON_3LB_GUN",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": [
+      "CANISTER"
+    ],
+    "RawUnitType": "ARTILLERY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 100,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "Austria_ColoredFlags",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        40.0,
+        20.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Field_Artillery",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Field_Artillery",
+    "Description": "Units/Desc/AUS_Field_Artillery",
+    "Cost": 1200,
+    "Value": 1000,
+    "BaseStats": {
+      "WalkSpeed": 15.0,
+      "SprintSpeed": 20.0,
+      "Morale": 25,
+      "FatigueSkill": 45,
+      "ReloadSkill": 20,
+      "RangedSkill": 35,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "IRON_5LB_GUN",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "ARTILLERY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 150,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Austria_ColoredFlags",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        10.0,
+        30.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Dutch_Field_Artillery",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Dutch_Field_Artillery",
+    "Description": "Units/Desc/AUS_Dutch_Field_Artillery",
+    "Cost": 1850,
+    "Value": 1650,
+    "BaseStats": {
+      "WalkSpeed": 10.0,
+      "SprintSpeed": 15.0,
+      "Morale": 30,
+      "FatigueSkill": 45,
+      "ReloadSkill": 10,
+      "RangedSkill": 30,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "IRON_5LB_GUN",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "ARTILLERY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 6,
+    "FlagTemplate": "Austria_ColoredFlags",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        0.0,
+        10.0,
+        60.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Guard_Artillery",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Guard_Artillery",
+    "Description": "Units/Desc/AUS_Guard_Artillery",
+    "Cost": 1600,
+    "Value": 1400,
+    "BaseStats": {
+      "WalkSpeed": 15.0,
+      "SprintSpeed": 20.0,
+      "Morale": 30,
+      "FatigueSkill": 50,
+      "ReloadSkill": 30,
+      "RangedSkill": 40,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "IRON_5LB_GUN",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "ARTILLERY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 150,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Austria_ColoredFlags",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        0.0,
+        10.0,
+        60.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Foreign_Recruit",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Foreign_Recruit",
+    "Description": "Units/Desc/AUS_Foreign_Recruit",
+    "Cost": 375,
+    "Value": 350,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 25.0,
+      "Morale": 35,
+      "FatigueSkill": 45,
+      "ReloadSkill": 10,
+      "RangedSkill": 15,
+      "MeleeSkill": 20,
+      "ChargeBonus": 25.0
+    },
+    "PrimaryWeapon": "RUSTIC_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "WORN_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Austria_Hungarian",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        100.0,
+        30.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Hungarian_Fusiliers",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Hungarian_Fusiliers",
+    "Description": "Units/Desc/AUS_Hungarian_Fusiliers",
+    "Cost": 775,
+    "Value": 625,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 30.0,
+      "Morale": 45,
+      "FatigueSkill": 50,
+      "ReloadSkill": 15,
+      "RangedSkill": 20,
+      "MeleeSkill": 30,
+      "ChargeBonus": 25.0
+    },
+    "PrimaryWeapon": "NEUSTADT_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "Austria_Hungarian",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        30.0,
+        100.0,
+        70.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Hungarian_Grenadiers",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Hungarian_Grenadiers",
+    "Description": "Units/Desc/AUS_Hungarian_Grenadiers",
+    "Cost": 1200,
+    "Value": 1050,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 60,
+      "FatigueSkill": 55,
+      "ReloadSkill": 20,
+      "RangedSkill": 15,
+      "MeleeSkill": 40,
+      "ChargeBonus": 50.0
+    },
+    "PrimaryWeapon": "NEUSTADT_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 6,
+    "FlagTemplate": "Austria_Hungarian",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        0.0,
+        20.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Hussars",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Hussars",
+    "Description": "Units/Desc/AUS_Hussars",
+    "Cost": 1200,
+    "Value": 1050,
+    "BaseStats": {
+      "WalkSpeed": 60.0,
+      "SprintSpeed": 90.0,
+      "Morale": 60,
+      "FatigueSkill": 75,
+      "ReloadSkill": 5,
+      "RangedSkill": 10,
+      "MeleeSkill": 30,
+      "ChargeBonus": 40.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HUSSAR_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Austria_HungarianCavalry",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        10.0,
+        30.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Frontier_Cavalry",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Frontier_Cavalry",
+    "Description": "Units/Desc/AUS_Frontier_Cavalry",
+    "Cost": 1550,
+    "Value": 1400,
+    "BaseStats": {
+      "WalkSpeed": 65.0,
+      "SprintSpeed": 95.0,
+      "Morale": 65,
+      "FatigueSkill": 80,
+      "ReloadSkill": 10,
+      "RangedSkill": 15,
+      "MeleeSkill": 35,
+      "ChargeBonus": 45.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HUSSAR_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 6,
+    "FlagTemplate": "Austria_HungarianCavalry",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        0.0,
+        20.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Grenzer_Recruits",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Grenzer_Recruits",
+    "Description": "Units/Desc/AUS_Grenzer_Recruits",
+    "Cost": 375,
+    "Value": 350,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 35.0,
+      "Morale": 30,
+      "FatigueSkill": 50,
+      "ReloadSkill": 10,
+      "RangedSkill": 35,
+      "MeleeSkill": 10,
+      "ChargeBonus": 5.0
+    },
+    "PrimaryWeapon": "RUSTIC_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "WORN_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Austria_Main",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        100.0,
+        30.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Grenzer_Infantry",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Grenzer_Infantry",
+    "Description": "Units/Desc/AUS_Grenzer_Infantry",
+    "Cost": 900,
+    "Value": 600,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 40.0,
+      "Morale": 40,
+      "FatigueSkill": 55,
+      "ReloadSkill": 15,
+      "RangedSkill": 45,
+      "MeleeSkill": 15,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "NEUSTADT_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 800,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Austria_Main",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        30.0,
+        100.0,
+        70.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Grenzer_Sharpshooters",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Grenzer_Sharpshooters",
+    "Description": "Units/Desc/AUS_Grenzer_Sharpshooters",
+    "Cost": 1250,
+    "Value": 950,
+    "BaseStats": {
+      "WalkSpeed": 40.0,
+      "SprintSpeed": 50.0,
+      "Morale": 55,
+      "FatigueSkill": 60,
+      "ReloadSkill": 20,
+      "RangedSkill": 60,
+      "MeleeSkill": 20,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "NEUSTADT_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "WORN_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 7,
+    "FlagTemplate": "Austria_Main",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        0.0,
+        30.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Grenzer_Grenadiers",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Grenzer_Grenadiers",
+    "Description": "Units/Desc/AUS_Grenzer_Grenadiers",
+    "Cost": 950,
+    "Value": 800,
+    "BaseStats": {
+      "WalkSpeed": 35.0,
+      "SprintSpeed": 45.0,
+      "Morale": 50,
+      "FatigueSkill": 60,
+      "ReloadSkill": 20,
+      "RangedSkill": 40,
+      "MeleeSkill": 25,
+      "ChargeBonus": 35.0
+    },
+    "PrimaryWeapon": "NEUSTADT_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 1000,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "Austria_Main",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        0.0,
+        20.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Grenz-Hussars",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Grenz_Hussars",
+    "Description": "Units/Desc/AUS_Grenz_Hussars",
+    "Cost": 900,
+    "Value": 750,
+    "BaseStats": {
+      "WalkSpeed": 60.0,
+      "SprintSpeed": 90.0,
+      "Morale": 50,
+      "FatigueSkill": 80,
+      "ReloadSkill": 25,
+      "RangedSkill": 35,
+      "MeleeSkill": 25,
+      "ChargeBonus": 30.0
+    },
+    "PrimaryWeapon": "NEUSTADT_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HUSSAR_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Austria_Main",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        10.0,
+        30.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Deutschmeister_Fusiliers",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Deutschmeister_Fusiliers",
+    "Description": "Units/Desc/AUS_Deutschmeister_Fusiliers",
+    "Cost": 1350,
+    "Value": 850,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 60,
+      "FatigueSkill": 50,
+      "ReloadSkill": 20,
+      "RangedSkill": 35,
+      "MeleeSkill": 25,
+      "ChargeBonus": 25.0
+    },
+    "PrimaryWeapon": "REINFORCED_NEUSTADT_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Austria_DeutschmeisterFusiliers",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Esterházy_Fusiliers",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Esterházy_Fusiliers",
+    "Description": "Units/Desc/AUS_Esterházy_Fusiliers",
+    "Cost": 1500,
+    "Value": 675,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 65,
+      "FatigueSkill": 55,
+      "ReloadSkill": 20,
+      "RangedSkill": 15,
+      "MeleeSkill": 35,
+      "ChargeBonus": 60.0
+    },
+    "PrimaryWeapon": "REINFORCED_NEUSTADT_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Austria_EsterhazyFusiliers",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_De_Ligne_Fusiliers",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_De_Ligne_Fusiliers",
+    "Description": "Units/Desc/AUS_De_Ligne_Fusiliers",
+    "Cost": 1350,
+    "Value": 850,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 50,
+      "FatigueSkill": 60,
+      "ReloadSkill": 30,
+      "RangedSkill": 35,
+      "MeleeSkill": 25,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": "REINFORCED_NEUSTADT_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Austria_DeLigneFusiliers",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Otocaner_Grenzers",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Otocaner_Grenzers",
+    "Description": "Units/Desc/AUS_Otocaner_Grenzers",
+    "Cost": 1250,
+    "Value": 650,
+    "BaseStats": {
+      "WalkSpeed": 35.0,
+      "SprintSpeed": 45.0,
+      "Morale": 55,
+      "FatigueSkill": 60,
+      "ReloadSkill": 30,
+      "RangedSkill": 50,
+      "MeleeSkill": 25,
+      "ChargeBonus": 35.0
+    },
+    "PrimaryWeapon": "REINFORCED_NEUSTADT_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Austria_OtocanerGrenzers",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Seriman_Grenadiers",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Seriman_Grenadiers",
+    "Description": "Units/Desc/AUS_Seriman_Grenadiers",
+    "Cost": 1500,
+    "Value": 1100,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 40.0,
+      "Morale": 65,
+      "FatigueSkill": 55,
+      "ReloadSkill": 20,
+      "RangedSkill": 15,
+      "MeleeSkill": 40,
+      "ChargeBonus": 60.0
+    },
+    "PrimaryWeapon": "REINFORCED_NEUSTADT_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Austria_SerimanGrenadiers",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Green_Loudon_Grenadiers",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Green_Loudon_Grenadiers",
+    "Description": "Units/Desc/AUS_Green_Loudon_Grenadiers",
+    "Cost": 1400,
+    "Value": 1000,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 65,
+      "FatigueSkill": 55,
+      "ReloadSkill": 20,
+      "RangedSkill": 30,
+      "MeleeSkill": 40,
+      "ChargeBonus": 35.0
+    },
+    "PrimaryWeapon": "REINFORCED_NEUSTADT_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Austria_GreenLoudonGrenadiers",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Kaiser_Franz_Hussars",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Kaiser_Franz_Hussars",
+    "Description": "Units/Desc/AUS_Kaiser_Franz_Hussars",
+    "Cost": 1850,
+    "Value": 1450,
+    "BaseStats": {
+      "WalkSpeed": 65.0,
+      "SprintSpeed": 95.0,
+      "Morale": 70,
+      "FatigueSkill": 90,
+      "ReloadSkill": 10,
+      "RangedSkill": 15,
+      "MeleeSkill": 35,
+      "ChargeBonus": 55.0
+    },
+    "PrimaryWeapon": "REINFORCED_NEUSTADT_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "REINFORCED_HUSSAR_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Austria_KaiserFranzHussars",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Erzherzog_Joseph_Dragoons",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Erzherzog_Joseph_Dragoons",
+    "Description": "Units/Desc/AUS_Erzherzog_Joseph_Dragoons",
+    "Cost": 1350,
+    "Value": 950,
+    "BaseStats": {
+      "WalkSpeed": 50.0,
+      "SprintSpeed": 70.0,
+      "Morale": 55,
+      "FatigueSkill": 60,
+      "ReloadSkill": 25,
+      "RangedSkill": 45,
+      "MeleeSkill": 35,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": "REINFORCED_NEUSTADT_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "REINFORCED_DRAGOON_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Austria_ErzherzogJosephDragoons",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Alt-Modena_Cuirassiers",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Alt_Modena_Cuirassiers",
+    "Description": "Units/Desc/AUS_Alt_Modena_Cuirassiers",
+    "Cost": 1700,
+    "Value": 1300,
+    "BaseStats": {
+      "WalkSpeed": 45.0,
+      "SprintSpeed": 65.0,
+      "Morale": 65,
+      "FatigueSkill": 60,
+      "ReloadSkill": 5,
+      "RangedSkill": 15,
+      "MeleeSkill": 60,
+      "ChargeBonus": 30.0
+    },
+    "PrimaryWeapon": "REINFORCED_NEUSTADT_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "REINFORCED_DRAGOON_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Austria_AltModenaCuirassiers",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "AUS_Perkopp_Artillery",
+    "Faction": "AUS",
+    "Name": "Units/Name/AUS_Perkopp_Artillery",
+    "Description": "Units/Desc/AUS_Perkopp_Artillery",
+    "Cost": 3400,
+    "Value": 1450,
+    "BaseStats": {
+      "WalkSpeed": 15.0,
+      "SprintSpeed": 20.0,
+      "Morale": 35,
+      "FatigueSkill": 50,
+      "ReloadSkill": 35,
+      "RangedSkill": 50,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "LIECHTENSTEIN_12LB_GUN",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "ARTILLERY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 150,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Austria_PerkoppArtillery",
+    "GenerationData": {
+      "Nationality": "AUS",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Volunteer_Recruits",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Volunteer_Recruits",
+    "Description": "Units/Desc/RUS_Volunteer_Recruits",
+    "Cost": 350,
+    "Value": 325,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 25.0,
+      "Morale": 35,
+      "FatigueSkill": 35,
+      "ReloadSkill": 15,
+      "RangedSkill": 10,
+      "MeleeSkill": 15,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": "RUSTIC_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "WORN_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Russia_Main",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        150.0,
+        50.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Musketeers",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Musketeers",
+    "Description": "Units/Desc/RUS_Musketeers",
+    "Cost": 750,
+    "Value": 600,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 30.0,
+      "Morale": 50,
+      "FatigueSkill": 40,
+      "ReloadSkill": 20,
+      "RangedSkill": 15,
+      "MeleeSkill": 25,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": "TULA_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "Russia_Main",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        30.0,
+        150.0,
+        100.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Drilled_Musketeers",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Drilled_Musketeers",
+    "Description": "Units/Desc/RUS_Drilled_Musketeers",
+    "Cost": 1025,
+    "Value": 775,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 55,
+      "FatigueSkill": 40,
+      "ReloadSkill": 25,
+      "RangedSkill": 20,
+      "MeleeSkill": 25,
+      "ChargeBonus": 25.0
+    },
+    "PrimaryWeapon": "TULA_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 1500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Russia_Main",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        0.0,
+        50.0,
+        150.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Grenadiers",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Grenadiers",
+    "Description": "Units/Desc/RUS_Grenadiers",
+    "Cost": 1125,
+    "Value": 975,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 60,
+      "FatigueSkill": 45,
+      "ReloadSkill": 25,
+      "RangedSkill": 15,
+      "MeleeSkill": 30,
+      "ChargeBonus": 40.0
+    },
+    "PrimaryWeapon": "TULA_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1300,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Russia_Grenadiers",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        0.0,
+        20.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Rider_Recruits",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Rider_Recruits",
+    "Description": "Units/Desc/RUS_Rider_Recruits",
+    "Cost": 375,
+    "Value": 325,
+    "BaseStats": {
+      "WalkSpeed": 35.0,
+      "SprintSpeed": 60.0,
+      "Morale": 40,
+      "FatigueSkill": 50,
+      "ReloadSkill": 5,
+      "RangedSkill": 5,
+      "MeleeSkill": 15,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "WORN_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "RECRUIT_LIGHT_CAVALRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Russia_Main",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        50.0,
+        30.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Hussars",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Hussars",
+    "Description": "Units/Desc/RUS_Hussars",
+    "Cost": 1050,
+    "Value": 900,
+    "BaseStats": {
+      "WalkSpeed": 50.0,
+      "SprintSpeed": 80.0,
+      "Morale": 60,
+      "FatigueSkill": 70,
+      "ReloadSkill": 10,
+      "RangedSkill": 10,
+      "MeleeSkill": 20,
+      "ChargeBonus": 40.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HUSSAR_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 6,
+    "FlagTemplate": "Russia_Cavalry",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        10.0,
+        30.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Provincial_Cavalry",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Provincial_Cavalry",
+    "Description": "Units/Desc/RUS_Provincial_Cavalry",
+    "Cost": 600,
+    "Value": 550,
+    "BaseStats": {
+      "WalkSpeed": 35.0,
+      "SprintSpeed": 65.0,
+      "Morale": 50,
+      "FatigueSkill": 55,
+      "ReloadSkill": 5,
+      "RangedSkill": 5,
+      "MeleeSkill": 15,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "WORN_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "Russia_Cavalry",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        30.0,
+        40.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Dragoons",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Dragoons",
+    "Description": "Units/Desc/RUS_Dragoons",
+    "Cost": 1000,
+    "Value": 850,
+    "BaseStats": {
+      "WalkSpeed": 45.0,
+      "SprintSpeed": 65.0,
+      "Morale": 55,
+      "FatigueSkill": 55,
+      "ReloadSkill": 30,
+      "RangedSkill": 25,
+      "MeleeSkill": 15,
+      "ChargeBonus": 25.0
+    },
+    "PrimaryWeapon": "TULA_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "DRAGOON_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Russia_Cavalry",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        5.0,
+        20.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Horse_Grenadiers",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Horse_Grenadiers",
+    "Description": "Units/Desc/RUS_Horse_Grenadiers",
+    "Cost": 1600,
+    "Value": 1450,
+    "BaseStats": {
+      "WalkSpeed": 45.0,
+      "SprintSpeed": 65.0,
+      "Morale": 70,
+      "FatigueSkill": 60,
+      "ReloadSkill": 10,
+      "RangedSkill": 5,
+      "MeleeSkill": 30,
+      "ChargeBonus": 45.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "CUIRASSIER_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 6,
+    "FlagTemplate": "Russia_Cavalry",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        0.0,
+        10.0,
+        30.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Cuirassiers",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Cuirassiers",
+    "Description": "Units/Desc/RUS_Cuirassiers",
+    "Cost": 1350,
+    "Value": 1200,
+    "BaseStats": {
+      "WalkSpeed": 40.0,
+      "SprintSpeed": 60.0,
+      "Morale": 65,
+      "FatigueSkill": 50,
+      "ReloadSkill": 5,
+      "RangedSkill": 5,
+      "MeleeSkill": 40,
+      "ChargeBonus": 35.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "CUIRASSIER_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Russia_Cavalry",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        0.0,
+        10.0,
+        30.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Artillerist_Recruits",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Artillerist_Recruits",
+    "Description": "Units/Desc/RUS_Artillerist_Recruits",
+    "Cost": 475,
+    "Value": 425,
+    "BaseStats": {
+      "WalkSpeed": 15.0,
+      "SprintSpeed": 20.0,
+      "Morale": 20,
+      "FatigueSkill": 35,
+      "ReloadSkill": 25,
+      "RangedSkill": 20,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "IRON_3LB_GUN",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": [
+      "CANISTER"
+    ],
+    "RawUnitType": "RECRUIT_ARTILLERY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 100,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Russia_Artillery",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        50.0,
+        20.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Reserve_Artillery",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Reserve_Artillery",
+    "Description": "Units/Desc/RUS_Reserve_Artillery",
+    "Cost": 825,
+    "Value": 625,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 25.0,
+      "Morale": 25,
+      "FatigueSkill": 40,
+      "ReloadSkill": 30,
+      "RangedSkill": 25,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "IRON_3LB_GUN",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": [
+      "CANISTER"
+    ],
+    "RawUnitType": "ARTILLERY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 125,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "Russia_Artillery",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        10.0,
+        30.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Field_Artillery",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Field_Artillery",
+    "Description": "Units/Desc/RUS_Field_Artillery",
+    "Cost": 1150,
+    "Value": 950,
+    "BaseStats": {
+      "WalkSpeed": 15.0,
+      "SprintSpeed": 20.0,
+      "Morale": 25,
+      "FatigueSkill": 45,
+      "ReloadSkill": 20,
+      "RangedSkill": 30,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "IRON_5LB_GUN",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "ARTILLERY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 150,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Russia_Artillery",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        0.0,
+        10.0,
+        60.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Frontier_Recruits",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Frontier_Recruits",
+    "Description": "Units/Desc/RUS_Frontier_Recruits",
+    "Cost": 300,
+    "Value": 275,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 30.0,
+      "Morale": 35,
+      "FatigueSkill": 50,
+      "ReloadSkill": 15,
+      "RangedSkill": 30,
+      "MeleeSkill": 20,
+      "ChargeBonus": 25.0
+    },
+    "PrimaryWeapon": "RUSTIC_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "WORN_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Russia_Cossacks",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        60.0,
+        20.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Pandurs",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Pandurs",
+    "Description": "Units/Desc/RUS_Pandurs",
+    "Cost": 900,
+    "Value": 600,
+    "BaseStats": {
+      "WalkSpeed": 35.0,
+      "SprintSpeed": 45.0,
+      "Morale": 40,
+      "FatigueSkill": 65,
+      "ReloadSkill": 20,
+      "RangedSkill": 45,
+      "MeleeSkill": 20,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": "TULA_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "WORN_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Russia_Cossacks",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        10.0,
+        50.0,
+        30.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Cossack_Riders",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Cossack_Riders",
+    "Description": "Units/Desc/RUS_Cossack_Riders",
+    "Cost": 650,
+    "Value": 600,
+    "BaseStats": {
+      "WalkSpeed": 65.0,
+      "SprintSpeed": 95.0,
+      "Morale": 45,
+      "FatigueSkill": 70,
+      "ReloadSkill": 10,
+      "RangedSkill": 5,
+      "MeleeSkill": 20,
+      "ChargeBonus": 25.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HUSSAR_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Russia_Cossacks",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        30.0,
+        40.0,
+        10.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Settled_Hussars",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Settled_Hussars",
+    "Description": "Units/Desc/RUS_Settled_Hussars",
+    "Cost": 1100,
+    "Value": 950,
+    "BaseStats": {
+      "WalkSpeed": 65.0,
+      "SprintSpeed": 95.0,
+      "Morale": 55,
+      "FatigueSkill": 75,
+      "ReloadSkill": 10,
+      "RangedSkill": 5,
+      "MeleeSkill": 25,
+      "ChargeBonus": 30.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HUSSAR_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "Russia_Cossacks",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        10.0,
+        30.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Orenburg_Cossacks",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Orenburg_Cossacks",
+    "Description": "Units/Desc/RUS_Orenburg_Cossacks",
+    "Cost": 1300,
+    "Value": 1150,
+    "BaseStats": {
+      "WalkSpeed": 75.0,
+      "SprintSpeed": 105.0,
+      "Morale": 50,
+      "FatigueSkill": 90,
+      "ReloadSkill": 15,
+      "RangedSkill": 10,
+      "MeleeSkill": 30,
+      "ChargeBonus": 40.0
+    },
+    "PrimaryWeapon": "TULA_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HUSSAR_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Russia_Cossacks",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        10.0,
+        30.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Don_Cossacks",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Don_Cossacks",
+    "Description": "Units/Desc/RUS_Don_Cossacks",
+    "Cost": 1400,
+    "Value": 1250,
+    "BaseStats": {
+      "WalkSpeed": 70.0,
+      "SprintSpeed": 100.0,
+      "Morale": 60,
+      "FatigueSkill": 85,
+      "ReloadSkill": 5,
+      "RangedSkill": 5,
+      "MeleeSkill": 30,
+      "ChargeBonus": 45.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HUSSAR_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 6,
+    "FlagTemplate": "Russia_Cossacks",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        10.0,
+        30.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Serf_Recruits",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Serf_Recruits",
+    "Description": "Units/Desc/RUS_Serf_Recruits",
+    "Cost": 375,
+    "Value": 350,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 25.0,
+      "Morale": 40,
+      "FatigueSkill": 45,
+      "ReloadSkill": 10,
+      "RangedSkill": 15,
+      "MeleeSkill": 10,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": "RUSTIC_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "WORN_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Russia_Observation",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        100.0,
+        30.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Observation_Musketeers",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Observation_Musketeers",
+    "Description": "Units/Desc/RUS_Observation_Musketeers",
+    "Cost": 775,
+    "Value": 625,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 25.0,
+      "Morale": 50,
+      "FatigueSkill": 50,
+      "ReloadSkill": 15,
+      "RangedSkill": 25,
+      "MeleeSkill": 15,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": "TULA_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Russia_Observation",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        30.0,
+        100.0,
+        70.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Observation_Fusiliers",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Observation_Fusiliers",
+    "Description": "Units/Desc/RUS_Observation_Fusiliers",
+    "Cost": 900,
+    "Value": 750,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 25.0,
+      "Morale": 55,
+      "FatigueSkill": 50,
+      "ReloadSkill": 25,
+      "RangedSkill": 35,
+      "MeleeSkill": 20,
+      "ChargeBonus": 25.0
+    },
+    "PrimaryWeapon": "TULA_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "Russia_Observation",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        0.0,
+        20.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Observation_Grenadiers",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Observation_Grenadiers",
+    "Description": "Units/Desc/RUS_Observation_Grenadiers",
+    "Cost": 1100,
+    "Value": 950,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 30.0,
+      "Morale": 65,
+      "FatigueSkill": 55,
+      "ReloadSkill": 20,
+      "RangedSkill": 20,
+      "MeleeSkill": 20,
+      "ChargeBonus": 35.0
+    },
+    "PrimaryWeapon": "TULA_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Russia_Grenadiers",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        0.0,
+        20.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Observation_Reserve_Artillery",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Observation_Reserve_Artillery",
+    "Description": "Units/Desc/RUS_Observation_Reserve_Artillery",
+    "Cost": 1200,
+    "Value": 1000,
+    "BaseStats": {
+      "WalkSpeed": 10.0,
+      "SprintSpeed": 20.0,
+      "Morale": 25,
+      "FatigueSkill": 40,
+      "ReloadSkill": 15,
+      "RangedSkill": 40,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "IRON_3LB_GUN",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "ARTILLERY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 150,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Russia_Artillery",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        10.0,
+        30.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Pskovskiy_Musketeers",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Pskovskiy_Musketeers",
+    "Description": "Units/Desc/RUS_Pskovskiy_Musketeers",
+    "Cost": 1275,
+    "Value": 825,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 70,
+      "FatigueSkill": 50,
+      "ReloadSkill": 25,
+      "RangedSkill": 20,
+      "MeleeSkill": 25,
+      "ChargeBonus": 25.0
+    },
+    "PrimaryWeapon": "REINFORCED_TULA_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Russia_PskovskiyMusketeers",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Kievskiy_Musketeers",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Kievskiy_Musketeers",
+    "Description": "Units/Desc/RUS_Kievskiy_Musketeers",
+    "Cost": 1275,
+    "Value": 825,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 60,
+      "FatigueSkill": 40,
+      "ReloadSkill": 35,
+      "RangedSkill": 25,
+      "MeleeSkill": 35,
+      "ChargeBonus": 25.0
+    },
+    "PrimaryWeapon": "REINFORCED_TULA_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Russia_KievskiyMusketeers",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Möller-Sakomelsky_Jägers",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Möller_Sakomelsky_Jägers",
+    "Description": "Units/Desc/RUS_Möller_Sakomelsky_Jägers",
+    "Cost": 1150,
+    "Value": 650,
+    "BaseStats": {
+      "WalkSpeed": 45.0,
+      "SprintSpeed": 55.0,
+      "Morale": 45,
+      "FatigueSkill": 65,
+      "ReloadSkill": 20,
+      "RangedSkill": 55,
+      "MeleeSkill": 20,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": "REINFORCED_TULA_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Russia_MoellerSakmoelskyJaegers",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Preobrazhenskiy_Life_Guards",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Preobrazhenskiy_Life_Guards",
+    "Description": "Units/Desc/RUS_Preobrazhenskiy_Life_Guards",
+    "Cost": 1350,
+    "Value": 1000,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 30.0,
+      "Morale": 80,
+      "FatigueSkill": 55,
+      "ReloadSkill": 20,
+      "RangedSkill": 25,
+      "MeleeSkill": 20,
+      "ChargeBonus": 40.0
+    },
+    "PrimaryWeapon": "REINFORCED_TULA_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1300,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Russia_PreobrazLifeGuards",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Chuguev_Cossacks",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Chuguev_Cossacks",
+    "Description": "Units/Desc/RUS_Chuguev_Cossacks",
+    "Cost": 1350,
+    "Value": 650,
+    "BaseStats": {
+      "WalkSpeed": 65.0,
+      "SprintSpeed": 95.0,
+      "Morale": 70,
+      "FatigueSkill": 75,
+      "ReloadSkill": 10,
+      "RangedSkill": 5,
+      "MeleeSkill": 25,
+      "ChargeBonus": 30.0
+    },
+    "PrimaryWeapon": "REINFORCED_TULA_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "REINFORCED_HUSSAR_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 700,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Russia_ChuvuevCossacks",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Serbski_Hussars",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Serbski_Hussars",
+    "Description": "Units/Desc/RUS_Serbski_Hussars",
+    "Cost": 1300,
+    "Value": 950,
+    "BaseStats": {
+      "WalkSpeed": 60.0,
+      "SprintSpeed": 90.0,
+      "Morale": 65,
+      "FatigueSkill": 70,
+      "ReloadSkill": 10,
+      "RangedSkill": 10,
+      "MeleeSkill": 20,
+      "ChargeBonus": 50.0
+    },
+    "PrimaryWeapon": "REINFORCED_TULA_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "REINFORCED_HUSSAR_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Russia_SerbskiHussars",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Dmitrivich_Dragoons",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Dmitrivich_Dragoons",
+    "Description": "Units/Desc/RUS_Dmitrivich_Dragoons",
+    "Cost": 1375,
+    "Value": 1025,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 65,
+      "FatigueSkill": 45,
+      "ReloadSkill": 25,
+      "RangedSkill": 20,
+      "MeleeSkill": 40,
+      "ChargeBonus": 40.0
+    },
+    "PrimaryWeapon": "REINFORCED_TULA_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1300,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Russia_1stGrenadiers",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Tverskoy_Dragoons",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Tverskoy_Dragoons",
+    "Description": "Units/Desc/RUS_Tverskoy_Dragoons",
+    "Cost": 1250,
+    "Value": 900,
+    "BaseStats": {
+      "WalkSpeed": 45.0,
+      "SprintSpeed": 65.0,
+      "Morale": 70,
+      "FatigueSkill": 55,
+      "ReloadSkill": 35,
+      "RangedSkill": 25,
+      "MeleeSkill": 15,
+      "ChargeBonus": 25.0
+    },
+    "PrimaryWeapon": "REINFORCED_TULA_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "REINFORCED_DRAGOON_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Russia_TverskoyDragoons",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Münnich_Cuirassiers",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Münnich_Cuirassiers",
+    "Description": "Units/Desc/RUS_Münnich_Cuirassiers",
+    "Cost": 1600,
+    "Value": 1250,
+    "BaseStats": {
+      "WalkSpeed": 40.0,
+      "SprintSpeed": 60.0,
+      "Morale": 70,
+      "FatigueSkill": 55,
+      "ReloadSkill": 5,
+      "RangedSkill": 5,
+      "MeleeSkill": 50,
+      "ChargeBonus": 35.0
+    },
+    "PrimaryWeapon": "REINFORCED_TULA_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "REINFORCED_CUIRASSIER_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Russia_MuennichCuirassiers",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "RUS_Shuvalov_Howitzers",
+    "Faction": "RUS",
+    "Name": "Units/Name/RUS_Shuvalov_Howitzers",
+    "Description": "Units/Desc/RUS_Shuvalov_Howitzers",
+    "Cost": 3325,
+    "Value": 1050,
+    "BaseStats": {
+      "WalkSpeed": 10.0,
+      "SprintSpeed": 20.0,
+      "Morale": 30,
+      "FatigueSkill": 40,
+      "ReloadSkill": 20,
+      "RangedSkill": 50,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "SHUVALOV_16LB_HOWITZER",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "ARTILLERY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 150,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Russia_ShuvalovHowitzers",
+    "GenerationData": {
+      "Nationality": "RUS",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_British_Recruits",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_British_Recruits",
+    "Description": "Units/Desc/GBR_British_Recruits",
+    "Cost": 375,
+    "Value": 350,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 25.0,
+      "Morale": 40,
+      "FatigueSkill": 40,
+      "ReloadSkill": 15,
+      "RangedSkill": 25,
+      "MeleeSkill": 10,
+      "ChargeBonus": 10.0
+    },
+    "PrimaryWeapon": "RUSTIC_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "WORN_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Britain_Main",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        200.0,
+        50.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_British_Foot",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_British_Foot",
+    "Description": "Units/Desc/GBR_British_Foot",
+    "Cost": 800,
+    "Value": 700,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 30.0,
+      "Morale": 50,
+      "FatigueSkill": 45,
+      "ReloadSkill": 20,
+      "RangedSkill": 30,
+      "MeleeSkill": 20,
+      "ChargeBonus": 10.0
+    },
+    "PrimaryWeapon": "BROWNBESS_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Britain_Main",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        30.0,
+        150.0,
+        100.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_British_Veteran_Foot",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_British_Veteran_Foot",
+    "Description": "Units/Desc/GBR_British_Veteran_Foot",
+    "Cost": 1100,
+    "Value": 900,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 55,
+      "FatigueSkill": 45,
+      "ReloadSkill": 25,
+      "RangedSkill": 40,
+      "MeleeSkill": 20,
+      "ChargeBonus": 10.0
+    },
+    "PrimaryWeapon": "BROWNBESS_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 6,
+    "FlagTemplate": "Britain_Elite",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        0.0,
+        50.0,
+        150.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_British_Grenadiers",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_British_Grenadiers",
+    "Description": "Units/Desc/GBR_British_Grenadiers",
+    "Cost": 1150,
+    "Value": 950,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 65,
+      "FatigueSkill": 50,
+      "ReloadSkill": 25,
+      "RangedSkill": 35,
+      "MeleeSkill": 25,
+      "ChargeBonus": 30.0
+    },
+    "PrimaryWeapon": "BROWNBESS_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1000,
+    "ExperienceGain": 25,
+    "UpgradeCost": 6,
+    "FlagTemplate": "Britain_Main",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        0.0,
+        20.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_British_Provincial_Cavalry",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_British_Provincial_Cavalry",
+    "Description": "Units/Desc/GBR_British_Provincial_Cavalry",
+    "Cost": 575,
+    "Value": 525,
+    "BaseStats": {
+      "WalkSpeed": 45.0,
+      "SprintSpeed": 75.0,
+      "Morale": 50,
+      "FatigueSkill": 55,
+      "ReloadSkill": 5,
+      "RangedSkill": 20,
+      "MeleeSkill": 15,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "WORN_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Britain_Cavalry",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        30.0,
+        40.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_British_Light_Dragoons",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_British_Light_Dragoons",
+    "Description": "Units/Desc/GBR_British_Light_Dragoons",
+    "Cost": 1100,
+    "Value": 950,
+    "BaseStats": {
+      "WalkSpeed": 55.0,
+      "SprintSpeed": 85.0,
+      "Morale": 55,
+      "FatigueSkill": 70,
+      "ReloadSkill": 25,
+      "RangedSkill": 45,
+      "MeleeSkill": 20,
+      "ChargeBonus": 25.0
+    },
+    "PrimaryWeapon": "BROWNBESS_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "DRAGOON_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Britain_Cavalry",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        10.0,
+        30.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_British_Dragoons",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_British_Dragoons",
+    "Description": "Units/Desc/GBR_British_Dragoons",
+    "Cost": 1250,
+    "Value": 1100,
+    "BaseStats": {
+      "WalkSpeed": 50.0,
+      "SprintSpeed": 70.0,
+      "Morale": 60,
+      "FatigueSkill": 55,
+      "ReloadSkill": 20,
+      "RangedSkill": 40,
+      "MeleeSkill": 25,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": "BROWNBESS_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "DRAGOON_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Britain_Cavalry",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        0.0,
+        20.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_British_Reserve_Artillery",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_British_Reserve_Artillery",
+    "Description": "Units/Desc/GBR_British_Reserve_Artillery",
+    "Cost": 650,
+    "Value": 600,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 25.0,
+      "Morale": 30,
+      "FatigueSkill": 35,
+      "ReloadSkill": 25,
+      "RangedSkill": 25,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "IRON_3LB_GUN",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": [
+      "CANISTER"
+    ],
+    "RawUnitType": "ARTILLERY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 100,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "Britain_Main",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        30.0,
+        20.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_British_Field_Artillery",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_British_Field_Artillery",
+    "Description": "Units/Desc/GBR_British_Field_Artillery",
+    "Cost": 1075,
+    "Value": 875,
+    "BaseStats": {
+      "WalkSpeed": 15.0,
+      "SprintSpeed": 20.0,
+      "Morale": 35,
+      "FatigueSkill": 40,
+      "ReloadSkill": 15,
+      "RangedSkill": 30,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "IRON_5LB_GUN",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "ARTILLERY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 150,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Britain_Main",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        10.0,
+        30.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_Highland_Foot",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_Highland_Foot",
+    "Description": "Units/Desc/GBR_Highland_Foot",
+    "Cost": 900,
+    "Value": 750,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 45,
+      "FatigueSkill": 55,
+      "ReloadSkill": 20,
+      "RangedSkill": 25,
+      "MeleeSkill": 30,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": "BROWNBESS_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Britain_Main",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        30.0,
+        50.0,
+        30.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_Highland_Grenadiers",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_Highland_Grenadiers",
+    "Description": "Units/Desc/GBR_Highland_Grenadiers",
+    "Cost": 1200,
+    "Value": 1000,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 40.0,
+      "Morale": 60,
+      "FatigueSkill": 60,
+      "ReloadSkill": 25,
+      "RangedSkill": 20,
+      "MeleeSkill": 35,
+      "ChargeBonus": 40.0
+    },
+    "PrimaryWeapon": "BROWNBESS_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1000,
+    "ExperienceGain": 25,
+    "UpgradeCost": 7,
+    "FlagTemplate": "Britain_Main",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        0.0,
+        20.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_German_Recruits",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_German_Recruits",
+    "Description": "Units/Desc/GBR_German_Recruits",
+    "Cost": 350,
+    "Value": 325,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 25.0,
+      "Morale": 30,
+      "FatigueSkill": 35,
+      "ReloadSkill": 20,
+      "RangedSkill": 15,
+      "MeleeSkill": 10,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": "RUSTIC_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "WORN_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Britain_Hanover",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        150.0,
+        50.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_German_Landmiliz",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_German_Landmiliz",
+    "Description": "Units/Desc/GBR_German_Landmiliz",
+    "Cost": 500,
+    "Value": 475,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 30.0,
+      "Morale": 35,
+      "FatigueSkill": 40,
+      "ReloadSkill": 25,
+      "RangedSkill": 20,
+      "MeleeSkill": 15,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": "RUSTIC_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "WORN_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 2,
+    "FlagTemplate": "Britain_Hanover",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        50.0,
+        30.0,
+        10.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_Brunswicker_Musketeers",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_Brunswicker_Musketeers",
+    "Description": "Units/Desc/GBR_Brunswicker_Musketeers",
+    "Cost": 700,
+    "Value": 550,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 40.0,
+      "Morale": 40,
+      "FatigueSkill": 50,
+      "ReloadSkill": 40,
+      "RangedSkill": 25,
+      "MeleeSkill": 25,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": "POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "Britain_Brunswick",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        40.0,
+        25.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_Hanoverian_Foot",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_Hanoverian_Foot",
+    "Description": "Units/Desc/GBR_Hanoverian_Foot",
+    "Cost": 800,
+    "Value": 650,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 40,
+      "FatigueSkill": 45,
+      "ReloadSkill": 25,
+      "RangedSkill": 30,
+      "MeleeSkill": 20,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": "BROWNBESS_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 2,
+    "FlagTemplate": "Britain_Hanover",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        30.0,
+        150.0,
+        100.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_Hessian_Musketeers",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_Hessian_Musketeers",
+    "Description": "Units/Desc/GBR_Hessian_Musketeers",
+    "Cost": 850,
+    "Value": 675,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 40.0,
+      "Morale": 45,
+      "FatigueSkill": 55,
+      "ReloadSkill": 35,
+      "RangedSkill": 20,
+      "MeleeSkill": 25,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": "POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Britain_Hesse",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        10.0,
+        50.0,
+        30.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_German_Jaegers",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_German_Jaegers",
+    "Description": "Units/Desc/GBR_German_Jaegers",
+    "Cost": 1050,
+    "Value": 750,
+    "BaseStats": {
+      "WalkSpeed": 35.0,
+      "SprintSpeed": 45.0,
+      "Morale": 45,
+      "FatigueSkill": 55,
+      "ReloadSkill": 30,
+      "RangedSkill": 45,
+      "MeleeSkill": 15,
+      "ChargeBonus": 5.0
+    },
+    "PrimaryWeapon": "POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "WORN_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Britain_Brunswick",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        0.0,
+        30.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_Hanoverian_Grenadiers",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_Hanoverian_Grenadiers",
+    "Description": "Units/Desc/GBR_Hanoverian_Grenadiers",
+    "Cost": 1075,
+    "Value": 925,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 55,
+      "FatigueSkill": 50,
+      "ReloadSkill": 30,
+      "RangedSkill": 25,
+      "MeleeSkill": 25,
+      "ChargeBonus": 35.0
+    },
+    "PrimaryWeapon": "BROWNBESS_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 6,
+    "FlagTemplate": "Britain_Hanover",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        0.0,
+        20.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_Hessian_Grenadiers",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_Hessian_Grenadiers",
+    "Description": "Units/Desc/GBR_Hessian_Grenadiers",
+    "Cost": 1200,
+    "Value": 1000,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 35.0,
+      "Morale": 60,
+      "FatigueSkill": 65,
+      "ReloadSkill": 40,
+      "RangedSkill": 15,
+      "MeleeSkill": 30,
+      "ChargeBonus": 40.0
+    },
+    "PrimaryWeapon": "POTZDAM_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1000,
+    "ExperienceGain": 25,
+    "UpgradeCost": 7,
+    "FlagTemplate": "Britain_Hesse",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        0.0,
+        10.0,
+        20.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_German_Provincial_Cavalry",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_German_Provincial_Cavalry",
+    "Description": "Units/Desc/GBR_German_Provincial_Cavalry",
+    "Cost": 550,
+    "Value": 500,
+    "BaseStats": {
+      "WalkSpeed": 40.0,
+      "SprintSpeed": 70.0,
+      "Morale": 40,
+      "FatigueSkill": 55,
+      "ReloadSkill": 5,
+      "RangedSkill": 5,
+      "MeleeSkill": 20,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "WORN_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "Britain_Hanover",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        30.0,
+        40.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_Hanoverian_Cavalry",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_Hanoverian_Cavalry",
+    "Description": "Units/Desc/GBR_Hanoverian_Cavalry",
+    "Cost": 950,
+    "Value": 800,
+    "BaseStats": {
+      "WalkSpeed": 50.0,
+      "SprintSpeed": 80.0,
+      "Morale": 50,
+      "FatigueSkill": 65,
+      "ReloadSkill": 15,
+      "RangedSkill": 10,
+      "MeleeSkill": 30,
+      "ChargeBonus": 30.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HUSSAR_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Britain_Hanover",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        10.0,
+        30.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_Hessian_Cavalry",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_Hessian_Cavalry",
+    "Description": "Units/Desc/GBR_Hessian_Cavalry",
+    "Cost": 1250,
+    "Value": 1100,
+    "BaseStats": {
+      "WalkSpeed": 50.0,
+      "SprintSpeed": 70.0,
+      "Morale": 60,
+      "FatigueSkill": 55,
+      "ReloadSkill": 10,
+      "RangedSkill": 10,
+      "MeleeSkill": 45,
+      "ChargeBonus": 35.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "CUIRASSIER_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 6,
+    "FlagTemplate": "Britain_Hesse",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        5.0,
+        20.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_German_Reserve_Artillery",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_German_Reserve_Artillery",
+    "Description": "Units/Desc/GBR_German_Reserve_Artillery",
+    "Cost": 675,
+    "Value": 625,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 30.0,
+      "Morale": 20,
+      "FatigueSkill": 40,
+      "ReloadSkill": 40,
+      "RangedSkill": 20,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "IRON_3LB_GUN",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": [
+      "CANISTER"
+    ],
+    "RawUnitType": "ARTILLERY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 100,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "Britain_Hanover",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        30.0,
+        20.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_German_Field_Artillery",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_German_Field_Artillery",
+    "Description": "Units/Desc/GBR_German_Field_Artillery",
+    "Cost": 1100,
+    "Value": 900,
+    "BaseStats": {
+      "WalkSpeed": 15.0,
+      "SprintSpeed": 20.0,
+      "Morale": 25,
+      "FatigueSkill": 45,
+      "ReloadSkill": 30,
+      "RangedSkill": 20,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "IRON_5LB_GUN",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "ARTILLERY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 150,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "Britain_Hanover",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        10.0,
+        30.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_Schaumburg_Lippe_Fusiliers",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_Schaumburg_Lippe_Fusiliers",
+    "Description": "Units/Desc/GBR_Schaumburg_Lippe_Fusiliers",
+    "Cost": 2900,
+    "Value": 950,
+    "BaseStats": {
+      "WalkSpeed": 15.0,
+      "SprintSpeed": 20.0,
+      "Morale": 30,
+      "FatigueSkill": 45,
+      "ReloadSkill": 40,
+      "RangedSkill": 25,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "BRUMMER_12LB_GUN",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "ARTILLERY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 150,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Britain_SchaumburgLippe",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_Campbells_Highlanders",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_Campbells_Highlanders",
+    "Description": "Units/Desc/GBR_Campbells_Highlanders",
+    "Cost": 1450,
+    "Value": 1050,
+    "BaseStats": {
+      "WalkSpeed": 40.0,
+      "SprintSpeed": 50.0,
+      "Morale": 65,
+      "FatigueSkill": 60,
+      "ReloadSkill": 25,
+      "RangedSkill": 20,
+      "MeleeSkill": 35,
+      "ChargeBonus": 50.0
+    },
+    "PrimaryWeapon": "REINFORCED_BROWNBESS_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Britain_CampbellHighlanders",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_Legion_Britannique_Musketeers",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_Legion_Britannique_Musketeers",
+    "Description": "Units/Desc/GBR_Legion_Britannique_Musketeers",
+    "Cost": 1300,
+    "Value": 600,
+    "BaseStats": {
+      "WalkSpeed": 35.0,
+      "SprintSpeed": 45.0,
+      "Morale": 50,
+      "FatigueSkill": 55,
+      "ReloadSkill": 40,
+      "RangedSkill": 55,
+      "MeleeSkill": 15,
+      "ChargeBonus": 5.0
+    },
+    "PrimaryWeapon": "REINFORCED_BROWNBESS_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Britain_LegionBritannique",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_Royal_Welch_Fusiliers",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_Royal_Welch_Fusiliers",
+    "Description": "Units/Desc/GBR_Royal_Welch_Fusiliers",
+    "Cost": 1350,
+    "Value": 950,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 70,
+      "FatigueSkill": 45,
+      "ReloadSkill": 25,
+      "RangedSkill": 45,
+      "MeleeSkill": 20,
+      "ChargeBonus": 10.0
+    },
+    "PrimaryWeapon": "REINFORCED_BROWNBESS_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Britain_RoyalWelchFusiliers",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_Hanoverian_Foot_Guards",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_Hanoverian_Foot_Guards",
+    "Description": "Units/Desc/GBR_Hanoverian_Foot_Guards",
+    "Cost": 1325,
+    "Value": 975,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 60,
+      "FatigueSkill": 55,
+      "ReloadSkill": 30,
+      "RangedSkill": 25,
+      "MeleeSkill": 35,
+      "ChargeBonus": 35.0
+    },
+    "PrimaryWeapon": "REINFORCED_BROWNBESS_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Britain_HanoverianFootGuards",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_Coldstream_Guards",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_Coldstream_Guards",
+    "Description": "Units/Desc/GBR_Coldstream_Guards",
+    "Cost": 1400,
+    "Value": 1000,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 75,
+      "FatigueSkill": 50,
+      "ReloadSkill": 25,
+      "RangedSkill": 35,
+      "MeleeSkill": 25,
+      "ChargeBonus": 40.0
+    },
+    "PrimaryWeapon": "REINFORCED_BROWNBESS_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1000,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Britain_ColdstreamGuards",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_Von_Roth_Hussars",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_Von_Roth_Hussars",
+    "Description": "Units/Desc/GBR_Von_Roth_Hussars",
+    "Cost": 1200,
+    "Value": 850,
+    "BaseStats": {
+      "WalkSpeed": 50.0,
+      "SprintSpeed": 80.0,
+      "Morale": 55,
+      "FatigueSkill": 75,
+      "ReloadSkill": 15,
+      "RangedSkill": 10,
+      "MeleeSkill": 30,
+      "ChargeBonus": 40.0
+    },
+    "PrimaryWeapon": "REINFORCED_BROWNBESS_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "REINFORCED_HUSSAR_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Britain_VonRothHussars",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_Bueckeberg_Carabiniers",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_Bueckeberg_Carabiniers",
+    "Description": "Units/Desc/GBR_Bueckeberg_Carabiniers",
+    "Cost": 1500,
+    "Value": 1150,
+    "BaseStats": {
+      "WalkSpeed": 50.0,
+      "SprintSpeed": 70.0,
+      "Morale": 65,
+      "FatigueSkill": 55,
+      "ReloadSkill": 10,
+      "RangedSkill": 10,
+      "MeleeSkill": 55,
+      "ChargeBonus": 40.0
+    },
+    "PrimaryWeapon": "REINFORCED_BROWNBESS_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "REINFORCED_CUIRASSIER_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Britain_BueckeburgCarabiniers",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_First_Dragoon_Guards",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_First_Dragoon_Guards",
+    "Description": "Units/Desc/GBR_First_Dragoon_Guards",
+    "Cost": 1500,
+    "Value": 1150,
+    "BaseStats": {
+      "WalkSpeed": 50.0,
+      "SprintSpeed": 70.0,
+      "Morale": 75,
+      "FatigueSkill": 55,
+      "ReloadSkill": 20,
+      "RangedSkill": 40,
+      "MeleeSkill": 30,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": "REINFORCED_BROWNBESS_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "REINFORCED_DRAGOON_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Britain_1stDragoonGuards",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "GBR_Royal_Horse_Guards",
+    "Faction": "GBR",
+    "Name": "Units/Name/GBR_Royal_Horse_Guards",
+    "Description": "Units/Desc/GBR_Royal_Horse_Guards",
+    "Cost": 1500,
+    "Value": 1150,
+    "BaseStats": {
+      "WalkSpeed": 50.0,
+      "SprintSpeed": 70.0,
+      "Morale": 70,
+      "FatigueSkill": 55,
+      "ReloadSkill": 20,
+      "RangedSkill": 40,
+      "MeleeSkill": 25,
+      "ChargeBonus": 30.0
+    },
+    "PrimaryWeapon": "REINFORCED_BROWNBESS_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "REINFORCED_DRAGOON_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "Britain_RoyalHorseGuards",
+    "GenerationData": {
+      "Nationality": "GBR",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_Royal_Recruits",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_Royal_Recruits",
+    "Description": "Units/Desc/FRA_Royal_Recruits",
+    "Cost": 325,
+    "Value": 300,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 25.0,
+      "Morale": 30,
+      "FatigueSkill": 40,
+      "ReloadSkill": 15,
+      "RangedSkill": 15,
+      "MeleeSkill": 15,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": "RUSTIC_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "WORN_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "RECRUIT_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 0,
+    "FlagTemplate": "France_Main",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        200.0,
+        50.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_French_Fusiliers",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_French_Fusiliers",
+    "Description": "Units/Desc/FRA_French_Fusiliers",
+    "Cost": 700,
+    "Value": 550,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 30.0,
+      "Morale": 35,
+      "FatigueSkill": 45,
+      "ReloadSkill": 20,
+      "RangedSkill": 20,
+      "MeleeSkill": 20,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": "CHARLEVILLE_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "France_Main",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        30.0,
+        150.0,
+        100.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_Irish_Fusiliers",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_Irish_Fusiliers",
+    "Description": "Units/Desc/FRA_Irish_Fusiliers",
+    "Cost": 675,
+    "Value": 525,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 30.0,
+      "Morale": 40,
+      "FatigueSkill": 50,
+      "ReloadSkill": 15,
+      "RangedSkill": 25,
+      "MeleeSkill": 20,
+      "ChargeBonus": 25.0
+    },
+    "PrimaryWeapon": "BROWNBESS_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "France_Irish",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        10.0,
+        40.0,
+        20.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_German_Fusiliers",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_German_Fusiliers",
+    "Description": "Units/Desc/FRA_German_Fusiliers",
+    "Cost": 750,
+    "Value": 600,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 40,
+      "FatigueSkill": 45,
+      "ReloadSkill": 35,
+      "RangedSkill": 20,
+      "MeleeSkill": 20,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": "NEUSTADT_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "France_German",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        20.0,
+        50.0,
+        30.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_Swiss_Fusiliers",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_Swiss_Fusiliers",
+    "Description": "Units/Desc/FRA_Swiss_Fusiliers",
+    "Cost": 1000,
+    "Value": 850,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 30.0,
+      "Morale": 50,
+      "FatigueSkill": 50,
+      "ReloadSkill": 25,
+      "RangedSkill": 35,
+      "MeleeSkill": 15,
+      "ChargeBonus": 10.0
+    },
+    "PrimaryWeapon": "CHARLEVILLE_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "France_Swiss",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        10.0,
+        40.0,
+        20.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_French_Veteran_Fusiliers",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_French_Veteran_Fusiliers",
+    "Description": "Units/Desc/FRA_French_Veteran_Fusiliers",
+    "Cost": 1000,
+    "Value": 750,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 40,
+      "FatigueSkill": 45,
+      "ReloadSkill": 25,
+      "RangedSkill": 30,
+      "MeleeSkill": 20,
+      "ChargeBonus": 25.0
+    },
+    "PrimaryWeapon": "CHARLEVILLE_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 1600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "France_Veterans",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        0.0,
+        50.0,
+        150.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_French_Grenadiers",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_French_Grenadiers",
+    "Description": "Units/Desc/FRA_French_Grenadiers",
+    "Cost": 1150,
+    "Value": 1000,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 50,
+      "FatigueSkill": 50,
+      "ReloadSkill": 25,
+      "RangedSkill": 25,
+      "MeleeSkill": 25,
+      "ChargeBonus": 40.0
+    },
+    "PrimaryWeapon": "CHARLEVILLE_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "France_Grenadiers",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        0.0,
+        20.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_Irish_Grenadiers",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_Irish_Grenadiers",
+    "Description": "Units/Desc/FRA_Irish_Grenadiers",
+    "Cost": 1050,
+    "Value": 900,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 55,
+      "FatigueSkill": 55,
+      "ReloadSkill": 20,
+      "RangedSkill": 20,
+      "MeleeSkill": 30,
+      "ChargeBonus": 45.0
+    },
+    "PrimaryWeapon": "BROWNBESS_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 1000,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "France_Irish",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        0.0,
+        10.0,
+        30.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_German_Grenadiers",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_German_Grenadiers",
+    "Description": "Units/Desc/FRA_German_Grenadiers",
+    "Cost": 1100,
+    "Value": 950,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 40.0,
+      "Morale": 55,
+      "FatigueSkill": 45,
+      "ReloadSkill": 40,
+      "RangedSkill": 15,
+      "MeleeSkill": 25,
+      "ChargeBonus": 35.0
+    },
+    "PrimaryWeapon": "NEUSTADT_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "France_German",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        0.0,
+        20.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_Swiss_Grenadiers",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_Swiss_Grenadiers",
+    "Description": "Units/Desc/FRA_Swiss_Grenadiers",
+    "Cost": 1650,
+    "Value": 1500,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 65,
+      "FatigueSkill": 55,
+      "ReloadSkill": 30,
+      "RangedSkill": 30,
+      "MeleeSkill": 20,
+      "ChargeBonus": 30.0
+    },
+    "PrimaryWeapon": "CHARLEVILLE_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 6,
+    "FlagTemplate": "France_Swiss",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        0.0,
+        10.0,
+        30.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_French_Provincial_Cavalry",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_French_Provincial_Cavalry",
+    "Description": "Units/Desc/FRA_French_Provincial_Cavalry",
+    "Cost": 725,
+    "Value": 675,
+    "BaseStats": {
+      "WalkSpeed": 40.0,
+      "SprintSpeed": 70.0,
+      "Morale": 45,
+      "FatigueSkill": 55,
+      "ReloadSkill": 5,
+      "RangedSkill": 5,
+      "MeleeSkill": 25,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "WORN_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "France_Cavalry",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        40.0,
+        40.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_French_Hussars",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_French_Hussars",
+    "Description": "Units/Desc/FRA_French_Hussars",
+    "Cost": 1100,
+    "Value": 950,
+    "BaseStats": {
+      "WalkSpeed": 55.0,
+      "SprintSpeed": 85.0,
+      "Morale": 55,
+      "FatigueSkill": 70,
+      "ReloadSkill": 5,
+      "RangedSkill": 5,
+      "MeleeSkill": 30,
+      "ChargeBonus": 40.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HUSSAR_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 5,
+    "FlagTemplate": "France_Cavalry",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        20.0,
+        30.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_French_Gendarmerie",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_French_Gendarmerie",
+    "Description": "Units/Desc/FRA_French_Gendarmerie",
+    "Cost": 1350,
+    "Value": 1200,
+    "BaseStats": {
+      "WalkSpeed": 60.0,
+      "SprintSpeed": 90.0,
+      "Morale": 60,
+      "FatigueSkill": 75,
+      "ReloadSkill": 15,
+      "RangedSkill": 10,
+      "MeleeSkill": 40,
+      "ChargeBonus": 35.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HUSSAR_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "France_Cavalry",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        0.0,
+        20.0,
+        30.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_French_Dragoons",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_French_Dragoons",
+    "Description": "Units/Desc/FRA_French_Dragoons",
+    "Cost": 1300,
+    "Value": 1150,
+    "BaseStats": {
+      "WalkSpeed": 50.0,
+      "SprintSpeed": 70.0,
+      "Morale": 55,
+      "FatigueSkill": 55,
+      "ReloadSkill": 25,
+      "RangedSkill": 30,
+      "MeleeSkill": 25,
+      "ChargeBonus": 25.0
+    },
+    "PrimaryWeapon": "CHARLEVILLE_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "DRAGOON_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "France_Cavalry",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        5.0,
+        20.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_French_Gentleman_Cavalry",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_French_Gentleman_Cavalry",
+    "Description": "Units/Desc/FRA_French_Gentleman_Cavalry",
+    "Cost": 1500,
+    "Value": 1350,
+    "BaseStats": {
+      "WalkSpeed": 50.0,
+      "SprintSpeed": 70.0,
+      "Morale": 65,
+      "FatigueSkill": 60,
+      "ReloadSkill": 5,
+      "RangedSkill": 10,
+      "MeleeSkill": 50,
+      "ChargeBonus": 35.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "CUIRASSIER_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "France_Cavalry",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        0.0,
+        10.0,
+        30.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_French_Royal_Cavalry",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_French_Royal_Cavalry",
+    "Description": "Units/Desc/FRA_French_Royal_Cavalry",
+    "Cost": 1800,
+    "Value": 1650,
+    "BaseStats": {
+      "WalkSpeed": 45.0,
+      "SprintSpeed": 65.0,
+      "Morale": 75,
+      "FatigueSkill": 55,
+      "ReloadSkill": 5,
+      "RangedSkill": 5,
+      "MeleeSkill": 60,
+      "ChargeBonus": 40.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "CUIRASSIER_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "France_Cavalry",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        0.0,
+        10.0,
+        30.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_French_Reserve_Artillery",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_French_Reserve_Artillery",
+    "Description": "Units/Desc/FRA_French_Reserve_Artillery",
+    "Cost": 1050,
+    "Value": 1000,
+    "BaseStats": {
+      "WalkSpeed": 20.0,
+      "SprintSpeed": 25.0,
+      "Morale": 20,
+      "FatigueSkill": 35,
+      "ReloadSkill": 30,
+      "RangedSkill": 10,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "IRON_3LB_GUN",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": [
+      "CANISTER"
+    ],
+    "RawUnitType": "ARTILLERY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 150,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "France_Main",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        30.0,
+        20.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_French_Field_Artillery",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_French_Field_Artillery",
+    "Description": "Units/Desc/FRA_French_Field_Artillery",
+    "Cost": 1400,
+    "Value": 1200,
+    "BaseStats": {
+      "WalkSpeed": 15.0,
+      "SprintSpeed": 20.0,
+      "Morale": 20,
+      "FatigueSkill": 40,
+      "ReloadSkill": 20,
+      "RangedSkill": 15,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "IRON_5LB_GUN",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "ARTILLERY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 175,
+    "ExperienceGain": 25,
+    "UpgradeCost": 7,
+    "FlagTemplate": "France_Veterans",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        10.0,
+        30.0,
+        50.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_Volontaires_Fusiliers",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_Volontaires_Fusiliers",
+    "Description": "Units/Desc/FRA_Volontaires_Fusiliers",
+    "Cost": 775,
+    "Value": 600,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 40.0,
+      "Morale": 40,
+      "FatigueSkill": 50,
+      "ReloadSkill": 25,
+      "RangedSkill": 30,
+      "MeleeSkill": 15,
+      "ChargeBonus": 5.0
+    },
+    "PrimaryWeapon": "CHARLEVILLE_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "France_Volontaires",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        10.0,
+        50.0,
+        30.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_Chasseurs",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_Chasseurs",
+    "Description": "Units/Desc/FRA_Chasseurs",
+    "Cost": 1100,
+    "Value": 800,
+    "BaseStats": {
+      "WalkSpeed": 35.0,
+      "SprintSpeed": 45.0,
+      "Morale": 35,
+      "FatigueSkill": 55,
+      "ReloadSkill": 30,
+      "RangedSkill": 50,
+      "MeleeSkill": 15,
+      "ChargeBonus": 5.0
+    },
+    "PrimaryWeapon": "CHARLEVILLE_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_INFANTRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "France_Volontaires",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        0.0,
+        30.0,
+        20.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_French_Royaux_Grenadiers",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_French_Royaux_Grenadiers",
+    "Description": "Units/Desc/FRA_French_Royaux_Grenadiers",
+    "Cost": 1000,
+    "Value": 850,
+    "BaseStats": {
+      "WalkSpeed": 35.0,
+      "SprintSpeed": 45.0,
+      "Morale": 50,
+      "FatigueSkill": 55,
+      "ReloadSkill": 35,
+      "RangedSkill": 25,
+      "MeleeSkill": 20,
+      "ChargeBonus": 35.0
+    },
+    "PrimaryWeapon": "CHARLEVILLE_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "France_Volontaires",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        0.0,
+        10.0,
+        30.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_Volontaires_Provincial_Cavalry",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_Volontaires_Provincial_Cavalry",
+    "Description": "Units/Desc/FRA_Volontaires_Provincial_Cavalry",
+    "Cost": 625,
+    "Value": 575,
+    "BaseStats": {
+      "WalkSpeed": 45.0,
+      "SprintSpeed": 75.0,
+      "Morale": 40,
+      "FatigueSkill": 55,
+      "ReloadSkill": 10,
+      "RangedSkill": 20,
+      "MeleeSkill": 20,
+      "ChargeBonus": 15.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "WORN_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Fast",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 2,
+    "FlagTemplate": "France_Main",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        20.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_Volontaires_Hussars",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_Volontaires_Hussars",
+    "Description": "Units/Desc/FRA_Volontaires_Hussars",
+    "Cost": 1050,
+    "Value": 900,
+    "BaseStats": {
+      "WalkSpeed": 60.0,
+      "SprintSpeed": 90.0,
+      "Morale": 50,
+      "FatigueSkill": 70,
+      "ReloadSkill": 15,
+      "RangedSkill": 10,
+      "MeleeSkill": 25,
+      "ChargeBonus": 35.0
+    },
+    "PrimaryWeapon": null,
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "HUSSAR_SABRES",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "LIGHT_CAVALRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 500,
+    "ExperienceGain": 25,
+    "UpgradeCost": 4,
+    "FlagTemplate": "France_Main",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        0.0,
+        20.0,
+        40.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_Volontaires_Dragoons",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_Volontaires_Dragoons",
+    "Description": "Units/Desc/FRA_Volontaires_Dragoons",
+    "Cost": 1150,
+    "Value": 1000,
+    "BaseStats": {
+      "WalkSpeed": 55.0,
+      "SprintSpeed": 75.0,
+      "Morale": 50,
+      "FatigueSkill": 55,
+      "ReloadSkill": 30,
+      "RangedSkill": 35,
+      "MeleeSkill": 20,
+      "ChargeBonus": 20.0
+    },
+    "PrimaryWeapon": "CHARLEVILLE_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "DRAGOON_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Normal",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 3,
+    "FlagTemplate": "France_Main",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        10.0,
+        20.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_Diesbach_Fusiliers",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_Diesbach_Fusiliers",
+    "Description": "Units/Desc/FRA_Diesbach_Fusiliers",
+    "Cost": 1900,
+    "Value": 900,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 70,
+      "FatigueSkill": 55,
+      "ReloadSkill": 35,
+      "RangedSkill": 40,
+      "MeleeSkill": 20,
+      "ChargeBonus": 30.0
+    },
+    "PrimaryWeapon": "REINFORCED_NEUSTADT_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "France_DiesbachFusiliers",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_Royal_Scots_Fusiliers",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_Royal_Scots_Fusiliers",
+    "Description": "Units/Desc/FRA_Royal_Scots_Fusiliers",
+    "Cost": 1300,
+    "Value": 575,
+    "BaseStats": {
+      "WalkSpeed": 30.0,
+      "SprintSpeed": 40.0,
+      "Morale": 60,
+      "FatigueSkill": 55,
+      "ReloadSkill": 20,
+      "RangedSkill": 20,
+      "MeleeSkill": 30,
+      "ChargeBonus": 55.0
+    },
+    "PrimaryWeapon": "REINFORCED_BROWNBESS_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "France_RoyalScotsFusiliers",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_Royal_Deux_Ponts_Grenadiers",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_Royal_Deux_Ponts_Grenadiers",
+    "Description": "Units/Desc/FRA_Royal_Deux_Ponts_Grenadiers",
+    "Cost": 1350,
+    "Value": 650,
+    "BaseStats": {
+      "WalkSpeed": 35.0,
+      "SprintSpeed": 45.0,
+      "Morale": 60,
+      "FatigueSkill": 45,
+      "ReloadSkill": 40,
+      "RangedSkill": 15,
+      "MeleeSkill": 25,
+      "ChargeBonus": 45.0
+    },
+    "PrimaryWeapon": "REINFORCED_JONKOPING_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "France_RoyalDeuxPontsGrenadiers",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_Grenadiers_Of_France",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_Grenadiers_Of_France",
+    "Description": "Units/Desc/FRA_Grenadiers_Of_France",
+    "Cost": 1400,
+    "Value": 1050,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 60,
+      "FatigueSkill": 50,
+      "ReloadSkill": 25,
+      "RangedSkill": 25,
+      "MeleeSkill": 35,
+      "ChargeBonus": 40.0
+    },
+    "PrimaryWeapon": "REINFORCED_CHARLEVILLE_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1400,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "France_GrenadiersofFrance",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_French_Guards",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_French_Guards",
+    "Description": "Units/Desc/FRA_French_Guards",
+    "Cost": 1400,
+    "Value": 1050,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 65,
+      "FatigueSkill": 50,
+      "ReloadSkill": 25,
+      "RangedSkill": 30,
+      "MeleeSkill": 25,
+      "ChargeBonus": 40.0
+    },
+    "PrimaryWeapon": "REINFORCED_CHARLEVILLE_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "France_FrenchGuards",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_Swiss_Guards",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_Swiss_Guards",
+    "Description": "Units/Desc/FRA_Swiss_Guards",
+    "Cost": 1900,
+    "Value": 1550,
+    "BaseStats": {
+      "WalkSpeed": 25.0,
+      "SprintSpeed": 35.0,
+      "Morale": 80,
+      "FatigueSkill": 55,
+      "ReloadSkill": 30,
+      "RangedSkill": 30,
+      "MeleeSkill": 25,
+      "ChargeBonus": 30.0
+    },
+    "PrimaryWeapon": "REINFORCED_CHARLEVILLE_MUSKET",
+    "FallbackPrimary": "TRAINING_MUSKET",
+    "SecondaryWeapon": "REINFORCED_SOCKET_BAYONET",
+    "FallbackSecondary": null,
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_LINE_INFANTRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 1200,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "France_SwissGuards",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_Musketeers_Of_The_Guard",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_Musketeers_Of_The_Guard",
+    "Description": "Units/Desc/FRA_Musketeers_Of_The_Guard",
+    "Cost": 1750,
+    "Value": 1400,
+    "BaseStats": {
+      "WalkSpeed": 50.0,
+      "SprintSpeed": 70.0,
+      "Morale": 80,
+      "FatigueSkill": 60,
+      "ReloadSkill": 5,
+      "RangedSkill": 10,
+      "MeleeSkill": 50,
+      "ChargeBonus": 40.0
+    },
+    "PrimaryWeapon": "REINFORCED_CHARLEVILLE_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "REINFORCED_CUIRASSIER_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "France_MusketeersoftheGuard",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_Royal_Allemand_Cavalry",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_Royal_Allemand_Cavalry",
+    "Description": "Units/Desc/FRA_Royal_Allemand_Cavalry",
+    "Cost": 1550,
+    "Value": 1200,
+    "BaseStats": {
+      "WalkSpeed": 50.0,
+      "SprintSpeed": 70.0,
+      "Morale": 60,
+      "FatigueSkill": 55,
+      "ReloadSkill": 30,
+      "RangedSkill": 30,
+      "MeleeSkill": 35,
+      "ChargeBonus": 25.0
+    },
+    "PrimaryWeapon": "REINFORCED_CHARLEVILLE_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "REINFORCED_CUIRASSIER_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "France_RoyalAllemandCavalry",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        3.0,
+        5.0,
+        7.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_Grenadiers_A_Cheval",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_Grenadiers_A_Cheval",
+    "Description": "Units/Desc/FRA_Grenadiers_A_Cheval",
+    "Cost": 2050,
+    "Value": 1700,
+    "BaseStats": {
+      "WalkSpeed": 50.0,
+      "SprintSpeed": 70.0,
+      "Morale": 80,
+      "FatigueSkill": 65,
+      "ReloadSkill": 5,
+      "RangedSkill": 5,
+      "MeleeSkill": 60,
+      "ChargeBonus": 40.0
+    },
+    "PrimaryWeapon": "REINFORCED_CHARLEVILLE_CARBINE",
+    "FallbackPrimary": null,
+    "SecondaryWeapon": "REINFORCED_CUIRASSIER_SWORDS",
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": [
+      "SMALL_BAG_CAST_IRON_GRENADES"
+    ],
+    "RawUnitType": "HEAVY_CAVALRY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 600,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "France_GrenadiersaCheval",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  },
+  {
+    "ID": "FRA_Fifth_Royal_Artillery",
+    "Faction": "FRA",
+    "Name": "Units/Name/FRA_Fifth_Royal_Artillery",
+    "Description": "Units/Desc/FRA_Fifth_Royal_Artillery",
+    "Cost": 3200,
+    "Value": 1250,
+    "BaseStats": {
+      "WalkSpeed": 15.0,
+      "SprintSpeed": 20.0,
+      "Morale": 25,
+      "FatigueSkill": 45,
+      "ReloadSkill": 20,
+      "RangedSkill": 15,
+      "MeleeSkill": 0,
+      "ChargeBonus": 0.0
+    },
+    "PrimaryWeapon": "BRONZE_16LB_HOWITZER",
+    "FallbackPrimary": "TRAINING_CANNON",
+    "SecondaryWeapon": null,
+    "FallbackSecondary": "WORN_SWORDS",
+    "OffHandItems": null,
+    "RawUnitType": "ARTILLERY",
+    "ReplenishmentRate": "Slow",
+    "MaxManpower": 225,
+    "ExperienceGain": 25,
+    "UpgradeCost": 1,
+    "FlagTemplate": "France_5thRoyalArtillery",
+    "GenerationData": {
+      "Nationality": "FRA",
+      "ShopProbabilities": [
+        -100.0,
+        10.0,
+        18.0,
+        0.0
+      ]
+    }
+  }
+]
