@@ -90,6 +90,8 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         player_data = self.data["PlayerSaveData"]
         army_data = player_data["ArmySaveData"]
         divisions_data = army_data["Divisions"]
+        reserve_regiments_data = army_data["ReserveRegiments"]
+        reserve_officers_data = army_data["ReserveOfficers"]
         
         self.goldSpinBox.setValue(player_data["Cash"])
         self.supplySpinBox.setValue(player_data["Food"])
@@ -100,6 +102,21 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         self.supplySpinBox.setValue(player_data["Food"])
         self.ammoSpinBox.setValue(player_data["Ammo"])
         self.manpowerSpinBox.setValue(player_data["Manpower"])
+        
+        for i, item in enumerate(reserve_regiments_data):
+            if item is None:
+                continue
+            combo = getattr(self, f"reserveTypeComboBox_{i+1}", None)
+            spinbox = getattr(self, f"reserveVeterancySpinBox_{i+1}", None)
+            if not isinstance(combo, QComboBox):
+                continue
+            if not isinstance(spinbox, QSpinBox):
+                continue
+            combo.setCurrentText(UNITS[item["UnitID"]])
+            spinbox.setValue(item["CurrentLevel"])
+        
+        for i, item in enumerate(reserve_officers_data):
+            pass
         
         for i in range(len(divisions_data)):
             for j in range(4):
@@ -131,6 +148,22 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         self.data["PlayerSaveData"] = player_data
     
     def populate_comboboxes(self, unit_list):
+        for i in range(5):
+            combo = getattr(self, f"reserveTypeComboBox_{i+1}", None)
+            if not isinstance(combo, QComboBox):
+                continue
+                    
+            combo.blockSignals(True)
+            combo.clear()
+
+            combo.addItem(" ", None)
+
+            for key, value in unit_list.items():
+                combo.addItem(value, key)
+
+            combo.blockSignals(False)
+
+            
         for i in range(5):
             for j in range(4):
                 name = f"regimentTypeComboBox_{i+1}_{j+1}"
