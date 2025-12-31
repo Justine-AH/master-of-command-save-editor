@@ -1315,11 +1315,11 @@ class Ui_MainWindow(object):
         self.veterancySpinBox_5_2.setMaximum(9)
         self.veterancySpinBox_5_3.setMaximum(9)
         self.veterancySpinBox_5_4.setMaximum(9)
+        
     # setupUi
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.actionLoad_Save_File.setText(QCoreApplication.translate("MainWindow", u"Load File", None))
         self.actionSave_File.setText(QCoreApplication.translate("MainWindow", u"Save File", None))
         self.actionLoad_File.setText(QCoreApplication.translate("MainWindow", u"Load File", None))
         self.goldGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Gold", None))
