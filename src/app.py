@@ -7,13 +7,16 @@ from PySide6.QtWidgets import (
     QMainWindow
 )
 from PySide6.QtCore import Qt
+from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QCheckBox)
 from save_editor_ui import Ui_MainWindow
-from PySide6.QtWidgets import QFileDialog
+from constants import UNITS
 
+# TODO: Yeesh, the unit stats are separate from unit type... might need to read game files
 class SaveEditor(QMainWindow, Ui_MainWindow):
     def __init__(self, q_app, parent=None):
         super().__init__(parent)
         self.setupUi(self)
+        self.populate_comboboxes(UNITS)
         
         self.data = None
         
@@ -76,17 +79,40 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         self.statusBar().showMessage("Save file loaded")
         
         player_data = self.data["PlayerSaveData"]
+        army_data = player_data["ArmySaveData"]
+        divisions_data = army_data["Divisions"]
         
         self.goldSpinBox.setValue(player_data["Cash"])
         self.supplySpinBox.setValue(player_data["Food"])
         self.ammoSpinBox.setValue(player_data["Ammo"])
         self.manpowerSpinBox.setValue(player_data["Manpower"])
     
+        self.goldSpinBox.setValue(player_data["Cash"])
+        self.supplySpinBox.setValue(player_data["Food"])
+        self.ammoSpinBox.setValue(player_data["Ammo"])
+        self.manpowerSpinBox.setValue(player_data["Manpower"])
+        
+        for i in range(len(divisions_data)):
+            for j in range(4):
+                combo = getattr(self, f"regimentTypeComboBox_{i+1}_{j+1}", None)
+                spinbox = getattr(self, f"veterancySpinBox_{i+1}_{j+1}", None)
+                if not isinstance(combo, QComboBox):
+                    continue
+                if not isinstance(spinbox, QSpinBox):
+                    continue
+                regiment = divisions_data[i]["Regiments"][j]
+                if regiment is None:
+                    # no unit here
+                    continue
+                combo.setCurrentText(UNITS[regiment["UnitID"]])
+                spinbox.setValue(regiment["CurrentLevel"])
+        
     def save_data(self):
         if self.data is None:
             return
         
         player_data = self.data["PlayerSaveData"]
+        army_data = player_data["ArmySaveData"]
         
         player_data["Cash"] = self.goldSpinBox.value()
         player_data["Food"] = self.supplySpinBox.value()
@@ -94,6 +120,25 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         player_data["Manpower"] = self.manpowerSpinBox.value()
         
         self.data["PlayerSaveData"] = player_data
+    
+    def populate_comboboxes(self, unit_list):
+        for i in range(5):
+            for j in range(4):
+                name = f"regimentTypeComboBox_{i+1}_{j+1}"
+                combo = getattr(self, name, None)
+
+                if not isinstance(combo, QComboBox):
+                    continue
+                    
+                combo.blockSignals(True)
+                combo.clear()
+
+                combo.addItem(" ", None)
+
+                for key, value in unit_list.items():
+                    combo.addItem(value, key)
+
+                combo.blockSignals(False)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
