@@ -10,9 +10,8 @@ from PySide6.QtWidgets import (
     QMainWindow
 )
 from PySide6.QtCore import Qt
-from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QTreeWidgetItem)
+from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QTreeWidgetItem, QTableWidgetItem)
 from save_editor_ui import Ui_MainWindow
-from constants import UNITS
 
 DEV_FEATURES = os.getenv("DEV_FEATURES", "").lower() == "true"
 
@@ -23,17 +22,19 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
     def __init__(self, q_app, parent=None):
         super().__init__(parent)
         self.setupUi(self)
-        self.populate_comboboxes(UNITS)
         
         self.data = None
-        
-        # Templates are needed for changing unit types or adding new units
-        # unit stats, bust and flag are not attached to unit_types and must be manually changed
-        # we need the templates for reference to generate or change units
         self.unit_template = None
         self.flag_template = None
         self.bust_template = None
         self.upgrade_template = None
+        self.loc_dict = None
+        
+        # Templates are needed for changing unit types or adding new units
+        # unit stats, bust and flag are not attached to unit_types and must be manually changed
+        # we need the templates for reference to generate or change units
+        self.load_templates()
+        self.populate_comboboxes(self.unit_template)
         
         self.q_app = q_app
 
@@ -45,7 +46,6 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         self.actionLoad_File.triggered.connect(self.on_load_button_trigger)
         self.actionSave_File.triggered.connect(self.on_save_button_trigger)
         
-        self.load_templates()
         
         index = self.tabWidget.indexOf(self.devTab)
         self.tabWidget.setTabVisible(index, False)
@@ -101,7 +101,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
             raise
 
     def load_data(self):
-        if self.data is None:
+        if self.data is None or self.loc_dict is None:
             return
         
         self.statusBar().showMessage("Save file loaded")
@@ -131,7 +131,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
                 continue
             if not isinstance(spinbox, QSpinBox):
                 continue
-            combo.setCurrentText(UNITS[item["UnitID"]])
+            combo.setCurrentText(self.loc_dict[item["UnitID"]])
             combo.setProperty("originalValue", combo.currentData())
             spinbox.setValue(item["CurrentLevel"])
         
@@ -150,7 +150,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
                 if regiment is None:
                     # no unit here
                     continue
-                combo.setCurrentText(UNITS[regiment["UnitID"]])
+                combo.setCurrentText(self.loc_dict[regiment["UnitID"]])
                 combo.setProperty("originalValue", combo.currentData())
                 spinbox.setValue(regiment["CurrentLevel"])
         
@@ -215,6 +215,8 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
             return
         if self.bust_template is None:
             return
+        if self.loc_dict is None:
+            return
         
         # TODO: handle adding and deleting units
         unit = self.unit_template[new_unit_type]
@@ -252,7 +254,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         regiment["PreviousUnlockedUnits"] = prereq
         regiment["BustData"] = new_bust
         regiment["FlagSave"] = flag
-        regiment["Name"] = UNITS[unit["Name"].split("/")[-1]]
+        regiment["Name"] = self.loc_dict[unit["Name"].split("/")[-1]]
         regiment["UnitID"] = new_unit_type
         regiment["UpgradeTreeID"] = tree_id
         
@@ -311,6 +313,9 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         return data
 
     def populate_comboboxes(self, unit_list):
+        if self.loc_dict is None:
+            return
+        
         for i in range(5):
             combo = getattr(self, f"reserveTypeComboBox_{i+1}", None)
             if not isinstance(combo, QComboBox):
@@ -322,7 +327,11 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
             combo.addItem(" ", None)
 
             for key, value in unit_list.items():
-                combo.addItem(value, key)
+                if "test" in key.lower() or value["RawUnitType"] == "SUPPLY_CARAVAN":
+                    continue
+                # "Name": "Units/Name/RUS_Möller_Sakomelsky_Jägers"
+                name_key = value["Name"].split("/")[-1]
+                combo.addItem(self.loc_dict[name_key], key)
 
             combo.blockSignals(False)
 
@@ -341,7 +350,10 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
                 combo.addItem(" ", None)
 
                 for key, value in unit_list.items():
-                    combo.addItem(value, key)
+                    if "test" in key.lower() or value["RawUnitType"] == "SUPPLY_CARAVAN":
+                        continue
+                    name_key = value["Name"].split("/")[-1]
+                    combo.addItem(self.loc_dict[name_key], key)
 
                 combo.blockSignals(False)
 
@@ -373,6 +385,15 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         
         self.bust_template = bust_templates
         
+        with open("./templates/English.json", "r", encoding="utf-8") as f:
+            loc = json.load(f)["Terms"]
+        
+        self.loc_dict = {
+            item["Key"].split("/")[-1]: item["Translation"]
+            for item in loc
+            if "Units/Name/" in item["Key"]
+        }
+        
         self.unitTemplateTreeWidget.setHeaderLabels(["Key", "Value"])
         self.add_dict_to_tree(self.unitTemplateTreeWidget.invisibleRootItem(), self.unit_template)
         self.flagTemplateTreeWidget.setHeaderLabels(["Key", "Value"])
@@ -381,6 +402,13 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         self.add_dict_to_tree(self.bustTemplateTreeWidget.invisibleRootItem(), self.bust_template)
         self.upgradeTemplateTreeWidget.setHeaderLabels(["Key", "Value"])
         self.add_dict_to_tree(self.upgradeTemplateTreeWidget.invisibleRootItem(), self.upgrade_template)
+        
+        for row, (key, value) in enumerate(self.loc_dict.items()):
+            self.locTableWidget.setRowCount(len(self.loc_dict))
+            self.locTableWidget.setItem(row, 0, QTableWidgetItem(str(key)))
+            self.locTableWidget.setItem(row, 1, QTableWidgetItem(str(value)))
+
+        self.locTableWidget.resizeColumnsToContents()
     
     def add_dict_to_tree(self, parent, data):
         for k, v in data.items():
