@@ -1619,10 +1619,6 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(3)
-        self.devTabWidget.setCurrentIndex(4)
-
-
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
 
@@ -1823,9 +1819,9 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.leaderTab), QCoreApplication.translate("MainWindow", u"Leaders", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.inventoryTab), QCoreApplication.translate("MainWindow", u"Inventory", None))
         ___qtablewidgetitem = self.locTableWidget.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Key", None));
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"Key", None)); # type: ignore
         ___qtablewidgetitem1 = self.locTableWidget.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Value", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"Value", None)); # type: ignore
         self.devTabWidget.setTabText(self.devTabWidget.indexOf(self.locTab), QCoreApplication.translate("MainWindow", u"Loc", None))
         ___qtreewidgetitem = self.unitTemplateTreeWidget.headerItem()
         ___qtreewidgetitem.setText(0, QCoreApplication.translate("MainWindow", u"Unit Template", None));
