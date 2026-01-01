@@ -134,6 +134,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
             combo.setCurrentText(self.loc_dict[item["UnitID"]])
             combo.setProperty("originalValue", combo.currentData())
             spinbox.setValue(item["CurrentLevel"])
+            spinbox.setProperty("originalValue", spinbox.value())
         
         for i, item in enumerate(reserve_officers_data):
             pass
@@ -153,6 +154,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
                 combo.setCurrentText(self.loc_dict[regiment["UnitID"]])
                 combo.setProperty("originalValue", combo.currentData())
                 spinbox.setValue(regiment["CurrentLevel"])
+                spinbox.setProperty("originalValue", spinbox.value())
         
     def save_data(self):
         if self.data is None:
@@ -177,33 +179,52 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         for i in range(len(divisions_data)):
             for j in range(4):
                 combo = getattr(self, f"regimentTypeComboBox_{i+1}_{j+1}", None)
+                spinbox = getattr(self, f"veterancySpinBox_{i+1}_{j+1}", None)
                 if not isinstance(combo, QComboBox):
                     continue
-                
-                original = None if combo.property("originalValue") == "" else combo.property("originalValue")
-                current = combo.currentData()
-
-                if original == current:
+                if not isinstance(spinbox, QSpinBox):
                     continue
-                # print(f"regimentTypeComboBox_{i+1}_{j+1} - {original} != {current}")
                 
-                new_regiment = self.handle_unit_type_change(divisions_data[i]["Regiments"][j], current)
-                self.data["PlayerSaveData"]["ArmySaveData"]["Divisions"][i]["Regiments"][j] = new_regiment
+                combo_original = None if combo.property("originalValue") == "" else combo.property("originalValue")
+                combo_current = combo.currentData()
+
+                if combo_original != combo_current:
+                    new_regiment = self.handle_unit_type_change(divisions_data[i]["Regiments"][j], combo_current)
+                    divisions_data[i]["Regiments"][j] = new_regiment
+                
+                spin_original = spinbox.property("originalValue") or 0
+                spin_current = spinbox.value()
+
+                if spin_original != spin_current:
+                    new_regiment = divisions_data[i]["Regiments"][j]
+                    if new_regiment is not None:
+                        new_regiment["CurrentLevel"] = spinbox.value()
                 
         for i in range(len(reserve_divisions_data)):
+            if reserve_divisions_data[i] is None:
+                return
+            
             combo = getattr(self, f"reserveTypeComboBox_{i+1}", None)
+            spinbox = getattr(self, f"reserveVeterancySpinBox_{i+1}", None)
             if not isinstance(combo, QComboBox):
                 continue
-            
-            original = None if combo.property("originalValue") == "" else combo.property("originalValue")
-            current = combo.currentData()
-
-            if original == current:
+            if not isinstance(spinbox, QSpinBox):
                 continue
-            # print(f"reserveTypeComboBox_{i+1} - {original} != {current}")
             
-            new_regiment = self.handle_unit_type_change(reserve_divisions_data[i], current)
-            self.data["PlayerSaveData"]["ArmySaveData"]["ReserveRegiments"][i] = new_regiment
+            combo_original = None if combo.property("originalValue") == "" else combo.property("originalValue")
+            combo_current = combo.currentData()
+
+            if combo_original != combo_current:
+                new_regiment = self.handle_unit_type_change(reserve_divisions_data[i], combo_current)
+                reserve_divisions_data[i] = new_regiment
+
+            spin_original = spinbox.property("originalValue") or 0
+            spin_current = spinbox.value()
+
+            if spin_original != spin_current:
+                new_regiment = reserve_divisions_data[i]
+                if new_regiment is not None:
+                    new_regiment["CurrentLevel"] = spinbox.value()
     
     def handle_unit_type_change(self, regiment, new_unit_type):
         
@@ -257,7 +278,10 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         regiment["Name"] = self.loc_dict[unit["Name"].split("/")[-1]]
         regiment["UnitID"] = new_unit_type
         regiment["UpgradeTreeID"] = tree_id
-        
+                
+        # "InfantryMaxSupply": 10,
+        # "CavalryMaxSupply": 15,
+        # "ArtilleryMaxSupply": 80,
         # regiment["Supply"] #??? dunno where this is based on, maybe by unit types?
         
         return regiment
