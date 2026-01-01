@@ -15,6 +15,7 @@ from constants import *
 from save_editor_ui import Ui_MainWindow
 
 # TODO: maybe find directory of game files for template instead
+# TODO: weapon and equipment contraints...
 
 DEV_FEATURES = os.getenv("DEV_FEATURES", "").lower() == "true"
 
@@ -201,11 +202,10 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
                 combo_current = combo.currentData()
 
                 if combo_original != combo_current:
-                    print(f"{combo_original} != {combo_current}")
                     if combo_current is None:
                         new_regiment = None
                     else:
-                        new_regiment = self.handle_unit_type_change(divisions_data[i]["Regiments"][j], combo_current)
+                        new_regiment = self.handle_unit_type_change(divisions_data[i]["Regiments"][j], combo_current, j)
                     divisions_data[i]["Regiments"][j] = new_regiment
                 
                 spin_original = spinbox.property("originalValue") or 0
@@ -231,11 +231,10 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
             combo_current = combo.currentData()
 
             if combo_original != combo_current:
-                print(f"{combo_original} != {combo_current}")
                 if combo_current is None:
                     new_regiment = None
                 else:
-                    new_regiment = self.handle_unit_type_change(reserve_divisions_data[i], combo_current)
+                    new_regiment = self.handle_unit_type_change(reserve_divisions_data[i], combo_current, i)
                 reserve_divisions_data[i] = new_regiment
 
             spin_original = spinbox.property("originalValue") or 0
@@ -246,7 +245,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
                 if new_regiment is not None:
                     new_regiment["CurrentLevel"] = spinbox.value()
 
-    def handle_unit_type_change(self, regiment, new_unit_type):
+    def handle_unit_type_change(self, regiment, new_unit_type, position):
         
         if self.unit_template is None:
             return
@@ -304,6 +303,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         regiment["UnitID"] = new_unit_type
         regiment["UpgradeTreeID"] = tree_id
         regiment["Supply"] = int((unit["MaxManpower"] // 100) * supply)
+        regiment["DivisionPosition"] = position
         
         return regiment
     
