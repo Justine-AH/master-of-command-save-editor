@@ -2,6 +2,7 @@ import json
 import os
 from pathlib import Path
 import pprint
+import random
 import sys
 import tempfile
 from PySide6.QtWidgets import (
@@ -14,6 +15,9 @@ from save_editor_ui import Ui_MainWindow
 from constants import UNITS
 
 DEV_FEATURES = os.getenv("DEV_FEATURES", "").lower() == "true"
+
+# TODO: setting to remember paths?
+# TODO: fix bust data, need to pick random and generate random when empty
 
 class SaveEditor(QMainWindow, Ui_MainWindow):
     def __init__(self, q_app, parent=None):
@@ -29,6 +33,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         self.unit_template = None
         self.flag_template = None
         self.bust_template = None
+        self.upgrade_template = None
         
         self.q_app = q_app
 
@@ -88,7 +93,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
 
         try:
             with os.fdopen(fd, "w", encoding="utf-8") as f:
-                json.dump(self.data, f, indent=2)
+                json.dump(self.data, f, indent=2, ensure_ascii=False)
 
             os.replace(temp_path, path)
         except Exception:
@@ -127,6 +132,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
             if not isinstance(spinbox, QSpinBox):
                 continue
             combo.setCurrentText(UNITS[item["UnitID"]])
+            combo.setProperty("originalValue", combo.currentData())
             spinbox.setValue(item["CurrentLevel"])
         
         for i, item in enumerate(reserve_officers_data):
@@ -145,6 +151,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
                     # no unit here
                     continue
                 combo.setCurrentText(UNITS[regiment["UnitID"]])
+                combo.setProperty("originalValue", combo.currentData())
                 spinbox.setValue(regiment["CurrentLevel"])
         
     def save_data(self):
@@ -160,7 +167,105 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         player_data["Manpower"] = self.manpowerSpinBox.value()
         
         self.data["PlayerSaveData"] = player_data
+        
+        player_data = self.data["PlayerSaveData"]
+        army_data = player_data["ArmySaveData"]
+        divisions_data = army_data["Divisions"]
+        reserve_divisions_data = army_data["ReserveRegiments"]
+        
+        # checks for unit type change
+        for i in range(len(divisions_data)):
+            for j in range(4):
+                combo = getattr(self, f"regimentTypeComboBox_{i+1}_{j+1}", None)
+                if not isinstance(combo, QComboBox):
+                    continue
+                
+                original = None if combo.property("originalValue") == "" else combo.property("originalValue")
+                current = combo.currentData()
+
+                if original == current:
+                    continue
+                # print(f"regimentTypeComboBox_{i+1}_{j+1} - {original} != {current}")
+                
+                new_regiment = self.handle_unit_type_change(divisions_data[i]["Regiments"][j], current)
+                self.data["PlayerSaveData"]["ArmySaveData"]["Divisions"][i]["Regiments"][j] = new_regiment
+                
+        for i in range(len(reserve_divisions_data)):
+            combo = getattr(self, f"reserveTypeComboBox_{i+1}", None)
+            if not isinstance(combo, QComboBox):
+                continue
+            
+            original = None if combo.property("originalValue") == "" else combo.property("originalValue")
+            current = combo.currentData()
+
+            if original == current:
+                continue
+            # print(f"reserveTypeComboBox_{i+1} - {original} != {current}")
+            
+            new_regiment = self.handle_unit_type_change(reserve_divisions_data[i], current)
+            self.data["PlayerSaveData"]["ArmySaveData"]["ReserveRegiments"][i] = new_regiment
     
+    def handle_unit_type_change(self, regiment, new_unit_type):
+        
+        if self.unit_template is None:
+            return
+        if self.upgrade_template is None:
+            return
+        if self.flag_template is None:
+            return
+        if self.bust_template is None:
+            return
+        
+        # TODO: handle adding and deleting units
+        unit = self.unit_template[new_unit_type]
+        flag_list = self.flag_template[unit["FlagTemplate"]]
+        bust_list = self.bust_template[unit["ID"]]
+        
+        primary_color = random.choice(flag_list["PrimaryColors"])
+        secondary_color = random.choice(flag_list["SecondaryColors"])
+        pattern = random.choice(flag_list["Patterns"])
+        emblem = random.choice(flag_list["Emblems"])
+        
+        flag = {
+            "EmblemKey": emblem,
+            "PrimaryColor": primary_color,
+            "Patternkey": pattern,
+            "SecondaryColor": secondary_color,
+            "SecondaryDyeColor": "00FFFF",
+            "PrimaryDyeColor": primary_color
+        }
+        
+        tree_id, prereq = self.find_tree_and_prereq_by_unit_id(self.upgrade_template, new_unit_type)
+        
+        regiment["TargetManpower"] = unit["MaxManpower"]
+        regiment["Manpower"] = unit["MaxManpower"]
+        regiment["MaxManpower"] = unit["MaxManpower"]
+        regiment["MeleeAttribute"] = unit["BaseStats"]["MeleeSkill"]
+        regiment["AccuracyAttribute"] = unit["BaseStats"]["RangedSkill"]
+        regiment["ReloadAttribute"] = unit["BaseStats"]["ReloadSkill"]
+        regiment["MoraleAttribute"] = unit["BaseStats"]["Morale"]
+        regiment["FatigueAttribute"] = unit["BaseStats"]["FatigueSkill"]
+        regiment["ChargeBonusAttribute"] = int(unit["BaseStats"]["ChargeBonus"])
+        regiment["WalkSpeed"] = int(unit["BaseStats"]["WalkSpeed"])
+        regiment["RunSpeed"] = int(unit["BaseStats"]["SprintSpeed"])
+        regiment["PreviousUnlockedUnits"] = prereq
+        regiment["BustData"] = bust_list
+        regiment["FlagSave"] = flag
+        regiment["Name"] = UNITS[unit["Name"].split("/")[-1]]
+        regiment["UnitID"] = new_unit_type
+        regiment["UpgradeTreeID"] = tree_id
+        
+        # regiment["Supply"] #??? dunno where this is based on, maybe by unit types?
+        
+        return regiment
+    
+    def find_tree_and_prereq_by_unit_id(self, data, unit_id):
+        for tree_name, tree in data.items():
+            items = tree["Items"]
+            if unit_id in items:
+                return tree_name, items[unit_id]["Prerequisite"] or []
+        return None, []
+
     def populate_comboboxes(self, unit_list):
         for i in range(5):
             combo = getattr(self, f"reserveTypeComboBox_{i+1}", None)
@@ -203,6 +308,12 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         
         self.unit_template = {unit["ID"]: unit for unit in unit_template_list}
         
+        # Loading Upgrade Templates
+        with open("./templates/UpgradeTrees.json", "r", encoding="utf-8") as f:
+            upgrade_template_list = json.load(f)
+        
+        self.upgrade_template = upgrade_template_list
+        
         # Loading Flag Templates
         with open("./templates/FlagTemplates.json", "r", encoding="utf-8") as f:
             flag_template_list = json.load(f)
@@ -224,7 +335,9 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         self.add_dict_to_tree(self.flagTemplateTreeWidget.invisibleRootItem(), self.flag_template)
         self.bustTemplateTreeWidget.setHeaderLabels(["Key", "Value"])
         self.add_dict_to_tree(self.bustTemplateTreeWidget.invisibleRootItem(), self.bust_template)
-        
+        self.upgradeTemplateTreeWidget.setHeaderLabels(["Key", "Value"])
+        self.add_dict_to_tree(self.upgradeTemplateTreeWidget.invisibleRootItem(), self.upgrade_template)
+    
     def add_dict_to_tree(self, parent, data):
         for k, v in data.items():
             item = QTreeWidgetItem([str(k)])
@@ -238,7 +351,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
                 item.setText(1, str(v))
 
             parent.addChild(item)
-            
+    
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 

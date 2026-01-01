@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'saveEditorbXZUvq.ui'
+## Form generated from reading UI file 'saveEditortwtbOQ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.10.1
 ##
@@ -54,6 +54,8 @@ class Ui_MainWindow(object):
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.goldSpinBox = QSpinBox(self.goldGroupBox)
         self.goldSpinBox.setObjectName(u"goldSpinBox")
+        self.goldSpinBox.setMaximum(9999999)
+        self.goldSpinBox.setSingleStep(100)
 
         self.verticalLayout.addWidget(self.goldSpinBox)
 
@@ -66,6 +68,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.supplySpinBox = QSpinBox(self.supplyGroupBox)
         self.supplySpinBox.setObjectName(u"supplySpinBox")
+        self.supplySpinBox.setMaximum(9999999)
+        self.supplySpinBox.setSingleStep(100)
 
         self.verticalLayout_5.addWidget(self.supplySpinBox)
 
@@ -78,6 +82,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.manpowerSpinBox = QSpinBox(self.manpowerGroupBox)
         self.manpowerSpinBox.setObjectName(u"manpowerSpinBox")
+        self.manpowerSpinBox.setMaximum(9999999)
+        self.manpowerSpinBox.setSingleStep(100)
 
         self.verticalLayout_4.addWidget(self.manpowerSpinBox)
 
@@ -90,6 +96,8 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.ammoSpinBox = QSpinBox(self.ammoGroupBox)
         self.ammoSpinBox.setObjectName(u"ammoSpinBox")
+        self.ammoSpinBox.setMaximum(9999999)
+        self.ammoSpinBox.setSingleStep(100)
 
         self.verticalLayout_2.addWidget(self.ammoSpinBox)
 
@@ -131,6 +139,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_59.setObjectName(u"verticalLayout_59")
         self.veterancySpinBox_4_1 = QSpinBox(self.veterancyGroupBox_4_1)
         self.veterancySpinBox_4_1.setObjectName(u"veterancySpinBox_4_1")
+        self.veterancySpinBox_4_1.setMaximum(9)
 
         self.verticalLayout_59.addWidget(self.veterancySpinBox_4_1)
 
@@ -155,6 +164,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_61.setObjectName(u"verticalLayout_61")
         self.veterancySpinBox_4_2 = QSpinBox(self.veterancyGroupBox_4_2)
         self.veterancySpinBox_4_2.setObjectName(u"veterancySpinBox_4_2")
+        self.veterancySpinBox_4_2.setMaximum(9)
 
         self.verticalLayout_61.addWidget(self.veterancySpinBox_4_2)
 
@@ -179,6 +189,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_68.setObjectName(u"verticalLayout_68")
         self.veterancySpinBox_4_3 = QSpinBox(self.veterancyGroupBox_4_3)
         self.veterancySpinBox_4_3.setObjectName(u"veterancySpinBox_4_3")
+        self.veterancySpinBox_4_3.setMaximum(9)
 
         self.verticalLayout_68.addWidget(self.veterancySpinBox_4_3)
 
@@ -203,6 +214,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_100.setObjectName(u"verticalLayout_100")
         self.veterancySpinBox_4_4 = QSpinBox(self.veterancyGroupBox_4_4)
         self.veterancySpinBox_4_4.setObjectName(u"veterancySpinBox_4_4")
+        self.veterancySpinBox_4_4.setMaximum(9)
 
         self.verticalLayout_100.addWidget(self.veterancySpinBox_4_4)
 
@@ -234,6 +246,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_45.setObjectName(u"verticalLayout_45")
         self.veterancySpinBox_2_1 = QSpinBox(self.veterancyGroupBox_2_1)
         self.veterancySpinBox_2_1.setObjectName(u"veterancySpinBox_2_1")
+        self.veterancySpinBox_2_1.setMaximum(9)
 
         self.verticalLayout_45.addWidget(self.veterancySpinBox_2_1)
 
@@ -258,6 +271,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_47.setObjectName(u"verticalLayout_47")
         self.veterancySpinBox_2_2 = QSpinBox(self.veterancyGroupBox_2_2)
         self.veterancySpinBox_2_2.setObjectName(u"veterancySpinBox_2_2")
+        self.veterancySpinBox_2_2.setMaximum(9)
 
         self.verticalLayout_47.addWidget(self.veterancySpinBox_2_2)
 
@@ -282,6 +296,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_49.setObjectName(u"verticalLayout_49")
         self.veterancySpinBox_2_3 = QSpinBox(self.veterancyGroupBox_2_3)
         self.veterancySpinBox_2_3.setObjectName(u"veterancySpinBox_2_3")
+        self.veterancySpinBox_2_3.setMaximum(9)
 
         self.verticalLayout_49.addWidget(self.veterancySpinBox_2_3)
 
@@ -306,6 +321,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_98.setObjectName(u"verticalLayout_98")
         self.veterancySpinBox_2_4 = QSpinBox(self.veterancyGroupBox_2_4)
         self.veterancySpinBox_2_4.setObjectName(u"veterancySpinBox_2_4")
+        self.veterancySpinBox_2_4.setMaximum(9)
 
         self.verticalLayout_98.addWidget(self.veterancySpinBox_2_4)
 
@@ -337,6 +353,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_39.setObjectName(u"verticalLayout_39")
         self.veterancySpinBox_1_1 = QSpinBox(self.veterancyGroupBox_1_1)
         self.veterancySpinBox_1_1.setObjectName(u"veterancySpinBox_1_1")
+        self.veterancySpinBox_1_1.setMaximum(9)
 
         self.verticalLayout_39.addWidget(self.veterancySpinBox_1_1)
 
@@ -361,6 +378,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_41.setObjectName(u"verticalLayout_41")
         self.veterancySpinBox_1_2 = QSpinBox(self.veterancyGroupBox_1_2)
         self.veterancySpinBox_1_2.setObjectName(u"veterancySpinBox_1_2")
+        self.veterancySpinBox_1_2.setMaximum(9)
 
         self.verticalLayout_41.addWidget(self.veterancySpinBox_1_2)
 
@@ -385,6 +403,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_43.setObjectName(u"verticalLayout_43")
         self.veterancySpinBox_1_3 = QSpinBox(self.veterancyGroupBox_1_3)
         self.veterancySpinBox_1_3.setObjectName(u"veterancySpinBox_1_3")
+        self.veterancySpinBox_1_3.setMaximum(9)
 
         self.verticalLayout_43.addWidget(self.veterancySpinBox_1_3)
 
@@ -409,6 +428,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_93.setObjectName(u"verticalLayout_93")
         self.veterancySpinBox_1_4 = QSpinBox(self.veterancyGroupBox_1_4)
         self.veterancySpinBox_1_4.setObjectName(u"veterancySpinBox_1_4")
+        self.veterancySpinBox_1_4.setMaximum(9)
 
         self.verticalLayout_93.addWidget(self.veterancySpinBox_1_4)
 
@@ -440,6 +460,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_52.setObjectName(u"verticalLayout_52")
         self.veterancySpinBox_3_1 = QSpinBox(self.veterancyGroupBox_3_1)
         self.veterancySpinBox_3_1.setObjectName(u"veterancySpinBox_3_1")
+        self.veterancySpinBox_3_1.setMaximum(9)
 
         self.verticalLayout_52.addWidget(self.veterancySpinBox_3_1)
 
@@ -464,6 +485,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_54.setObjectName(u"verticalLayout_54")
         self.veterancySpinBox_3_2 = QSpinBox(self.veterancyGroupBox_3_2)
         self.veterancySpinBox_3_2.setObjectName(u"veterancySpinBox_3_2")
+        self.veterancySpinBox_3_2.setMaximum(9)
 
         self.verticalLayout_54.addWidget(self.veterancySpinBox_3_2)
 
@@ -488,6 +510,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_56.setObjectName(u"verticalLayout_56")
         self.veterancySpinBox_3_3 = QSpinBox(self.veterancyGroupBox_3_3)
         self.veterancySpinBox_3_3.setObjectName(u"veterancySpinBox_3_3")
+        self.veterancySpinBox_3_3.setMaximum(9)
 
         self.verticalLayout_56.addWidget(self.veterancySpinBox_3_3)
 
@@ -512,6 +535,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_99.setObjectName(u"verticalLayout_99")
         self.veterancySpinBox_3_4 = QSpinBox(self.veterancyGroupBox_3_4)
         self.veterancySpinBox_3_4.setObjectName(u"veterancySpinBox_3_4")
+        self.veterancySpinBox_3_4.setMaximum(9)
 
         self.verticalLayout_99.addWidget(self.veterancySpinBox_3_4)
 
@@ -543,6 +567,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_101.setObjectName(u"verticalLayout_101")
         self.veterancySpinBox_5_1 = QSpinBox(self.veterancyGroupBox_5_1)
         self.veterancySpinBox_5_1.setObjectName(u"veterancySpinBox_5_1")
+        self.veterancySpinBox_5_1.setMaximum(9)
 
         self.verticalLayout_101.addWidget(self.veterancySpinBox_5_1)
 
@@ -567,6 +592,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_103.setObjectName(u"verticalLayout_103")
         self.veterancySpinBox_5_2 = QSpinBox(self.veterancyGroupBox_5_2)
         self.veterancySpinBox_5_2.setObjectName(u"veterancySpinBox_5_2")
+        self.veterancySpinBox_5_2.setMaximum(9)
 
         self.verticalLayout_103.addWidget(self.veterancySpinBox_5_2)
 
@@ -591,6 +617,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_105.setObjectName(u"verticalLayout_105")
         self.veterancySpinBox_5_3 = QSpinBox(self.veterancyGroupBox_5_3)
         self.veterancySpinBox_5_3.setObjectName(u"veterancySpinBox_5_3")
+        self.veterancySpinBox_5_3.setMaximum(9)
 
         self.verticalLayout_105.addWidget(self.veterancySpinBox_5_3)
 
@@ -615,6 +642,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_107.setObjectName(u"verticalLayout_107")
         self.veterancySpinBox_5_4 = QSpinBox(self.veterancyGroupBox_5_4)
         self.veterancySpinBox_5_4.setObjectName(u"veterancySpinBox_5_4")
+        self.veterancySpinBox_5_4.setMaximum(9)
 
         self.verticalLayout_107.addWidget(self.veterancySpinBox_5_4)
 
@@ -649,6 +677,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_62.setObjectName(u"verticalLayout_62")
         self.reserveVeterancySpinBox_1 = QSpinBox(self.reserveVeterancyGroupBox_1)
         self.reserveVeterancySpinBox_1.setObjectName(u"reserveVeterancySpinBox_1")
+        self.reserveVeterancySpinBox_1.setMaximum(9)
 
         self.verticalLayout_62.addWidget(self.reserveVeterancySpinBox_1)
 
@@ -673,6 +702,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_63.setObjectName(u"verticalLayout_63")
         self.reserveVeterancySpinBox_2 = QSpinBox(self.reserveVeterancyGroupBox_2)
         self.reserveVeterancySpinBox_2.setObjectName(u"reserveVeterancySpinBox_2")
+        self.reserveVeterancySpinBox_2.setMaximum(9)
 
         self.verticalLayout_63.addWidget(self.reserveVeterancySpinBox_2)
 
@@ -697,6 +727,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_64.setObjectName(u"verticalLayout_64")
         self.reserveVeterancySpinBox_3 = QSpinBox(self.reserveVeterancyGroupBox_3)
         self.reserveVeterancySpinBox_3.setObjectName(u"reserveVeterancySpinBox_3")
+        self.reserveVeterancySpinBox_3.setMaximum(9)
 
         self.verticalLayout_64.addWidget(self.reserveVeterancySpinBox_3)
 
@@ -721,6 +752,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_65.setObjectName(u"verticalLayout_65")
         self.reserveVeterancySpinBox_4 = QSpinBox(self.reserveVeterancyGroupBox_4)
         self.reserveVeterancySpinBox_4.setObjectName(u"reserveVeterancySpinBox_4")
+        self.reserveVeterancySpinBox_4.setMaximum(9)
 
         self.verticalLayout_65.addWidget(self.reserveVeterancySpinBox_4)
 
@@ -745,6 +777,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_66.setObjectName(u"verticalLayout_66")
         self.reserveVeterancySpinBox_5 = QSpinBox(self.reserveVeterancyGroupBox_5)
         self.reserveVeterancySpinBox_5.setObjectName(u"reserveVeterancySpinBox_5")
+        self.reserveVeterancySpinBox_5.setMaximum(9)
 
         self.verticalLayout_66.addWidget(self.reserveVeterancySpinBox_5)
 
@@ -815,6 +848,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_79.setObjectName(u"verticalLayout_79")
         self.leaderLevelSpinBox_1 = QSpinBox(self.leaderLevelGroupBox_1)
         self.leaderLevelSpinBox_1.setObjectName(u"leaderLevelSpinBox_1")
+        self.leaderLevelSpinBox_1.setMaximum(5)
 
         self.verticalLayout_79.addWidget(self.leaderLevelSpinBox_1)
 
@@ -885,6 +919,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_83.setObjectName(u"verticalLayout_83")
         self.leaderLevelSpinBox_2 = QSpinBox(self.leaderLevelGroupBox_2)
         self.leaderLevelSpinBox_2.setObjectName(u"leaderLevelSpinBox_2")
+        self.leaderLevelSpinBox_2.setMaximum(5)
 
         self.verticalLayout_83.addWidget(self.leaderLevelSpinBox_2)
 
@@ -955,6 +990,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_85.setObjectName(u"verticalLayout_85")
         self.leaderLevelSpinBox_3 = QSpinBox(self.leaderLevelGroupBox_3)
         self.leaderLevelSpinBox_3.setObjectName(u"leaderLevelSpinBox_3")
+        self.leaderLevelSpinBox_3.setMaximum(5)
 
         self.verticalLayout_85.addWidget(self.leaderLevelSpinBox_3)
 
@@ -1025,6 +1061,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_87.setObjectName(u"verticalLayout_87")
         self.leaderLevelSpinBox_4 = QSpinBox(self.leaderLevelGroupBox_4)
         self.leaderLevelSpinBox_4.setObjectName(u"leaderLevelSpinBox_4")
+        self.leaderLevelSpinBox_4.setMaximum(5)
 
         self.verticalLayout_87.addWidget(self.leaderLevelSpinBox_4)
 
@@ -1095,6 +1132,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_89.setObjectName(u"verticalLayout_89")
         self.leaderLevelSpinBox_5 = QSpinBox(self.leaderLevelGroupBox_5)
         self.leaderLevelSpinBox_5.setObjectName(u"leaderLevelSpinBox_5")
+        self.leaderLevelSpinBox_5.setMaximum(5)
 
         self.verticalLayout_89.addWidget(self.leaderLevelSpinBox_5)
 
@@ -1172,6 +1210,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_74.setObjectName(u"verticalLayout_74")
         self.reserveLeaderLevelSpinBox_1 = QSpinBox(self.reserveLeaderLevelGroupBox_1)
         self.reserveLeaderLevelSpinBox_1.setObjectName(u"reserveLeaderLevelSpinBox_1")
+        self.reserveLeaderLevelSpinBox_1.setMaximum(5)
 
         self.verticalLayout_74.addWidget(self.reserveLeaderLevelSpinBox_1)
 
@@ -1242,6 +1281,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_75.setObjectName(u"verticalLayout_75")
         self.reserveLeaderLevelSpinBox_2 = QSpinBox(self.reserveLeaderLevelGroupBox_2)
         self.reserveLeaderLevelSpinBox_2.setObjectName(u"reserveLeaderLevelSpinBox_2")
+        self.reserveLeaderLevelSpinBox_2.setMaximum(5)
 
         self.verticalLayout_75.addWidget(self.reserveLeaderLevelSpinBox_2)
 
@@ -1312,6 +1352,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_76.setObjectName(u"verticalLayout_76")
         self.reserveLeaderLevelSpinBox_3 = QSpinBox(self.reserveLeaderLevelGroupBox_3)
         self.reserveLeaderLevelSpinBox_3.setObjectName(u"reserveLeaderLevelSpinBox_3")
+        self.reserveLeaderLevelSpinBox_3.setMaximum(5)
 
         self.verticalLayout_76.addWidget(self.reserveLeaderLevelSpinBox_3)
 
@@ -1382,6 +1423,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_77.setObjectName(u"verticalLayout_77")
         self.reserveLeaderLevelSpinBox_4 = QSpinBox(self.reserveLeaderLevelGroupBox_4)
         self.reserveLeaderLevelSpinBox_4.setObjectName(u"reserveLeaderLevelSpinBox_4")
+        self.reserveLeaderLevelSpinBox_4.setMaximum(5)
 
         self.verticalLayout_77.addWidget(self.reserveLeaderLevelSpinBox_4)
 
@@ -1452,6 +1494,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_78.setObjectName(u"verticalLayout_78")
         self.reserveLeaderLevelSpinBox_5 = QSpinBox(self.reserveLeaderLevelGroupBox_5)
         self.reserveLeaderLevelSpinBox_5.setObjectName(u"reserveLeaderLevelSpinBox_5")
+        self.reserveLeaderLevelSpinBox_5.setMaximum(5)
 
         self.verticalLayout_78.addWidget(self.reserveLeaderLevelSpinBox_5)
 
@@ -1542,6 +1585,16 @@ class Ui_MainWindow(object):
         self.verticalLayout_28.addWidget(self.bustTemplateTreeWidget)
 
         self.devTabWidget.addTab(self.bustTemplateTab, "")
+        self.upgradeTab = QWidget()
+        self.upgradeTab.setObjectName(u"upgradeTab")
+        self.verticalLayout_29 = QVBoxLayout(self.upgradeTab)
+        self.verticalLayout_29.setObjectName(u"verticalLayout_29")
+        self.upgradeTemplateTreeWidget = QTreeWidget(self.upgradeTab)
+        self.upgradeTemplateTreeWidget.setObjectName(u"upgradeTemplateTreeWidget")
+
+        self.verticalLayout_29.addWidget(self.upgradeTemplateTreeWidget)
+
+        self.devTabWidget.addTab(self.upgradeTab, "")
 
         self.verticalLayout_24.addWidget(self.devTabWidget)
 
@@ -1567,61 +1620,10 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.tabWidget.setCurrentIndex(3)
-        self.devTabWidget.setCurrentIndex(3)
+        self.devTabWidget.setCurrentIndex(4)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
-        
-        self.ammoSpinBox.setMaximum(999999)
-        self.ammoSpinBox.setSingleStep(100)
-        self.manpowerSpinBox.setMaximum(999999)
-        self.manpowerSpinBox.setSingleStep(100)
-        self.goldSpinBox.setMaximum(999999)
-        self.goldSpinBox.setSingleStep(100)
-        self.supplySpinBox.setMaximum(999999)
-        self.supplySpinBox.setSingleStep(100)
-        self.reserveLeaderLevelSpinBox_1.setMaximum(5)
-        self.leaderLevelSpinBox_1.setMaximum(5)
-        self.reserveLeaderLevelSpinBox_2.setMaximum(5)
-        self.leaderLevelSpinBox_2.setMaximum(5)
-        self.reserveLeaderLevelSpinBox_3.setMaximum(5)
-        self.leaderLevelSpinBox_3.setMaximum(5)
-        self.reserveLeaderLevelSpinBox_4.setMaximum(5)
-        self.leaderLevelSpinBox_4.setMaximum(5)
-        self.reserveLeaderLevelSpinBox_5.setMaximum(5)
-        self.leaderLevelSpinBox_5.setMaximum(5)
-        
-        self.reserveLeaderLevelSpinBox_1.setMaximum(5)
-        self.leaderLevelSpinBox_1.setMaximum(5)
-        self.reserveLeaderLevelSpinBox_2.setMaximum(5)
-        self.leaderLevelSpinBox_2.setMaximum(5)
-        self.reserveLeaderLevelSpinBox_3.setMaximum(5)
-        self.leaderLevelSpinBox_3.setMaximum(5)
-        self.reserveLeaderLevelSpinBox_4.setMaximum(5)
-        self.leaderLevelSpinBox_4.setMaximum(5)
-        self.reserveLeaderLevelSpinBox_5.setMaximum(5)
-        self.leaderLevelSpinBox_5.setMaximum(5)
-        
-        self.veterancySpinBox_1_1.setMaximum(9)
-        self.veterancySpinBox_1_2.setMaximum(9)
-        self.veterancySpinBox_1_3.setMaximum(9)
-        self.veterancySpinBox_1_4.setMaximum(9)
-        self.veterancySpinBox_2_1.setMaximum(9)
-        self.veterancySpinBox_2_2.setMaximum(9)
-        self.veterancySpinBox_2_3.setMaximum(9)
-        self.veterancySpinBox_2_4.setMaximum(9)
-        self.veterancySpinBox_3_1.setMaximum(9)
-        self.veterancySpinBox_3_2.setMaximum(9)
-        self.veterancySpinBox_3_3.setMaximum(9)
-        self.veterancySpinBox_3_4.setMaximum(9)
-        self.veterancySpinBox_4_1.setMaximum(9)
-        self.veterancySpinBox_4_2.setMaximum(9)
-        self.veterancySpinBox_4_3.setMaximum(9)
-        self.veterancySpinBox_4_4.setMaximum(9)
-        self.veterancySpinBox_5_1.setMaximum(9)
-        self.veterancySpinBox_5_2.setMaximum(9)
-        self.veterancySpinBox_5_3.setMaximum(9)
-        self.veterancySpinBox_5_4.setMaximum(9)
     # setupUi
 
     def retranslateUi(self, MainWindow):
@@ -1636,111 +1638,186 @@ class Ui_MainWindow(object):
         self.ammoGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Ammunition", None))
         self.divisionGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Division #4", None))
         self.regimentGroupBox_4_1.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #1", None))
+        self.regimentTypeComboBox_4_1.setProperty(u"originalValue", "")
         self.veterancyGroupBox_4_1.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.regimentGroupBox_4_2.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #2", None))
+        self.regimentTypeComboBox_4_2.setProperty(u"originalValue", "")
         self.veterancyGroupBox_4_2.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.regimentGroupBox_4_3.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #3", None))
+        self.regimentTypeComboBox_4_3.setProperty(u"originalValue", "")
         self.veterancyGroupBox_4_3.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.regimentGroupBox_4_4.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #4", None))
+        self.regimentTypeComboBox_4_4.setProperty(u"originalValue", "")
         self.veterancyGroupBox_4_4.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.divisionGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Division #2", None))
         self.regimentGroupBox_2_1.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #1", None))
+        self.regimentTypeComboBox_2_1.setProperty(u"originalValue", "")
         self.veterancyGroupBox_2_1.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.regimentGroupBox_2_2.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #2", None))
+        self.regimentTypeComboBox_2_2.setProperty(u"originalValue", "")
         self.veterancyGroupBox_2_2.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.regimentGroupBox_2_3.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #3", None))
+        self.regimentTypeComboBox_2_3.setProperty(u"originalValue", "")
         self.veterancyGroupBox_2_3.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.regimentGroupBox_2_4.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #4", None))
+        self.regimentTypeComboBox_2_4.setProperty(u"originalValue", "")
         self.veterancyGroupBox_2_4.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.divisionGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Division #1", None))
         self.regimentGroupBox_1_1.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #1", None))
+        self.regimentTypeComboBox_1_1.setProperty(u"originalValue", "")
         self.veterancyGroupBox_1_1.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.regimentGroupBox_1_2.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #2", None))
+        self.regimentTypeComboBox_1_2.setProperty(u"originalValue", "")
         self.veterancyGroupBox_1_2.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.regimentGroupBox_1_3.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #3", None))
+        self.regimentTypeComboBox_1_3.setProperty(u"originalValue", "")
         self.veterancyGroupBox_1_3.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.regimentGroupBox_1_4.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #4", None))
+        self.regimentTypeComboBox_1_4.setProperty(u"originalValue", "")
         self.veterancyGroupBox_1_4.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.divisionGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Division #3", None))
         self.regimentGroupBox_3_1.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #1", None))
+        self.regimentTypeComboBox_3_1.setProperty(u"originalValue", "")
         self.veterancyGroupBox_3_1.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.regimentGroupBox_3_2.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #2", None))
+        self.regimentTypeComboBox_3_2.setProperty(u"originalValue", "")
         self.veterancyGroupBox_3_2.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.regimentGroupBox_3_3.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #3", None))
+        self.regimentTypeComboBox_3_3.setProperty(u"originalValue", "")
         self.veterancyGroupBox_3_3.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.regimentGroupBox_3_4.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #4", None))
+        self.regimentTypeComboBox_3_4.setProperty(u"originalValue", "")
         self.veterancyGroupBox_3_4.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.divisionGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Division #5", None))
         self.regimentGroupBox_5_1.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #1", None))
+        self.regimentTypeComboBox_5_1.setProperty(u"originalValue", "")
         self.veterancyGroupBox_5_1.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.regimentGroupBox_5_2.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #2", None))
+        self.regimentTypeComboBox_5_2.setProperty(u"originalValue", "")
         self.veterancyGroupBox_5_2.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.regimentGroupBox_5_3.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #3", None))
+        self.regimentTypeComboBox_5_3.setProperty(u"originalValue", "")
         self.veterancyGroupBox_5_3.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.regimentGroupBox_5_4.setTitle(QCoreApplication.translate("MainWindow", u"Regiment #4", None))
+        self.regimentTypeComboBox_5_4.setProperty(u"originalValue", "")
         self.veterancyGroupBox_5_4.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.reserveGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Reserve", None))
         self.reserveGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Reserve Division #1", None))
+        self.reserveTypeComboBox_1.setProperty(u"originalValue", "")
         self.reserveVeterancyGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.reserveGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Reserve Division #1", None))
+        self.reserveTypeComboBox_2.setProperty(u"originalValue", "")
         self.reserveVeterancyGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.reserveGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Reserve Division #1", None))
+        self.reserveTypeComboBox_3.setProperty(u"originalValue", "")
         self.reserveVeterancyGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.reserveGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Reserve Division #1", None))
+        self.reserveTypeComboBox_4.setProperty(u"originalValue", "")
         self.reserveVeterancyGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.reserveGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Reserve Division #1", None))
+        self.reserveTypeComboBox_5.setProperty(u"originalValue", "")
         self.reserveVeterancyGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Veterancy Point", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.armyTab), QCoreApplication.translate("MainWindow", u"Army", None))
         self.leaderGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Leaders", None))
         self.leaderGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Leader #1", None))
         self.leaderNameGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
         self.leaderNameLabel_1.setText("")
+        self.leaderComboBox_1_1.setProperty(u"originalValue", "")
+        self.leaderComboBox_1_2.setProperty(u"originalValue", "")
+        self.leaderComboBox_1_3.setProperty(u"originalValue", "")
+        self.leaderComboBox_1_4.setProperty(u"originalValue", "")
+        self.leaderComboBox_1_5.setProperty(u"originalValue", "")
         self.leaderLevelGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Level", None))
         self.leaderSkillPointGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.leaderGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Leader #2", None))
         self.leaderNameGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
         self.leaderNameLabel_2.setText("")
+        self.leaderComboBox_2_1.setProperty(u"originalValue", "")
+        self.leaderComboBox_2_2.setProperty(u"originalValue", "")
+        self.leaderComboBox_2_3.setProperty(u"originalValue", "")
+        self.leaderComboBox_2_4.setProperty(u"originalValue", "")
+        self.leaderComboBox_2_5.setProperty(u"originalValue", "")
         self.leaderLevelGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Level", None))
         self.leaderSkillPointGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.leaderGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Leader #3", None))
         self.leaderNameGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
         self.leaderNameLabel_3.setText("")
+        self.leaderComboBox_3_1.setProperty(u"originalValue", "")
+        self.leaderComboBox_3_2.setProperty(u"originalValue", "")
+        self.leaderComboBox_3_3.setProperty(u"originalValue", "")
+        self.leaderComboBox_3_4.setProperty(u"originalValue", "")
+        self.leaderComboBox_3_5.setProperty(u"originalValue", "")
         self.leaderLevelGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Level", None))
         self.leaderSkillPointGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.leaderGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Leader #4", None))
         self.leaderNameGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
         self.leaderNameLabel_4.setText("")
+        self.leaderComboBox_4_1.setProperty(u"originalValue", "")
+        self.leaderComboBox_4_2.setProperty(u"originalValue", "")
+        self.leaderComboBox_4_3.setProperty(u"originalValue", "")
+        self.leaderComboBox_4_4.setProperty(u"originalValue", "")
+        self.leaderComboBox_4_5.setProperty(u"originalValue", "")
         self.leaderLevelGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Level", None))
         self.leaderSkillPointGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.leaderGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Leader #5", None))
         self.leaderNameGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
         self.leaderNameLabel_5.setText("")
+        self.leaderComboBox_5_1.setProperty(u"originalValue", "")
+        self.leaderComboBox_5_2.setProperty(u"originalValue", "")
+        self.leaderComboBox_5_3.setProperty(u"originalValue", "")
+        self.leaderComboBox_5_4.setProperty(u"originalValue", "")
+        self.leaderComboBox_5_5.setProperty(u"originalValue", "")
         self.leaderLevelGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Level", None))
         self.leaderSkillPointGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.groupBox_15.setTitle(QCoreApplication.translate("MainWindow", u"Reserve", None))
         self.reserveLeaderGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Reserve Leader #1", None))
         self.reserveLeaderNameGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
         self.reserveLeaderNameLabel_1.setText("")
+        self.reserveLeaderComboBox_1_1.setProperty(u"originalValue", "")
+        self.reserveLeaderComboBox_1_2.setProperty(u"originalValue", "")
+        self.reserveLeaderComboBox_1_3.setProperty(u"originalValue", "")
+        self.reserveLeaderComboBox_1_4.setProperty(u"originalValue", "")
+        self.reserveLeaderComboBox_1_5.setProperty(u"originalValue", "")
         self.reserveLeaderLevelGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Level", None))
         self.reserveLeaderSkillPointGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.reserveLeaderGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Reserve Leader #2", None))
         self.reserveLeaderNameGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
         self.reserveLeaderNameLabel_2.setText("")
+        self.reserveLeaderComboBox_2_1.setProperty(u"originalValue", "")
+        self.reserveLeaderComboBox_2_2.setProperty(u"originalValue", "")
+        self.reserveLeaderComboBox_2_3.setProperty(u"originalValue", "")
+        self.reserveLeaderComboBox_2_4.setProperty(u"originalValue", "")
+        self.reserveLeaderComboBox_2_5.setProperty(u"originalValue", "")
         self.reserveLeaderLevelGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Level", None))
         self.reserveLeaderSkillPointGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.reserveLeaderGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Reserve Leader #3", None))
         self.reserveLeaderNameGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
         self.reserveLeaderNameLabel_3.setText("")
+        self.reserveLeaderComboBox_3_1.setProperty(u"originalValue", "")
+        self.reserveLeaderComboBox_3_2.setProperty(u"originalValue", "")
+        self.reserveLeaderComboBox_3_3.setProperty(u"originalValue", "")
+        self.reserveLeaderComboBox_3_4.setProperty(u"originalValue", "")
+        self.reserveLeaderComboBox_3_5.setProperty(u"originalValue", "")
         self.reserveLeaderLevelGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Level", None))
         self.reserveLeaderSkillPointGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.reserveLeaderGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Reserve Leader #4", None))
         self.reserveLeaderNameGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
         self.reserveLeaderNameLabel_4.setText("")
+        self.reserveLeaderComboBox_4_1.setProperty(u"originalValue", "")
+        self.reserveLeaderComboBox_4_2.setProperty(u"originalValue", "")
+        self.reserveLeaderComboBox_4_3.setProperty(u"originalValue", "")
+        self.reserveLeaderComboBox_4_4.setProperty(u"originalValue", "")
+        self.reserveLeaderComboBox_4_5.setProperty(u"originalValue", "")
         self.reserveLeaderLevelGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Level", None))
         self.reserveLeaderSkillPointGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.reserveLeaderGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Reserve Leader #5", None))
         self.reserveLeaderNameGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
         self.reserveLeaderNameLabel_5.setText("")
+        self.reserveLeaderComboBox_5_1.setProperty(u"originalValue", "")
+        self.reserveLeaderComboBox_5_2.setProperty(u"originalValue", "")
+        self.reserveLeaderComboBox_5_3.setProperty(u"originalValue", "")
+        self.reserveLeaderComboBox_5_4.setProperty(u"originalValue", "")
+        self.reserveLeaderComboBox_5_5.setProperty(u"originalValue", "")
         self.reserveLeaderLevelGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Level", None))
         self.reserveLeaderSkillPointGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.leaderTab), QCoreApplication.translate("MainWindow", u"Leaders", None))
@@ -1759,6 +1836,9 @@ class Ui_MainWindow(object):
         ___qtreewidgetitem2 = self.bustTemplateTreeWidget.headerItem()
         ___qtreewidgetitem2.setText(0, QCoreApplication.translate("MainWindow", u"Bust Template", None));
         self.devTabWidget.setTabText(self.devTabWidget.indexOf(self.bustTemplateTab), QCoreApplication.translate("MainWindow", u"BustTemplate", None))
+        ___qtreewidgetitem3 = self.upgradeTemplateTreeWidget.headerItem()
+        ___qtreewidgetitem3.setText(0, QCoreApplication.translate("MainWindow", u"Upgrade Template", None));
+        self.devTabWidget.setTabText(self.devTabWidget.indexOf(self.upgradeTab), QCoreApplication.translate("MainWindow", u"UpgradeTemplate", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.devTab), QCoreApplication.translate("MainWindow", u"Dev", None))
         self.menuFile.setTitle(QCoreApplication.translate("MainWindow", u"File", None))
     # retranslateUi
