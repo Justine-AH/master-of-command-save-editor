@@ -236,6 +236,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         }
         
         tree_id, prereq = self.find_tree_and_prereq_by_unit_id(self.upgrade_template, new_unit_type)
+        new_bust = self.validate_bust_data(bust_list)
         
         regiment["TargetManpower"] = unit["MaxManpower"]
         regiment["Manpower"] = unit["MaxManpower"]
@@ -249,7 +250,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         regiment["WalkSpeed"] = int(unit["BaseStats"]["WalkSpeed"])
         regiment["RunSpeed"] = int(unit["BaseStats"]["SprintSpeed"])
         regiment["PreviousUnlockedUnits"] = prereq
-        regiment["BustData"] = bust_list
+        regiment["BustData"] = new_bust
         regiment["FlagSave"] = flag
         regiment["Name"] = UNITS[unit["Name"].split("/")[-1]]
         regiment["UnitID"] = new_unit_type
@@ -265,6 +266,49 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
             if unit_id in items:
                 return tree_name, items[unit_id]["Prerequisite"] or []
         return None, []
+    
+    def validate_bust_data(self, data):
+        COLOR_KEYS = {
+            "PrimaryColors",
+            "SecondaryColors",
+            "TertiaryColors",
+            "QuaternaryColors",
+        }
+
+        def make_placeholder():
+            return [{
+                "r": 45,
+                "g": 45,
+                "b": 45,
+                "a": 255,
+            }]
+
+        # maybe recursive isnt optimal but it works...
+        def walk(obj):
+            if isinstance(obj, dict):
+                for key, value in obj.items():
+                    k_lower = key.lower()
+                    if k_lower.endswith("colordata") and isinstance(value, dict):
+                        for ck in COLOR_KEYS:
+                            if ck in value and isinstance(value[ck], list):
+                                if value[ck] == []:
+                                    # empty lists causes color issues (ugly cyan)
+                                    value[ck] = make_placeholder()
+                                else:
+                                    # game chooses only 1 color or it messes up customization
+                                    value[ck] = [random.choice(value[ck])]
+                    if k_lower == "items" and isinstance(value, list):
+                        # game chooses only 1 item
+                        if len(value) > 1:
+                            obj[key] = [random.choice(value)]
+                    walk(value)
+
+            elif isinstance(obj, list):
+                for item in obj:
+                    walk(item)
+
+        walk(data)
+        return data
 
     def populate_comboboxes(self, unit_list):
         for i in range(5):
