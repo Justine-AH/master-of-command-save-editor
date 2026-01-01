@@ -11,7 +11,7 @@ from PySide6.QtWidgets import (
 )
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QTreeWidgetItem, QTableWidgetItem)
-from constants import SUPPLY_MULT, TYPE_MAP
+from constants import *
 from save_editor_ui import Ui_MainWindow
 
 DEV_FEATURES = os.getenv("DEV_FEATURES", "").lower() == "true"
@@ -35,7 +35,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         # unit stats, bust and flag are not attached to unit_types and must be manually changed
         # we need the templates for reference to generate or change units
         self.load_templates()
-        self.populate_comboboxes(self.unit_template)
+        self.populate_comboboxes()
         
         self.q_app = q_app
 
@@ -111,13 +111,8 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         army_data = player_data["ArmySaveData"]
         divisions_data = army_data["Divisions"]
         reserve_regiments_data = army_data["ReserveRegiments"]
-        reserve_officers_data = army_data["ReserveOfficers"]
+        # reserve_officers_data = army_data["ReserveOfficers"]
         
-        self.goldSpinBox.setValue(player_data["Cash"])
-        self.supplySpinBox.setValue(player_data["Food"])
-        self.ammoSpinBox.setValue(player_data["Ammo"])
-        self.manpowerSpinBox.setValue(player_data["Manpower"])
-    
         self.goldSpinBox.setValue(player_data["Cash"])
         self.supplySpinBox.setValue(player_data["Food"])
         self.ammoSpinBox.setValue(player_data["Ammo"])
@@ -137,8 +132,8 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
             spinbox.setValue(item["CurrentLevel"])
             spinbox.setProperty("originalValue", spinbox.value())
         
-        for i, item in enumerate(reserve_officers_data):
-            pass
+        # for i, item in enumerate(reserve_officers_data):
+        #     pass
         
         for i in range(len(divisions_data)):
             for j in range(4):
@@ -203,7 +198,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
                 
         for i in range(len(reserve_divisions_data)):
             if reserve_divisions_data[i] is None:
-                return
+                continue
             
             combo = getattr(self, f"reserveTypeComboBox_{i+1}", None)
             spinbox = getattr(self, f"reserveVeterancySpinBox_{i+1}", None)
@@ -294,20 +289,8 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         return None, []
     
     def validate_bust_data(self, data):
-        COLOR_KEYS = {
-            "PrimaryColors",
-            "SecondaryColors",
-            "TertiaryColors",
-            "QuaternaryColors",
-        }
-
         def make_placeholder():
-            return [{
-                "r": 45,
-                "g": 45,
-                "b": 45,
-                "a": 255,
-            }]
+            return [PLACEHOLDER_COLOR]
 
         # maybe recursive isnt optimal but it works...
         def walk(obj):
@@ -336,28 +319,14 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         walk(data)
         return data
 
-    def populate_comboboxes(self, unit_list):
-        if self.loc_dict is None:
-            return
-        
+    def populate_comboboxes(self):
+                
         for i in range(5):
             combo = getattr(self, f"reserveTypeComboBox_{i+1}", None)
             if not isinstance(combo, QComboBox):
                 continue
-                    
-            combo.blockSignals(True)
-            combo.clear()
-
-            combo.addItem(" ", None)
-
-            for key, value in unit_list.items():
-                if "test" in key.lower() or value["RawUnitType"] == "SUPPLY_CARAVAN":
-                    continue
-                # "Name": "Units/Name/RUS_Möller_Sakomelsky_Jägers"
-                name_key = value["Name"].split("/")[-1]
-                combo.addItem(self.loc_dict[name_key], key)
-
-            combo.blockSignals(False)
+                
+            self._populate_unit_combo(combo)
 
             
         for i in range(5):
@@ -367,55 +336,67 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
 
                 if not isinstance(combo, QComboBox):
                     continue
-                    
-                combo.blockSignals(True)
-                combo.clear()
+                
+                self._populate_unit_combo(combo)
+    
+    def _populate_unit_combo(self, combo: QComboBox):
+        if self.loc_dict is None:
+            return
+        if self.unit_template is None:
+            return
+        
+        combo.blockSignals(True)
+        combo.clear()
+        combo.addItem(" ", None)
 
-                combo.addItem(" ", None)
+        for key, value in self.unit_template.items():
+            if self._is_excluded(key.lower()) or value["RawUnitType"] in EXCLUDED_RAW_TYPES:
+                continue
+            # ex. "Name": "Units/Name/RUS_Möller_Sakomelsky_Jägers"
+            name_key = value["Name"].split("/")[-1]
+            combo.addItem(self.loc_dict[name_key], key)
 
-                for key, value in unit_list.items():
-                    if "test" in key.lower() or value["RawUnitType"] == "SUPPLY_CARAVAN":
-                        continue
-                    name_key = value["Name"].split("/")[-1]
-                    combo.addItem(self.loc_dict[name_key], key)
-
-                combo.blockSignals(False)
-
+        combo.blockSignals(False)
+        
+    def _is_excluded(self, unit_id):
+        uid = unit_id.lower()
+        return any(sub in uid for sub in EXCLUDED_ID_SUBSTRINGS)
+    
     def load_templates(self):
         # Loading Unit Templates
-        with open("./templates/Template_Units.json", "r", encoding="utf-8") as f:
+        with open(TEMPLATES_DIR / "Template_Units.json", "r", encoding="utf-8") as f:
             unit_template_list = json.load(f)
         
         self.unit_template = {unit["ID"]: unit for unit in unit_template_list}
         
         # Loading Upgrade Templates
-        with open("./templates/UpgradeTrees.json", "r", encoding="utf-8") as f:
+        with open(TEMPLATES_DIR / "UpgradeTrees.json", "r", encoding="utf-8") as f:
             upgrade_template_list = json.load(f)
         
         self.upgrade_template = upgrade_template_list
         
         # Loading Flag Templates
-        with open("./templates/FlagTemplates.json", "r", encoding="utf-8") as f:
+        with open(TEMPLATES_DIR / "FlagTemplates.json", "r", encoding="utf-8") as f:
             flag_template_list = json.load(f)
         
         self.flag_template = flag_template_list["FlagTemplates"]
             
         # Loading Bust Templates
         bust_templates = {}
-        folder_path = Path("./templates/Busts")
+        folder_path = Path(TEMPLATES_DIR / "Busts")
         for file in folder_path.glob("*.json"):
             with file.open("r", encoding="utf-8") as f:
                 bust_templates[file.stem] = json.load(f)
         
         self.bust_template = bust_templates
         
-        with open("./templates/English.json", "r", encoding="utf-8") as f:
+        with open(TEMPLATES_DIR / "English.json", "r", encoding="utf-8") as f:
             loc = json.load(f)["Terms"]
         
         self.loc_dict = {
             item["Key"].split("/")[-1]: item["Translation"]
             for item in loc
-            if "Units/Name/" in item["Key"]
+            if LOC_UNITS_NAME_PREFIX in item["Key"]
         }
         
         self.unitTemplateTreeWidget.setHeaderLabels(["Key", "Value"])

@@ -1,3 +1,8 @@
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+TEMPLATES_DIR = BASE_DIR / "templates"
+
 TYPE_MAP = {
     "RECRUIT_INFANTRY": "INFANTRY",
     "RECRUIT_LIGHT_CAVALRY": "CAVALRY",
@@ -17,3 +22,20 @@ SUPPLY_MULT = {
     "CAVALRY": 15,
     "ARTILLERY": 80,
 }
+
+EXCLUDED_RAW_TYPES = {"SUPPLY_CARAVAN"}
+LOC_UNITS_NAME_PREFIX = "Units/Name/"
+EXCLUDED_ID_SUBSTRINGS = (
+    "test",
+    "debug",
+    "dummy",
+)
+
+COLOR_KEYS = {
+    "PrimaryColors",
+    "SecondaryColors",
+    "TertiaryColors",
+    "QuaternaryColors",
+}
+
+PLACEHOLDER_COLOR = {"r": 45, "g": 45, "b": 45, "a": 255}
