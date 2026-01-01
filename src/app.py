@@ -49,6 +49,64 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         self.actionLoad_File.triggered.connect(self.on_load_button_trigger)
         self.actionSave_File.triggered.connect(self.on_save_button_trigger)
         
+        self.regiment_combos = [
+            self.regimentTypeComboBox_1_1,
+            self.regimentTypeComboBox_1_2,
+            self.regimentTypeComboBox_1_3,
+            self.regimentTypeComboBox_1_4,
+            self.regimentTypeComboBox_2_1,
+            self.regimentTypeComboBox_2_2,
+            self.regimentTypeComboBox_2_3,
+            self.regimentTypeComboBox_2_4,
+            self.regimentTypeComboBox_3_1,
+            self.regimentTypeComboBox_3_2,
+            self.regimentTypeComboBox_3_3,
+            self.regimentTypeComboBox_3_4,
+            self.regimentTypeComboBox_4_1,
+            self.regimentTypeComboBox_4_2,
+            self.regimentTypeComboBox_4_3,
+            self.regimentTypeComboBox_4_4,
+            self.regimentTypeComboBox_5_1,
+            self.regimentTypeComboBox_5_2,
+            self.regimentTypeComboBox_5_3,
+            self.regimentTypeComboBox_5_4,
+        ]
+        self.reserve_combos = [
+            self.reserveTypeComboBox_1,
+            self.reserveTypeComboBox_2,
+            self.reserveTypeComboBox_3,
+            self.reserveTypeComboBox_4,
+            self.reserveTypeComboBox_5
+        ]
+        self.regiment_spinboxes = [
+            self.veterancySpinBox_1_1,
+            self.veterancySpinBox_1_2,
+            self.veterancySpinBox_1_3,
+            self.veterancySpinBox_1_4,
+            self.veterancySpinBox_2_1,
+            self.veterancySpinBox_2_2,
+            self.veterancySpinBox_2_3,
+            self.veterancySpinBox_2_4,
+            self.veterancySpinBox_3_1,
+            self.veterancySpinBox_3_2,
+            self.veterancySpinBox_3_3,
+            self.veterancySpinBox_3_4,
+            self.veterancySpinBox_4_1,
+            self.veterancySpinBox_4_2,
+            self.veterancySpinBox_4_3,
+            self.veterancySpinBox_4_4,
+            self.veterancySpinBox_5_1,
+            self.veterancySpinBox_5_2,
+            self.veterancySpinBox_5_3,
+            self.veterancySpinBox_5_4,
+        ]
+        self.reserve_spinboxes = [
+            self.reserveVeterancySpinBox_1,
+            self.reserveVeterancySpinBox_2,
+            self.reserveVeterancySpinBox_3,
+            self.reserveVeterancySpinBox_4,
+            self.reserveVeterancySpinBox_5
+        ]
         
         index = self.tabWidget.indexOf(self.devTab)
         self.tabWidget.setTabVisible(index, False)
@@ -122,6 +180,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         if self.data is None or self.loc_dict is None:
             return
         
+        self.refresh_ui()
         self.statusBar().showMessage("Save file loaded")
         
         player_data = self.data["PlayerSaveData"]
@@ -455,6 +514,36 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
 
             parent.addChild(item)
     
+    def refresh_ui(self):
+        self.reset_spinboxes()
+        self.reset_comboboxes()
+    
+    def reset_spinboxes(self):
+        spinboxes = [
+            self.goldSpinBox,
+            self.supplySpinBox,
+            self.ammoSpinBox,
+            self.manpowerSpinBox,
+            *self.regiment_spinboxes,
+            *self.reserve_spinboxes,
+        ]
+        for w in spinboxes:
+            w.blockSignals(True)
+            w.setValue(0)
+            w.setProperty("originalValue", 0)
+            w.blockSignals(False)
+    
+    def reset_comboboxes(self):
+        comboboxes = [
+            *self.regiment_combos,
+            *self.reserve_combos,
+        ]
+        for w in comboboxes:
+            w.blockSignals(True)
+            w.setCurrentIndex(0)
+            w.setProperty("originalValue", "")
+            w.blockSignals(False)
+            
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 
