@@ -11,6 +11,7 @@ from PySide6.QtWidgets import (
 )
 from PySide6.QtCore import Qt
 from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QTreeWidgetItem, QTableWidgetItem)
+from constants import SUPPLY_MULT, TYPE_MAP
 from save_editor_ui import Ui_MainWindow
 
 DEV_FEATURES = os.getenv("DEV_FEATURES", "").lower() == "true"
@@ -258,6 +259,9 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
             "PrimaryDyeColor": primary_color
         }
         
+        category = TYPE_MAP[unit["RawUnitType"]]
+        supply = SUPPLY_MULT[category]
+
         tree_id, prereq = self.find_tree_and_prereq_by_unit_id(self.upgrade_template, new_unit_type)
         new_bust = self.validate_bust_data(bust_list)
         
@@ -278,11 +282,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         regiment["Name"] = self.loc_dict[unit["Name"].split("/")[-1]]
         regiment["UnitID"] = new_unit_type
         regiment["UpgradeTreeID"] = tree_id
-                
-        # "InfantryMaxSupply": 10,
-        # "CavalryMaxSupply": 15,
-        # "ArtilleryMaxSupply": 80,
-        # regiment["Supply"] #??? dunno where this is based on, maybe by unit types?
+        regiment["Supply"] = int((unit["MaxManpower"] // 100) * supply)
         
         return regiment
     
