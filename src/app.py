@@ -9,15 +9,14 @@ from PySide6.QtWidgets import (
     QApplication,
     QMainWindow
 )
-from PySide6.QtCore import Qt
+from PySide6.QtCore import (QSettings, Slot)
 from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QTreeWidgetItem, QTableWidgetItem)
 from constants import *
 from save_editor_ui import Ui_MainWindow
 
-DEV_FEATURES = os.getenv("DEV_FEATURES", "").lower() == "true"
+# TODO: maybe find directory of game files for template instead
 
-# TODO: setting to remember paths?
-# TODO: fix bust data, need to pick random and generate random when empty
+DEV_FEATURES = os.getenv("DEV_FEATURES", "").lower() == "true"
 
 class SaveEditor(QMainWindow, Ui_MainWindow):
     def __init__(self, q_app, parent=None):
@@ -31,6 +30,8 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         self.upgrade_template = None
         self.loc_dict = None
         
+        self.settings = QSettings(str(SETTINGS), QSettings.Format.IniFormat)
+
         # Templates are needed for changing unit types or adding new units
         # unit stats, bust and flag are not attached to unit_types and must be manually changed
         # we need the templates for reference to generate or change units
@@ -59,13 +60,21 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
             self.load_data()
             self.actionSave_File.setEnabled(True)
     
+    @Slot()
     def on_load_button_trigger(self):
+        last = self.settings.value("paths/last_open_dir", "", str)
+        if last is None:
+            last = ""
+            
         path, _ = QFileDialog.getOpenFileName(
             self,
             "Open File",
-            "",
+            str(last),
             "Save Files (*.fcs *.json)"
         )
+
+        if path:
+            self.settings.setValue("paths/last_open_dir", path)
 
         if not path:
             return
@@ -75,7 +84,8 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
             
         self.load_data()
         self.actionSave_File.setEnabled(True)
-        
+    
+    @Slot()
     def on_save_button_trigger(self):
         self.save_data()
         
@@ -221,7 +231,7 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
                 new_regiment = reserve_divisions_data[i]
                 if new_regiment is not None:
                     new_regiment["CurrentLevel"] = spinbox.value()
-    
+
     def handle_unit_type_change(self, regiment, new_unit_type):
         
         if self.unit_template is None:
