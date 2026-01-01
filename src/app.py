@@ -87,12 +87,18 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
     
     @Slot()
     def on_save_button_trigger(self):
+        
         self.save_data()
+        
+        last = self.settings.value("paths/last_open_dir", "", str)
+        if last is None:
+            last = ""
+        
         
         path, _ = QFileDialog.getSaveFileName(
             self,
             "Save File",
-            "",
+            str(last),
             "Save Files (*.fcs)"
         )
 
@@ -195,7 +201,11 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
                 combo_current = combo.currentData()
 
                 if combo_original != combo_current:
-                    new_regiment = self.handle_unit_type_change(divisions_data[i]["Regiments"][j], combo_current)
+                    print(f"{combo_original} != {combo_current}")
+                    if combo_current is None:
+                        new_regiment = None
+                    else:
+                        new_regiment = self.handle_unit_type_change(divisions_data[i]["Regiments"][j], combo_current)
                     divisions_data[i]["Regiments"][j] = new_regiment
                 
                 spin_original = spinbox.property("originalValue") or 0
@@ -221,7 +231,11 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
             combo_current = combo.currentData()
 
             if combo_original != combo_current:
-                new_regiment = self.handle_unit_type_change(reserve_divisions_data[i], combo_current)
+                print(f"{combo_original} != {combo_current}")
+                if combo_current is None:
+                    new_regiment = None
+                else:
+                    new_regiment = self.handle_unit_type_change(reserve_divisions_data[i], combo_current)
                 reserve_divisions_data[i] = new_regiment
 
             spin_original = spinbox.property("originalValue") or 0
@@ -245,7 +259,9 @@ class SaveEditor(QMainWindow, Ui_MainWindow):
         if self.loc_dict is None:
             return
         
-        # TODO: handle adding and deleting units
+        if regiment is None:
+            regiment = json.loads(NEW_UNIT_TEMPLATE)
+        
         unit = self.unit_template[new_unit_type]
         flag_list = self.flag_template[unit["FlagTemplate"]]
         bust_list = self.bust_template[unit["ID"]]
