@@ -1,6 +1,6 @@
 
 
-from PySide6.QtWidgets import QSpinBox, QComboBox, QTreeWidgetItem, QLabel
+from PySide6.QtWidgets import QSpinBox, QComboBox, QTreeWidgetItem, QLabel, QWidget
 
 class UIHelperMixin:
     
@@ -138,7 +138,8 @@ class UIHelperMixin:
             
     def reset_leader_labels(self):
         comboboxes = [
-            *self.leader_label
+            *self.leader_label,
+            *self.reserve_leader_label
         ]
         for w in comboboxes:
             w.blockSignals(True)
@@ -160,3 +161,59 @@ class UIHelperMixin:
 
             parent.addChild(item)
     
+    def on_load_file_UI_handler(self, divisions_enabled):
+        # Maybe define proper division ui in future
+        for i in range(divisions_enabled):
+            self.enable_widgets([self.leader_label[i]])
+            self.enable_widgets([self.leader_level_spinbox[i]])
+            self.enable_widgets([self.leader_skillpoints_spinbox[i]])
+            
+            reg_start = i * 4
+            self.enable_widgets(self.regiment_combos[reg_start: reg_start + 4])
+            self.enable_widgets(self.regiment_spinboxes[reg_start: reg_start + 4])
+            
+            skill_start = i * 5
+            self.enable_widgets(self.leader_skill_combos[skill_start: skill_start + 5])
+        
+        self.enable_widgets([
+            *self.resource_spinboxes,
+            # reserve regiments
+            *self.reserve_spinboxes,
+            *self.reserve_combos,
+            # reserve leader
+            *self.reserve_leader_label,
+            *self.reserve_leader_level_spinbox,
+            *self.reserve_leader_skillpoints_spinbox,
+            *self.reserve_leader_skill_combos,
+        ])
+    
+    def enable_widgets(self, widgets: list):
+        for w in widgets:
+            w.blockSignals(True)
+            w.setEnabled(True)
+            w.blockSignals(False)
+        
+    def disable_all_widgets(self):
+        widgets = [
+            # regiments
+            *self.regiment_spinboxes,
+            *self.regiment_combos,
+            # leaders
+            *self.leader_label,
+            *self.leader_level_spinbox,
+            *self.leader_skillpoints_spinbox,
+            *self.leader_skill_combos,
+            *self.resource_spinboxes,
+            # reserve regiments
+            *self.reserve_spinboxes,
+            *self.reserve_combos,
+            # reserve leader
+            *self.reserve_leader_label,
+            *self.reserve_leader_level_spinbox,
+            *self.reserve_leader_skillpoints_spinbox,
+            *self.reserve_leader_skill_combos,
+        ]
+        for w in widgets:
+            w.blockSignals(True)
+            w.setEnabled(False)
+            w.blockSignals(False)

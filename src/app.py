@@ -118,6 +118,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
             raise
 
     def load_data(self):
+        self.disable_all_widgets()
         if self.data is None:
             return
         
@@ -194,7 +195,9 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
                 combo = self.leader_skill_combos[index]
                 combo.setCurrentText(self.get_skill_loc(leader["SkillSaves"][j]))
                 combo.setProperty("originalValue", combo.currentData())
-        
+
+        self.on_load_file_UI_handler(len(divisions_data))
+    
     def save_data(self):
         if self.data is None:
             return
