@@ -5,6 +5,7 @@ import pprint
 import random
 import sys
 import tempfile
+from typing import Any, Optional
 from PySide6.QtWidgets import (
     QApplication,
     QMainWindow
@@ -13,6 +14,7 @@ from PySide6.QtCore import (QSettings, Slot)
 from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QTreeWidgetItem, QTableWidgetItem)
 from constants import *
 from main_window import Ui_MainWindow
+from template_store import TemplateStore
 from ui_helper import UIHelperMixin
 
 # TODO: maybe find directory of game files for template instead
@@ -27,19 +29,16 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         self.init_widget_lists()
         
         self.data = None
-        self.unit_template = None
-        self.flag_template = None
-        self.bust_template = None
-        self.upgrade_template = None
-        self.loc_dict = None
         
         self.settings = QSettings(str(SETTINGS), QSettings.Format.IniFormat)
 
         # Templates are needed for changing unit types or adding new units
         # unit stats, bust and flag are not attached to unit_types and must be manually changed
         # we need the templates for reference to generate or change units
-        self.load_templates()
+        self.templates = TemplateStore()
+        self.templates.load_templates()
         self.populate_comboboxes()
+        self.populate_dev_tabs()
         
         self.q_app = q_app
 
@@ -120,7 +119,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
             raise
 
     def load_data(self):
-        if self.data is None or self.loc_dict is None:
+        if self.data is None or self.templates.loc_dict is None:
             return
         
         self.refresh_ui()
@@ -146,7 +145,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
                 continue
             if not isinstance(spinbox, QSpinBox):
                 continue
-            combo.setCurrentText(self.loc_dict[item["UnitID"]])
+            combo.setCurrentText(self.templates.loc_dict[item["UnitID"]])
             combo.setProperty("originalValue", combo.currentData())
             spinbox.setValue(item["CurrentLevel"])
             spinbox.setProperty("originalValue", spinbox.value())
@@ -166,7 +165,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
                 if regiment is None:
                     # no unit here
                     continue
-                combo.setCurrentText(self.loc_dict[regiment["UnitID"]])
+                combo.setCurrentText(self.templates.loc_dict[regiment["UnitID"]])
                 combo.setProperty("originalValue", combo.currentData())
                 spinbox.setValue(regiment["CurrentLevel"])
                 spinbox.setProperty("originalValue", spinbox.value())
@@ -249,23 +248,23 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
 
     def handle_unit_type_change(self, regiment, new_unit_type, position):
         
-        if self.unit_template is None:
+        if self.templates.unit_template is None:
             return
-        if self.upgrade_template is None:
+        if self.templates.upgrade_template is None:
             return
-        if self.flag_template is None:
+        if self.templates.flag_template is None:
             return
-        if self.bust_template is None:
+        if self.templates.bust_template is None:
             return
-        if self.loc_dict is None:
+        if self.templates.loc_dict is None:
             return
         
         if regiment is None:
             regiment = json.loads(NEW_UNIT_TEMPLATE)
         
-        unit = self.unit_template[new_unit_type]
-        flag_list = self.flag_template[unit["FlagTemplate"]]
-        bust_list = self.bust_template[unit["ID"]]
+        unit = self.templates.unit_template[new_unit_type]
+        flag_list = self.templates.flag_template[unit["FlagTemplate"]]
+        bust_list = self.templates.bust_template[unit["ID"]]
         
         primary_color = random.choice(flag_list["PrimaryColors"])
         secondary_color = random.choice(flag_list["SecondaryColors"])
@@ -284,7 +283,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         category = TYPE_MAP[unit["RawUnitType"]]
         supply = SUPPLY_MULT[category]
 
-        tree_id, prereq = self.find_tree_and_prereq_by_unit_id(self.upgrade_template, new_unit_type)
+        tree_id, prereq = self.find_tree_and_prereq_by_unit_id(self.templates.upgrade_template, new_unit_type)
         new_bust = self.validate_bust_data(bust_list)
         
         regiment["TargetManpower"] = unit["MaxManpower"]
@@ -301,7 +300,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         regiment["PreviousUnlockedUnits"] = prereq
         regiment["BustData"] = new_bust
         regiment["FlagSave"] = flag
-        regiment["Name"] = self.loc_dict[unit["Name"].split("/")[-1]]
+        regiment["Name"] = self.templates.loc_dict[unit["Name"].split("/")[-1]]
         regiment["UnitID"] = new_unit_type
         regiment["UpgradeTreeID"] = tree_id
         regiment["Supply"] = int((unit["MaxManpower"] // 100) * supply)
@@ -368,80 +367,47 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
                 self._populate_unit_combo(combo)
     
     def _populate_unit_combo(self, combo: QComboBox):
-        if self.loc_dict is None:
+        if self.templates.loc_dict is None:
             return
-        if self.unit_template is None:
+        if self.templates.unit_template is None:
             return
         
         combo.blockSignals(True)
         combo.clear()
         combo.addItem(" ", None)
 
-        for key, value in self.unit_template.items():
+        for key, value in self.templates.unit_template.items():
             if self._is_excluded(key.lower()) or value["RawUnitType"] in EXCLUDED_RAW_TYPES:
                 continue
             # ex. "Name": "Units/Name/RUS_Möller_Sakomelsky_Jägers"
             name_key = value["Name"].split("/")[-1]
-            combo.addItem(self.loc_dict[name_key], key)
+            combo.addItem(self.templates.loc_dict[name_key], key)
 
         combo.blockSignals(False)
-        
-    def _is_excluded(self, unit_id):
-        uid = unit_id.lower()
-        return any(sub in uid for sub in EXCLUDED_ID_SUBSTRINGS)
     
-    def load_templates(self):
-        # Loading Unit Templates
-        with open(TEMPLATES_DIR / "Template_Units.json", "r", encoding="utf-8") as f:
-            unit_template_list = json.load(f)
-        
-        self.unit_template = {unit["ID"]: unit for unit in unit_template_list}
-        
-        # Loading Upgrade Templates
-        with open(TEMPLATES_DIR / "UpgradeTrees.json", "r", encoding="utf-8") as f:
-            upgrade_template_list = json.load(f)
-        
-        self.upgrade_template = upgrade_template_list
-        
-        # Loading Flag Templates
-        with open(TEMPLATES_DIR / "FlagTemplates.json", "r", encoding="utf-8") as f:
-            flag_template_list = json.load(f)
-        
-        self.flag_template = flag_template_list["FlagTemplates"]
-            
-        # Loading Bust Templates
-        bust_templates = {}
-        folder_path = Path(TEMPLATES_DIR / "Busts")
-        for file in folder_path.glob("*.json"):
-            with file.open("r", encoding="utf-8") as f:
-                bust_templates[file.stem] = json.load(f)
-        
-        self.bust_template = bust_templates
-        
-        with open(TEMPLATES_DIR / "English.json", "r", encoding="utf-8") as f:
-            loc = json.load(f)["Terms"]
-        
-        self.loc_dict = {
-            item["Key"].split("/")[-1]: item["Translation"]
-            for item in loc
-            if LOC_UNITS_NAME_PREFIX in item["Key"]
-        }
-        
+    def populate_dev_tabs(self):
         self.unitTemplateTreeWidget.setHeaderLabels(["Key", "Value"])
-        self.add_dict_to_tree(self.unitTemplateTreeWidget.invisibleRootItem(), self.unit_template)
+        self.add_dict_to_tree(self.unitTemplateTreeWidget.invisibleRootItem(), self.templates.unit_template)
         self.flagTemplateTreeWidget.setHeaderLabels(["Key", "Value"])
-        self.add_dict_to_tree(self.flagTemplateTreeWidget.invisibleRootItem(), self.flag_template)
+        self.add_dict_to_tree(self.flagTemplateTreeWidget.invisibleRootItem(), self.templates.flag_template)
         self.bustTemplateTreeWidget.setHeaderLabels(["Key", "Value"])
-        self.add_dict_to_tree(self.bustTemplateTreeWidget.invisibleRootItem(), self.bust_template)
+        self.add_dict_to_tree(self.bustTemplateTreeWidget.invisibleRootItem(), self.templates.bust_template)
         self.upgradeTemplateTreeWidget.setHeaderLabels(["Key", "Value"])
-        self.add_dict_to_tree(self.upgradeTemplateTreeWidget.invisibleRootItem(), self.upgrade_template)
+        self.add_dict_to_tree(self.upgradeTemplateTreeWidget.invisibleRootItem(), self.templates.upgrade_template)
         
-        for row, (key, value) in enumerate(self.loc_dict.items()):
-            self.locTableWidget.setRowCount(len(self.loc_dict))
+        if self.templates.loc_dict is None:
+            return
+        
+        for row, (key, value) in enumerate(self.templates.loc_dict.items()):
+            self.locTableWidget.setRowCount(len(self.templates.loc_dict))
             self.locTableWidget.setItem(row, 0, QTableWidgetItem(str(key)))
             self.locTableWidget.setItem(row, 1, QTableWidgetItem(str(value)))
 
         self.locTableWidget.resizeColumnsToContents()
+        
+    def _is_excluded(self, unit_id):
+        uid = unit_id.lower()
+        return any(sub in uid for sub in EXCLUDED_ID_SUBSTRINGS)
     
     def add_dict_to_tree(self, parent, data):
         for k, v in data.items():
