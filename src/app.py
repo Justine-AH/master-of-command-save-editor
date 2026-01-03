@@ -175,7 +175,6 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
             for j in range(len(item["SkillSaves"])):
                 index = (i*5)+j
                 self.reserve_leader_skill_combos[index].setCurrentText(self.get_skill_loc(item["SkillSaves"][j]))
-                print(item["SkillSaves"][j])
         
         for i, item in enumerate(divisions_data):
             leader = item["OfficerSave"]
@@ -187,7 +186,6 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
             for j in range(len(leader["SkillSaves"])):
                 index = (i*5)+j
                 self.leader_skill_combos[index].setCurrentText(self.get_skill_loc(leader["SkillSaves"][j]))
-                print(leader["SkillSaves"][j])
         
     def save_data(self):
         if self.data is None:
