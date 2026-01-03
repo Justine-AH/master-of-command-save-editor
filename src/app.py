@@ -45,8 +45,8 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         self.statusBar().showMessage("Ready")
         
         self.actionSave_File.setEnabled(False)
-        self.actionLoad_File.triggered.connect(self.on_load_button_trigger)
-        self.actionSave_File.triggered.connect(self.on_save_button_trigger)
+        self.actionLoad_File.triggered.connect(self.on_load_button_triggered)
+        self.actionSave_File.triggered.connect(self.on_save_button_triggered)
         
         index = self.tabWidget.indexOf(self.devTab)
         self.tabWidget.setTabVisible(index, False)
@@ -60,7 +60,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
             self.actionSave_File.setEnabled(True)
     
     @Slot()
-    def on_load_button_trigger(self):
+    def on_load_button_triggered(self):
         last = self.settings.value("paths/last_open_dir", "", str)
         if last is None:
             last = ""
@@ -85,7 +85,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         self.actionSave_File.setEnabled(True)
     
     @Slot()
-    def on_save_button_trigger(self):
+    def on_save_button_triggered(self):
         
         self.save_data()
         
