@@ -1,11 +1,8 @@
 import json
 import os
-from pathlib import Path
-import pprint
 import random
 import sys
 import tempfile
-from typing import Any, Optional
 from PySide6.QtWidgets import (
     QApplication,
     QMainWindow
@@ -408,20 +405,6 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
     def _is_excluded(self, unit_id):
         uid = unit_id.lower()
         return any(sub in uid for sub in EXCLUDED_ID_SUBSTRINGS)
-    
-    def add_dict_to_tree(self, parent, data):
-        for k, v in data.items():
-            item = QTreeWidgetItem([str(k)])
-
-            if isinstance(v, dict):
-                self.add_dict_to_tree(item, v)
-            elif isinstance(v, list):
-                for i, val in enumerate(v):
-                    self.add_dict_to_tree(item, {f"[{i}]": val})
-            else:
-                item.setText(1, str(v))
-
-            parent.addChild(item)
     
 if __name__ == "__main__":
     app = QApplication(sys.argv)

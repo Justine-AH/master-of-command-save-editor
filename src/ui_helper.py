@@ -1,6 +1,6 @@
 
 
-from PySide6.QtWidgets import QSpinBox, QComboBox
+from PySide6.QtWidgets import QSpinBox, QComboBox, QTreeWidgetItem
 
 class UIHelperMixin:
     
@@ -66,4 +66,18 @@ class UIHelperMixin:
             w.setCurrentIndex(0)
             w.setProperty("originalValue", "")
             w.blockSignals(False)
+    
+    def add_dict_to_tree(self, parent, data):
+        for k, v in data.items():
+            item = QTreeWidgetItem([str(k)])
+
+            if isinstance(v, dict):
+                self.add_dict_to_tree(item, v)
+            elif isinstance(v, list):
+                for i, val in enumerate(v):
+                    self.add_dict_to_tree(item, {f"[{i}]": val})
+            else:
+                item.setText(1, str(v))
+
+            parent.addChild(item)
     
