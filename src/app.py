@@ -17,6 +17,7 @@ from ui_helper import UIHelperMixin
 
 # TODO: maybe find directory of game files for template instead
 # TODO: weapon and equipment contraints...
+# TODO: skill desc
 
 DEV_FEATURES = os.getenv("DEV_FEATURES", "").lower() == "true"
 
@@ -423,6 +424,8 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         self.add_dict_to_tree(self.bustTemplateTreeWidget.invisibleRootItem(), self.templates.bust_template)
         self.upgradeTemplateTreeWidget.setHeaderLabels(["Key", "Value"])
         self.add_dict_to_tree(self.upgradeTemplateTreeWidget.invisibleRootItem(), self.templates.upgrade_template)
+        self.skillsTreeWidget.setHeaderLabels(["Key", "Value"])
+        self.add_dict_to_tree(self.skillsTreeWidget.invisibleRootItem(), self.templates.skill_template)
         
         if self.templates.loc_dict is None:
             return
