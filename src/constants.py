@@ -109,7 +109,7 @@ NEW_UNIT_TEMPLATE = """
         ],
         "RangedWeaponSlot": {
             "ItemSave": null
-        }
+        },
         "MeleeWeaponSlot": {
             "ItemSave": null
         }
