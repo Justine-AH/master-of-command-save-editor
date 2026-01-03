@@ -68,56 +68,50 @@ NEW_UNIT_TEMPLATE = """
     },
     "InventorySave": {
         "BackpackSlot": {
-        "ItemSave": null
+            "ItemSave": null
         },
         "BackpackSlots": [],
         "OffhandSlots": [
-        {
+            {
             "ItemSave": null
-        },
-        {
+            },
+            {
             "ItemSave": null
-        },
-        {
+            },
+            {
             "ItemSave": null
-        },
-        {
+            },
+            {
             "ItemSave": null
-        },
-        {
+            },
+            {
             "ItemSave": null
-        },
-        {
+            },
+            {
             "ItemSave": null
-        },
-        {
+            },
+            {
             "ItemSave": null
-        },
-        {
+            },
+            {
             "ItemSave": null
-        }
+            }
         ],
         "LockedOffHandSlots": [
-        false,
-        false,
-        false,
-        true,
-        true,
-        true,
-        true,
-        true
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true
         ],
         "RangedWeaponSlot": {
-        "ItemSave": {
-            "ID": "RUSTIC_MUSKET",
-            "Amount": 1
+            "ItemSave": null
         }
-        },
         "MeleeWeaponSlot": {
-        "ItemSave": {
-            "ID": "WORN_BAYONET",
-            "Amount": 1
-        }
+            "ItemSave": null
         }
     },
     "BustData": {
