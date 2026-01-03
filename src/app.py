@@ -325,7 +325,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
                     new_regiment = None
                 else:
                     new_regiment = self.handle_unit_type_change(item, combo_current, i)
-                item = new_regiment
+                reserve_divisions_data[i] = new_regiment
 
             spin_original = spinbox.property("originalValue") or 0
             spin_current = spinbox.value()
