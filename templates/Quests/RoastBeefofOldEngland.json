@@ -1,0 +1,101 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      27,
+      29,
+      28,
+      30
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_Roast_Beef"
+      }
+    },
+    {
+      "ID": 10,
+      "Key": "Morale",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 15.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitMoraleData, MocCampaign",
+        "UnitType": "LINE_INFANTRY",
+        "Value": 26
+      },
+      "ID": 27
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitMoraleData, MocCampaign",
+        "UnitType": "RECRUIT_INFANTRY",
+        "Value": 26
+      },
+      "ID": 28
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitMoraleData, MocCampaign",
+        "UnitType": "LIGHT_INFANTRY",
+        "Value": 26
+      },
+      "ID": 29
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitMoraleData, MocCampaign",
+        "UnitType": "HEAVY_LINE_INFANTRY",
+        "Value": 26
+      },
+      "ID": 30
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 10,
+      "VariableOutputsPorts": [
+        27,
+        28,
+        29,
+        30,
+        5
+      ],
+      "ID": 26
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Stratagem/RoastBeefofOldEnglandHeader",
+      "TextKey": "Stratagem/RoastBeefofOldEnglandBody",
+      "BodyVariables": [
+        26
+      ],
+      "HeaderVariables": [],
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "RoastBeefofOldEngland",
+  "StartNode": 2,
+  "FileName": "RoastBeefofOldEngland"
+}

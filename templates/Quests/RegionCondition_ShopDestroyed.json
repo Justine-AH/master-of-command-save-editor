@@ -1,0 +1,48 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      2
+    ],
+    "DialogueID": 0,
+    "ID": 1
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 1,
+      "Key": "Shop Costs",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 50.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.Regions.RegionConditionControllerData, MocCampaign",
+        "PositiveTerm": "Region/RegionCondition_ShopDestroyed_Negative",
+        "PositiveHintTerm": "Region/RegionCondition_ShopDestroyed_Negative_Hint",
+        "Positives": [],
+        "NegativeTerm": "Region/RegionCondition_ShopDestroyed_Negative",
+        "NegativeHintTerm": "Region/RegionCondition_ShopDestroyed_Negative_Hint",
+        "Negatives": []
+      },
+      "ID": 2
+    }
+  ],
+  "VariableNodes": [],
+  "TooltipNodes": [],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "RegionCondition_ShopDestroyed",
+  "StartNode": 1,
+  "FileName": "RegionCondition_ShopDestroyed"
+}

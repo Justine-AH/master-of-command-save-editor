@@ -1,0 +1,278 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [
+      1,
+      1
+    ],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [],
+    "ID": 2
+  },
+  "BranchingConditionalNodes": [
+    {
+      "ExecutePort": [],
+      "ConditionalsPort": [],
+      "SuccessPort": [],
+      "FailurePort": [
+        9,
+        9
+      ],
+      "ID": 24
+    }
+  ],
+  "ConditionalBlockNodes": [
+    {
+      "CompleteConditionalsPort": [
+        9,
+        9
+      ],
+      "FailurInputsPort": [
+        9,
+        9
+      ],
+      "StateSourcePort": [
+        8,
+        8
+      ],
+      "SuccessSourcePort": [],
+      "FailureSourcePort": [],
+      "ID": 9
+    }
+  ],
+  "StateNodes": [
+    {
+      "OptionalState": false,
+      "RequiresAllConditionalsToBeCompleted": false,
+      "StartStatePort": [
+        1,
+        1
+      ],
+      "ConditionalsPort": [],
+      "SuccessPort": [
+        8,
+        8
+      ],
+      "FailurePort": [],
+      "ID": 1
+    },
+    {
+      "OptionalState": false,
+      "RequiresAllConditionalsToBeCompleted": false,
+      "StartStatePort": [
+        8,
+        8
+      ],
+      "ConditionalsPort": [
+        8,
+        8
+      ],
+      "SuccessPort": [],
+      "FailurePort": [
+        14,
+        14
+      ],
+      "ID": 8
+    }
+  ],
+  "ChildGenerators": [
+    {
+      "Generator": {
+        "$type": "GameData.Quests.GenerateTargetTradeSettlement, GameCore",
+        "DestinationVariable": 20,
+        "DestinationVectorVariable": 22
+      },
+      "ID": 4
+    },
+    {
+      "Generator": {
+        "$type": "GameData.Quests.SetQuestStartPos, GameCore",
+        "StartVariable": 31
+      },
+      "ID": 30
+    }
+  ],
+  "GeneratorNode": {
+    "Generators": [],
+    "QuestTitle": 0,
+    "ID": 3
+  },
+  "QuestType": "CARAVAN_ESCORT",
+  "Variables": [
+    {
+      "ID": 1,
+      "Key": "Quest Type",
+      "Variable": {
+        "$type": "GameData.Variables.QuestTypeVariable, GameCore",
+        "Value": "CARAVAN_ESCORT"
+      }
+    },
+    {
+      "ID": 2,
+      "Key": "QUEST_NAME",
+      "Variable": {
+        "$type": "GameData.Variables.StringVariable, GameCore",
+        "Value": "Escort Caravan"
+      }
+    },
+    {
+      "ID": 4,
+      "Key": "CARAVAN_ID",
+      "Variable": {
+        "$type": "GameData.Variables.IntVariable, GameCore",
+        "Value": 0
+      }
+    },
+    {
+      "ID": 6,
+      "Key": "CARAVAN_DESTINATION",
+      "Variable": {
+        "$type": "GameData.Variables.StringVariable, GameCore",
+        "Value": null
+      }
+    },
+    {
+      "ID": 7,
+      "Key": "CARAVAN_VECTOR_DESTINATION",
+      "Variable": {
+        "$type": "GameData.Variables.VectorVariable, GameCore",
+        "Value": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+      }
+    },
+    {
+      "ID": 8,
+      "Key": "CARAVAN_SPAWN_POS",
+      "Variable": {
+        "$type": "GameData.Variables.VectorVariable, GameCore",
+        "Value": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        }
+      }
+    }
+  ],
+  "Conditionals": [
+    {
+      "Data": {
+        "$type": "GameData.Conditionals.PartyExistsConditionalData, GameCore",
+        "PartyID": 12,
+        "OnFailed": []
+      },
+      "ID": 10
+    },
+    {
+      "Data": {
+        "$type": "GameData.Conditionals.PartyDestinationReachedData, GameCore",
+        "PartyID": 12,
+        "Destination": 33
+      },
+      "ID": 11
+    }
+  ],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "GameData.Activators.SpawnQuestCaravanActivatorData, GameCore",
+        "CaravanID": 7,
+        "PositionID": 29
+      },
+      "ID": 6
+    },
+    {
+      "Data": {
+        "$type": "GameData.Activators.FailQuestActivatorData, GameCore"
+      },
+      "ID": 14
+    },
+    {
+      "Data": {
+        "$type": "GameData.Activators.SetPartyDestinationActivatorData, GameCore",
+        "Destination": 19
+      },
+      "ID": 15
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 2,
+      "VariableOutputsPorts": [
+        3,
+        3
+      ],
+      "ID": 5
+    },
+    {
+      "Variable": 4,
+      "VariableOutputsPorts": [
+        6,
+        6
+      ],
+      "ID": 7
+    },
+    {
+      "Variable": 4,
+      "VariableOutputsPorts": [
+        10,
+        11,
+        10,
+        11
+      ],
+      "ID": 12
+    },
+    {
+      "Variable": 7,
+      "VariableOutputsPorts": [
+        15,
+        15
+      ],
+      "ID": 19
+    },
+    {
+      "Variable": 6,
+      "VariableOutputsPorts": [
+        4,
+        4
+      ],
+      "ID": 20
+    },
+    {
+      "Variable": 7,
+      "VariableOutputsPorts": [
+        4,
+        4
+      ],
+      "ID": 22
+    },
+    {
+      "Variable": 8,
+      "VariableOutputsPorts": [
+        6,
+        6
+      ],
+      "ID": 29
+    },
+    {
+      "Variable": 8,
+      "VariableOutputsPorts": [
+        30,
+        30
+      ],
+      "ID": 31
+    },
+    {
+      "Variable": 7,
+      "VariableOutputsPorts": [
+        11,
+        11
+      ],
+      "ID": 33
+    }
+  ],
+  "ID": "QuestDefaultback",
+  "StartNode": 2,
+  "FileName": "QuestDefaultback"
+}

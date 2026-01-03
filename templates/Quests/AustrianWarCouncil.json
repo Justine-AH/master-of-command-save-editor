@@ -1,0 +1,97 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      35,
+      33
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 14,
+      "Key": "RecruitmentCost",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -75.0
+      }
+    },
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_AustrianWarCouncil"
+      }
+    },
+    {
+      "ID": 16,
+      "Key": "ExperienceGain",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -10.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyOfficerExperienceGainData, MocCampaign",
+        "Value": 32
+      },
+      "ID": 33
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyOfficerRecruitmentCostData, MocCampaign",
+        "Value": 30
+      },
+      "ID": 35
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 14,
+      "VariableOutputsPorts": [
+        35,
+        5
+      ],
+      "ID": 30
+    },
+    {
+      "Variable": 16,
+      "VariableOutputsPorts": [
+        33,
+        5
+      ],
+      "ID": 32
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Strategem/AustrianWarCouncilHeader",
+      "TextKey": "Strategem/AustrianWarCouncilBody",
+      "BodyVariables": [
+        30,
+        32
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "AustrianWarCouncil",
+  "StartNode": 2,
+  "FileName": "AustrianWarCouncil"
+}

@@ -1,0 +1,82 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      44,
+      46
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 6,
+      "Key": "Value",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 10.0
+      }
+    },
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Modifiers_InexperiencedReserves"
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyCombatEffectivenessData, MocCampaign",
+        "Value": 41,
+        "EnemyOnly": true
+      },
+      "ID": 44
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyEnemyMoraleData, MocCampaign",
+        "Value": 41
+      },
+      "ID": 46
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 6,
+      "VariableOutputsPorts": [
+        44,
+        46,
+        5
+      ],
+      "ID": 41
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Strategem/IncohesiveForceHeader",
+      "TextKey": "Strategem/IncohesiveForceBody",
+      "BodyVariables": [
+        41
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "IncohesiveForce",
+  "StartNode": 2,
+  "FileName": "IncohesiveForce"
+}

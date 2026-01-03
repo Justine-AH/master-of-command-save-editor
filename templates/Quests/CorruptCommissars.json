@@ -1,0 +1,99 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      44,
+      45,
+      46,
+      47
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 6,
+      "Key": "Price",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 25.0
+      }
+    },
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Modifiers_CorruptCommissars"
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyShopItemsCostsData, MocCampaign",
+        "Value": 29
+      },
+      "ID": 44
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyPlayerManpowerPriceData, MocCampaign",
+        "Value": 29
+      },
+      "ID": 45
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyShopFoodCostModifierData, MocCampaign",
+        "Value": 29
+      },
+      "ID": 46
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyShopAmmoCostModifierData, MocCampaign",
+        "Value": 29
+      },
+      "ID": 47
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 6,
+      "VariableOutputsPorts": [
+        44,
+        45,
+        46,
+        47,
+        5
+      ],
+      "ID": 29
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Strategem/CorruptCommissarsHeader",
+      "TextKey": "Strategem/CorruptCommissarsBody",
+      "BodyVariables": [
+        29
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "CorruptCommissars",
+  "StartNode": 2,
+  "FileName": "CorruptCommissars"
+}

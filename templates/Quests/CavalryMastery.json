@@ -1,0 +1,146 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      10,
+      8,
+      6,
+      7,
+      11,
+      13
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 7,
+      "Key": "Cavalry Charge Damage",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 15.0
+      }
+    },
+    {
+      "ID": 3,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Skill_Cavalier"
+      }
+    },
+    {
+      "ID": 5,
+      "Key": "ABILITY_TYPE",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "PASSIVE"
+      }
+    },
+    {
+      "ID": 8,
+      "Key": "Officer Death Chance",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 5.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitChargeDamageData, MocCampaign",
+        "UnitType": "HEAVY_CAVALRY",
+        "Value": 15
+      },
+      "ID": 6
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitChargeDamageData, MocCampaign",
+        "UnitType": "MELEE_CAVALRY",
+        "Value": 15
+      },
+      "ID": 7
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitChargeDamageData, MocCampaign",
+        "UnitType": "DRAGOON",
+        "Value": 15
+      },
+      "ID": 8
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitChargeDamageData, MocCampaign",
+        "UnitType": "LIGHT_CAVALRY",
+        "Value": 15
+      },
+      "ID": 10
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitChargeDamageData, MocCampaign",
+        "UnitType": "RECRUIT_LIGHT_CAVALRY",
+        "Value": 15
+      },
+      "ID": 11
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyOfficerDeathChanceData, MocCampaign",
+        "Value": 14
+      },
+      "ID": 13
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 8,
+      "VariableOutputsPorts": [
+        13,
+        4
+      ],
+      "ID": 14
+    },
+    {
+      "Variable": 7,
+      "VariableOutputsPorts": [
+        10,
+        8,
+        6,
+        7,
+        11,
+        4
+      ],
+      "ID": 15
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Skill/CavalryMasteryName",
+      "TextKey": "Skill/CavalryMasteryDesc",
+      "BodyVariables": [
+        15,
+        14
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 4
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "CavalryMastery",
+  "StartNode": 2,
+  "FileName": "CavalryMastery"
+}

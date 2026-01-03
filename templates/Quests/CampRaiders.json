@@ -1,0 +1,78 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      31,
+      34
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Modifiers_CampRaiders"
+      }
+    },
+    {
+      "ID": 14,
+      "Key": "Campaign Delay",
+      "Variable": {
+        "$type": "Campaign.Variables.IntVariable, Campaign",
+        "Value": 90
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyHQDelayTimeStrategemOnlyData, MocCampaign",
+        "Value": 36
+      },
+      "ID": 31
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyWinterDelayTimeStrategemData, MocCampaign",
+        "Value": 36
+      },
+      "ID": 34
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 14,
+      "VariableOutputsPorts": [
+        31,
+        34
+      ],
+      "ID": 36
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Strategem/CampRaidersHeader",
+      "TextKey": "Strategem/CampRaidersBody",
+      "BodyVariables": [],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 38
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "CampRaiders",
+  "StartNode": 2,
+  "FileName": "CampRaiders"
+}

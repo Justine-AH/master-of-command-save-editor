@@ -1,0 +1,69 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      18
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_Officer-Corps-Training"
+      }
+    },
+    {
+      "ID": 10,
+      "Key": "Amount",
+      "Variable": {
+        "$type": "Campaign.Variables.IntVariable, Campaign",
+        "Value": 1
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyOfficerPromotionOnPurchaseData, MocCampaign",
+        "Value": 21
+      },
+      "ID": 18
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 10,
+      "VariableOutputsPorts": [
+        18
+      ],
+      "ID": 21
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Strategem/OfficerCorpsTrainingHeader",
+      "TextKey": "Strategem/OfficerCorpsTrainingBody",
+      "BodyVariables": [],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "OfficerCorpsTraining",
+  "StartNode": 2,
+  "FileName": "OfficerCorpsTraining"
+}

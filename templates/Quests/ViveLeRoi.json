@@ -1,0 +1,199 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      60,
+      61,
+      62,
+      63,
+      54,
+      55,
+      57,
+      58,
+      59,
+      67,
+      66,
+      65
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 16,
+      "Key": "Cavalry damage reduction",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -25.0
+      }
+    },
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_Vive_le_Roi"
+      }
+    },
+    {
+      "ID": 17,
+      "Key": "Infantry Cost",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 10.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyMeleeDamageRecievedByUnitTypeData, MocCampaign",
+        "Value": 37,
+        "UnitType": "MELEE_CAVALRY"
+      },
+      "ID": 54
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyMeleeDamageRecievedByUnitTypeData, MocCampaign",
+        "Value": 37,
+        "UnitType": "HEAVY_CAVALRY"
+      },
+      "ID": 55
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyMeleeDamageRecievedByUnitTypeData, MocCampaign",
+        "Value": 37,
+        "UnitType": "LIGHT_CAVALRY"
+      },
+      "ID": 57
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyMeleeDamageRecievedByUnitTypeData, MocCampaign",
+        "Value": 37,
+        "UnitType": "DRAGOON"
+      },
+      "ID": 58
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyMeleeDamageRecievedByUnitTypeData, MocCampaign",
+        "Value": 37,
+        "UnitType": "RECRUIT_LIGHT_CAVALRY"
+      },
+      "ID": 59
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitTypeRecruitmentCostData, MocCampaign",
+        "UnitType": "LINE_INFANTRY",
+        "Value": 38
+      },
+      "ID": 60
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitTypeRecruitmentCostData, MocCampaign",
+        "UnitType": "LIGHT_INFANTRY",
+        "Value": 38
+      },
+      "ID": 61
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitTypeRecruitmentCostData, MocCampaign",
+        "UnitType": "HEAVY_LINE_INFANTRY",
+        "Value": 38
+      },
+      "ID": 62
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitTypeRecruitmentCostData, MocCampaign",
+        "UnitType": "RECRUIT_INFANTRY",
+        "Value": 38
+      },
+      "ID": 63
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitTypeRecruitmentCostData, MocCampaign",
+        "UnitType": "RECRUIT_ARTILLERY",
+        "Value": 38
+      },
+      "ID": 65
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitTypeRecruitmentCostData, MocCampaign",
+        "UnitType": "LIGHT_ARTILLERY",
+        "Value": 38
+      },
+      "ID": 66
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitTypeRecruitmentCostData, MocCampaign",
+        "UnitType": "ARTILLERY",
+        "Value": 38
+      },
+      "ID": 67
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 16,
+      "VariableOutputsPorts": [
+        5,
+        54,
+        57,
+        59,
+        58,
+        55
+      ],
+      "ID": 37
+    },
+    {
+      "Variable": 17,
+      "VariableOutputsPorts": [
+        5,
+        60,
+        61,
+        62,
+        63,
+        67,
+        66,
+        65
+      ],
+      "ID": 38
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Stratagem/ViveLeRoiHeader",
+      "TextKey": "Stratagem/ViveLeRoiBody",
+      "BodyVariables": [
+        37,
+        38
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "ViveLeRoi",
+  "StartNode": 2,
+  "FileName": "ViveLeRoi"
+}

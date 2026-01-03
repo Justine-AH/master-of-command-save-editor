@@ -1,0 +1,105 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      19,
+      23
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 7,
+      "Key": "Flanking Fire Damage",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 15.0
+      }
+    },
+    {
+      "ID": 3,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Skill_Cunning"
+      }
+    },
+    {
+      "ID": 5,
+      "Key": "ABILITY_TYPE",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "PASSIVE"
+      }
+    },
+    {
+      "ID": 8,
+      "Key": "Melee Damage Received",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 10.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyFireFlankingDamageData, MocCampaign",
+        "Value": 21
+      },
+      "ID": 19
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyMeleeDamageRecievedData, MocCampaign",
+        "Value": 22
+      },
+      "ID": 23
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 7,
+      "VariableOutputsPorts": [
+        19,
+        4
+      ],
+      "ID": 21
+    },
+    {
+      "Variable": 8,
+      "VariableOutputsPorts": [
+        23,
+        4
+      ],
+      "ID": 22
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Skill/FlankingFireName",
+      "TextKey": "Skill/FlankingFireDesc",
+      "BodyVariables": [
+        21,
+        22
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 4
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "FlankingFire",
+  "StartNode": 2,
+  "FileName": "FlankingFire"
+}

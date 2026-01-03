@@ -1,0 +1,97 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      18,
+      20
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_Allied-Subsidies"
+      }
+    },
+    {
+      "ID": 10,
+      "Key": "CashAllowance",
+      "Variable": {
+        "$type": "Campaign.Variables.IntVariable, Campaign",
+        "Value": 5
+      }
+    },
+    {
+      "ID": 12,
+      "Key": "Morale Buff",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 5.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyDailyCashGainData, MocCampaign",
+        "Value": 16
+      },
+      "ID": 18
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyMoraleData, MocCampaign",
+        "Value": 21
+      },
+      "ID": 20
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 10,
+      "VariableOutputsPorts": [
+        18,
+        5
+      ],
+      "ID": 16
+    },
+    {
+      "Variable": 12,
+      "VariableOutputsPorts": [
+        20,
+        5
+      ],
+      "ID": 21
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Strategem/AlliedSubsidiesHeader",
+      "TextKey": "Strategem/AlliedSubsidiesBody",
+      "BodyVariables": [
+        16,
+        21
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "AlliedSubsidies",
+  "StartNode": 2,
+  "FileName": "AlliedSubsidies"
+}

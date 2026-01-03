@@ -1,0 +1,97 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      43,
+      46
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_White_Horse"
+      }
+    },
+    {
+      "ID": 15,
+      "Key": "Combat Debuff",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -10.0
+      }
+    },
+    {
+      "ID": 20,
+      "Key": "Combat Buff",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 10.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyCombatEffectivenessWhenInCommandAuraData, MocCampaign",
+        "Value": 36
+      },
+      "ID": 43
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyMoraleWhenOutOfCommandAuraRangeData, MocCampaign",
+        "Value": 22
+      },
+      "ID": 46
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 15,
+      "VariableOutputsPorts": [
+        46,
+        5
+      ],
+      "ID": 22
+    },
+    {
+      "Variable": 20,
+      "VariableOutputsPorts": [
+        43,
+        5
+      ],
+      "ID": 36
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Stratagem/TheWhiteHorseHeader",
+      "TextKey": "Stratagem/TheWhiteHorseBody",
+      "BodyVariables": [
+        36,
+        22
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "TheWhiteHorse",
+  "StartNode": 2,
+  "FileName": "TheWhiteHorse"
+}

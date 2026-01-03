@@ -1,0 +1,105 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      6,
+      8
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 10,
+      "Key": "Melee Damage",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 5.0
+      }
+    },
+    {
+      "ID": 3,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Skill_Burly"
+      }
+    },
+    {
+      "ID": 5,
+      "Key": "ABILITY_TYPE",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "PASSIVE"
+      }
+    },
+    {
+      "ID": 9,
+      "Key": "Grenade Throw Range",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 25.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyGrenadesRangeData, MocCampaign",
+        "Value": 10
+      },
+      "ID": 6
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyMeleeDamageData, MocCampaign",
+        "Value": 9
+      },
+      "ID": 8
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 10,
+      "VariableOutputsPorts": [
+        8,
+        4
+      ],
+      "ID": 9
+    },
+    {
+      "Variable": 9,
+      "VariableOutputsPorts": [
+        6,
+        4
+      ],
+      "ID": 10
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Skill/GrenadierSpiritName",
+      "TextKey": "Skill/GrenadierSpiritDesc",
+      "BodyVariables": [
+        10,
+        9
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 4
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "GrenadierSpirit",
+  "StartNode": 2,
+  "FileName": "GrenadierSpirit"
+}

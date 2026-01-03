@@ -1,0 +1,105 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      27,
+      25
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 13,
+      "Key": "Cover Efficiency",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -10.0
+      }
+    },
+    {
+      "ID": 3,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Skill_Determined"
+      }
+    },
+    {
+      "ID": 5,
+      "Key": "ABILITY_TYPE",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "PASSIVE"
+      }
+    },
+    {
+      "ID": 11,
+      "Key": "Charge Damage",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 5.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyCoverBonusData, MocCampaign",
+        "Value": 26
+      },
+      "ID": 25
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyChargeDamageData, MocCampaign",
+        "Value": 28
+      },
+      "ID": 27
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 13,
+      "VariableOutputsPorts": [
+        25,
+        4
+      ],
+      "ID": 26
+    },
+    {
+      "Variable": 11,
+      "VariableOutputsPorts": [
+        27,
+        4
+      ],
+      "ID": 28
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Skill/DeterminedName",
+      "TextKey": "Skill/DeterminedDesc",
+      "BodyVariables": [
+        28,
+        26
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 4
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "Determined",
+  "StartNode": 2,
+  "FileName": "Determined"
+}

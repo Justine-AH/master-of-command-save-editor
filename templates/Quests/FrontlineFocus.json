@@ -1,0 +1,97 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      18,
+      20
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 6,
+      "Key": "FireDamageRecieved",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -15.0
+      }
+    },
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_Frontline-Focus"
+      }
+    },
+    {
+      "ID": 10,
+      "Key": "FlankingDamageRecieved",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 30.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyFlankingDamageRecievedData, MocCampaign",
+        "Value": 16
+      },
+      "ID": 18
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyFireDamageRecievedData, MocCampaign",
+        "Value": 13
+      },
+      "ID": 20
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 6,
+      "VariableOutputsPorts": [
+        20,
+        5
+      ],
+      "ID": 13
+    },
+    {
+      "Variable": 10,
+      "VariableOutputsPorts": [
+        18,
+        5
+      ],
+      "ID": 16
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Strategem/FrontlineFocusHeader",
+      "TextKey": "Strategem/FrontlineFocusBody",
+      "BodyVariables": [
+        13,
+        16
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "FrontlineFocus",
+  "StartNode": 2,
+  "FileName": "FrontlineFocus"
+}

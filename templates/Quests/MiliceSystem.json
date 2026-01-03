@@ -1,0 +1,97 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      26,
+      27
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_Milice_System"
+      }
+    },
+    {
+      "ID": 14,
+      "Key": "MoraleModifier",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -5.0
+      }
+    },
+    {
+      "ID": 16,
+      "Key": "DailyManpower",
+      "Variable": {
+        "$type": "Campaign.Variables.IntVariable, Campaign",
+        "Value": 75
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyDailyManpowerData, MocCampaign",
+        "Value": 28
+      },
+      "ID": 26
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyMoraleData, MocCampaign",
+        "Value": 23
+      },
+      "ID": 27
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 14,
+      "VariableOutputsPorts": [
+        27,
+        5
+      ],
+      "ID": 23
+    },
+    {
+      "Variable": 16,
+      "VariableOutputsPorts": [
+        26,
+        5
+      ],
+      "ID": 28
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Stratagem/MiliceSystemHeader",
+      "TextKey": "Stratagem/MiliceSystemBody",
+      "BodyVariables": [
+        28,
+        23
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "MiliceSystem",
+  "StartNode": 2,
+  "FileName": "MiliceSystem"
+}

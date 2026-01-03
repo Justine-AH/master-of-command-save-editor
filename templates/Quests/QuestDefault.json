@@ -1,0 +1,83 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 5,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Ability_Throw_Grenade"
+      }
+    },
+    {
+      "ID": 7,
+      "Key": "ABILITY_TYPE",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "UNYIELDING_ASSAULT"
+      }
+    },
+    {
+      "ID": 9,
+      "Key": "FATIGUE_MODIFIER",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -100.0
+      }
+    },
+    {
+      "ID": 10,
+      "Key": "MELEE_DAMAGE_MODIFIER",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 10.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [],
+  "VariableNodes": [
+    {
+      "Variable": 9,
+      "VariableOutputsPorts": [
+        4
+      ],
+      "ID": 8
+    },
+    {
+      "Variable": 10,
+      "VariableOutputsPorts": [
+        4
+      ],
+      "ID": 9
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Skill/UnyieldingAssaultName",
+      "TextKey": "Skill/UnyieldingAssaultDesc",
+      "BodyVariables": [
+        8,
+        9
+      ],
+      "HeaderVariables": [],
+      "ID": 4
+    }
+  ],
+  "ID": "QuestDefault",
+  "StartNode": 2,
+  "FileName": "QuestDefault"
+}

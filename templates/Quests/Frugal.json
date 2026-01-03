@@ -1,0 +1,105 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      19,
+      18
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 11,
+      "Key": "Ammunition Consumption",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -25.0
+      }
+    },
+    {
+      "ID": 3,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Skill_Frugal"
+      }
+    },
+    {
+      "ID": 5,
+      "Key": "ABILITY_TYPE",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "PASSIVE"
+      }
+    },
+    {
+      "ID": 12,
+      "Key": "Reload Speed",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 5.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyReloadSpeedData, MocCampaign",
+        "Value": 22
+      },
+      "ID": 18
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyAmmoConsumptionData, MocCampaign",
+        "Value": 23
+      },
+      "ID": 19
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 12,
+      "VariableOutputsPorts": [
+        18,
+        4
+      ],
+      "ID": 22
+    },
+    {
+      "Variable": 11,
+      "VariableOutputsPorts": [
+        19,
+        4
+      ],
+      "ID": 23
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Skill/FrugalName",
+      "TextKey": "Skill/FrugalDesc",
+      "BodyVariables": [
+        23,
+        22
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 4
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "Frugal",
+  "StartNode": 2,
+  "FileName": "Frugal"
+}

@@ -1,0 +1,97 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      29,
+      34
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_Coffers_over_Corpses"
+      }
+    },
+    {
+      "ID": 16,
+      "Key": "DailyCash",
+      "Variable": {
+        "$type": "Campaign.Variables.IntVariable, Campaign",
+        "Value": 8
+      }
+    },
+    {
+      "ID": 20,
+      "Key": "DivisionDiscounted",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 25.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyDailyCashGainData, MocCampaign",
+        "Value": 28
+      },
+      "ID": 29
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyDivisionUnlockCostData, MocCampaign",
+        "Value": 36
+      },
+      "ID": 34
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 16,
+      "VariableOutputsPorts": [
+        29,
+        5
+      ],
+      "ID": 28
+    },
+    {
+      "Variable": 20,
+      "VariableOutputsPorts": [
+        34,
+        5
+      ],
+      "ID": 36
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Stratagem/CoffersOverCorpsesHeader",
+      "TextKey": "Stratagem/CoffersOverCorpsesBody",
+      "BodyVariables": [
+        28,
+        36
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "CoffersOverCorpses",
+  "StartNode": 2,
+  "FileName": "CoffersOverCorpses"
+}

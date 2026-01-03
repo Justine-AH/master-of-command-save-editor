@@ -1,0 +1,72 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      17
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 10,
+      "Key": "ManpowerGain",
+      "Variable": {
+        "$type": "Campaign.Variables.IntVariable, Campaign",
+        "Value": 350
+      }
+    },
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_Canton-System"
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyManpowerGainWhenVisitingVillagesData, MocCampaign",
+        "Value": 16
+      },
+      "ID": 17
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 10,
+      "VariableOutputsPorts": [
+        17,
+        5
+      ],
+      "ID": 16
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Strategem/MiracleofBrandenburgHeader",
+      "TextKey": "Strategem/MiracleofBrandenburgBody",
+      "BodyVariables": [
+        16
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "MiracleofBrandenburg",
+  "StartNode": 2,
+  "FileName": "MiracleofBrandenburg"
+}

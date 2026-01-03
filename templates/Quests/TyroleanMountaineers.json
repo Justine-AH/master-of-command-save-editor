@@ -1,0 +1,72 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      32
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 14,
+      "Key": "Modifier",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 100.0
+      }
+    },
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_Tyrolean-Mountaineers"
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyElevationBonusesData, MocCampaign",
+        "Value": 30
+      },
+      "ID": 32
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 14,
+      "VariableOutputsPorts": [
+        32,
+        5
+      ],
+      "ID": 30
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Strategem/TyroleanMountaineersHeader",
+      "TextKey": "Strategem/TyroleanMountaineersBody",
+      "BodyVariables": [
+        30
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "TyroleanMountaineers",
+  "StartNode": 2,
+  "FileName": "TyroleanMountaineers"
+}

@@ -1,0 +1,108 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      27,
+      30,
+      29
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 12,
+      "Key": "LootBonus",
+      "Variable": {
+        "$type": "Campaign.Variables.IntVariable, Campaign",
+        "Value": 2
+      }
+    },
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_HussarRaiders"
+      }
+    },
+    {
+      "ID": 14,
+      "Key": "Light cav speed",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 15.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyPostBattleLootItemsData, MocCampaign",
+        "Value": 25
+      },
+      "ID": 27
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitSpeedData, MocCampaign",
+        "UnitType": "RECRUIT_LIGHT_CAVALRY",
+        "Value": 31
+      },
+      "ID": 29
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitSpeedData, MocCampaign",
+        "UnitType": "LIGHT_CAVALRY",
+        "Value": 31
+      },
+      "ID": 30
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 12,
+      "VariableOutputsPorts": [
+        27,
+        5
+      ],
+      "ID": 25
+    },
+    {
+      "Variable": 14,
+      "VariableOutputsPorts": [
+        30,
+        29,
+        5
+      ],
+      "ID": 31
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Strategem/HussarRaidersHeader",
+      "TextKey": "Strategem/HussarRaidersBody",
+      "BodyVariables": [
+        25,
+        31
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "HussarRaiders",
+  "StartNode": 2,
+  "FileName": "HussarRaiders"
+}

@@ -1,0 +1,103 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      6,
+      10
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 7,
+      "Key": "Cover Effectiveness",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 10.0
+      }
+    },
+    {
+      "ID": 3,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Skill_FieldEngineering"
+      }
+    },
+    {
+      "ID": 5,
+      "Key": "ABILITY_TYPE",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "PASSIVE"
+      }
+    },
+    {
+      "ID": 8,
+      "Key": "Deployable Speed",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 100.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyDeployableConstructionSpeedData, MocCampaign",
+        "Value": 9
+      },
+      "ID": 6
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyCoverBonusData, MocCampaign",
+        "Value": 11
+      },
+      "ID": 10
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 8,
+      "VariableOutputsPorts": [
+        6
+      ],
+      "ID": 9
+    },
+    {
+      "Variable": 7,
+      "VariableOutputsPorts": [
+        10,
+        4
+      ],
+      "ID": 11
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Skill/FieldEngineeringName",
+      "TextKey": "Skill/FieldEngineeringDesc",
+      "BodyVariables": [
+        11
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 4
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "FieldEngineering",
+  "StartNode": 2,
+  "FileName": "FieldEngineering"
+}

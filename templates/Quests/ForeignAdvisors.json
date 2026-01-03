@@ -1,0 +1,98 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      7,
+      10
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 5,
+      "Key": "ExperienceGain",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -10.0
+      }
+    },
+    {
+      "ID": 3,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_Foreign-Advisors"
+      }
+    },
+    {
+      "ID": 7,
+      "Key": "Combat Effectiveness",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 5.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyArmyExperienceGainData, MocCampaign",
+        "Value": 8
+      },
+      "ID": 7
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyCombatEffectivenessData, MocCampaign",
+        "Value": 11,
+        "EnemyOnly": false
+      },
+      "ID": 10
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 5,
+      "VariableOutputsPorts": [
+        7,
+        5
+      ],
+      "ID": 8
+    },
+    {
+      "Variable": 7,
+      "VariableOutputsPorts": [
+        10,
+        5
+      ],
+      "ID": 11
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Strategem/ForeginAdvisorsHeader",
+      "TextKey": "Strategem/ForeginAdvisorsBody",
+      "BodyVariables": [
+        11,
+        8
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "ForeignAdvisors",
+  "StartNode": 2,
+  "FileName": "ForeignAdvisors"
+}

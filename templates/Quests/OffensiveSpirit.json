@@ -1,0 +1,95 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      19,
+      21
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 11,
+      "Key": "MeleeDamageModifier",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 25.0
+      }
+    },
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_Offensive-Spirit"
+      }
+    },
+    {
+      "ID": 12,
+      "Key": "RangeAccuracyModifier",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -10.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyAccuracyData, MocCampaign",
+        "Value": 18
+      },
+      "ID": 19
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyMeleeDamageData, MocCampaign",
+        "Value": 17
+      },
+      "ID": 21
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 11,
+      "VariableOutputsPorts": [
+        21,
+        5
+      ],
+      "ID": 17
+    },
+    {
+      "Variable": 12,
+      "VariableOutputsPorts": [
+        19,
+        5
+      ],
+      "ID": 18
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Strategem/OffensiveSpiritHeader",
+      "TextKey": "Strategem/OffensiveSpiritBody",
+      "BodyVariables": [
+        17,
+        18
+      ],
+      "HeaderVariables": [],
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "OffensiveSpirit",
+  "StartNode": 2,
+  "FileName": "OffensiveSpirit"
+}

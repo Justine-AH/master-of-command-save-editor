@@ -1,0 +1,139 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      43,
+      44,
+      45,
+      49,
+      48,
+      47
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_Experimental-Artillery"
+      }
+    },
+    {
+      "ID": 14,
+      "Key": "ArtyReloadSpeed",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -5.0
+      }
+    },
+    {
+      "ID": 15,
+      "Key": "ArtyAccuracy",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 15.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitAccuracyData, MocCampaign",
+        "UnitType": "RECRUIT_ARTILLERY",
+        "Value": 39
+      },
+      "ID": 43
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitAccuracyData, MocCampaign",
+        "UnitType": "ARTILLERY",
+        "Value": 39
+      },
+      "ID": 44
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitAccuracyData, MocCampaign",
+        "UnitType": "LIGHT_ARTILLERY",
+        "Value": 39
+      },
+      "ID": 45
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitReloadSpeedData, MocCampaign",
+        "UnitType": "RECRUIT_ARTILLERY",
+        "Value": 38
+      },
+      "ID": 47
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitReloadSpeedData, MocCampaign",
+        "UnitType": "LIGHT_ARTILLERY",
+        "Value": 38
+      },
+      "ID": 48
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitReloadSpeedData, MocCampaign",
+        "UnitType": "ARTILLERY",
+        "Value": 38
+      },
+      "ID": 49
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 14,
+      "VariableOutputsPorts": [
+        47,
+        48,
+        49,
+        5
+      ],
+      "ID": 38
+    },
+    {
+      "Variable": 15,
+      "VariableOutputsPorts": [
+        43,
+        44,
+        45,
+        5
+      ],
+      "ID": 39
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Stratagem/ExperimentalArtilleryHeader",
+      "TextKey": "Stratagem/ExperimentalArtilleryBody",
+      "BodyVariables": [
+        39,
+        38
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "ExperimentalArtillery",
+  "StartNode": 2,
+  "FileName": "ExperimentalArtillery"
+}

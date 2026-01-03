@@ -1,0 +1,57 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      2
+    ],
+    "DialogueID": 0,
+    "ID": 1
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.Regions.RegionConditionControllerData, MocCampaign",
+        "PositiveTerm": "Region/RegionCondition_Support_Positive",
+        "PositiveHintTerm": "Region/RegionCondition_Support_Positive_Hint",
+        "Positives": [
+          8
+        ],
+        "NegativeTerm": "Region/RegionCondition_Support_Negative",
+        "NegativeHintTerm": "Region/RegionCondition_Support_Negative_Hint",
+        "Negatives": [
+          9
+        ]
+      },
+      "ID": 2
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.Regions.RegionItemCostData, MocCampaign",
+        "Value": -0.15
+      },
+      "ID": 8
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.Regions.RegionItemCostData, MocCampaign",
+        "Value": 0.15
+      },
+      "ID": 9
+    }
+  ],
+  "VariableNodes": [],
+  "TooltipNodes": [],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "RegionCondition_Support",
+  "StartNode": 1,
+  "FileName": "RegionCondition_Support"
+}

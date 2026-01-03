@@ -1,0 +1,97 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      19,
+      22
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 5,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_Scraping-the-Barrel"
+      }
+    },
+    {
+      "ID": 10,
+      "Key": "ArmyExperience",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -10.0
+      }
+    },
+    {
+      "ID": 9,
+      "Key": "Manpower Cost",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -40.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyArmyExperienceGainData, MocCampaign",
+        "Value": 20
+      },
+      "ID": 19
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyPlayerManpowerPriceData, MocCampaign",
+        "Value": 18
+      },
+      "ID": 22
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 9,
+      "VariableOutputsPorts": [
+        22,
+        5
+      ],
+      "ID": 18
+    },
+    {
+      "Variable": 10,
+      "VariableOutputsPorts": [
+        19,
+        5
+      ],
+      "ID": 20
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Strategem/ScrapingTheBarrelHeader",
+      "TextKey": "Strategem/ScrapingTheBarrelBody",
+      "BodyVariables": [
+        18,
+        20
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "ScrapingTheBarrel",
+  "StartNode": 2,
+  "FileName": "ScrapingTheBarrel"
+}

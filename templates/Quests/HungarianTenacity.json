@@ -1,0 +1,139 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      21,
+      26,
+      27,
+      28,
+      31,
+      25
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 6,
+      "Key": "ChargeDamageModifier",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 25.0
+      }
+    },
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_Hungarian-Tenacity"
+      }
+    },
+    {
+      "ID": 10,
+      "Key": "AccuracyModifier",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -10.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitChargeDamageData, MocCampaign",
+        "UnitType": "LIGHT_CAVALRY",
+        "Value": 13
+      },
+      "ID": 21
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitChargeDamageData, MocCampaign",
+        "UnitType": "RECRUIT_LIGHT_CAVALRY",
+        "Value": 13
+      },
+      "ID": 25
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitAccuracyData, MocCampaign",
+        "UnitType": "LIGHT_INFANTRY",
+        "Value": 16
+      },
+      "ID": 26
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitAccuracyData, MocCampaign",
+        "UnitType": "LINE_INFANTRY",
+        "Value": 16
+      },
+      "ID": 27
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitAccuracyData, MocCampaign",
+        "UnitType": "RECRUIT_INFANTRY",
+        "Value": 16
+      },
+      "ID": 28
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitAccuracyData, MocCampaign",
+        "UnitType": "HEAVY_LINE_INFANTRY",
+        "Value": 16
+      },
+      "ID": 31
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 6,
+      "VariableOutputsPorts": [
+        21,
+        25,
+        5
+      ],
+      "ID": 13
+    },
+    {
+      "Variable": 10,
+      "VariableOutputsPorts": [
+        26,
+        27,
+        28,
+        31,
+        5
+      ],
+      "ID": 16
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Strategem/HungarianTenacityHeader",
+      "TextKey": "Strategem/HungarianTenacityBody",
+      "BodyVariables": [
+        13,
+        16
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "HungarianTenacity",
+  "StartNode": 2,
+  "FileName": "HungarianTenacity"
+}

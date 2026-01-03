@@ -1,0 +1,105 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      12,
+      13
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 11,
+      "Key": "Combat Effectiveness",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 5.0
+      }
+    },
+    {
+      "ID": 3,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Skill_Cautious"
+      }
+    },
+    {
+      "ID": 5,
+      "Key": "ABILITY_TYPE",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "PASSIVE"
+      }
+    },
+    {
+      "ID": 13,
+      "Key": "Command Radius",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -25.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyCombatEffectivenessData, MocCampaign",
+        "Value": 11
+      },
+      "ID": 12
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyCommandAuraRangeData, MocCampaign",
+        "Value": 14
+      },
+      "ID": 13
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 11,
+      "VariableOutputsPorts": [
+        12,
+        4
+      ],
+      "ID": 11
+    },
+    {
+      "Variable": 13,
+      "VariableOutputsPorts": [
+        13,
+        4
+      ],
+      "ID": 14
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Skill/GroundHuggerName",
+      "TextKey": "Skill/GroundHuggerDesc",
+      "BodyVariables": [
+        11,
+        14
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 4
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "GroundHugger",
+  "StartNode": 2,
+  "FileName": "GroundHugger"
+}

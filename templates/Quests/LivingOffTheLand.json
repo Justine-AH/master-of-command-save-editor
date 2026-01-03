@@ -1,0 +1,72 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      25
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_Living-off-the-Land"
+      }
+    },
+    {
+      "ID": 12,
+      "Key": "FoodConsumption",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -50.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyForagingConsumptionModifierData, MocCampaign",
+        "Value": 21
+      },
+      "ID": 25
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 12,
+      "VariableOutputsPorts": [
+        25,
+        5
+      ],
+      "ID": 21
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Strategem/LivingOffTheLandHeader",
+      "TextKey": "Strategem/LivingOffTheLandBody",
+      "BodyVariables": [
+        21
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "LivingOffTheLand",
+  "StartNode": 2,
+  "FileName": "LivingOffTheLand"
+}

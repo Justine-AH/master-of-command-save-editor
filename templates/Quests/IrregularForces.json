@@ -1,0 +1,97 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      24,
+      29
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 6,
+      "Key": "PrisonerRewards",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 60.0
+      }
+    },
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_Irregular-Forces"
+      }
+    },
+    {
+      "ID": 12,
+      "Key": "ManpowerLoss",
+      "Variable": {
+        "$type": "Campaign.Variables.IntVariable, Campaign",
+        "Value": -3
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyPrisonersRewardData, MocCampaign",
+        "Value": 13
+      },
+      "ID": 24
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyDailyManpowerBasedOnRegimentsInArmyData, MocCampaign",
+        "Value": 27
+      },
+      "ID": 29
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 6,
+      "VariableOutputsPorts": [
+        24,
+        5
+      ],
+      "ID": 13
+    },
+    {
+      "Variable": 12,
+      "VariableOutputsPorts": [
+        29,
+        5
+      ],
+      "ID": 27
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Strategem/IrregularForcesHeader",
+      "TextKey": "Strategem/IrregularForcesBody",
+      "BodyVariables": [
+        13,
+        27
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "IrregularForces",
+  "StartNode": 2,
+  "FileName": "IrregularForces"
+}

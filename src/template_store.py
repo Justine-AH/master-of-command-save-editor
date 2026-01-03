@@ -2,7 +2,7 @@ from dataclasses import dataclass
 import json
 from pathlib import Path
 from typing import Any, Optional, Protocol, TypeGuard
-from constants import LOC_UNITS_NAME_PREFIX, TEMPLATES_DIR
+from constants import TEMPLATES_DIR
 
 class LoadedTemplateStore(Protocol):
     unit_template: dict[str, dict[str, Any]]
@@ -47,15 +47,40 @@ class TemplateStore():
         
         self.bust_template = bust_templates
         
+        # Loading Skills Templates
+        # the skill system of the game is convoluted, their definition are under Quests along other stuff like stratagems, etc.
+        quests_templates = {}
+        folder_path = Path(TEMPLATES_DIR / "Quests")
+        for file in folder_path.glob("*.json"):
+            with file.open("r", encoding="utf-8") as f:
+                quests_templates[file.stem] = json.load(f)
+                
+        skills_templates = {}
+        folder_path = Path(TEMPLATES_DIR / "Skills")
+        for file in folder_path.glob("*.json"):
+            with file.open("r", encoding="utf-8") as f:
+                skills_templates[file.stem] = json.load(f)
+                
+        self.skill_template = {
+            quest.get("ID"): quest.get("TooltipNodes")[0]["HeaderKey"] 
+            for quest in quests_templates.values() 
+            if quest.get("ID") in skills_templates.keys()
+            and quest.get("TooltipNodes")
+        }
+        
+        # TODO: make loc only retrieve needed locs
         # Loading Localization Templates
         with open(TEMPLATES_DIR / "English.json", "r", encoding="utf-8") as f:
             loc = json.load(f)["Terms"]
         
         self.loc_dict = {
-            item["Key"].split("/")[-1]: item["Translation"]
+            item["Key"]: item["Translation"]
             for item in loc
-            if LOC_UNITS_NAME_PREFIX in item["Key"]
         }
+        for key, value in self.unit_template.items():
+            self.unit_template[key]["Name"] = self.loc_dict.get(str(value.get("Name")))
+        for key, value in self.skill_template.items():
+            self.skill_template[key] = self.loc_dict.get(value)
 
     def missing_templates(self) -> list[str]:
         missing: list[str] = []
@@ -69,6 +94,8 @@ class TemplateStore():
             missing.append("bust_template")
         if self.loc_dict is None:
             missing.append("loc_dict")
+        if self.skill_template is None:
+            missing.append("skill_template")
         return missing
 
     def is_loaded(self) -> bool:
@@ -81,4 +108,5 @@ class TemplateStore():
             and store.flag_template is not None
             and store.bust_template is not None
             and store.loc_dict is not None
+            and store.skill_template is not None
         )

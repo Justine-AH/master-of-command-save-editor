@@ -1,0 +1,99 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      33,
+      34
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_British_Grenadiers"
+      }
+    },
+    {
+      "ID": 12,
+      "Key": "Combat Effectiveness",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 10.0
+      }
+    },
+    {
+      "ID": 13,
+      "Key": "Heavy Infantry Cost",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 10.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitTypeRecruitmentCostData, MocCampaign",
+        "UnitType": "HEAVY_LINE_INFANTRY",
+        "Value": 35
+      },
+      "ID": 33
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyCombatEffectivenessByUnitTypeData, MocCampaign",
+        "UnitType": "HEAVY_LINE_INFANTRY",
+        "Value": 36
+      },
+      "ID": 34
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 13,
+      "VariableOutputsPorts": [
+        33,
+        5
+      ],
+      "ID": 35
+    },
+    {
+      "Variable": 12,
+      "VariableOutputsPorts": [
+        34,
+        5
+      ],
+      "ID": 36
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Stratagem/BritishGrenadiersHeader",
+      "TextKey": "Stratagem/BritishGrenadiersBody",
+      "BodyVariables": [
+        36,
+        35
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "BritishGrenadiers",
+  "StartNode": 2,
+  "FileName": "BritishGrenadiers"
+}

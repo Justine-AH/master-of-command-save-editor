@@ -1,0 +1,105 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      11,
+      12
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 5,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Skill_RallyTroops"
+      }
+    },
+    {
+      "ID": 7,
+      "Key": "ABILITY_TYPE",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "PASSIVE"
+      }
+    },
+    {
+      "ID": 9,
+      "Key": "Combat Effectiveness",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 10.0
+      }
+    },
+    {
+      "ID": 10,
+      "Key": "Officer Death Chance",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -15.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyCombatEffectivenessData, MocCampaign",
+        "Value": 14
+      },
+      "ID": 11
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyOfficerDeathChanceData, MocCampaign",
+        "Value": 13
+      },
+      "ID": 12
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 10,
+      "VariableOutputsPorts": [
+        12,
+        4
+      ],
+      "ID": 13
+    },
+    {
+      "Variable": 9,
+      "VariableOutputsPorts": [
+        11,
+        4
+      ],
+      "ID": 14
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Skill/CommandingVoiceName",
+      "TextKey": "Skill/CommandingVoiceDesc",
+      "BodyVariables": [
+        14,
+        13
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 4
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "CommandingVoice",
+  "StartNode": 2,
+  "FileName": "CommandingVoice"
+}

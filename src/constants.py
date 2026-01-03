@@ -26,7 +26,6 @@ SUPPLY_MULT = {
 }
 
 EXCLUDED_RAW_TYPES = {"SUPPLY_CARAVAN"}
-LOC_UNITS_NAME_PREFIX = "Units/Name/"
 EXCLUDED_ID_SUBSTRINGS = (
     "test",
     "debug",

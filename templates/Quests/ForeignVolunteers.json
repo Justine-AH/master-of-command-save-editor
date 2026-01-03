@@ -1,0 +1,103 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      35,
+      30,
+      34,
+      33
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_Foreign_Volunteers"
+      }
+    },
+    {
+      "ID": 14,
+      "Key": "MoveModifier",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 20.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitSpeedData, MocCampaign",
+        "UnitType": "HEAVY_LINE_INFANTRY",
+        "Value": 23
+      },
+      "ID": 30
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitSpeedData, MocCampaign",
+        "UnitType": "RECRUIT_INFANTRY",
+        "Value": 23
+      },
+      "ID": 33
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitSpeedData, MocCampaign",
+        "UnitType": "LINE_INFANTRY",
+        "Value": 23
+      },
+      "ID": 34
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyUnitSpeedData, MocCampaign",
+        "UnitType": "LIGHT_INFANTRY",
+        "Value": 23
+      },
+      "ID": 35
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 14,
+      "VariableOutputsPorts": [
+        30,
+        33,
+        34,
+        35,
+        5
+      ],
+      "ID": 23
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Stratagem/ForeignVolunteersHeader",
+      "TextKey": "Stratagem/ForeignVolunteersBody",
+      "BodyVariables": [
+        23
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "ForeignVolunteers",
+  "StartNode": 2,
+  "FileName": "ForeignVolunteers"
+}

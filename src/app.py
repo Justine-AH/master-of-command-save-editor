@@ -117,7 +117,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
             raise
 
     def load_data(self):
-        if self.data is None or self.templates.loc_dict is None:
+        if self.data is None:
             return
         
         self.refresh_ui()
@@ -143,29 +143,11 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
                 continue
             if not isinstance(spinbox, QSpinBox):
                 continue
-            combo.setCurrentText(self.templates.loc_dict[item["UnitID"]])
+            combo.setCurrentText(self.get_unit_loc(item["UnitID"]))
             combo.setProperty("originalValue", combo.currentData())
             spinbox.setValue(item["CurrentLevel"])
             spinbox.setProperty("originalValue", spinbox.value())
         
-        for i, item in enumerate(reserve_leaders_data):
-            if item is None:
-                continue
-            self.reserve_leader_label[i].setText(item["Name"])
-            self.reserve_leader_level_spinbox[i].setValue(item["Level"])
-            self.reserve_leader_skillpoints_spinbox[i].setValue(item["SkillPointsAvailable"])
-            # for j in range(5):
-            #     self.leader_skill_combos[i]
-        
-        for i, item in enumerate(divisions_data):
-            if item["OfficerSave"] is None:
-                continue
-            self.leader_label[i].setText(item["OfficerSave"]["Name"])
-            self.leader_level_spinbox[i].setValue(item["OfficerSave"]["Level"])
-            self.leader_skillpoints_spinbox[i].setValue(item["OfficerSave"]["SkillPointsAvailable"])
-            # for j in range(5):
-            #     self.leader_skill_combos[i] = SkillSaves
-            
         for i in range(len(divisions_data)):
             for j in range(4):
                 combo = getattr(self, f"regimentTypeComboBox_{i+1}_{j+1}", None)
@@ -178,10 +160,33 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
                 if regiment is None:
                     # no unit here
                     continue
-                combo.setCurrentText(self.templates.loc_dict[regiment["UnitID"]])
+                combo.setCurrentText(self.get_unit_loc(regiment["UnitID"]))
                 combo.setProperty("originalValue", combo.currentData())
                 spinbox.setValue(regiment["CurrentLevel"])
                 spinbox.setProperty("originalValue", spinbox.value())
+                
+        for i, item in enumerate(reserve_leaders_data):
+            if item is None:
+                continue
+            self.reserve_leader_label[i].setText(f"{item["Name"]} {item["LastName"]}")
+            self.reserve_leader_level_spinbox[i].setValue(item["Level"])
+            self.reserve_leader_skillpoints_spinbox[i].setValue(item["SkillPointsAvailable"])
+            for j in range(len(item["SkillSaves"])):
+                index = (i*5)+j
+                self.reserve_leader_skill_combos[index].setCurrentText(self.get_skill_loc(item["SkillSaves"][j]))
+                print(item["SkillSaves"][j])
+        
+        for i, item in enumerate(divisions_data):
+            leader = item["OfficerSave"]
+            if leader is None:
+                continue
+            self.leader_label[i].setText(f"{leader["Name"]} {leader["LastName"]}")
+            self.leader_level_spinbox[i].setValue(leader["Level"])
+            self.leader_skillpoints_spinbox[i].setValue(leader["SkillPointsAvailable"])
+            for j in range(len(leader["SkillSaves"])):
+                index = (i*5)+j
+                self.leader_skill_combos[index].setCurrentText(self.get_skill_loc(leader["SkillSaves"][j]))
+                print(leader["SkillSaves"][j])
         
     def save_data(self):
         if self.data is None:
@@ -346,7 +351,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         regiment["PreviousUnlockedUnits"] = prereq
         regiment["BustData"] = new_bust
         regiment["FlagSave"] = flag
-        regiment["Name"] = self.templates.loc_dict[unit["Name"].split("/")[-1]]
+        regiment["Name"] = unit["Name"]
         regiment["UnitID"] = new_unit_type
         regiment["UpgradeTreeID"] = tree_id
         regiment["Supply"] = int((unit["MaxManpower"] // 100) * supply)
@@ -373,10 +378,15 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
                     continue
                 
                 self._populate_unit_combo(combo)
+            
+        all_leader_skill_combos = [
+            *self.leader_skill_combos,
+            *self.reserve_leader_skill_combos,
+        ]
+        for combo in all_leader_skill_combos:
+            self._populate_skill_combo(combo)
     
     def _populate_unit_combo(self, combo: QComboBox):
-        if self.templates.loc_dict is None:
-            return
         if self.templates.unit_template is None:
             return
         
@@ -387,9 +397,20 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         for key, value in self.templates.unit_template.items():
             if self._is_excluded(key.lower()) or value["RawUnitType"] in EXCLUDED_RAW_TYPES:
                 continue
-            # ex. "Name": "Units/Name/RUS_Möller_Sakomelsky_Jägers"
-            name_key = value["Name"].split("/")[-1]
-            combo.addItem(self.templates.loc_dict[name_key], key)
+            combo.addItem(value["Name"], key)
+
+        combo.blockSignals(False)
+    
+    def _populate_skill_combo(self, combo: QComboBox):
+        if self.templates.skill_template is None:
+            return
+        
+        combo.blockSignals(True)
+        combo.clear()
+        combo.addItem(" ", None)
+
+        for key, value in self.templates.skill_template.items():
+            combo.addItem(value, key)
 
         combo.blockSignals(False)
     
@@ -417,6 +438,29 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         uid = unit_id.lower()
         return any(sub in uid for sub in EXCLUDED_ID_SUBSTRINGS)
     
+    def get_unit_loc(self, key, fallback = ""):
+        if self.templates.unit_template is None:
+            return fallback
+        if not isinstance(key, str):
+            return fallback
+        
+        unit = self.templates.unit_template.get(key)
+        if unit is not None:
+            return unit["Name"]
+        return fallback
+    
+    def get_skill_loc(self, key, fallback = ""):
+        if self.templates.skill_template is None:
+            return fallback
+        if not isinstance(key, str):
+            return fallback
+        
+        skill = self.templates.skill_template.get(key)
+        if skill is not None:
+            return skill 
+        else:
+            return fallback
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 

@@ -1,0 +1,105 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      13,
+      12
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 7,
+      "Key": "Morale Damage Received",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -10.0
+      }
+    },
+    {
+      "ID": 3,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Skill_Grounded"
+      }
+    },
+    {
+      "ID": 5,
+      "Key": "ABILITY_TYPE",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "PASSIVE"
+      }
+    },
+    {
+      "ID": 8,
+      "Key": "Move Speed",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -5.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyArmyMovementSpeedData, MocCampaign",
+        "Value": 14
+      },
+      "ID": 12
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyMoraleDamageRecievedData, MocCampaign",
+        "Value": 11
+      },
+      "ID": 13
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 7,
+      "VariableOutputsPorts": [
+        13,
+        4
+      ],
+      "ID": 11
+    },
+    {
+      "Variable": 8,
+      "VariableOutputsPorts": [
+        12,
+        4
+      ],
+      "ID": 14
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Skill/GroundedName",
+      "TextKey": "Skill/GroundedDesc",
+      "BodyVariables": [
+        11,
+        14
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 4
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "Grounded",
+  "StartNode": 2,
+  "FileName": "Grounded"
+}

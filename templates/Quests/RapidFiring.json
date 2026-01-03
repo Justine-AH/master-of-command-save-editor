@@ -1,0 +1,105 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      7,
+      9
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 7,
+      "Key": "Reload Speed",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 10.0
+      }
+    },
+    {
+      "ID": 3,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Skill_Efficient"
+      }
+    },
+    {
+      "ID": 5,
+      "Key": "ABILITY_TYPE",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "PASSIVE"
+      }
+    },
+    {
+      "ID": 8,
+      "Key": "Move Speed",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 5.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyReloadSpeedData, MocCampaign",
+        "Value": 11
+      },
+      "ID": 7
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyArmyMovementSpeedData, MocCampaign",
+        "Value": 10
+      },
+      "ID": 9
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 8,
+      "VariableOutputsPorts": [
+        9,
+        4
+      ],
+      "ID": 10
+    },
+    {
+      "Variable": 7,
+      "VariableOutputsPorts": [
+        7,
+        4
+      ],
+      "ID": 11
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Skill/RapidFiringName",
+      "TextKey": "Skill/RapidFiringDesc",
+      "BodyVariables": [
+        11,
+        10
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 4
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "RapidFiring",
+  "StartNode": 2,
+  "FileName": "RapidFiring"
+}

@@ -1,0 +1,97 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      47,
+      49
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 6,
+      "Key": "Value",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 25.0
+      }
+    },
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Modifiers_GuerillaOperations"
+      }
+    },
+    {
+      "ID": 10,
+      "Key": "Delay",
+      "Variable": {
+        "$type": "Campaign.Variables.IntVariable, Campaign",
+        "Value": -14
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyEnemyMoveSpeedData, MocCampaign",
+        "Value": 43
+      },
+      "ID": 47
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyHQDelayTimeStrategemOnlyData, MocCampaign",
+        "Value": 50
+      },
+      "ID": 49
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 6,
+      "VariableOutputsPorts": [
+        47,
+        5
+      ],
+      "ID": 43
+    },
+    {
+      "Variable": 10,
+      "VariableOutputsPorts": [
+        49,
+        5
+      ],
+      "ID": 50
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Strategem/GuerillaOperationsHeader",
+      "TextKey": "Strategem/GuerillaOperationsBody",
+      "BodyVariables": [
+        43,
+        50
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "GuerillaOperations",
+  "StartNode": 2,
+  "FileName": "GuerillaOperations"
+}

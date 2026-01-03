@@ -1,0 +1,98 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      41,
+      44,
+      45
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_Scorched-Earth"
+      }
+    },
+    {
+      "ID": 18,
+      "Key": "Morale",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -10.0
+      }
+    },
+    {
+      "ID": 19,
+      "Key": "Goods Reduction",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -25.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyShopManpowerAvailableData, MocCampaign",
+        "Value": 42
+      },
+      "ID": 41
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyShopAmmoAvailableData, MocCampaign",
+        "Value": 42
+      },
+      "ID": 44
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyShopFoodAvailableData, MocCampaign",
+        "Value": 42
+      },
+      "ID": 45
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 19,
+      "VariableOutputsPorts": [
+        41,
+        44,
+        45,
+        47
+      ],
+      "ID": 42
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Strategem/DesolationHeader",
+      "TextKey": "Strategem/DesolationBody",
+      "BodyVariables": [
+        42
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 47
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "Desolation",
+  "StartNode": 2,
+  "FileName": "Desolation"
+}

@@ -1,0 +1,122 @@
+{
+  "StartNodeSave": {
+    "TargetNodes": [],
+    "OnCreatedNodes": [],
+    "OnStartNodes": [
+      20,
+      18,
+      36
+    ],
+    "DialogueID": 0,
+    "ID": 2
+  },
+  "StateNodes": [],
+  "CanGenerateNodeSave": null,
+  "ChildGenerators": [],
+  "GeneratorNode": null,
+  "QuestType": "NONE",
+  "Variables": [
+    {
+      "ID": 8,
+      "Key": "ICON",
+      "Variable": {
+        "$type": "Campaign.Variables.StringVariable, Campaign",
+        "Value": "Stratagem_Winterized-Quarters"
+      }
+    },
+    {
+      "ID": 10,
+      "Key": "Food Consumption",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": 20.0
+      }
+    },
+    {
+      "ID": 11,
+      "Key": "Movement Speed",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -10.0
+      }
+    },
+    {
+      "ID": 16,
+      "Key": "MapVision",
+      "Variable": {
+        "$type": "Campaign.Variables.FloatVariable, Campaign",
+        "Value": -20.0
+      }
+    }
+  ],
+  "Conditionals": [],
+  "Activators": [
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyFoodConsumptionData, MocCampaign",
+        "Value": 19
+      },
+      "ID": 18
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyCampaignMovementSpeedData, MocCampaign",
+        "Value": 21
+      },
+      "ID": 20
+    },
+    {
+      "Data": {
+        "$type": "MocCampaign.Dynamics.ModifyCampaignMapVisionData, MocCampaign",
+        "Value": 33
+      },
+      "ID": 36
+    }
+  ],
+  "VariableNodes": [
+    {
+      "Variable": 10,
+      "VariableOutputsPorts": [
+        18,
+        5
+      ],
+      "ID": 19
+    },
+    {
+      "Variable": 11,
+      "VariableOutputsPorts": [
+        20,
+        5
+      ],
+      "ID": 21
+    },
+    {
+      "Variable": 16,
+      "VariableOutputsPorts": [
+        36,
+        5
+      ],
+      "ID": 33
+    }
+  ],
+  "TooltipNodes": [
+    {
+      "HeaderKey": "Strategem/WinterizedQuartersHeader",
+      "TextKey": "Strategem/WinterizedQuartersBody",
+      "BodyVariables": [
+        19,
+        21,
+        33
+      ],
+      "HeaderVariables": [],
+      "Inputs": null,
+      "Outputs": null,
+      "ID": 5
+    }
+  ],
+  "BranchingConditionalNodes": [],
+  "ConditionalBlockNodes": [],
+  "ID": "WinterizedQuarters",
+  "StartNode": 2,
+  "FileName": "WinterizedQuarters"
+}
