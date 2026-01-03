@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'saveEditorycUmCd.ui'
+## Form generated from reading UI file 'saveEditorhVcIkA.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.10.1
 ##
@@ -33,6 +33,7 @@ class Ui_MainWindow(object):
         self.actionLoad_Save_File.setObjectName(u"actionLoad_Save_File")
         self.actionSave_File = QAction(MainWindow)
         self.actionSave_File.setObjectName(u"actionSave_File")
+        self.actionSave_File.setEnabled(False)
         self.actionLoad_File = QAction(MainWindow)
         self.actionLoad_File.setObjectName(u"actionLoad_File")
         self.actionView_Templates = QAction(MainWindow)
@@ -55,6 +56,7 @@ class Ui_MainWindow(object):
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.goldSpinBox = QSpinBox(self.goldGroupBox)
         self.goldSpinBox.setObjectName(u"goldSpinBox")
+        self.goldSpinBox.setEnabled(False)
         self.goldSpinBox.setMaximum(9999999)
         self.goldSpinBox.setSingleStep(100)
 
@@ -69,6 +71,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.supplySpinBox = QSpinBox(self.supplyGroupBox)
         self.supplySpinBox.setObjectName(u"supplySpinBox")
+        self.supplySpinBox.setEnabled(False)
         self.supplySpinBox.setMaximum(9999999)
         self.supplySpinBox.setSingleStep(100)
 
@@ -83,6 +86,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
         self.manpowerSpinBox = QSpinBox(self.manpowerGroupBox)
         self.manpowerSpinBox.setObjectName(u"manpowerSpinBox")
+        self.manpowerSpinBox.setEnabled(False)
         self.manpowerSpinBox.setMaximum(9999999)
         self.manpowerSpinBox.setSingleStep(100)
 
@@ -97,6 +101,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.ammoSpinBox = QSpinBox(self.ammoGroupBox)
         self.ammoSpinBox.setObjectName(u"ammoSpinBox")
+        self.ammoSpinBox.setEnabled(False)
         self.ammoSpinBox.setMaximum(9999999)
         self.ammoSpinBox.setSingleStep(100)
 
