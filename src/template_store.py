@@ -1,11 +1,15 @@
-
-
 from dataclasses import dataclass
 import json
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any, Optional, Protocol, TypeGuard
 from constants import LOC_UNITS_NAME_PREFIX, TEMPLATES_DIR
 
+class LoadedTemplateStore(Protocol):
+    unit_template: dict[str, dict[str, Any]]
+    upgrade_template: dict[str, Any]
+    flag_template: dict[str, Any]
+    bust_template: dict[str, Any]
+    loc_dict: dict[str, str]
 @dataclass
 class TemplateStore():
     
@@ -52,4 +56,29 @@ class TemplateStore():
             for item in loc
             if LOC_UNITS_NAME_PREFIX in item["Key"]
         }
+
+    def missing_templates(self) -> list[str]:
+        missing: list[str] = []
+        if self.unit_template is None:
+            missing.append("unit_template")
+        if self.upgrade_template is None:
+            missing.append("upgrade_template")
+        if self.flag_template is None:
+            missing.append("flag_template")
+        if self.bust_template is None:
+            missing.append("bust_template")
+        if self.loc_dict is None:
+            missing.append("loc_dict")
+        return missing
+
+    def is_loaded(self) -> bool:
+        return not self.missing_templates()
     
+    def templates_ready(self, store: TemplateStore) -> TypeGuard[LoadedTemplateStore]:
+        return (
+            store.unit_template is not None
+            and store.upgrade_template is not None
+            and store.flag_template is not None
+            and store.bust_template is not None
+            and store.loc_dict is not None
+        )

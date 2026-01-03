@@ -3,6 +3,7 @@ import os
 import random
 import sys
 import tempfile
+from typing import TypeGuard
 from PySide6.QtWidgets import (
     QApplication,
     QMainWindow
@@ -245,15 +246,48 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
 
     def handle_unit_type_change(self, regiment, new_unit_type, position):
         
-        if self.templates.unit_template is None:
-            return
-        if self.templates.upgrade_template is None:
-            return
-        if self.templates.flag_template is None:
-            return
-        if self.templates.bust_template is None:
-            return
-        if self.templates.loc_dict is None:
+        def find_tree_and_prereq_by_unit_id(data, unit_id):
+            for tree_name, tree in data.items():
+                items = tree["Items"]
+                if unit_id in items:
+                    return tree_name, items[unit_id]["Prerequisite"] or []
+            return None, []
+        
+        def validate_bust_data(data):
+            def make_placeholder():
+                return [PLACEHOLDER_COLOR]
+
+            # ? this now mutates the template with randoms but maybe that better
+            # maybe recursive isnt optimal but it works...
+            def walk(obj):
+                if isinstance(obj, dict):
+                    for key, value in obj.items():
+                        k_lower = key.lower()
+                        if k_lower.endswith("colordata") and isinstance(value, dict):
+                            for ck in COLOR_KEYS:
+                                if ck in value and isinstance(value[ck], list):
+                                    if value[ck] == []:
+                                        # empty lists causes color issues (ugly cyan)
+                                        value[ck] = make_placeholder()
+                                    else:
+                                        # game chooses only 1 color or it messes up customization
+                                        value[ck] = [random.choice(value[ck])]
+                        if k_lower == "items" and isinstance(value, list):
+                            # game chooses only 1 item
+                            if len(value) > 1:
+                                obj[key] = [random.choice(value)]
+                        walk(value)
+
+                elif isinstance(obj, list):
+                    for item in obj:
+                        walk(item)
+
+            walk(data)
+            return data
+        
+        if not self.templates.templates_ready(self.templates):
+            # ? might need to add logging in future
+            print("Templates missing:", self.templates.missing_templates())
             return
         
         if regiment is None:
@@ -280,8 +314,8 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         category = TYPE_MAP[unit["RawUnitType"]]
         supply = SUPPLY_MULT[category]
 
-        tree_id, prereq = self.find_tree_and_prereq_by_unit_id(self.templates.upgrade_template, new_unit_type)
-        new_bust = self.validate_bust_data(bust_list)
+        tree_id, prereq = find_tree_and_prereq_by_unit_id(self.templates.upgrade_template, new_unit_type)
+        new_bust = validate_bust_data(bust_list)
         
         regiment["TargetManpower"] = unit["MaxManpower"]
         regiment["Manpower"] = unit["MaxManpower"]
@@ -305,44 +339,6 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         
         return regiment
     
-    def find_tree_and_prereq_by_unit_id(self, data, unit_id):
-        for tree_name, tree in data.items():
-            items = tree["Items"]
-            if unit_id in items:
-                return tree_name, items[unit_id]["Prerequisite"] or []
-        return None, []
-    
-    def validate_bust_data(self, data):
-        def make_placeholder():
-            return [PLACEHOLDER_COLOR]
-
-        # maybe recursive isnt optimal but it works...
-        def walk(obj):
-            if isinstance(obj, dict):
-                for key, value in obj.items():
-                    k_lower = key.lower()
-                    if k_lower.endswith("colordata") and isinstance(value, dict):
-                        for ck in COLOR_KEYS:
-                            if ck in value and isinstance(value[ck], list):
-                                if value[ck] == []:
-                                    # empty lists causes color issues (ugly cyan)
-                                    value[ck] = make_placeholder()
-                                else:
-                                    # game chooses only 1 color or it messes up customization
-                                    value[ck] = [random.choice(value[ck])]
-                    if k_lower == "items" and isinstance(value, list):
-                        # game chooses only 1 item
-                        if len(value) > 1:
-                            obj[key] = [random.choice(value)]
-                    walk(value)
-
-            elif isinstance(obj, list):
-                for item in obj:
-                    walk(item)
-
-        walk(data)
-        return data
-
     def populate_comboboxes(self):
                 
         for i in range(5):
