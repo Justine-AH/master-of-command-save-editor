@@ -127,7 +127,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         army_data = player_data["ArmySaveData"]
         divisions_data = army_data["Divisions"]
         reserve_regiments_data = army_data["ReserveRegiments"]
-        # reserve_officers_data = army_data["ReserveOfficers"]
+        reserve_leaders_data = army_data["ReserveOfficers"]
         
         self.goldSpinBox.setValue(player_data["Cash"])
         self.supplySpinBox.setValue(player_data["Food"])
@@ -148,9 +148,24 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
             spinbox.setValue(item["CurrentLevel"])
             spinbox.setProperty("originalValue", spinbox.value())
         
-        # for i, item in enumerate(reserve_officers_data):
-        #     pass
+        for i, item in enumerate(reserve_leaders_data):
+            if item is None:
+                continue
+            self.reserve_leader_label[i].setText(item["Name"])
+            self.reserve_leader_level_spinbox[i].setValue(item["Level"])
+            self.reserve_leader_skillpoints_spinbox[i].setValue(item["SkillPointsAvailable"])
+            # for j in range(5):
+            #     self.leader_skill_combos[i]
         
+        for i, item in enumerate(divisions_data):
+            if item["OfficerSave"] is None:
+                continue
+            self.leader_label[i].setText(item["OfficerSave"]["Name"])
+            self.leader_level_spinbox[i].setValue(item["OfficerSave"]["Level"])
+            self.leader_skillpoints_spinbox[i].setValue(item["OfficerSave"]["SkillPointsAvailable"])
+            # for j in range(5):
+            #     self.leader_skill_combos[i] = SkillSaves
+            
         for i in range(len(divisions_data)):
             for j in range(4):
                 combo = getattr(self, f"regimentTypeComboBox_{i+1}_{j+1}", None)
