@@ -47,7 +47,7 @@ NEW_UNIT_TEMPLATE = """
     "$type": "GameData.Save.PlayerRegimentSaveData, GameCore",
     "TargetManpower": 500,
     "CurrentExperience": 0,
-    "CurrentLevel": 8,
+    "CurrentLevel": 0,
     "MeleeAttribute": 25,
     "AccuracyAttribute": 10,
     "ReloadAttribute": 15,
