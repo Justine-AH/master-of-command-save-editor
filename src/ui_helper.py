@@ -1,6 +1,6 @@
 
 
-from PySide6.QtWidgets import QSpinBox, QComboBox, QTreeWidgetItem
+from PySide6.QtWidgets import QSpinBox, QComboBox, QTreeWidgetItem, QLabel
 
 class UIHelperMixin:
     
@@ -39,12 +39,57 @@ class UIHelperMixin:
             getattr(self, f"reserveVeterancySpinBox_{i}")
             for i in range(1, 6)
         ]
+        
+        self.leader_label: list[QLabel] = [
+            getattr(self, f'leaderNameLabel_{i}')
+            for i in range(1, 6)
+        ]
+        
+        self.leader_skill_combos: list[QComboBox] = [
+            getattr(self, f'leaderComboBox_{i}_{j}')
+            for i in range(1, 6)
+            for j in range(1, 6)
+        ]
+        
+        self.leader_level_spinbox: list[QSpinBox] = [
+            getattr(self, f'leaderLevelSpinBox_{i}')
+            for i in range(1, 6)
+        ]
+        
+        self.leader_skillpoints_spinbox: list[QSpinBox] = [
+            getattr(self, f'leaderSkillPointSpinBox_{i}')
+            for i in range(1, 6)
+        ]
+        
+        self.reserve_leader_label: list[QLabel] = [
+            getattr(self, f'reserveLeaderNameLabel_{i}')
+            for i in range(1, 6)
+        ]
+        
+        self.reserve_leader_skill_combos: list[QComboBox] = [
+            getattr(self, f'reserveLeaderComboBox_{i}_{j}')
+            for i in range(1, 6)
+            for j in range(1, 6)
+        ]
+        
+        self.reserve_leader_level_spinbox: list[QSpinBox] = [
+            getattr(self, f'reserveLeaderLevelSpinBox_{i}')
+            for i in range(1, 6)
+        ]
+        
+        self.reserve_leader_skillpoints_spinbox: list[QSpinBox] = [
+            getattr(self, f'reserveLeaderSkillPointSpinBox_{i}')
+            for i in range(1, 6)
+        ]
     
     def refresh_ui(self):
-        self.reset_spinboxes()
-        self.reset_comboboxes()
+        self.reset_army_spinboxes()
+        self.reset_army_comboboxes()
+        self.reset_leader_spinboxes()
+        self.reset_leader_comboboxes()
+        self.reset_leader_labels()
     
-    def reset_spinboxes(self):
+    def reset_army_spinboxes(self):
         spinboxes = [
             *self.resource_spinboxes,
             *self.regiment_spinboxes,
@@ -56,7 +101,7 @@ class UIHelperMixin:
             w.setProperty("originalValue", 0)
             w.blockSignals(False)
     
-    def reset_comboboxes(self):
+    def reset_army_comboboxes(self):
         comboboxes = [
             *self.regiment_combos,
             *self.reserve_combos,
@@ -64,6 +109,40 @@ class UIHelperMixin:
         for w in comboboxes:
             w.blockSignals(True)
             w.setCurrentIndex(0)
+            w.setProperty("originalValue", "")
+            w.blockSignals(False)
+    
+    def reset_leader_spinboxes(self):
+        spinboxes = [
+            *self.leader_level_spinbox,
+            *self.leader_skillpoints_spinbox,
+            *self.reserve_leader_level_spinbox,
+            *self.reserve_leader_skillpoints_spinbox,
+        ]
+        for w in spinboxes:
+            w.blockSignals(True)
+            w.setValue(0)
+            w.setProperty("originalValue", 0)
+            w.blockSignals(False)
+    
+    def reset_leader_comboboxes(self):
+        comboboxes = [
+            *self.leader_skill_combos,
+            *self.reserve_leader_skill_combos,
+        ]
+        for w in comboboxes:
+            w.blockSignals(True)
+            w.setCurrentIndex(0)
+            w.setProperty("originalValue", "")
+            w.blockSignals(False)
+            
+    def reset_leader_labels(self):
+        comboboxes = [
+            *self.leader_label
+        ]
+        for w in comboboxes:
+            w.blockSignals(True)
+            w.setText("")
             w.setProperty("originalValue", "")
             w.blockSignals(False)
     

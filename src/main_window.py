@@ -1143,10 +1143,10 @@ class Ui_MainWindow(object):
         self.leaderSkillPointGroupBox_5.setObjectName(u"leaderSkillPointGroupBox_5")
         self.verticalLayout_111 = QVBoxLayout(self.leaderSkillPointGroupBox_5)
         self.verticalLayout_111.setObjectName(u"verticalLayout_111")
-        self.leaderSkillPointSpinBox_6 = QSpinBox(self.leaderSkillPointGroupBox_5)
-        self.leaderSkillPointSpinBox_6.setObjectName(u"leaderSkillPointSpinBox_6")
+        self.leaderSkillPointSpinBox_5 = QSpinBox(self.leaderSkillPointGroupBox_5)
+        self.leaderSkillPointSpinBox_5.setObjectName(u"leaderSkillPointSpinBox_5")
 
-        self.verticalLayout_111.addWidget(self.leaderSkillPointSpinBox_6)
+        self.verticalLayout_111.addWidget(self.leaderSkillPointSpinBox_5)
 
 
         self.verticalLayout_88.addWidget(self.leaderSkillPointGroupBox_5)
