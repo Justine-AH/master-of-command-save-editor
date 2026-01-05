@@ -1,3 +1,4 @@
+from functools import partial
 import json
 import os
 import random
@@ -9,7 +10,7 @@ from PySide6.QtWidgets import (
     QMainWindow
 )
 from PySide6.QtCore import (QSettings, Slot)
-from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QWidget, QTableWidgetItem)
+from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QWidget, QTableWidgetItem, QPushButton)
 from constants import *
 from leader_dataclass import Leader
 from main_window import Ui_MainWindow
@@ -47,8 +48,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         self.statusBar().showMessage("Ready")
         
         self.actionSave_File.setEnabled(False)
-        self.actionLoad_File.triggered.connect(self.load_button_triggered)
-        self.actionSave_File.triggered.connect(self.save_button_triggered)
+        self.setup_connections()
         
         index = self.tabWidget.indexOf(self.devTab)
         self.tabWidget.setTabVisible(index, False)
@@ -61,63 +61,6 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
             self.load_data()
             self.actionSave_File.setEnabled(True)
     
-    @Slot()
-    def load_button_triggered(self):
-        last = self.settings.value("paths/last_open_dir", "", str)
-        if last is None:
-            last = ""
-            
-        path, _ = QFileDialog.getOpenFileName(
-            self,
-            "Open File",
-            str(last),
-            "Save Files (*.fcs *.json)"
-        )
-
-        if path:
-            self.settings.setValue("paths/last_open_dir", path)
-
-        if not path:
-            return
-
-        with open(path, "r", encoding="utf-8") as f:
-            self.data = json.load(f)
-            
-        self.load_data()
-        self.actionSave_File.setEnabled(True)
-    
-    @Slot()
-    def save_button_triggered(self):
-        
-        self.save_data()
-        
-        last = self.settings.value("paths/last_open_dir", "", str)
-        if last is None:
-            last = ""
-        
-        
-        path, _ = QFileDialog.getSaveFileName(
-            self,
-            "Save File",
-            str(last),
-            "Save Files (*.fcs)"
-        )
-
-        if not path:
-            return
-        
-        dir_name = os.path.dirname(path)
-        fd, temp_path = tempfile.mkstemp(dir=dir_name)
-
-        try:
-            with os.fdopen(fd, "w", encoding="utf-8") as f:
-                json.dump(self.data, f, indent=2, ensure_ascii=False)
-
-            os.replace(temp_path, path)
-        except Exception:
-            os.remove(temp_path)
-            raise
-
     def load_data(self):
         self.disable_all_widgets()
         if self.data is None:
@@ -197,7 +140,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
                 combo.setCurrentText(self.get_skill_loc(leader["SkillSaves"][j]))
                 combo.setProperty("originalValue", combo.currentData())
 
-        self.on_load_file_UI_handler(len(divisions_data))
+        self.on_load_file_UI_handler(len(divisions_data), len(reserve_leaders_data))
     
     def _detect_changed_value(self, widget: QWidget, current):
         value = widget.property("originalValue")
@@ -489,6 +432,116 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
 
         self.locTableWidget.resizeColumnsToContents()
         
+    def setup_connections(self):
+        self.actionLoad_File.triggered.connect(self.on_load_button_triggered)
+        self.actionSave_File.triggered.connect(self.on_save_button_triggered)
+        
+        create_buttons = [
+            *self.create_reserve_leader_buttons,
+            *self.create_leader_buttons,
+        ]
+        delete_buttons = [
+            *self.delete_reserve_leader_buttons,
+            *self.delete_leader_buttons
+        ]
+        for button in create_buttons:
+            button.clicked.connect(
+                partial(self.on_create_leader_button_triggered, button)
+            )
+
+        for button in delete_buttons:
+            button.clicked.connect(
+                partial(self.on_delete_leader_button_triggered, button)
+            )
+    
+    def on_create_leader_button_triggered(self, widget: QPushButton):
+        reserve: bool = widget.property("reserveLeader")
+        index = int(widget.property("index")) - 1
+        
+        if self.data is None:
+            return
+        
+        leader_template = Leader()
+        if reserve:
+            self.data["PlayerSaveData"]["ArmySaveData"]["ReserveOfficers"][index] = leader_template.data
+        else:
+            divisions_data = self.data["PlayerSaveData"]["ArmySaveData"]["Divisions"]
+            divisions_data[index]["OfficerSave"] = leader_template.data
+        
+        self.load_data()
+    
+    def on_delete_leader_button_triggered(self, widget: QPushButton):
+        reserve: bool = widget.property("reserveLeader")
+        index = int(widget.property("index")) - 1
+        
+        if self.data is None:
+            return
+        
+        if reserve:
+            self.data["PlayerSaveData"]["ArmySaveData"]["ReserveOfficers"][index] = None
+        else:
+            divisions_data = self.data["PlayerSaveData"]["ArmySaveData"]["Divisions"]
+            divisions_data[index]["OfficerSave"] = None
+            
+        self.load_data()
+    
+    def on_load_button_triggered(self):
+        last = self.settings.value("paths/last_open_dir", "", str)
+        if last is None:
+            last = ""
+            
+        path, _ = QFileDialog.getOpenFileName(
+            self,
+            "Open File",
+            str(last),
+            "Save Files (*.fcs *.json)"
+        )
+
+        if path:
+            self.settings.setValue("paths/last_open_dir", path)
+
+        if not path:
+            return
+
+        with open(path, "r", encoding="utf-8") as f:
+            self.data = json.load(f)
+            
+        self.load_data()
+        self.actionSave_File.setEnabled(True)
+    
+    def on_save_button_triggered(self):
+        
+        self.save_data()
+        
+        last = self.settings.value("paths/last_open_dir", "", str)
+        if last is None:
+            last = ""
+        
+        
+        path, _ = QFileDialog.getSaveFileName(
+            self,
+            "Save File",
+            str(last),
+            "Save Files (*.fcs)"
+        )
+
+        if not path:
+            return
+        
+        dir_name = os.path.dirname(path)
+        fd, temp_path = tempfile.mkstemp(dir=dir_name)
+
+        try:
+            with os.fdopen(fd, "w", encoding="utf-8") as f:
+                json.dump(self.data, f, indent=2, ensure_ascii=False)
+
+            os.replace(temp_path, path)
+        except Exception:
+            os.remove(temp_path)
+            raise
+        
+        self.load_data()
+
     def _is_excluded(self, unit_id):
         uid = unit_id.lower()
         return any(sub in uid for sub in EXCLUDED_ID_SUBSTRINGS)

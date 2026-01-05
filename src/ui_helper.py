@@ -1,6 +1,6 @@
 
 
-from PySide6.QtWidgets import QSpinBox, QComboBox, QTreeWidgetItem, QLabel, QWidget
+from PySide6.QtWidgets import QSpinBox, QComboBox, QTreeWidgetItem, QLabel, QPushButton
 
 class UIHelperMixin:
     
@@ -40,6 +40,16 @@ class UIHelperMixin:
             for i in range(1, 6)
         ]
         
+        self.create_leader_buttons: list[QPushButton] = [
+            getattr(self, f"createLeaderButton_{i}")
+            for i in range(1, 6)
+        ]
+        
+        self.delete_leader_buttons: list[QPushButton] = [
+            getattr(self, f"deleteLeaderButton_{i}")
+            for i in range(1, 6)
+        ]
+        
         self.leader_label: list[QLabel] = [
             getattr(self, f'leaderNameLabel_{i}')
             for i in range(1, 6)
@@ -58,6 +68,16 @@ class UIHelperMixin:
         
         self.leader_skillpoints_spinbox: list[QSpinBox] = [
             getattr(self, f'leaderSkillPointSpinBox_{i}')
+            for i in range(1, 6)
+        ]
+        
+        self.create_reserve_leader_buttons: list[QPushButton] = [
+            getattr(self, f"reserveCreateLeaderButton_{i}")
+            for i in range(1, 6)
+        ]
+        
+        self.delete_reserve_leader_buttons: list[QPushButton] = [
+            getattr(self, f"reserveDeleteLeaderButton_{i}")
             for i in range(1, 6)
         ]
         
@@ -161,30 +181,41 @@ class UIHelperMixin:
 
             parent.addChild(item)
     
-    def on_load_file_UI_handler(self, divisions_enabled):
+    def on_load_file_UI_handler(self, divisions_enabled: int, reserve_leaders: int):
         # Maybe define proper division ui in future
         for i in range(divisions_enabled):
             self.enable_widgets([self.leader_label[i]])
-            self.enable_widgets([self.leader_level_spinbox[i]])
-            self.enable_widgets([self.leader_skillpoints_spinbox[i]])
             
             reg_start = i * 4
             self.enable_widgets(self.regiment_combos[reg_start: reg_start + 4])
             self.enable_widgets(self.regiment_spinboxes[reg_start: reg_start + 4])
             
             skill_start = i * 5
-            self.enable_widgets(self.leader_skill_combos[skill_start: skill_start + 5])
+            if (self.leader_label[i].text()):
+                self.enable_widgets([self.leader_level_spinbox[i]])
+                self.enable_widgets([self.leader_skillpoints_spinbox[i]])
+                self.enable_widgets(self.leader_skill_combos[skill_start: skill_start + 5])
+                
+                self.enable_widgets([self.delete_leader_buttons[i]])
+            else:
+                self.enable_widgets([self.create_leader_buttons[i]])
+        
+        for i in range(reserve_leaders):
+            skill_start = i * 5
+            if (self.reserve_leader_label[i].text()):
+                self.enable_widgets([self.reserve_leader_level_spinbox[i]])
+                self.enable_widgets([self.reserve_leader_skillpoints_spinbox[i]])
+                self.enable_widgets(self.reserve_leader_skill_combos[skill_start: skill_start + 5])
+                
+                self.enable_widgets([self.delete_reserve_leader_buttons[i]])
+            else:
+                self.enable_widgets([self.create_reserve_leader_buttons[i]])
         
         self.enable_widgets([
             *self.resource_spinboxes,
             # reserve regiments
             *self.reserve_spinboxes,
             *self.reserve_combos,
-            # reserve leader
-            *self.reserve_leader_label,
-            *self.reserve_leader_level_spinbox,
-            *self.reserve_leader_skillpoints_spinbox,
-            *self.reserve_leader_skill_combos,
         ])
     
     def enable_widgets(self, widgets: list):
@@ -212,6 +243,11 @@ class UIHelperMixin:
             *self.reserve_leader_level_spinbox,
             *self.reserve_leader_skillpoints_spinbox,
             *self.reserve_leader_skill_combos,
+            # leader buttons
+            *self.delete_leader_buttons,
+            *self.create_leader_buttons,
+            *self.delete_reserve_leader_buttons,
+            *self.create_reserve_leader_buttons,
         ]
         for w in widgets:
             w.blockSignals(True)
