@@ -455,7 +455,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
     
     def on_create_leader_button_triggered(self, widget: QPushButton):
         reserve: bool = widget.property("reserveLeader")
-        index = int(widget.property("index")) - 1
+        index = int(widget.property("index"))
         
         if self.data is None:
             return
@@ -471,7 +471,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
     
     def on_delete_leader_button_triggered(self, widget: QPushButton):
         reserve: bool = widget.property("reserveLeader")
-        index = int(widget.property("index")) - 1
+        index = int(widget.property("index"))
         
         if self.data is None:
             return
