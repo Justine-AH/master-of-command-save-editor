@@ -452,6 +452,11 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
             button.clicked.connect(
                 partial(self.on_delete_leader_button_triggered, button)
             )
+            
+        for checkbox in self.division_checkboxes:
+            checkbox.clicked.connect(
+                partial(self.on_division_checkbox_triggered, checkbox)
+            )
     
     def on_create_leader_button_triggered(self, widget: QPushButton):
         reserve: bool = widget.property("reserveLeader")
@@ -483,6 +488,37 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
             divisions_data[index]["OfficerSave"] = None
             
         self.load_data()
+    
+    def on_division_checkbox_triggered(self, widget: QCheckBox):
+        index = int(widget.property("index"))
+        checked: bool = widget.isChecked()
+        
+        end = index + 1 if checked else 5
+        
+        self.enable_divisions(index, end, checked)
+        
+        if checked:
+            if index < 4:
+                self.enable_widgets([self.division_checkboxes[index + 1]], True)
+        else:
+            self.enable_widgets(self.division_checkboxes[index + 1:], False)
+        
+        amount = index + 1 if checked else index
+        self.modify_division_count(amount, checked)
+        self.load_data()
+    
+    def modify_division_count(self, new_division_count, add: bool):
+        if self.data is None:
+            return
+        
+        divisions_data: list = self.data["PlayerSaveData"]["ArmySaveData"]["Divisions"]
+        
+        if add:
+            while len(divisions_data) < new_division_count:
+                divisions_data.append(json.loads(NEW_DIVISION_TEMPLATE))
+        else:
+            while len(divisions_data) > new_division_count:
+                divisions_data.pop()
     
     def on_load_button_triggered(self):
         last = self.settings.value("paths/last_open_dir", "", str)

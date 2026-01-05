@@ -41,6 +41,18 @@ COLOR_KEYS = {
 
 PLACEHOLDER_COLOR = {"r": 45, "g": 45, "b": 45, "a": 255}
 
+NEW_DIVISION_TEMPLATE = """
+{
+    "OfficerSave": null,
+    "Regiments": [
+        null,
+        null,
+        null,
+        null
+    ],
+    "Name": "2nd Brigade"
+}
+"""
 NEW_LEADER_TEMPLATE = """
 {
     "Name": "John",

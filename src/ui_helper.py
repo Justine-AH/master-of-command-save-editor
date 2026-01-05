@@ -1,6 +1,6 @@
 
 
-from PySide6.QtWidgets import QSpinBox, QComboBox, QTreeWidgetItem, QLabel, QPushButton
+from PySide6.QtWidgets import QSpinBox, QComboBox, QTreeWidgetItem, QLabel, QPushButton, QCheckBox
 
 class UIHelperMixin:
     
@@ -16,6 +16,11 @@ class UIHelperMixin:
             self.supplySpinBox,
             self.ammoSpinBox,
             self.manpowerSpinBox
+        ]
+        
+        self.division_checkboxes: list[QCheckBox] = [
+            getattr(self, f"divisionCheckBox_{i}")
+            for i in range(1, 6)
         ]
 
         self.regiment_combos: list[QComboBox] = [
@@ -183,26 +188,12 @@ class UIHelperMixin:
     
     def on_load_file_UI_handler(self, divisions_enabled: int, reserve_leaders: int):
         # Maybe define proper division ui in future
-        for i in range(divisions_enabled):
-            self.enable_widgets([self.leader_label[i]])
-            
-            reg_start = i * 4
-            self.enable_widgets(self.regiment_combos[reg_start: reg_start + 4])
-            self.enable_widgets(self.regiment_spinboxes[reg_start: reg_start + 4])
-            
-            skill_start = i * 5
-            if (self.leader_label[i].text()):
-                self.enable_widgets([self.leader_level_spinbox[i]])
-                self.enable_widgets([self.leader_skillpoints_spinbox[i]])
-                self.enable_widgets(self.leader_skill_combos[skill_start: skill_start + 5])
-                
-                self.enable_widgets([self.delete_leader_buttons[i]])
-            else:
-                self.enable_widgets([self.create_leader_buttons[i]])
+        self.enable_divisions(0, divisions_enabled, True)
         
         for i in range(reserve_leaders):
             skill_start = i * 5
             if (self.reserve_leader_label[i].text()):
+                self.enable_widgets([self.reserve_leader_label[i]])
                 self.enable_widgets([self.reserve_leader_level_spinbox[i]])
                 self.enable_widgets([self.reserve_leader_skillpoints_spinbox[i]])
                 self.enable_widgets(self.reserve_leader_skill_combos[skill_start: skill_start + 5])
@@ -218,14 +209,39 @@ class UIHelperMixin:
             *self.reserve_combos,
         ])
     
-    def enable_widgets(self, widgets: list):
+    def enable_divisions(self, start_idx = 0, end_idx = 5, set_bool: bool = True):
+        for i in range(start_idx, end_idx):
+            # if i == 0:
+            #     continue
+            
+            if i != 0:
+                self.enable_widgets([self.division_checkboxes[i]], set_bool)
+            self.division_checkboxes[i].setChecked(set_bool)
+            self.enable_widgets([self.leader_label[i]], set_bool)
+            
+            reg_start = i * 4
+            self.enable_widgets(self.regiment_combos[reg_start: reg_start + 4], set_bool)
+            self.enable_widgets(self.regiment_spinboxes[reg_start: reg_start + 4], set_bool)
+        
+            skill_start = i * 5
+            if (self.leader_label[i].text()):
+                self.enable_widgets([self.leader_level_spinbox[i]])
+                self.enable_widgets([self.leader_skillpoints_spinbox[i]])
+                self.enable_widgets(self.leader_skill_combos[skill_start: skill_start + 5])
+                
+                self.enable_widgets([self.delete_leader_buttons[i]])
+            else:
+                self.enable_widgets([self.create_leader_buttons[i]])
+                
+    def enable_widgets(self, widgets: list, enable: bool = True):
         for w in widgets:
             w.blockSignals(True)
-            w.setEnabled(True)
+            w.setEnabled(enable)
             w.blockSignals(False)
         
     def disable_all_widgets(self):
         widgets = [
+            *self.division_checkboxes,
             # regiments
             *self.regiment_spinboxes,
             *self.regiment_combos,
@@ -251,5 +267,7 @@ class UIHelperMixin:
         ]
         for w in widgets:
             w.blockSignals(True)
+            if isinstance(w, QCheckBox):
+                w.setChecked(False)
             w.setEnabled(False)
             w.blockSignals(False)
