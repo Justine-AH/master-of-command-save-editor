@@ -143,7 +143,8 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
     
     def _detect_changed_value(self, widget: QWidget, current):
         value = widget.property("originalValue")
-        return (current != value)
+        old = value if value != "" else None
+        return (current != old)
     
     def save_data(self):
         if self.data is None:
