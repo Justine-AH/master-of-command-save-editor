@@ -4,12 +4,11 @@ import os
 import random
 import sys
 import tempfile
-from typing import TypeGuard
 from PySide6.QtWidgets import (
     QApplication,
     QMainWindow
 )
-from PySide6.QtCore import (QSettings, Slot)
+from PySide6.QtCore import (QSettings)
 from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QWidget, QTableWidgetItem, QPushButton)
 from constants import *
 from leader_dataclass import Leader
