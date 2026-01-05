@@ -9,7 +9,7 @@ from PySide6.QtWidgets import (
     QMainWindow
 )
 from PySide6.QtCore import (QSettings)
-from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QWidget, QTableWidgetItem, QPushButton)
+from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QWidget, QTableWidgetItem, QPushButton, QCheckBox)
 from constants import *
 from leader_dataclass import Leader
 from main_window import Ui_MainWindow
@@ -19,7 +19,8 @@ from ui_helper import UIHelperMixin
 # TODO: maybe find directory of game files for template instead
 # TODO: weapon and equipment contraints...
 # TODO: skill desc
-
+# TODO: isolate original value saving
+# TODO: multiple previously unlocked units possible
 DEV_FEATURES = os.getenv("DEV_FEATURES", "").lower() == "true"
 
 class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
@@ -54,19 +55,18 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         
         if DEV_FEATURES:
             self.tabWidget.setTabVisible(index, True)
-            with open("./save_folder/test.fcs", "r", encoding="utf-8") as f:
+            with open("./save_folder/div1.fcs", "r", encoding="utf-8") as f:
                 self.data = json.load(f)
                 
+            self.refresh_ui()
             self.load_data()
+            self.set_original_values()
             self.actionSave_File.setEnabled(True)
     
     def load_data(self):
         self.disable_all_widgets()
         if self.data is None:
             return
-        
-        self.refresh_ui()
-        self.statusBar().showMessage("Save file loaded")
         
         player_data = self.data["PlayerSaveData"]
         army_data = player_data["ArmySaveData"]
@@ -89,9 +89,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
             if not isinstance(spinbox, QSpinBox):
                 continue
             combo.setCurrentText(self.get_unit_loc(item["UnitID"]))
-            combo.setProperty("originalValue", combo.currentData())
             spinbox.setValue(item["CurrentLevel"])
-            spinbox.setProperty("originalValue", spinbox.value())
         
         for i in range(len(divisions_data)):
             for j in range(4):
@@ -106,9 +104,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
                     # no unit here
                     continue
                 combo.setCurrentText(self.get_unit_loc(regiment["UnitID"]))
-                combo.setProperty("originalValue", combo.currentData())
                 spinbox.setValue(regiment["CurrentLevel"])
-                spinbox.setProperty("originalValue", spinbox.value())
                 
         for i, item in enumerate(reserve_leaders_data):
             if item is None:
@@ -116,13 +112,10 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
             self.reserve_leader_label[i].setText(f"{item["Name"]} {item["LastName"]}")
             self.reserve_leader_level_spinbox[i].setValue(item["Level"])
             self.reserve_leader_skillpoints_spinbox[i].setValue(item["SkillPointsAvailable"])
-            self.reserve_leader_level_spinbox[i].setProperty("originalValue", self.reserve_leader_level_spinbox[i].value())
-            self.reserve_leader_skillpoints_spinbox[i].setProperty("originalValue", self.reserve_leader_skillpoints_spinbox[i].value())
             for j in range(len(item["SkillSaves"])):
                 index = (i*5)+j
                 combo = self.reserve_leader_skill_combos[index]
                 combo.setCurrentText(self.get_skill_loc(item["SkillSaves"][j]))
-                combo.setProperty("originalValue", combo.currentData())
         
         for i, item in enumerate(divisions_data):
             leader = item["OfficerSave"]
@@ -131,21 +124,13 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
             self.leader_label[i].setText(f"{leader["Name"]} {leader["LastName"]}")
             self.leader_level_spinbox[i].setValue(leader["Level"])
             self.leader_skillpoints_spinbox[i].setValue(leader["SkillPointsAvailable"])
-            self.leader_level_spinbox[i].setProperty("originalValue", self.leader_level_spinbox[i].value())
-            self.leader_skillpoints_spinbox[i].setProperty("originalValue", self.leader_skillpoints_spinbox[i].value())
             for j in range(len(leader["SkillSaves"])):
                 index = (i*5)+j
                 combo = self.leader_skill_combos[index]
                 combo.setCurrentText(self.get_skill_loc(leader["SkillSaves"][j]))
-                combo.setProperty("originalValue", combo.currentData())
 
         self.on_load_file_UI_handler(len(divisions_data), len(reserve_leaders_data))
-    
-    def _detect_changed_value(self, widget: QWidget, current):
-        value = widget.property("originalValue")
-        old = value if value != "" else None
-        return (current != old)
-    
+        
     def save_data(self):
         if self.data is None:
             return
@@ -168,25 +153,24 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
                 
                 leader = item["OfficerSave"]
                 
-                if leader is None:
-                    continue
+                if leader is not None:
                 
-                leader_obj = Leader(leader)
+                    leader_obj = Leader(leader)
                     
-                skill_set = []
-                for j in range(5):
-                    index = ( i * 5 ) + j
-                    combo = self.leader_skill_combos[index]
-                    combo_current = combo.currentData()
-                    
-                    if combo_current:
-                        skill_set.append(combo_current)
+                    skill_set = []
+                    for j in range(5):
+                        index = ( i * 5 ) + j
+                        combo = self.leader_skill_combos[index]
+                        combo_current = combo.currentData()
                         
-                leader_obj.set_level(self.leader_level_spinbox[i].value())
-                leader_obj.set_skill_points(self.leader_skillpoints_spinbox[i].value())
-                leader_obj.set_skills(skill_set)
-                
-                item["OfficerSave"] = leader_obj.data
+                        if combo_current:
+                            skill_set.append(combo_current)
+                            
+                    leader_obj.set_level(self.leader_level_spinbox[i].value())
+                    leader_obj.set_skill_points(self.leader_skillpoints_spinbox[i].value())
+                    leader_obj.set_skills(skill_set)
+                    
+                    item["OfficerSave"] = leader_obj.data
             
             ###############################################
             
@@ -542,7 +526,9 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         with open(path, "r", encoding="utf-8") as f:
             self.data = json.load(f)
             
+        self.refresh_ui()
         self.load_data()
+        self.set_original_values()
         self.actionSave_File.setEnabled(True)
     
     def on_save_button_triggered(self):

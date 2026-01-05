@@ -1,6 +1,6 @@
 
 
-from PySide6.QtWidgets import QSpinBox, QComboBox, QTreeWidgetItem, QLabel, QPushButton, QCheckBox
+from PySide6.QtWidgets import QSpinBox, QComboBox, QTreeWidgetItem, QLabel, QPushButton, QCheckBox, QWidget
 
 class UIHelperMixin:
     
@@ -172,6 +172,44 @@ class UIHelperMixin:
             w.setProperty("originalValue", "")
             w.blockSignals(False)
     
+    def set_original_values(self):
+        widgets = [
+            *self.resource_spinboxes,
+            # regiment
+            *self.regiment_combos,
+            *self.regiment_spinboxes,
+            # reserve regiments
+            *self.reserve_combos,
+            *self.reserve_spinboxes,
+            # leader
+            *self.leader_label,
+            *self.leader_skill_combos,
+            *self.leader_level_spinbox,
+            *self.leader_skillpoints_spinbox,
+            # reserve_leader
+            *self.reserve_leader_label,
+            *self.reserve_leader_skill_combos,
+            *self.reserve_leader_level_spinbox,
+            *self.reserve_leader_skillpoints_spinbox,
+        ]
+        for w in widgets:
+            self._set_original_value(w)
+    
+    def _detect_changed_value(self, widget: QWidget, current):
+        value = widget.property("originalValue")
+        old = value if value != "" else None
+        return (current != old)
+    
+    def _set_original_value(self, widget):
+        if isinstance(widget, QComboBox):
+            widget.setProperty("originalValue", widget.currentData() or "")
+        elif isinstance(widget, QSpinBox):
+            widget.setProperty("originalValue", widget.value())
+        elif isinstance(widget, QCheckBox):
+            widget.setProperty("originalValue", widget.isChecked())
+        elif isinstance(widget, QLabel):
+            widget.setProperty("originalValue", widget.text())
+        
     def add_dict_to_tree(self, parent, data):
         for k, v in data.items():
             item = QTreeWidgetItem([str(k)])
@@ -188,6 +226,8 @@ class UIHelperMixin:
     
     def on_load_file_UI_handler(self, divisions_enabled: int, reserve_leaders: int):
         # Maybe define proper division ui in future
+        if divisions_enabled < 5:
+            self.enable_widgets([self.division_checkboxes[divisions_enabled]])
         self.enable_divisions(0, divisions_enabled, True)
         
         for i in range(reserve_leaders):
@@ -211,8 +251,6 @@ class UIHelperMixin:
     
     def enable_divisions(self, start_idx = 0, end_idx = 5, set_bool: bool = True):
         for i in range(start_idx, end_idx):
-            # if i == 0:
-            #     continue
             
             if i != 0:
                 self.enable_widgets([self.division_checkboxes[i]], set_bool)
