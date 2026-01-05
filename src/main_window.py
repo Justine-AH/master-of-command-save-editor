@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'saveEditorhVcIkA.ui'
+## Form generated from reading UI file 'saveEditornQMWPo.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.10.1
 ##
@@ -976,17 +976,19 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_15 = QHBoxLayout()
         self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
-        self.deleteLeaderButton_1 = QPushButton(self.leaderGroupBox_4)
-        self.deleteLeaderButton_1.setObjectName(u"deleteLeaderButton_1")
-        self.deleteLeaderButton_1.setEnabled(False)
+        self.deleteLeaderButton_4 = QPushButton(self.leaderGroupBox_4)
+        self.deleteLeaderButton_4.setObjectName(u"deleteLeaderButton_4")
+        self.deleteLeaderButton_4.setEnabled(False)
+        self.deleteLeaderButton_4.setProperty(u"reserveLeader", False)
 
-        self.horizontalLayout_15.addWidget(self.deleteLeaderButton_1)
+        self.horizontalLayout_15.addWidget(self.deleteLeaderButton_4)
 
-        self.createLeaderButton_1 = QPushButton(self.leaderGroupBox_4)
-        self.createLeaderButton_1.setObjectName(u"createLeaderButton_1")
-        self.createLeaderButton_1.setEnabled(False)
+        self.createLeaderButton_4 = QPushButton(self.leaderGroupBox_4)
+        self.createLeaderButton_4.setObjectName(u"createLeaderButton_4")
+        self.createLeaderButton_4.setEnabled(False)
+        self.createLeaderButton_4.setProperty(u"reserveLeader", False)
 
-        self.horizontalLayout_15.addWidget(self.createLeaderButton_1)
+        self.horizontalLayout_15.addWidget(self.createLeaderButton_4)
 
 
         self.verticalLayout_31.addLayout(self.horizontalLayout_15)
@@ -1075,12 +1077,14 @@ class Ui_MainWindow(object):
         self.deleteLeaderButton_2 = QPushButton(self.leaderGroupBox_2)
         self.deleteLeaderButton_2.setObjectName(u"deleteLeaderButton_2")
         self.deleteLeaderButton_2.setEnabled(False)
+        self.deleteLeaderButton_2.setProperty(u"reserveLeader", False)
 
         self.horizontalLayout_6.addWidget(self.deleteLeaderButton_2)
 
         self.createLeaderButton_2 = QPushButton(self.leaderGroupBox_2)
         self.createLeaderButton_2.setObjectName(u"createLeaderButton_2")
         self.createLeaderButton_2.setEnabled(False)
+        self.createLeaderButton_2.setProperty(u"reserveLeader", False)
 
         self.horizontalLayout_6.addWidget(self.createLeaderButton_2)
 
@@ -1168,17 +1172,19 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_7 = QHBoxLayout()
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
-        self.deleteLeaderButton_3 = QPushButton(self.leaderGroupBox_1)
-        self.deleteLeaderButton_3.setObjectName(u"deleteLeaderButton_3")
-        self.deleteLeaderButton_3.setEnabled(False)
+        self.deleteLeaderButton_1 = QPushButton(self.leaderGroupBox_1)
+        self.deleteLeaderButton_1.setObjectName(u"deleteLeaderButton_1")
+        self.deleteLeaderButton_1.setEnabled(False)
+        self.deleteLeaderButton_1.setProperty(u"reserveLeader", False)
 
-        self.horizontalLayout_7.addWidget(self.deleteLeaderButton_3)
+        self.horizontalLayout_7.addWidget(self.deleteLeaderButton_1)
 
-        self.createLeaderButton_3 = QPushButton(self.leaderGroupBox_1)
-        self.createLeaderButton_3.setObjectName(u"createLeaderButton_3")
-        self.createLeaderButton_3.setEnabled(False)
+        self.createLeaderButton_1 = QPushButton(self.leaderGroupBox_1)
+        self.createLeaderButton_1.setObjectName(u"createLeaderButton_1")
+        self.createLeaderButton_1.setEnabled(False)
+        self.createLeaderButton_1.setProperty(u"reserveLeader", False)
 
-        self.horizontalLayout_7.addWidget(self.createLeaderButton_3)
+        self.horizontalLayout_7.addWidget(self.createLeaderButton_1)
 
 
         self.verticalLayout_12.addLayout(self.horizontalLayout_7)
@@ -1264,17 +1270,19 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_8 = QHBoxLayout()
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
-        self.deleteLeaderButton_4 = QPushButton(self.leaderGroupBox_3)
-        self.deleteLeaderButton_4.setObjectName(u"deleteLeaderButton_4")
-        self.deleteLeaderButton_4.setEnabled(False)
+        self.deleteLeaderButton_3 = QPushButton(self.leaderGroupBox_3)
+        self.deleteLeaderButton_3.setObjectName(u"deleteLeaderButton_3")
+        self.deleteLeaderButton_3.setEnabled(False)
+        self.deleteLeaderButton_3.setProperty(u"reserveLeader", False)
 
-        self.horizontalLayout_8.addWidget(self.deleteLeaderButton_4)
+        self.horizontalLayout_8.addWidget(self.deleteLeaderButton_3)
 
-        self.createLeaderButton_4 = QPushButton(self.leaderGroupBox_3)
-        self.createLeaderButton_4.setObjectName(u"createLeaderButton_4")
-        self.createLeaderButton_4.setEnabled(False)
+        self.createLeaderButton_3 = QPushButton(self.leaderGroupBox_3)
+        self.createLeaderButton_3.setObjectName(u"createLeaderButton_3")
+        self.createLeaderButton_3.setEnabled(False)
+        self.createLeaderButton_3.setProperty(u"reserveLeader", False)
 
-        self.horizontalLayout_8.addWidget(self.createLeaderButton_4)
+        self.horizontalLayout_8.addWidget(self.createLeaderButton_3)
 
 
         self.verticalLayout_84.addLayout(self.horizontalLayout_8)
@@ -1363,12 +1371,14 @@ class Ui_MainWindow(object):
         self.deleteLeaderButton_5 = QPushButton(self.leaderGroupBox_5)
         self.deleteLeaderButton_5.setObjectName(u"deleteLeaderButton_5")
         self.deleteLeaderButton_5.setEnabled(False)
+        self.deleteLeaderButton_5.setProperty(u"reserveLeader", False)
 
         self.horizontalLayout_9.addWidget(self.deleteLeaderButton_5)
 
         self.createLeaderButton_5 = QPushButton(self.leaderGroupBox_5)
         self.createLeaderButton_5.setObjectName(u"createLeaderButton_5")
         self.createLeaderButton_5.setEnabled(False)
+        self.createLeaderButton_5.setProperty(u"reserveLeader", False)
 
         self.horizontalLayout_9.addWidget(self.createLeaderButton_5)
 
@@ -1463,17 +1473,19 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_10 = QHBoxLayout()
         self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
-        self.deleteLeaderButton_6 = QPushButton(self.reserveLeaderGroupBox_1)
-        self.deleteLeaderButton_6.setObjectName(u"deleteLeaderButton_6")
-        self.deleteLeaderButton_6.setEnabled(False)
+        self.reserveDeleteLeaderButton_1 = QPushButton(self.reserveLeaderGroupBox_1)
+        self.reserveDeleteLeaderButton_1.setObjectName(u"reserveDeleteLeaderButton_1")
+        self.reserveDeleteLeaderButton_1.setEnabled(False)
+        self.reserveDeleteLeaderButton_1.setProperty(u"reserveLeader", True)
 
-        self.horizontalLayout_10.addWidget(self.deleteLeaderButton_6)
+        self.horizontalLayout_10.addWidget(self.reserveDeleteLeaderButton_1)
 
-        self.createLeaderButton_6 = QPushButton(self.reserveLeaderGroupBox_1)
-        self.createLeaderButton_6.setObjectName(u"createLeaderButton_6")
-        self.createLeaderButton_6.setEnabled(False)
+        self.reserveCreateLeaderButton_1 = QPushButton(self.reserveLeaderGroupBox_1)
+        self.reserveCreateLeaderButton_1.setObjectName(u"reserveCreateLeaderButton_1")
+        self.reserveCreateLeaderButton_1.setEnabled(False)
+        self.reserveCreateLeaderButton_1.setProperty(u"reserveLeader", True)
 
-        self.horizontalLayout_10.addWidget(self.createLeaderButton_6)
+        self.horizontalLayout_10.addWidget(self.reserveCreateLeaderButton_1)
 
 
         self.verticalLayout_13.addLayout(self.horizontalLayout_10)
@@ -1559,17 +1571,19 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_11 = QHBoxLayout()
         self.horizontalLayout_11.setObjectName(u"horizontalLayout_11")
-        self.deleteLeaderButton_7 = QPushButton(self.reserveLeaderGroupBox_2)
-        self.deleteLeaderButton_7.setObjectName(u"deleteLeaderButton_7")
-        self.deleteLeaderButton_7.setEnabled(False)
+        self.reserveDeleteLeaderButton_2 = QPushButton(self.reserveLeaderGroupBox_2)
+        self.reserveDeleteLeaderButton_2.setObjectName(u"reserveDeleteLeaderButton_2")
+        self.reserveDeleteLeaderButton_2.setEnabled(False)
+        self.reserveDeleteLeaderButton_2.setProperty(u"reserveLeader", True)
 
-        self.horizontalLayout_11.addWidget(self.deleteLeaderButton_7)
+        self.horizontalLayout_11.addWidget(self.reserveDeleteLeaderButton_2)
 
-        self.createLeaderButton_7 = QPushButton(self.reserveLeaderGroupBox_2)
-        self.createLeaderButton_7.setObjectName(u"createLeaderButton_7")
-        self.createLeaderButton_7.setEnabled(False)
+        self.reserveCreateLeaderButton_2 = QPushButton(self.reserveLeaderGroupBox_2)
+        self.reserveCreateLeaderButton_2.setObjectName(u"reserveCreateLeaderButton_2")
+        self.reserveCreateLeaderButton_2.setEnabled(False)
+        self.reserveCreateLeaderButton_2.setProperty(u"reserveLeader", True)
 
-        self.horizontalLayout_11.addWidget(self.createLeaderButton_7)
+        self.horizontalLayout_11.addWidget(self.reserveCreateLeaderButton_2)
 
 
         self.verticalLayout_94.addLayout(self.horizontalLayout_11)
@@ -1579,6 +1593,7 @@ class Ui_MainWindow(object):
 
         self.reserveLeaderGroupBox_3 = QGroupBox(self.groupBox_15)
         self.reserveLeaderGroupBox_3.setObjectName(u"reserveLeaderGroupBox_3")
+        self.reserveLeaderGroupBox_3.setEnabled(True)
         self.verticalLayout_95 = QVBoxLayout(self.reserveLeaderGroupBox_3)
         self.verticalLayout_95.setObjectName(u"verticalLayout_95")
         self.reserveLeaderNameGroupBox_3 = QGroupBox(self.reserveLeaderGroupBox_3)
@@ -1655,17 +1670,19 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_12 = QHBoxLayout()
         self.horizontalLayout_12.setObjectName(u"horizontalLayout_12")
-        self.deleteLeaderButton_8 = QPushButton(self.reserveLeaderGroupBox_3)
-        self.deleteLeaderButton_8.setObjectName(u"deleteLeaderButton_8")
-        self.deleteLeaderButton_8.setEnabled(False)
+        self.reserveDeleteLeaderButton_3 = QPushButton(self.reserveLeaderGroupBox_3)
+        self.reserveDeleteLeaderButton_3.setObjectName(u"reserveDeleteLeaderButton_3")
+        self.reserveDeleteLeaderButton_3.setEnabled(False)
+        self.reserveDeleteLeaderButton_3.setProperty(u"reserveLeader", True)
 
-        self.horizontalLayout_12.addWidget(self.deleteLeaderButton_8)
+        self.horizontalLayout_12.addWidget(self.reserveDeleteLeaderButton_3)
 
-        self.createLeaderButton_8 = QPushButton(self.reserveLeaderGroupBox_3)
-        self.createLeaderButton_8.setObjectName(u"createLeaderButton_8")
-        self.createLeaderButton_8.setEnabled(False)
+        self.reserveCreateLeaderButton_3 = QPushButton(self.reserveLeaderGroupBox_3)
+        self.reserveCreateLeaderButton_3.setObjectName(u"reserveCreateLeaderButton_3")
+        self.reserveCreateLeaderButton_3.setEnabled(False)
+        self.reserveCreateLeaderButton_3.setProperty(u"reserveLeader", True)
 
-        self.horizontalLayout_12.addWidget(self.createLeaderButton_8)
+        self.horizontalLayout_12.addWidget(self.reserveCreateLeaderButton_3)
 
 
         self.verticalLayout_95.addLayout(self.horizontalLayout_12)
@@ -1751,17 +1768,19 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_13 = QHBoxLayout()
         self.horizontalLayout_13.setObjectName(u"horizontalLayout_13")
-        self.deleteLeaderButton_9 = QPushButton(self.reserveLeaderGroupBox_4)
-        self.deleteLeaderButton_9.setObjectName(u"deleteLeaderButton_9")
-        self.deleteLeaderButton_9.setEnabled(False)
+        self.reserveDeleteLeaderButton_4 = QPushButton(self.reserveLeaderGroupBox_4)
+        self.reserveDeleteLeaderButton_4.setObjectName(u"reserveDeleteLeaderButton_4")
+        self.reserveDeleteLeaderButton_4.setEnabled(False)
+        self.reserveDeleteLeaderButton_4.setProperty(u"reserveLeader", True)
 
-        self.horizontalLayout_13.addWidget(self.deleteLeaderButton_9)
+        self.horizontalLayout_13.addWidget(self.reserveDeleteLeaderButton_4)
 
-        self.createLeaderButton_9 = QPushButton(self.reserveLeaderGroupBox_4)
-        self.createLeaderButton_9.setObjectName(u"createLeaderButton_9")
-        self.createLeaderButton_9.setEnabled(False)
+        self.reserveCreateLeaderButton_4 = QPushButton(self.reserveLeaderGroupBox_4)
+        self.reserveCreateLeaderButton_4.setObjectName(u"reserveCreateLeaderButton_4")
+        self.reserveCreateLeaderButton_4.setEnabled(False)
+        self.reserveCreateLeaderButton_4.setProperty(u"reserveLeader", True)
 
-        self.horizontalLayout_13.addWidget(self.createLeaderButton_9)
+        self.horizontalLayout_13.addWidget(self.reserveCreateLeaderButton_4)
 
 
         self.verticalLayout_96.addLayout(self.horizontalLayout_13)
@@ -1847,17 +1866,19 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_14 = QHBoxLayout()
         self.horizontalLayout_14.setObjectName(u"horizontalLayout_14")
-        self.deleteLeaderButton_10 = QPushButton(self.reserveLeaderGroupBox_5)
-        self.deleteLeaderButton_10.setObjectName(u"deleteLeaderButton_10")
-        self.deleteLeaderButton_10.setEnabled(False)
+        self.reserveDeleteLeaderButton_5 = QPushButton(self.reserveLeaderGroupBox_5)
+        self.reserveDeleteLeaderButton_5.setObjectName(u"reserveDeleteLeaderButton_5")
+        self.reserveDeleteLeaderButton_5.setEnabled(False)
+        self.reserveDeleteLeaderButton_5.setProperty(u"reserveLeader", True)
 
-        self.horizontalLayout_14.addWidget(self.deleteLeaderButton_10)
+        self.horizontalLayout_14.addWidget(self.reserveDeleteLeaderButton_5)
 
-        self.createLeaderButton_10 = QPushButton(self.reserveLeaderGroupBox_5)
-        self.createLeaderButton_10.setObjectName(u"createLeaderButton_10")
-        self.createLeaderButton_10.setEnabled(False)
+        self.reserveCreateLeaderButton_5 = QPushButton(self.reserveLeaderGroupBox_5)
+        self.reserveCreateLeaderButton_5.setObjectName(u"reserveCreateLeaderButton_5")
+        self.reserveCreateLeaderButton_5.setEnabled(False)
+        self.reserveCreateLeaderButton_5.setProperty(u"reserveLeader", True)
 
-        self.horizontalLayout_14.addWidget(self.createLeaderButton_10)
+        self.horizontalLayout_14.addWidget(self.reserveCreateLeaderButton_5)
 
 
         self.verticalLayout_97.addLayout(self.horizontalLayout_14)
@@ -2125,8 +2146,10 @@ class Ui_MainWindow(object):
         self.leaderLevelSpinBox_4.setProperty(u"originalValue", "")
         self.leaderSkillPointGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.leaderSkillPointSpinBox_4.setProperty(u"originalValue", "")
-        self.deleteLeaderButton_1.setText(QCoreApplication.translate("MainWindow", u"Create Leader", None))
-        self.createLeaderButton_1.setText(QCoreApplication.translate("MainWindow", u"Remove Leader", None))
+        self.deleteLeaderButton_4.setText(QCoreApplication.translate("MainWindow", u"Remove Leader", None))
+        self.deleteLeaderButton_4.setProperty(u"index", QCoreApplication.translate("MainWindow", u"4", None))
+        self.createLeaderButton_4.setText(QCoreApplication.translate("MainWindow", u"Create Leader", None))
+        self.createLeaderButton_4.setProperty(u"index", QCoreApplication.translate("MainWindow", u"4", None))
         self.leaderGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Leader #2", None))
         self.leaderNameGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
         self.leaderNameLabel_2.setText("")
@@ -2139,8 +2162,10 @@ class Ui_MainWindow(object):
         self.leaderLevelSpinBox_2.setProperty(u"originalValue", "")
         self.leaderSkillPointGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.leaderSkillPointSpinBox_2.setProperty(u"originalValue", "")
-        self.deleteLeaderButton_2.setText(QCoreApplication.translate("MainWindow", u"Create Leader", None))
-        self.createLeaderButton_2.setText(QCoreApplication.translate("MainWindow", u"Remove Leader", None))
+        self.deleteLeaderButton_2.setText(QCoreApplication.translate("MainWindow", u"Remove Leader", None))
+        self.deleteLeaderButton_2.setProperty(u"index", QCoreApplication.translate("MainWindow", u"2", None))
+        self.createLeaderButton_2.setText(QCoreApplication.translate("MainWindow", u"Create Leader", None))
+        self.createLeaderButton_2.setProperty(u"index", QCoreApplication.translate("MainWindow", u"2", None))
         self.leaderGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Leader #1", None))
         self.leaderNameGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
         self.leaderNameLabel_1.setText("")
@@ -2153,8 +2178,10 @@ class Ui_MainWindow(object):
         self.leaderLevelSpinBox_1.setProperty(u"originalValue", "")
         self.leaderSkillPointGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.leaderSkillPointSpinBox_1.setProperty(u"originalValue", "")
-        self.deleteLeaderButton_3.setText(QCoreApplication.translate("MainWindow", u"Create Leader", None))
-        self.createLeaderButton_3.setText(QCoreApplication.translate("MainWindow", u"Remove Leader", None))
+        self.deleteLeaderButton_1.setText(QCoreApplication.translate("MainWindow", u"Remove Leader", None))
+        self.deleteLeaderButton_1.setProperty(u"index", QCoreApplication.translate("MainWindow", u"1", None))
+        self.createLeaderButton_1.setText(QCoreApplication.translate("MainWindow", u"Create Leader", None))
+        self.createLeaderButton_1.setProperty(u"index", QCoreApplication.translate("MainWindow", u"1", None))
         self.leaderGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Leader #3", None))
         self.leaderNameGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
         self.leaderNameLabel_3.setText("")
@@ -2167,8 +2194,10 @@ class Ui_MainWindow(object):
         self.leaderLevelSpinBox_3.setProperty(u"originalValue", "")
         self.leaderSkillPointGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.leaderSkillPointSpinBox_3.setProperty(u"originalValue", "")
-        self.deleteLeaderButton_4.setText(QCoreApplication.translate("MainWindow", u"Create Leader", None))
-        self.createLeaderButton_4.setText(QCoreApplication.translate("MainWindow", u"Remove Leader", None))
+        self.deleteLeaderButton_3.setText(QCoreApplication.translate("MainWindow", u"Remove Leader", None))
+        self.deleteLeaderButton_3.setProperty(u"index", QCoreApplication.translate("MainWindow", u"3", None))
+        self.createLeaderButton_3.setText(QCoreApplication.translate("MainWindow", u"Create Leader", None))
+        self.createLeaderButton_3.setProperty(u"index", QCoreApplication.translate("MainWindow", u"3", None))
         self.leaderGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Leader #5", None))
         self.leaderNameGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
         self.leaderNameLabel_5.setText("")
@@ -2181,8 +2210,10 @@ class Ui_MainWindow(object):
         self.leaderLevelSpinBox_5.setProperty(u"originalValue", "")
         self.leaderSkillPointGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.leaderSkillPointSpinBox_5.setProperty(u"originalValue", "")
-        self.deleteLeaderButton_5.setText(QCoreApplication.translate("MainWindow", u"Create Leader", None))
-        self.createLeaderButton_5.setText(QCoreApplication.translate("MainWindow", u"Remove Leader", None))
+        self.deleteLeaderButton_5.setText(QCoreApplication.translate("MainWindow", u"Remove Leader", None))
+        self.deleteLeaderButton_5.setProperty(u"index", QCoreApplication.translate("MainWindow", u"5", None))
+        self.createLeaderButton_5.setText(QCoreApplication.translate("MainWindow", u"Create Leader", None))
+        self.createLeaderButton_5.setProperty(u"index", QCoreApplication.translate("MainWindow", u"5", None))
         self.groupBox_15.setTitle(QCoreApplication.translate("MainWindow", u"Reserve", None))
         self.reserveLeaderGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Reserve Leader #1", None))
         self.reserveLeaderNameGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
@@ -2196,8 +2227,10 @@ class Ui_MainWindow(object):
         self.reserveLeaderLevelSpinBox_1.setProperty(u"originalValue", "")
         self.reserveLeaderSkillPointGroupBox_1.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.reserveLeaderSkillPointSpinBox_1.setProperty(u"originalValue", "")
-        self.deleteLeaderButton_6.setText(QCoreApplication.translate("MainWindow", u"Create Leader", None))
-        self.createLeaderButton_6.setText(QCoreApplication.translate("MainWindow", u"Remove Leader", None))
+        self.reserveDeleteLeaderButton_1.setText(QCoreApplication.translate("MainWindow", u"Remove Leader", None))
+        self.reserveDeleteLeaderButton_1.setProperty(u"index", QCoreApplication.translate("MainWindow", u"1", None))
+        self.reserveCreateLeaderButton_1.setText(QCoreApplication.translate("MainWindow", u"Create Leader", None))
+        self.reserveCreateLeaderButton_1.setProperty(u"index", QCoreApplication.translate("MainWindow", u"1", None))
         self.reserveLeaderGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Reserve Leader #2", None))
         self.reserveLeaderNameGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
         self.reserveLeaderNameLabel_2.setText("")
@@ -2210,8 +2243,10 @@ class Ui_MainWindow(object):
         self.reserveLeaderLevelSpinBox_2.setProperty(u"originalValue", "")
         self.reserveLeaderSkillPointGroupBox_2.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.reserveLeaderSkillPointSpinBox_2.setProperty(u"originalValue", "")
-        self.deleteLeaderButton_7.setText(QCoreApplication.translate("MainWindow", u"Create Leader", None))
-        self.createLeaderButton_7.setText(QCoreApplication.translate("MainWindow", u"Remove Leader", None))
+        self.reserveDeleteLeaderButton_2.setText(QCoreApplication.translate("MainWindow", u"Remove Leader", None))
+        self.reserveDeleteLeaderButton_2.setProperty(u"index", QCoreApplication.translate("MainWindow", u"2", None))
+        self.reserveCreateLeaderButton_2.setText(QCoreApplication.translate("MainWindow", u"Create Leader", None))
+        self.reserveCreateLeaderButton_2.setProperty(u"index", QCoreApplication.translate("MainWindow", u"2", None))
         self.reserveLeaderGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Reserve Leader #3", None))
         self.reserveLeaderNameGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
         self.reserveLeaderNameLabel_3.setText("")
@@ -2224,8 +2259,10 @@ class Ui_MainWindow(object):
         self.reserveLeaderLevelSpinBox_3.setProperty(u"originalValue", "")
         self.reserveLeaderSkillPointGroupBox_3.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.reserveLeaderSkillPointSpinBox_3.setProperty(u"originalValue", "")
-        self.deleteLeaderButton_8.setText(QCoreApplication.translate("MainWindow", u"Create Leader", None))
-        self.createLeaderButton_8.setText(QCoreApplication.translate("MainWindow", u"Remove Leader", None))
+        self.reserveDeleteLeaderButton_3.setText(QCoreApplication.translate("MainWindow", u"Remove Leader", None))
+        self.reserveDeleteLeaderButton_3.setProperty(u"index", QCoreApplication.translate("MainWindow", u"3", None))
+        self.reserveCreateLeaderButton_3.setText(QCoreApplication.translate("MainWindow", u"Create Leader", None))
+        self.reserveCreateLeaderButton_3.setProperty(u"index", QCoreApplication.translate("MainWindow", u"3", None))
         self.reserveLeaderGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Reserve Leader #4", None))
         self.reserveLeaderNameGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
         self.reserveLeaderNameLabel_4.setText("")
@@ -2238,8 +2275,10 @@ class Ui_MainWindow(object):
         self.reserveLeaderLevelSpinBox_4.setProperty(u"originalValue", "")
         self.reserveLeaderSkillPointGroupBox_4.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.reserveLeaderSkillPointSpinBox_4.setProperty(u"originalValue", "")
-        self.deleteLeaderButton_9.setText(QCoreApplication.translate("MainWindow", u"Create Leader", None))
-        self.createLeaderButton_9.setText(QCoreApplication.translate("MainWindow", u"Remove Leader", None))
+        self.reserveDeleteLeaderButton_4.setText(QCoreApplication.translate("MainWindow", u"Remove Leader", None))
+        self.reserveDeleteLeaderButton_4.setProperty(u"index", QCoreApplication.translate("MainWindow", u"4", None))
+        self.reserveCreateLeaderButton_4.setText(QCoreApplication.translate("MainWindow", u"Create Leader", None))
+        self.reserveCreateLeaderButton_4.setProperty(u"index", QCoreApplication.translate("MainWindow", u"4", None))
         self.reserveLeaderGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Reserve Leader #5", None))
         self.reserveLeaderNameGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Name", None))
         self.reserveLeaderNameLabel_5.setText("")
@@ -2252,8 +2291,10 @@ class Ui_MainWindow(object):
         self.reserveLeaderLevelSpinBox_5.setProperty(u"originalValue", "")
         self.reserveLeaderSkillPointGroupBox_5.setTitle(QCoreApplication.translate("MainWindow", u"Unspent Skillpoints", None))
         self.reserveLeaderSkillPointSpinBox_5.setProperty(u"originalValue", "")
-        self.deleteLeaderButton_10.setText(QCoreApplication.translate("MainWindow", u"Create Leader", None))
-        self.createLeaderButton_10.setText(QCoreApplication.translate("MainWindow", u"Remove Leader", None))
+        self.reserveDeleteLeaderButton_5.setText(QCoreApplication.translate("MainWindow", u"Remove Leader", None))
+        self.reserveDeleteLeaderButton_5.setProperty(u"index", QCoreApplication.translate("MainWindow", u"5", None))
+        self.reserveCreateLeaderButton_5.setText(QCoreApplication.translate("MainWindow", u"Create Leader", None))
+        self.reserveCreateLeaderButton_5.setProperty(u"index", QCoreApplication.translate("MainWindow", u"5", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.leaderTab), QCoreApplication.translate("MainWindow", u"Leaders", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.inventoryTab), QCoreApplication.translate("MainWindow", u"Inventory", None))
         ___qtablewidgetitem = self.locTableWidget.horizontalHeaderItem(0)
