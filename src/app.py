@@ -9,8 +9,9 @@ from PySide6.QtWidgets import (
     QMainWindow
 )
 from PySide6.QtCore import (QSettings, Slot)
-from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QTreeWidgetItem, QTableWidgetItem)
+from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QWidget, QTableWidgetItem)
 from constants import *
+from leader_dataclass import Leader
 from main_window import Ui_MainWindow
 from template_store import TemplateStore
 from ui_helper import UIHelperMixin
@@ -198,61 +199,54 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
 
         self.on_load_file_UI_handler(len(divisions_data))
     
+    def _detect_changed_value(self, widget: QWidget, current):
+        value = widget.property("originalValue")
+        return (current != value)
+    
     def save_data(self):
         if self.data is None:
             return
         
         player_data = self.data["PlayerSaveData"]
         army_data = player_data["ArmySaveData"]
+        divisions_data = army_data["Divisions"]
+        reserve_regiments_data = army_data["ReserveRegiments"]
+        reserve_officers_data = army_data["ReserveOfficers"]
         
+        # resources
         player_data["Cash"] = self.goldSpinBox.value()
         player_data["Food"] = self.supplySpinBox.value()
         player_data["Ammo"] = self.ammoSpinBox.value()
         player_data["Manpower"] = self.manpowerSpinBox.value()
         
-        self.data["PlayerSaveData"] = player_data
-        
-        player_data = self.data["PlayerSaveData"]
-        army_data = player_data["ArmySaveData"]
-        divisions_data = army_data["Divisions"]
-        reserve_divisions_data = army_data["ReserveRegiments"]
-        reserve_officers_data = army_data["ReserveOfficers"]
-        
-        # todo: need to handle cases of division not unlocked
         # detect any change for future logging
         for i, item in enumerate(divisions_data):
-            
-            leader = item["OfficerSave"]
-            if leader is None:
-                continue
-            
-            leader_level_pin_original = self.leader_level_spinbox[i].property("originalValue") or 0
-            leader_level_spin_current = self.leader_level_spinbox[i].value()
-            leader_skillpoints_level_pin_original = self.leader_skillpoints_spinbox[i].property("originalValue") or 0
-            leader_skillpoints_level_spin_current = self.leader_skillpoints_spinbox[i].value()
+            if item is not None:
                 
-            if leader_level_pin_original != leader_level_spin_current:
-                leader["Level"] = self.leader_level_spinbox[i].value()
-                    
-            if leader_skillpoints_level_pin_original != leader_skillpoints_level_spin_current:
-                leader["SkillPointsAvailable"] = self.leader_skillpoints_spinbox[i].value()
-                    
-            skill_set = []
-            for j in range(5):
-                index = (i*5)+j
-                combo = self.leader_skill_combos[index]
-                combo_original = None if combo.property("originalValue") == "" else combo.property("originalValue")
-                combo_current = combo.currentData()
+                leader = item["OfficerSave"]
                 
-                # if combo_original != combo_current:
-                #     print(f"{combo_original} != {combo_current}")
+                if leader is None:
+                    continue
                 
-                if combo_current:
-                    skill_set.append(combo_current)
+                leader_obj = Leader(leader)
                     
-            leader["SkillSaves"] = skill_set
+                skill_set = []
+                for j in range(5):
+                    index = ( i * 5 ) + j
+                    combo = self.leader_skill_combos[index]
+                    combo_current = combo.currentData()
+                    
+                    if combo_current:
+                        skill_set.append(combo_current)
+                        
+                leader_obj.set_level(self.leader_level_spinbox[i].value())
+                leader_obj.set_skill_points(self.leader_skillpoints_spinbox[i].value())
+                leader_obj.set_skills(skill_set)
+                
+                item["OfficerSave"] = leader_obj.data
             
             ###############################################
+            
             for j in range(4):
                 combo = getattr(self, f"regimentTypeComboBox_{i+1}_{j+1}", None)
                 spinbox = getattr(self, f"veterancySpinBox_{i+1}_{j+1}", None)
@@ -261,57 +255,44 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
                 if not isinstance(spinbox, QSpinBox):
                     continue
                 
-                combo_original = None if combo.property("originalValue") == "" else combo.property("originalValue")
                 combo_current = combo.currentData()
 
-                if combo_original != combo_current:
+                if self._detect_changed_value(combo, combo_current):
                     if combo_current is None:
                         new_regiment = None
                     else:
                         new_regiment = self.handle_unit_type_change(item["Regiments"][j], combo_current, j)
                     item["Regiments"][j] = new_regiment
                 
-                spin_original = spinbox.property("originalValue") or 0
                 spin_current = spinbox.value()
 
-                if spin_original != spin_current:
+                if self._detect_changed_value(spinbox, spin_current):
                     new_regiment = item["Regiments"][j]
                     if new_regiment is not None:
                         new_regiment["CurrentLevel"] = spinbox.value()
                 
         for i, item in enumerate(reserve_officers_data):
             if item is None:
-                continue
+                return
             
-            reserve_leader_level_pin_original = self.reserve_leader_level_spinbox[i].property("originalValue") or 0
-            reserve_leader_level_spin_current = self.reserve_leader_level_spinbox[i].value()
-            reserve_leader_skillpoints_level_pin_original = self.reserve_leader_skillpoints_spinbox[i].property("originalValue") or 0
-            reserve_leader_skillpoints_level_spin_current = self.reserve_leader_skillpoints_spinbox[i].value()
-                
-            if reserve_leader_level_pin_original != reserve_leader_level_spin_current:
-                item["Level"] = self.reserve_leader_level_spinbox[i].value()
-                    
-            if reserve_leader_skillpoints_level_pin_original != reserve_leader_skillpoints_level_spin_current:
-                item["SkillPointsAvailable"] = self.reserve_leader_skillpoints_spinbox[i].value()
+            leader_obj = Leader(item)
                     
             skill_set = []
             for j in range(5):
-                index = (i*5)+j
+                index = ( i * 5 ) + j
                 combo = self.reserve_leader_skill_combos[index]
-                combo_original = None if combo.property("originalValue") == "" else combo.property("originalValue")
-                combo_current = combo.currentData()
+                current_data = combo.currentData()
                 
-                # if combo_original != combo_current:
-                #     print(f"{combo_original} != {combo_current}")
-                
-                if combo_current:
-                    skill_set.append(combo_current)
-                    
-            item["SkillSaves"] = skill_set
+                if current_data:
+                    skill_set.append(current_data)
             
-        for i, item in enumerate(reserve_divisions_data):
-            if item is None:
-                continue
+            leader_obj.set_level(self.leader_level_spinbox[i].value())
+            leader_obj.set_skill_points(self.leader_skillpoints_spinbox[i].value())
+            leader_obj.set_skills(skill_set)
+            
+            item = leader_obj.data
+            
+        for i, item in enumerate(reserve_regiments_data):
             
             combo = getattr(self, f"reserveTypeComboBox_{i+1}", None)
             spinbox = getattr(self, f"reserveVeterancySpinBox_{i+1}", None)
@@ -320,20 +301,18 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
             if not isinstance(spinbox, QSpinBox):
                 continue
             
-            combo_original = None if combo.property("originalValue") == "" else combo.property("originalValue")
             combo_current = combo.currentData()
 
-            if combo_original != combo_current:
+            if self._detect_changed_value(combo, combo_current):
                 if combo_current is None:
                     new_regiment = None
                 else:
                     new_regiment = self.handle_unit_type_change(item, combo_current, i)
-                reserve_divisions_data[i] = new_regiment
+                reserve_regiments_data[i] = new_regiment
 
-            spin_original = spinbox.property("originalValue") or 0
             spin_current = spinbox.value()
 
-            if spin_original != spin_current:
+            if self._detect_changed_value(spinbox, spin_current):
                 new_regiment = item
                 if new_regiment is not None:
                     new_regiment["CurrentLevel"] = spinbox.value()

@@ -41,6 +41,28 @@ COLOR_KEYS = {
 
 PLACEHOLDER_COLOR = {"r": 45, "g": 45, "b": 45, "a": 255}
 
+NEW_LEADER_TEMPLATE = """
+{
+    "Name": "John",
+    "LastName": "Befehlmeister",
+    "Level": 1,
+    "Experience": 0,
+    "SkillPointsAvailable": 0,
+    "SkillSaves": [],
+    "Uniform": "OFFICER_UNIFORM_AUS_06",
+    "Head": "OFFICER_HEAD_06",
+    "Hat": "OFFICER_HAT_00",
+    "Hair": "OFFICER_HAIR_04",
+    "StatsTracker": {
+        "Kills": 0,
+        "Losses": 0,
+        "RecentKills": 0,
+        "RecentLosses": 0,
+        "BattlesWon": 0,
+        "BattlesLoss": 0
+    }
+}
+"""
 NEW_UNIT_TEMPLATE = """
 {
     "$type": "GameData.Save.PlayerRegimentSaveData, GameCore",
