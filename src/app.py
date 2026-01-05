@@ -216,7 +216,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
                 
         for i, item in enumerate(reserve_officers_data):
             if item is None:
-                return
+                continue
             
             leader_obj = Leader(item)
                     
