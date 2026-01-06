@@ -16,6 +16,7 @@ from leader_dataclass import Leader
 from main_window import Ui_MainWindow
 from template_store import TemplateLoadError, TemplateStore, templates_ready
 from ui_helper import UIHelperMixin
+from utils.resources import resource_path
 
 # TODO: weapon and equipment contraints...
 # TODO: skill desc
@@ -24,8 +25,6 @@ DEV_FEATURES = os.getenv("DEV_FEATURES", "").lower() == "true"
 class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
     def __init__(self, q_app, parent=None):
         super().__init__(parent)
-        icon_path = Path(__file__).resolve().parent.parent / "assets" / "icon.ico"
-        self.setWindowIcon(QIcon(str(icon_path)))
         self.setupUi(self)
         self.init_widget_lists()
         
@@ -662,9 +661,12 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
             return fallback
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
 
+    app = QApplication(sys.argv)
+    icon = QIcon(resource_path("assets/icon.ico"))
+    app.setWindowIcon(icon)
     main_window = SaveEditor(app)
+    main_window.setWindowIcon(icon)
     main_window.show()
 
     sys.exit(app.exec())
