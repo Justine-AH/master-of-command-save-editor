@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'saveEditorcxCBFU.ui'
+## Form generated from reading UI file 'saveEditoraLTBsM.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.10.1
 ##
@@ -38,6 +38,8 @@ class Ui_MainWindow(object):
         self.actionLoad_File.setObjectName(u"actionLoad_File")
         self.actionView_Templates = QAction(MainWindow)
         self.actionView_Templates.setObjectName(u"actionView_Templates")
+        self.actionSelect_Game_Folder = QAction(MainWindow)
+        self.actionSelect_Game_Folder.setObjectName(u"actionSelect_Game_Folder")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout_3 = QVBoxLayout(self.centralwidget)
@@ -2026,6 +2028,7 @@ class Ui_MainWindow(object):
         self.menubar.addAction(self.menuFile.menuAction())
         self.menuFile.addAction(self.actionLoad_File)
         self.menuFile.addAction(self.actionSave_File)
+        self.menuFile.addAction(self.actionSelect_Game_Folder)
 
         self.retranslateUi(MainWindow)
 
@@ -2042,6 +2045,7 @@ class Ui_MainWindow(object):
         self.actionSave_File.setText(QCoreApplication.translate("MainWindow", u"Save File", None))
         self.actionLoad_File.setText(QCoreApplication.translate("MainWindow", u"Load File", None))
         self.actionView_Templates.setText(QCoreApplication.translate("MainWindow", u"View Templates", None))
+        self.actionSelect_Game_Folder.setText(QCoreApplication.translate("MainWindow", u"Select Game Folder", None))
         self.goldGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Thalers", None))
         self.supplyGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Supply", None))
         self.manpowerGroupBox.setTitle(QCoreApplication.translate("MainWindow", u"Manpower", None))

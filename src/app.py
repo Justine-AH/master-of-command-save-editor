@@ -8,12 +8,12 @@ from PySide6.QtWidgets import (
     QApplication,
     QMainWindow
 )
-from PySide6.QtCore import (QSettings)
-from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QWidget, QTableWidgetItem, QPushButton, QCheckBox)
+from PySide6.QtCore import (QSettings, QTimer)
+from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QMessageBox, QTableWidgetItem, QPushButton, QCheckBox)
 from constants import *
 from leader_dataclass import Leader
 from main_window import Ui_MainWindow
-from template_store import TemplateStore
+from template_store import TemplateLoadError, TemplateStore, templates_ready
 from ui_helper import UIHelperMixin
 
 # TODO: maybe find directory of game files for template instead
@@ -28,6 +28,9 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.init_widget_lists()
         
+        self.enable_widgets([self.actionLoad_File], False)
+        self.enable_widgets([self.actionSave_File], False)
+        
         self.data = None
         
         self.settings = QSettings(str(SETTINGS), QSettings.Format.IniFormat)
@@ -36,9 +39,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         # unit stats, bust and flag are not attached to unit_types and must be manually changed
         # we need the templates for reference to generate or change units
         self.templates = TemplateStore()
-        self.templates.load_templates()
-        self.populate_comboboxes()
-        self.populate_dev_tabs()
+        QTimer.singleShot(0, self.on_game_path_button_triggered)
         
         self.q_app = q_app
 
@@ -46,7 +47,6 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         self.resize(1200, 800)
         self.statusBar().showMessage("Ready")
         
-        self.actionSave_File.setEnabled(False)
         self.setup_connections()
         
         index = self.tabWidget.indexOf(self.devTab)
@@ -54,14 +54,18 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         
         if DEV_FEATURES:
             self.tabWidget.setTabVisible(index, True)
-            with open("./save_folder/div1.fcs", "r", encoding="utf-8") as f:
-                self.data = json.load(f)
-                
-            self.refresh_ui()
-            self.load_data()
-            self.set_original_values()
-            self.actionSave_File.setEnabled(True)
+            # with open("./save_folder/div1.fcs", "r", encoding="utf-8") as f:
+            #     self.data = json.load(f)
+            
+            # self.refresh_ui()
+            # self.load_data()
+            # self.set_original_values()
+            # self.actionSave_File.setEnabled(True)
     
+    def pick_game_folder(self) -> Path | None:
+        folder = QFileDialog.getExistingDirectory(self, "Select game folder")
+        return Path(folder) if folder else None
+
     def load_data(self):
         self.disable_all_widgets()
         self.refresh_ui()
@@ -306,7 +310,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
             walk(data)
             return data
         
-        if not self.templates.templates_ready(self.templates):
+        if not templates_ready(self.templates):
             # ? might need to add logging in future
             print("Templates missing:", self.templates.missing_templates())
             return
@@ -440,6 +444,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
     def setup_connections(self):
         self.actionLoad_File.triggered.connect(self.on_load_button_triggered)
         self.actionSave_File.triggered.connect(self.on_save_button_triggered)
+        self.actionSelect_Game_Folder.triggered.connect(self.on_game_path_button_triggered)
         
         create_buttons = [
             *self.create_reserve_leader_buttons,
@@ -584,6 +589,30 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
             raise
         
         self.load_data()
+
+    def on_game_path_button_triggered(self):
+        game_path = self.pick_game_folder()
+        
+        if game_path is None:
+            self.enable_widgets([self.actionLoad_File], False)
+            return
+        
+        try:
+            self.templates.load_templates(game_path)
+        except TemplateLoadError as e:
+            QMessageBox.critical(
+                self, 
+                "Templates not found",
+                f"Couldn't find templates under the selected folder: {self.templates.missing_templates()}"
+            )
+            self.enable_widgets([self.actionLoad_File], False)
+            return
+        
+        if templates_ready(self.templates):
+            self.populate_comboboxes()
+            self.populate_dev_tabs()
+        
+        self.enable_widgets([self.actionLoad_File], True)
 
     def _is_excluded(self, unit_id):
         uid = unit_id.lower()

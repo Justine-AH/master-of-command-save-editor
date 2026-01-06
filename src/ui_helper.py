@@ -1,7 +1,7 @@
 
 
 from PySide6.QtWidgets import QSpinBox, QComboBox, QTreeWidgetItem, QLabel, QPushButton, QCheckBox, QWidget
-
+from PySide6.QtGui import QAction
 class UIHelperMixin:
     
     # for typehints
@@ -10,7 +10,18 @@ class UIHelperMixin:
     ammoSpinBox: QSpinBox
     manpowerSpinBox: QSpinBox
     
+    actionLoad_File: QAction
+    actionSave_File: QAction
+    actionSelect_Game_Folder: QAction
+    
     def init_widget_lists(self):
+        
+        self.menu_options: list[QAction] = [
+            self.actionLoad_File,
+            self.actionSave_File,
+            self.actionSelect_Game_Folder
+        ]
+        
         self.resource_spinboxes: list[QSpinBox] = [
             self.goldSpinBox,
             self.supplySpinBox,

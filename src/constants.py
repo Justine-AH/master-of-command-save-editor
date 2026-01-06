@@ -2,8 +2,16 @@ import json
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATES_DIR = BASE_DIR / "templates"
 SETTINGS = BASE_DIR / "settings.ini"
+
+GAME_DIR = Path("Master Of Command_Data/StreamingAssets/GameData")
+QUESTS_DIR = GAME_DIR / "Quests"
+SKILLS_DIR = GAME_DIR / "Skills"
+UNITS_DIR = GAME_DIR / "Units/Template_Units.json"
+LOC_DIR = GAME_DIR / "Languages/English.json"
+FLAG_DIR = GAME_DIR / "General/FlagTemplates.json"
+BUST_DIR = GAME_DIR / "Busts"
+UPGRADE_DIR = GAME_DIR / "Campaign/UpgradeTrees.json"
 
 TYPE_MAP = {
     "RECRUIT_INFANTRY": "INFANTRY",
