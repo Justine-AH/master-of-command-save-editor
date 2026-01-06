@@ -3,6 +3,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 SETTINGS = BASE_DIR / "settings.ini"
+VERSION = "1.0.0"
 
 GAME_DIR = Path("Master Of Command_Data/StreamingAssets/GameData")
 QUESTS_DIR = GAME_DIR / "Quests"

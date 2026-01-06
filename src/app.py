@@ -1,6 +1,7 @@
 from functools import partial
 import json
 import os
+from pathlib import Path
 import random
 import sys
 import tempfile
@@ -11,7 +12,7 @@ from PySide6.QtWidgets import (
 from PySide6.QtCore import (QSettings, QTimer)
 from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QMessageBox, QTableWidgetItem, QPushButton, QCheckBox)
-from constants import *
+from constants import (COLOR_KEYS, EXCLUDED_ID_SUBSTRINGS, EXCLUDED_RAW_TYPES, NEW_DIVISION_TEMPLATE, NEW_UNIT_TEMPLATE, PLACEHOLDER_COLOR, SETTINGS, SUPPLY_MULT, TYPE_MAP, VERSION)
 from leader_dataclass import Leader
 from main_window import Ui_MainWindow
 from template_store import TemplateLoadError, TemplateStore, templates_ready
@@ -45,7 +46,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         
         self.q_app = q_app
 
-        self.setWindowTitle("Master of Command - Save Editor")
+        self.setWindowTitle(f"Master of Command - Save Editor v{VERSION}")
         self.resize(1200, 800)
         self.statusBar().showMessage("Ready")
         
