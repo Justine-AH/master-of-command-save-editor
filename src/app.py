@@ -39,7 +39,9 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         # unit stats, bust and flag are not attached to unit_types and must be manually changed
         # we need the templates for reference to generate or change units
         self.templates = TemplateStore()
-        QTimer.singleShot(0, self.on_game_path_button_triggered)
+        
+        saved_game_dir = self.settings.value("paths/game_dir", "", str)
+        QTimer.singleShot(0, lambda: self.on_game_path_button_triggered(saved_game_dir))
         
         self.q_app = q_app
 
@@ -590,8 +592,11 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         
         self.load_data()
 
-    def on_game_path_button_triggered(self):
-        game_path = self.pick_game_folder()
+    def on_game_path_button_triggered(self, saved_path = None):
+        if saved_path:
+            game_path = Path(saved_path)
+        else:
+            game_path = self.pick_game_folder()
         
         if game_path is None:
             self.enable_widgets([self.actionLoad_File], False)
@@ -611,6 +616,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         if templates_ready(self.templates):
             self.populate_comboboxes()
             self.populate_dev_tabs()
+            self.settings.setValue("paths/game_dir", game_path.as_posix())
         
         self.enable_widgets([self.actionLoad_File], True)
 
