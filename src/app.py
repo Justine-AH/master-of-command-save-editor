@@ -17,10 +17,8 @@ from main_window import Ui_MainWindow
 from template_store import TemplateLoadError, TemplateStore, templates_ready
 from ui_helper import UIHelperMixin
 
-# TODO: maybe find directory of game files for template instead
 # TODO: weapon and equipment contraints...
 # TODO: skill desc
-# TODO: isolate original value saving
 DEV_FEATURES = os.getenv("DEV_FEATURES", "").lower() == "true"
 
 class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
