@@ -51,18 +51,22 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         
         self.setup_connections()
         
-        index = self.tabWidget.indexOf(self.devTab)
-        self.tabWidget.setTabVisible(index, False)
+        dev_index = self.tabWidget.indexOf(self.devTab)
+        self.tabWidget.setTabVisible(dev_index, False)
+        
+        # not yet
+        index2 = self.tabWidget.indexOf(self.inventoryTab)
+        self.tabWidget.setTabVisible(index2, False)
         
         if DEV_FEATURES:
-            self.tabWidget.setTabVisible(index, True)
-            # with open("./save_folder/div1.fcs", "r", encoding="utf-8") as f:
-            #     self.data = json.load(f)
+            self.tabWidget.setTabVisible(dev_index, True)
+            with open("./save_folder/div1.fcs", "r", encoding="utf-8") as f:
+                self.data = json.load(f)
             
-            # self.refresh_ui()
-            # self.load_data()
-            # self.set_original_values()
-            # self.actionSave_File.setEnabled(True)
+            self.refresh_ui()
+            self.load_data()
+            self.set_original_values()
+            self.actionSave_File.setEnabled(True)
     
     def pick_game_folder(self) -> Path | None:
         folder = QFileDialog.getExistingDirectory(self, "Select game folder")
