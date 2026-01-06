@@ -64,6 +64,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
     
     def load_data(self):
         self.disable_all_widgets()
+        self.refresh_ui()
         if self.data is None:
             return
         

@@ -123,7 +123,6 @@ class UIHelperMixin:
         for w in spinboxes:
             w.blockSignals(True)
             w.setValue(0)
-            w.setProperty("originalValue", 0)
             w.blockSignals(False)
     
     def reset_army_comboboxes(self):
@@ -134,7 +133,6 @@ class UIHelperMixin:
         for w in comboboxes:
             w.blockSignals(True)
             w.setCurrentIndex(0)
-            w.setProperty("originalValue", "")
             w.blockSignals(False)
     
     def reset_leader_spinboxes(self):
@@ -147,7 +145,6 @@ class UIHelperMixin:
         for w in spinboxes:
             w.blockSignals(True)
             w.setValue(0)
-            w.setProperty("originalValue", 0)
             w.blockSignals(False)
     
     def reset_leader_comboboxes(self):
@@ -158,7 +155,6 @@ class UIHelperMixin:
         for w in comboboxes:
             w.blockSignals(True)
             w.setCurrentIndex(0)
-            w.setProperty("originalValue", "")
             w.blockSignals(False)
             
     def reset_leader_labels(self):
@@ -169,7 +165,6 @@ class UIHelperMixin:
         for w in comboboxes:
             w.blockSignals(True)
             w.setText("")
-            w.setProperty("originalValue", "")
             w.blockSignals(False)
     
     def set_original_values(self):
