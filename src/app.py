@@ -489,6 +489,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
             divisions_data = self.data["PlayerSaveData"]["ArmySaveData"]["Divisions"]
             divisions_data[index]["OfficerSave"] = leader_template.data
         
+        self.save_data()
         self.load_data()
     
     def on_delete_leader_button_triggered(self, widget: QPushButton):
@@ -504,6 +505,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
             divisions_data = self.data["PlayerSaveData"]["ArmySaveData"]["Divisions"]
             divisions_data[index]["OfficerSave"] = None
             
+        self.save_data()
         self.load_data()
     
     def on_division_checkbox_triggered(self, widget: QCheckBox):
@@ -522,6 +524,7 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         
         amount = index + 1 if checked else index
         self.modify_division_count(amount, checked)
+        self.save_data()
         self.load_data()
     
     def modify_division_count(self, new_division_count, add: bool):
