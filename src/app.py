@@ -182,8 +182,6 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
                         if combo_current:
                             skill_set.append(combo_current)
                     
-                    
-                    print(f"{leader_obj.data.get("Level")} != {self.leader_level_spinbox[i].value()}")
                     leader_obj.set_level(self.leader_level_spinbox[i].value())
                     leader_obj.set_skill_points(self.leader_skillpoints_spinbox[i].value())
                     leader_obj.set_skills(skill_set)
