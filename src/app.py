@@ -9,6 +9,7 @@ from PySide6.QtWidgets import (
     QMainWindow
 )
 from PySide6.QtCore import (QSettings, QTimer)
+from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import (QFileDialog, QComboBox, QSpinBox, QMessageBox, QTableWidgetItem, QPushButton, QCheckBox)
 from constants import *
 from leader_dataclass import Leader
@@ -25,6 +26,8 @@ DEV_FEATURES = os.getenv("DEV_FEATURES", "").lower() == "true"
 class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
     def __init__(self, q_app, parent=None):
         super().__init__(parent)
+        icon_path = Path(__file__).resolve().parent.parent / "assets" / "icon.ico"
+        self.setWindowIcon(QIcon(str(icon_path)))
         self.setupUi(self)
         self.init_widget_lists()
         
