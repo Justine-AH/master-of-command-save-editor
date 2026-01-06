@@ -20,7 +20,6 @@ from ui_helper import UIHelperMixin
 # TODO: weapon and equipment contraints...
 # TODO: skill desc
 # TODO: isolate original value saving
-# TODO: multiple previously unlocked units possible
 DEV_FEATURES = os.getenv("DEV_FEATURES", "").lower() == "true"
 
 class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
@@ -247,11 +246,32 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
     def handle_unit_type_change(self, regiment, new_unit_type, position):
         
         def find_tree_and_prereq_by_unit_id(data, unit_id):
+            prereq_list = None
+            tree = None
             for tree_name, tree in data.items():
                 items = tree["Items"]
                 if unit_id in items:
-                    return tree_name, items[unit_id]["Prerequisite"] or []
+                    prereq_list = get_prereq(unit_id, tree["Items"])
+                    return tree_name, prereq_list
+            
             return None, []
+        
+        def get_prereq(unit_id, tree) -> list:
+            prereq_list = tree.get(unit_id)["Prerequisite"]
+            result = []
+            
+            if prereq_list is None:
+                return []
+            
+            for item in prereq_list:
+                res = get_prereq(item, tree)
+                if res is None:
+                    return []
+                else:
+                    result.append(item)
+                    result.extend(res)
+            
+            return result
         
         def validate_bust_data(data):
             def make_placeholder():
