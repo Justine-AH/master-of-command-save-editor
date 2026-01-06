@@ -60,12 +60,18 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
         
         if DEV_FEATURES:
             self.tabWidget.setTabVisible(dev_index, True)
-            with open("./save_folder/div1.fcs", "r", encoding="utf-8") as f:
+            with open("./save_folder/test.fcs", "r", encoding="utf-8") as f:
                 self.data = json.load(f)
             
             self.refresh_ui()
-            self.load_data()
-            self.set_original_values()
+            QTimer.singleShot(
+                0, 
+                lambda: self.load_data()
+            )
+            QTimer.singleShot(
+                0, 
+                lambda: self.set_original_values()
+            )
             self.actionSave_File.setEnabled(True)
     
     def pick_game_folder(self) -> Path | None:
@@ -175,7 +181,9 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
                         
                         if combo_current:
                             skill_set.append(combo_current)
-                            
+                    
+                    
+                    print(f"{leader_obj.data.get("Level")} != {self.leader_level_spinbox[i].value()}")
                     leader_obj.set_level(self.leader_level_spinbox[i].value())
                     leader_obj.set_skill_points(self.leader_skillpoints_spinbox[i].value())
                     leader_obj.set_skills(skill_set)
@@ -223,8 +231,8 @@ class SaveEditor(UIHelperMixin, QMainWindow, Ui_MainWindow):
                 if current_data:
                     skill_set.append(current_data)
             
-            leader_obj.set_level(self.leader_level_spinbox[i].value())
-            leader_obj.set_skill_points(self.leader_skillpoints_spinbox[i].value())
+            leader_obj.set_level(self.reserve_leader_level_spinbox[i].value())
+            leader_obj.set_skill_points(self.reserve_leader_skillpoints_spinbox[i].value())
             leader_obj.set_skills(skill_set)
             
             item = leader_obj.data
